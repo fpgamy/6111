@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+d/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab2/lab2
+vascii2dots
+!s100 9HXJES;RZUcoXbFmWahgz1
+IlCWenX`[b[L<W2<;_znKo1
+V8BA?zG@dzF9KE?bnJKl[D2
+Z0 d/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab2B
+Z1 w1537132395
+Z2 8lab2b/labkit_serial.v
+Z3 Flab2b/labkit_serial.v
+L0 571
+Z4 OE;L;6.4a;39
+r1
+!s85 0
+31
+Z5 o-L mtiAvm -L mtiOvm -L mtiUPF
+vdebounce
+!s100 5EIba=>ii6]8W48oKUFXT2
+Ii;Xk;P`k3L3EQkViZAkSn1
+VnlDBH;]395Ea:=dmAZD@M2
+Z6 d/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab2B
+R1
+R2
+R3
+L0 689
+R4
+r1
+!s85 0
+31
+R5
+vdisplay_string
+!s100 NT[LWBQ8n1KRafk<fkge[1
+IlkOLT8BN[Joc?=Hh5JV0B2
+V>=oPAPd]Ta;i;MDDFWT0R3
+R6
+R1
+R2
+R3
+L0 386
+R4
+r1
+!s85 0
+31
+R5
+vlabkit
+!s100 OZ=45hSXCV1D=R:dG5Aa81
+IhTA]n:K:V]VSiKX4]jNRN2
+V>n^fIP3Uc9<5=^]bF[^T71
+R6
+R1
+R2
+R3
+L0 62
+R4
+r1
+!s85 0
+31
+R5
+vrs232send
+!s100 >Rl;`BkjMP2L0^N=3Q>KY3
+IZIiD:Q2]GRoB4RWn_bB6T2
+V^:4bUoj@JFN0Y;6BZfXEz1
+R6
+R1
+R2
+R3
+L0 743
+R4
+r1
+!s85 0
+31
+R5

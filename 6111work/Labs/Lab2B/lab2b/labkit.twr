@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/bin/lin64/unwrapped/trce -ise
+/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab2B/lab2b/lab2b.ise
+-intstyle ise -v 3 -s 4 -xml labkit labkit.ncd -o labkit.twr labkit.pcf -ucf
+labkit.ucf
+
+Design file:              labkit.ncd
+Physical constraint file: labkit.pcf
+Device,package,speed:     xc2v6000,bf957,-4 (PRODUCTION 1.121 2008-07-25, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock_27mhz
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+button_enter|    4.593(R)|   -2.814(R)|clock_27mhz_BUFGP |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clock_27mhz to Pad
+-----------------+------------+------------------+--------+
+                 | clk (edge) |                  | Clock  |
+Destination      |   to PAD   |Internal Clock(s) | Phase  |
+-----------------+------------+------------------+--------+
+analyzer3_data<0>|   15.921(R)|clock_27mhz_BUFGP |   0.000|
+analyzer3_data<1>|   12.367(R)|clock_27mhz_BUFGP |   0.000|
+disp_clock       |   12.135(R)|clock_27mhz_BUFGP |   0.000|
+led<1>           |   17.383(R)|clock_27mhz_BUFGP |   0.000|
+led<2>           |   11.663(R)|clock_27mhz_BUFGP |   0.000|
+led<3>           |   16.345(R)|clock_27mhz_BUFGP |   0.000|
+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock_27mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock_27mhz    |    4.897|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+------------------+---------+
+Source Pad     |Destination Pad   |  Delay  |
+---------------+------------------+---------+
+switch<0>      |analyzer3_data<8> |   13.209|
+switch<1>      |analyzer3_data<9> |   14.990|
+switch<2>      |analyzer3_data<10>|   14.057|
+switch<3>      |analyzer3_data<11>|   12.912|
+switch<4>      |analyzer3_data<12>|   15.721|
+switch<5>      |analyzer3_data<13>|   11.919|
+switch<6>      |analyzer3_data<14>|   13.089|
+switch<7>      |analyzer3_data<15>|   13.910|
+---------------+------------------+---------+
+
+
+Analysis completed Sun Sep 16 17:14:09 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 345 MB
+
+
+
