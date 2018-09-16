@@ -1,0 +1,4 @@
+verilog work "../sources/counter.v"
+verilog work "../sources/binary_to_seven_seg_decoder.v"
+verilog work "debounce.v"
+verilog work "labkit.v"
