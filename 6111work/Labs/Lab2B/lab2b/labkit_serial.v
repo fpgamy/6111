@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 ///////////////////////////////////////////////////////////////////////////////
 //
 // 6.111 FPGA Labkit -- Template Toplevel Module
@@ -765,8 +766,9 @@ module rs232send(
     reg [15:0] count;
 	 reg  [3:0] bits_to_send;
 	 reg  [7:0] data_packet;
+	 reg         latched_state;
 	 
-    assign led_debug = state;
+    assign led_debug = latched_state;
 	 
 	 // clock divider
     always @(posedge clk or posedge rst)
@@ -788,13 +790,15 @@ module rs232send(
 	 begin
 	    if (rst)
 		 begin
-		     start_send_saved <= 1'b0;
+		    start_send_saved <= 1'b0;
+			 latched_state<= 1'b0;
 		 end
 		 else
 		 begin
 		     if (start_send)
 			  begin
-			     start_send_saved <= start_send;
+			     start_send_saved <= 1'b1;
+				  latched_state    <= ~latched_state;
 			  end
 			  else if (state == STATE_SENDING)
 			  begin
@@ -809,7 +813,7 @@ module rs232send(
     begin
 	    if (rst)
 		 begin
-		    xmit_data    <= 1'b0;
+		    xmit_data    <= 1'b1;
 		    bits_to_send <= BITS_PER_PACKET;
 		    state        <= STATE_IDLE;
 			 data_packet  <= 8'b0;
