@@ -12,10 +12,25 @@ module debounce (input reset, clock, noisy,
    reg new;
 
    always @(posedge clock)
-     if (reset) begin new <= noisy; clean <= noisy; count <= 0; end
-     else if (noisy != new) begin new <= noisy; count <= 0; end
-     else if (count == 650000) clean <= new;
-     else count <= count+1;
+      if (reset)
+      begin
+         new <= noisy; 
+         clean <= noisy; 
+         count <= 0; 
+      end
+      else if (noisy != new) 
+      begin 
+         new <= noisy; 
+         count <= 0; 
+      end
+      else if (count == 650000)
+      begin
+         clean <= new;
+      end
+      else
+      begin
+         count <= count+1;
+      end
 
 endmodule
 
@@ -141,19 +156,14 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    input  ac97_bit_clock, ac97_sdata_in;
    
    output [7:0] vga_out_red, vga_out_green, vga_out_blue;
-   output vga_out_sync_b, vga_out_blank_b, vga_out_pixel_clock,
-	  vga_out_hsync, vga_out_vsync;
+   output vga_out_sync_b, vga_out_blank_b, vga_out_pixel_clock, vga_out_hsync, vga_out_vsync;
 
    output [9:0] tv_out_ycrcb;
-   output tv_out_reset_b, tv_out_clock, tv_out_i2c_clock, tv_out_i2c_data,
-	  tv_out_pal_ntsc, tv_out_hsync_b, tv_out_vsync_b, tv_out_blank_b,
-	  tv_out_subcar_reset;
+   output tv_out_reset_b, tv_out_clock, tv_out_i2c_clock, tv_out_i2c_data, tv_out_pal_ntsc, tv_out_hsync_b, tv_out_vsync_b, tv_out_blank_b, tv_out_subcar_reset;
    
    input  [19:0] tv_in_ycrcb;
-   input  tv_in_data_valid, tv_in_line_clock1, tv_in_line_clock2, tv_in_aef,
-	  tv_in_hff, tv_in_aff;
-   output tv_in_i2c_clock, tv_in_fifo_read, tv_in_fifo_clock, tv_in_iso,
-	  tv_in_reset_b, tv_in_clock;
+   input  tv_in_data_valid, tv_in_line_clock1, tv_in_line_clock2, tv_in_aef, tv_in_hff, tv_in_aff;
+   output tv_in_i2c_clock, tv_in_fifo_read, tv_in_fifo_clock, tv_in_iso, tv_in_reset_b, tv_in_clock;
    inout  tv_in_i2c_data;
         
    inout  [35:0] ram0_data;
@@ -185,8 +195,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    input  disp_data_in;
    output  disp_data_out;
    
-   input  button0, button1, button2, button3, button_enter, button_right,
-	  button_left, button_down, button_up;
+   input  button0, button1, button2, button3, button_enter, button_right, button_left, button_down, button_up;
    input  [7:0] switch;
    output [7:0] led;
 
@@ -199,8 +208,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    output systemace_ce_b, systemace_we_b, systemace_oe_b;
    input  systemace_irq, systemace_mpbrdy;
 
-   output [15:0] analyzer1_data, analyzer2_data, analyzer3_data, 
-		 analyzer4_data;
+   output [15:0] analyzer1_data, analyzer2_data, analyzer3_data, analyzer4_data;
    output analyzer1_clock, analyzer2_clock, analyzer3_clock, analyzer4_clock;
 
    ////////////////////////////////////////////////////////////////////////////
@@ -329,44 +337,93 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // use FPGA's digital clock manager to produce a
    // 65MHz clock (actually 64.8MHz)
    wire clock_65mhz_unbuf,clock_65mhz;
-   DCM vclk1(.CLKIN(clock_27mhz),.CLKFX(clock_65mhz_unbuf));
+   DCM vclk1(
+               .CLKIN(clock_27mhz),
+               .CLKFX(clock_65mhz_unbuf)
+            );
+
    // synthesis attribute CLKFX_DIVIDE of vclk1 is 10
    // synthesis attribute CLKFX_MULTIPLY of vclk1 is 24
    // synthesis attribute CLK_FEEDBACK of vclk1 is NONE
    // synthesis attribute CLKIN_PERIOD of vclk1 is 37
-   BUFG vclk2(.O(clock_65mhz),.I(clock_65mhz_unbuf));
+   BUFG vclk2(
+               .O(clock_65mhz),
+               .I(clock_65mhz_unbuf)
+            );
 
    // power-on reset generation
    wire power_on_reset;    // remain high for first 16 clocks
-   SRL16 reset_sr (.D(1'b0), .CLK(clock_65mhz), .Q(power_on_reset),
-		   .A0(1'b1), .A1(1'b1), .A2(1'b1), .A3(1'b1));
+   SRL16 reset_sr (
+                     .D(1'b0), 
+                     .CLK(clock_65mhz), 
+                     .Q(power_on_reset),
+                     .A0(1'b1), 
+                     .A1(1'b1), 
+                     .A2(1'b1), 
+                     .A3(1'b1)
+                  );
+
    defparam reset_sr.INIT = 16'hFFFF;
 
    // ENTER button is user reset
    wire reset,user_reset;
-   debounce db1(.reset(power_on_reset),.clock(clock_65mhz),.noisy(~button_enter),.clean(user_reset));
+   debounce db1(
+                  .reset(power_on_reset),
+                  .clock(clock_65mhz),
+                  .noisy(~button_enter),
+                  .clean(user_reset)
+               );
+
    assign reset = user_reset | power_on_reset;
    
    // UP and DOWN buttons for pong paddle
    wire up,down;
-   debounce db2(.reset(reset),.clock(clock_65mhz),.noisy(~button_up),.clean(up));
-   debounce db3(.reset(reset),.clock(clock_65mhz),.noisy(~button_down),.clean(down));
+   debounce db2(
+                  .reset(reset),
+                  .clock(clock_65mhz),
+                  .noisy(~button_up),
+                  .clean(up)
+               );
+
+   debounce db3(
+                  .reset(reset),
+                  .clock(clock_65mhz),
+                  .noisy(~button_down),
+                  .clean(down)
+               );
 
    // generate basic XVGA video signals
    wire [10:0] hcount;
    wire [9:0]  vcount;
    wire hsync,vsync,blank;
-   xvga xvga1(.vclock(clock_65mhz),.hcount(hcount),.vcount(vcount),
-              .hsync(hsync),.vsync(vsync),.blank(blank));
+   xvga xvga1(
+               .vclock(clock_65mhz),
+               .hcount(hcount),
+               .vcount(vcount),
+               .hsync(hsync),
+               .vsync(vsync),
+               .blank(blank)
+            );
 
    // feed XVGA signals to user's pong game
    wire [23:0] pixel;
    wire phsync,pvsync,pblank;
-   pong_game pg(.vclock(clock_65mhz),.reset(reset),
-                .up(up),.down(down),.pspeed(switch[7:4]),
-		.hcount(hcount),.vcount(vcount),
-                .hsync(hsync),.vsync(vsync),.blank(blank),
-		.phsync(phsync),.pvsync(pvsync),.pblank(pblank),.pixel(pixel));
+   pong_game pg(
+                  .vclock_in(clock_65mhz),
+                  .reset_in(reset),
+                  .up_in(up),
+                  .down_int(down),
+                  .pspeed_int(switch[7:4]),
+	               .hcount_int(hcount),
+                  .vcount_int(vcount),
+                  .hsync_int(hsync),
+                  .vsync_int(vsync),
+                  .blank_in(blank),
+                  .phsync_out(phsync),
+                  .pvsync_out(pvsync),
+                  .pblank_out(pblank),
+                  .pixel_out(pixel)
+               );
 
    // switch[1:0] selects which video generator to use:
    //  00: user's pong game
@@ -376,25 +433,30 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    wire border = (hcount==0 | hcount==1023 | vcount==0 | vcount==767);
    
    reg b,hs,vs;
-   always @(posedge clock_65mhz) begin
-      if (switch[1:0] == 2'b01) begin
-	 // 1 pixel outline of visible area (white)
-	 hs <= hsync;
-	 vs <= vsync;
-	 b <= blank;
-	 rgb <= {24{border}};
-      end else if (switch[1:0] == 2'b10) begin
-	 // color bars
-	 hs <= hsync;
-	 vs <= vsync;
-	 b <= blank;
-	 rgb <= {{8{hcount[8]}}, {8{hcount[7]}}, {8{hcount[6]}}} ;
-      end else begin
+   always @(posedge clock_65mhz) 
+   begin
+      if (switch[1:0] == 2'b01) 
+      begin
+         // 1 pixel outline of visible area (white)
+         hs <= hsync;
+         vs <= vsync;
+         b <= blank;
+      	rgb <= {24{border}};
+      end 
+      else if (switch[1:0] == 2'b10) 
+      begin         // color bars
+         hs <= hsync;
+         vs <= vsync;
+         b <= blank;
+         rgb <= {{8{hcount[8]}}, {8{hcount[7]}}, {8{hcount[6]}}} ;
+      end
+      else 
+      begin
          // default: pong
-	 hs <= phsync;
-	 vs <= pvsync;
-	 b <= pblank;
-	 rgb <= pixel;
+         hs <= phsync;
+         vs <= pvsync;
+         b <= pblank;
+         rgb <= pixel;
       end
    end
 
@@ -445,7 +507,8 @@ module xvga(input vclock,
    wire next_hblank,next_vblank;
    assign next_hblank = hreset ? 0 : hblankon ? 1 : hblank;
    assign next_vblank = vreset ? 0 : vblankon ? 1 : vblank;
-   always @(posedge vclock) begin
+   always @(posedge vclock) 
+   begin
       hcount <= hreset ? 0 : hcount + 1;
       hblank <= next_hblank;
       hsync <= hsyncon ? 0 : hsyncoff ? 1 : hsync;  // active low
@@ -465,36 +528,35 @@ endmodule
 ////////////////////////////////////////////////////////////////////////////////
 
 module pong_game (
-   input vclock,	// 65MHz clock
-   input reset,		// 1 to initialize module
-   input up,		// 1 when paddle should move up
-   input down,  	// 1 when paddle should move down
-   input [3:0] pspeed,  // puck speed in pixels/tick 
-   input [10:0] hcount,	// horizontal index of current pixel (0..1023)
-   input [9:0] 	vcount, // vertical index of current pixel (0..767)
-   input hsync,		// XVGA horizontal sync signal (active low)
-   input vsync,		// XVGA vertical sync signal (active low)
-   input blank,		// XVGA blanking (1 means output black pixel)
+   input         vclock_in, 	// 65MHz clock
+   input         reset_in,		// 1 to initialize module
+   input         up_in,		   // 1 when paddle should move up
+   input         down_in,     // 1 when paddle should move down
+   input [3:0]   pspeed_in,   // puck speed in pixels/tick 
+   input [10:0]  hcount_in,	// horizontal index of current pixel (0..1023)
+   input [9:0]   vcount_in,   // vertical index of current pixel (0..767)
+   input         hsync_in,    // XVGA horizontal sync signal (active low)
+   input         vsync_in,    // XVGA vertical sync signal (active low)
+   input         blank_in,    // XVGA blanking (1 means output black pixel)
  	
-   output phsync,	// pong game's horizontal sync
-   output pvsync,	// pong game's vertical sync
-   output pblank,	// pong game's blanking
-   output [23:0] pixel	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
+   output        phsync_out, 	// pong game's horizontal sync
+   output        pvsync_out, 	// pong game's vertical sync
+   output        pblank_out, 	// pong game's blanking
+   output [23:0] pixel_out  	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
    );
 
-   wire [2:0] checkerboard;
+   wire [2:0]    checkerboard;
 	
    // REPLACE ME! The code below just generates a color checkerboard
    // using 64 pixel by 64 pixel squares.
    
-   assign phsync = hsync;
-   assign pvsync = vsync;
-   assign pblank = blank;
-   assign checkerboard = hcount[8:6] + vcount[8:6];
+   assign phsync_out = hsync_in;
+   assign pvsync_out = vsync_in;
+   assign pblank_out = blank_in;
 
    // here we use three bits from hcount and vcount to generate the \
    // checkerboard
 
-   assign pixel = {{8{checkerboard[2]}}, {8{checkerboard[1]}}, {8{checkerboard[0]}}} ;
+   assign pixel_out = 0;//{{8{checkerboard[2]}}, {8{checkerboard[1]}}, {8{checkerboard[0]}}} ;
      
 endmodule
