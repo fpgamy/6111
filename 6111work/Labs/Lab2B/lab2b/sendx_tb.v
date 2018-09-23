@@ -67,7 +67,7 @@ module sendx_tb;
 		start_send = 1'b1;
 		#10;
 		start_send = 1'b0;
-		#1000;
+		#10;
 
 	end
       
