@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool versions: 
 // Description: 
-// toggles the seven segment counter every time button_in has a positive edger
+// toggles the seven segment counter every time button_in has a positive edge
 // Dependencies: 
 // seven_seg_out gives active low outputs from a (MSB) to g
 // Revision: 

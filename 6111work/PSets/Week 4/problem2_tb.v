@@ -41,7 +41,7 @@ module problem2_tb;
 	assign problem_d_2 = i2;
 	assign problem_d_3 = i3;
 
-	problem2 #(.SIGNED_INPUT(0)) p2a(
+	problem2 p2a(
 										.problem_a(problem_a),
 										.solution_a(solution_a),
 										.problem_b_1(problem_b_1),
@@ -59,7 +59,7 @@ module problem2_tb;
 										.solution_d(solution_d)
 									);
 
-	problem2 #(.SIGNED_INPUT(1), .NONE_OF_THEM_ARE_ONE(3)) p2b(
+	problem2 #(.NONE_OF_THEM_ARE_ONE(3)) p2b(
 										.problem_a(problem_a),
 										.solution_a(solution_a2),
 										.problem_b_1(problem_b_1),
@@ -95,7 +95,7 @@ module problem2_tb;
 		op1  = 8'b10100111;
 		op2a = 16'd456;
 		op2b = 16'd123;
-		i0 = 1;
+		i0 = 3;
 		i1 = 3;
 		i2 = 3;
 		i3 = 3;

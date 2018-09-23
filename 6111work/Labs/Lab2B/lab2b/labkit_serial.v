@@ -784,6 +784,7 @@ module rs232send(
     end
 	 
 	 // catching input with faster clock
+   // this just makes sure that the start_send signal can't be missed in the slower clock domain.
 	 always @(posedge clk or posedge rst)
 	 begin
 	    if (rst)
@@ -805,6 +806,7 @@ module rs232send(
 		      
 	 
 	 // state machine
+   // clock logic on slower clock to save dynamic power
 	 always @(posedge xmit_clk or posedge rst)
     begin
 	    if (rst)
@@ -818,26 +820,32 @@ module rs232send(
 		 begin
 			 if ((state == STATE_IDLE) & start_send_saved)
 			 begin
+         // start sending bits...
 				 bits_to_send <= BITS_PER_PACKET;
 				 state        <= STATE_SENDING;
 				 data_packet  <= data;
+         // set the data to the start bit, thus BITS_PER_PACKET = 8 + stop_bit
 		       xmit_data    <= START_BIT;
 			 end
 			 else if (state == STATE_SENDING)
 			 begin
 				 if (bits_to_send == 0)
 				 begin
+            // No more bits to send, go to idle.
 				    state        <= STATE_IDLE;
 				 end
 				 else
 				 begin
+            // we are sending a bit, so decrement
 				    bits_to_send <= bits_to_send - 1;
 					 if (bits_to_send == 1)
 					 begin
+              // last bit is stop bit
 						  xmit_data <= STOP_BIT;
 					 end
 					 else
 					 begin
+              // other bits are from shift register
 					    xmit_data   <= data_packet[0];
 						 data_packet <= data_packet >> 1;
 					 end

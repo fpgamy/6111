@@ -1,0 +1,50 @@
+$date
+	Tue Sep 18 09:04:28 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module problem1_tb $end
+$var wire 8 ! byte0 [7:0] $end
+$var wire 8 " byte1 [7:0] $end
+$var wire 8 # byte2 [7:0] $end
+$var wire 8 $ byte3 [7:0] $end
+$var wire 8 % out3 [7:0] $end
+$var wire 8 & out2 [7:0] $end
+$var wire 8 ' out1 [7:0] $end
+$var wire 8 ( out0 [7:0] $end
+$scope module i2 $end
+$var wire 8 ) byte0 [7:0] $end
+$var wire 8 * byte1 [7:0] $end
+$var wire 8 + byte2 [7:0] $end
+$var wire 8 , byte3 [7:0] $end
+$var wire 8 - out3 [7:0] $end
+$var wire 8 . out2 [7:0] $end
+$var wire 8 / out1 [7:0] $end
+$var wire 8 0 out0 [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11001000 0
+b111100 /
+b0 .
+b100000 -
+b11 ,
+b10001100 +
+b1110 *
+b0 )
+b11001000 (
+b111100 '
+b0 &
+b100000 %
+b11 $
+b10001100 #
+b1110 "
+b0 !
+$end
+#10

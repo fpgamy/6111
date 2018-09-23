@@ -13,7 +13,7 @@ module problem1_tb;
 	assign byte2 = 8'h8C;
 	assign byte3 = 8'h03;
 
-	interleaver i1 (
+	main i2 (
 						.byte0(byte0),
 						.byte1(byte1),
 						.byte2(byte2),

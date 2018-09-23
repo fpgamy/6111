@@ -1,4 +1,4 @@
-module problem2 #(parameter SIGNED_INPUT = 0, parameter NONE_OF_THEM_ARE_ONE = 0) (
+module problem2 #(parameter NONE_OF_THEM_ARE_ONE = 0) (
 	input      [7:0] problem_a,
 	output     [3:0] solution_a,
 
@@ -19,16 +19,7 @@ module problem2 #(parameter SIGNED_INPUT = 0, parameter NONE_OF_THEM_ARE_ONE = 0
 	output reg [1:0] solution_d
 	);
 	
-	generate
-		if (SIGNED_INPUT == 0)
-		begin
-			assign  solution_a = (problem_a >> 4);
-		end
-		else 
-		begin
-			assign  solution_a = (problem_a >>> 4);
-		end
-	endgenerate
+	assign solution_a = (problem_a / 16);
 
 	assign solution_b = problem_b_1 + problem_b_2;
 

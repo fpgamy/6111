@@ -340,9 +340,12 @@ module labkit (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 														.tick_in   (debounced_button),
 														.reset_in  (power_on_reset),
 														.count_out (bin_to_seven_seg)
-													 );												
+													 );					
+   
+   // Assign to LEDs for debugging
+   assign led = {1'b1, 1'b1, 1'b1, 1'b1, ~bin_to_seven_seg};
+   
 	// Assign the output of the counter to the hex display
-	assign led = {1'b1, 1'b1, 1'b1, 1'b1, ~bin_to_seven_seg};
 	binary_to_seven_seg_decoder seven_seg(
 													.count_in      (bin_to_seven_seg),
 													.seven_seg_out (seven_seg_output),
