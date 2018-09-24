@@ -2,8 +2,11 @@ NUM_USER_FILES
 2
 s
 user_file_1
-lab3.v
+labkit.ucf
 s
 user_file_2
-labkit.ucf
+sources/lab3.v
+s
+user_file_3
+sources/lab3.v
 s

@@ -5,22 +5,22 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Sun Sep 23 14:57:33 2018">
+  <application stringID="par" timeStamp="Sun Sep 23 22:07:00 2018">
     <task stringID="PAR_DEVICE_UTILIZATION">
       <section stringID="PAR_DEVICE_UTLIZATION">
-        <item AVAILABLE="684" dataType="int" stringID="PAR_EXTERNAL_IOB" value="576">
-          <item AVAILABLE="576" dataType="int" stringID="PAR_LOC_IOB" value="576"/>
+        <item AVAILABLE="684" dataType="int" stringID="PAR_EXTERNAL_IOB" value="250">
+          <item AVAILABLE="250" dataType="int" stringID="PAR_LOC_IOB" value="0"/>
         </item>
       </section>
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="9 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="9 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="15 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="15 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="16 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="12 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="21 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="18 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -34,7 +34,7 @@
       <section stringID="PAR_UNROUTES_REPORT">
         <item dataType="int" stringID="PAR_UNROUTED_NETS" value="0"/>
         <item dataType="int" stringID="PAR_TOTAL_SOURCELESS_NETS" value="0"/>
-        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="330"/>
+        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="0"/>
       </section>
     </task>
   </application>

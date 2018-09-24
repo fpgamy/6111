@@ -1,4 +1,4 @@
-`default_nettype none
+none
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Pushbutton Debounce Module (video version - 24 bits)  
@@ -412,12 +412,12 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
                   .vclock_in(clock_65mhz),
                   .reset_in(reset),
                   .up_in(up),
-                  .down_int(down),
-                  .pspeed_int(switch[7:4]),
-	               .hcount_int(hcount),
-                  .vcount_int(vcount),
-                  .hsync_int(hsync),
-                  .vsync_int(vsync),
+                  .down_in(down),
+                  .pspeed_in(switch[7:4]),
+	               .hcount_in(hcount),
+                  .vcount_in(vcount),
+                  .hsync_in(hsync),
+                  .vsync_in(vsync),
                   .blank_in(blank),
                   .phsync_out(phsync),
                   .pvsync_out(pvsync),
@@ -527,6 +527,16 @@ endmodule
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+`define INSIDE(pixel_x, pixel_y, region_x, region_y, region_w, region_h) \
+			(((pixel_x > region_x) & (pixel_x < (region_x + region_w))) & ((pixel_y > region_y) & (pixel_y < (region_y + region_h))))
+
+`define DISTSQ(x1, x2, y1, y2) \
+			((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1))
+			
+`define INSIDERADIUS(x1, x2, y1, y2, r) \
+			((r*r) < DISTSQ(x1, x2, y1, y2)) 
+			
+
 module pong_game (
    input         vclock_in, 	// 65MHz clock
    input         reset_in,		// 1 to initialize module
@@ -542,10 +552,20 @@ module pong_game (
    output        phsync_out, 	// pong game's horizontal sync
    output        pvsync_out, 	// pong game's vertical sync
    output        pblank_out, 	// pong game's blanking
-   output [23:0] pixel_out  	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
+   output reg [23:0] pixel_out  	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
    );
-
-   wire [2:0]    checkerboard;
+	
+	localparam PADDLESTART_X = 100;
+	localparam PADDLESTART_Y = 300;
+	localparam PADDLE_WIDTH  = 10;
+	localparam PADDLE_HEIGHT = 168;
+	localparam SCREEN_WIDTH  = 1023;
+	localparam SCREEN_HEIGHT = 767;
+	
+	localparam PUCK_RADIUS   = 10;
+	localparam PUCK_STARTX   = SCREEN_WIDTH/2;
+	localparam PUCK_STARTY   = SCREEN_HEIGHT+1/2;
+	
 	
    // REPLACE ME! The code below just generates a color checkerboard
    // using 64 pixel by 64 pixel squares.
@@ -553,10 +573,69 @@ module pong_game (
    assign phsync_out = hsync_in;
    assign pvsync_out = vsync_in;
    assign pblank_out = blank_in;
+	
+	reg[9:0] paddle_x = PADDLESTART_X;
+	reg[9:0] paddle_y = PADDLESTART_Y;
+	
+	reg[9:0] puck_x = PUCK_STARTX;
+	reg[9:0] puck_y = PUCK_STARTY;
+	
+	// angle which the puck is travelling
+	reg [8:0] angle = 0;
+	
+	reg[18:0] move_counter = 19'h7FFFF;
 
    // here we use three bits from hcount and vcount to generate the \
    // checkerboard
-
-   assign pixel_out = 0;//{{8{checkerboard[2]}}, {8{checkerboard[1]}}, {8{checkerboard[0]}}} ;
+	always @(posedge vclock_in or posedge reset_in)
+	begin
+		if (reset_in)
+		begin
+			paddle_x       <= PADDLESTART_X;
+			paddle_y       <= PADDLESTART_Y;
+			move_counter <= 19'h7FFFF;
+			
+			puck_x = PUCK_STARTX;
+			puck_y = PUCK_STARTY;
+		end
+		else
+		begin
+			// Puck logic
+			if (up_in)
+			begin
+				if ((move_counter == 0) & `INSIDE(paddle_x, paddle_y-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+				begin
+					paddle_y <= paddle_y - pspeed_in;
+					move_counter <= 19'h7FFFF;
+				end
+				else
+				begin
+					move_counter <= move_counter - 1;
+				end
+			end
+			else if (down_in)
+			begin
+				if (move_counter == 0 & `INSIDE(paddle_x, paddle_y+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+				begin
+					paddle_y <= paddle_y + pspeed_in;
+					move_counter <= 19'h7FFFF;
+				end
+				else
+				begin
+					move_counter <= move_counter - 1;
+				end
+			end
+			if (`INSIDE(hcount_in, vcount_in, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+			begin
+				pixel_out <= {8'hFF, 8'h00, 8'h00};
+			end
+			else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
+				pixel_out <= {8'hFF, 8'hFF, 8'hFF};
+			else
+			begin
+				pixel_out <= 24'b0;
+			end
+		end
+	end
      
 endmodule

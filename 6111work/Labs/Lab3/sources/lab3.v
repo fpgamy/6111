@@ -1,4 +1,3 @@
-`default_nettype none
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Pushbutton Debounce Module (video version - 24 bits)  
@@ -12,10 +11,25 @@ module debounce (input reset, clock, noisy,
    reg new;
 
    always @(posedge clock)
-     if (reset) begin new <= noisy; clean <= noisy; count <= 0; end
-     else if (noisy != new) begin new <= noisy; count <= 0; end
-     else if (count == 650000) clean <= new;
-     else count <= count+1;
+      if (reset)
+      begin
+         new <= noisy; 
+         clean <= noisy; 
+         count <= 0; 
+      end
+      else if (noisy != new) 
+      begin 
+         new <= noisy; 
+         count <= 0; 
+      end
+      else if (count == 650000)
+      begin
+         clean <= new;
+      end
+      else
+      begin
+         count <= count+1;
+      end
 
 endmodule
 
@@ -141,19 +155,14 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    input  ac97_bit_clock, ac97_sdata_in;
    
    output [7:0] vga_out_red, vga_out_green, vga_out_blue;
-   output vga_out_sync_b, vga_out_blank_b, vga_out_pixel_clock,
-	  vga_out_hsync, vga_out_vsync;
+   output vga_out_sync_b, vga_out_blank_b, vga_out_pixel_clock, vga_out_hsync, vga_out_vsync;
 
    output [9:0] tv_out_ycrcb;
-   output tv_out_reset_b, tv_out_clock, tv_out_i2c_clock, tv_out_i2c_data,
-	  tv_out_pal_ntsc, tv_out_hsync_b, tv_out_vsync_b, tv_out_blank_b,
-	  tv_out_subcar_reset;
+   output tv_out_reset_b, tv_out_clock, tv_out_i2c_clock, tv_out_i2c_data, tv_out_pal_ntsc, tv_out_hsync_b, tv_out_vsync_b, tv_out_blank_b, tv_out_subcar_reset;
    
    input  [19:0] tv_in_ycrcb;
-   input  tv_in_data_valid, tv_in_line_clock1, tv_in_line_clock2, tv_in_aef,
-	  tv_in_hff, tv_in_aff;
-   output tv_in_i2c_clock, tv_in_fifo_read, tv_in_fifo_clock, tv_in_iso,
-	  tv_in_reset_b, tv_in_clock;
+   input  tv_in_data_valid, tv_in_line_clock1, tv_in_line_clock2, tv_in_aef, tv_in_hff, tv_in_aff;
+   output tv_in_i2c_clock, tv_in_fifo_read, tv_in_fifo_clock, tv_in_iso, tv_in_reset_b, tv_in_clock;
    inout  tv_in_i2c_data;
         
    inout  [35:0] ram0_data;
@@ -185,8 +194,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    input  disp_data_in;
    output  disp_data_out;
    
-   input  button0, button1, button2, button3, button_enter, button_right,
-	  button_left, button_down, button_up;
+   input  button0, button1, button2, button3, button_enter, button_right, button_left, button_down, button_up;
    input  [7:0] switch;
    output [7:0] led;
 
@@ -199,8 +207,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    output systemace_ce_b, systemace_we_b, systemace_oe_b;
    input  systemace_irq, systemace_mpbrdy;
 
-   output [15:0] analyzer1_data, analyzer2_data, analyzer3_data, 
-		 analyzer4_data;
+   output [15:0] analyzer1_data, analyzer2_data, analyzer3_data, analyzer4_data;
    output analyzer1_clock, analyzer2_clock, analyzer3_clock, analyzer4_clock;
 
    ////////////////////////////////////////////////////////////////////////////
@@ -329,44 +336,93 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // use FPGA's digital clock manager to produce a
    // 65MHz clock (actually 64.8MHz)
    wire clock_65mhz_unbuf,clock_65mhz;
-   DCM vclk1(.CLKIN(clock_27mhz),.CLKFX(clock_65mhz_unbuf));
+   DCM vclk1(
+               .CLKIN(clock_27mhz),
+               .CLKFX(clock_65mhz_unbuf)
+            );
+
    // synthesis attribute CLKFX_DIVIDE of vclk1 is 10
    // synthesis attribute CLKFX_MULTIPLY of vclk1 is 24
    // synthesis attribute CLK_FEEDBACK of vclk1 is NONE
    // synthesis attribute CLKIN_PERIOD of vclk1 is 37
-   BUFG vclk2(.O(clock_65mhz),.I(clock_65mhz_unbuf));
+   BUFG vclk2(
+               .O(clock_65mhz),
+               .I(clock_65mhz_unbuf)
+            );
 
    // power-on reset generation
    wire power_on_reset;    // remain high for first 16 clocks
-   SRL16 reset_sr (.D(1'b0), .CLK(clock_65mhz), .Q(power_on_reset),
-		   .A0(1'b1), .A1(1'b1), .A2(1'b1), .A3(1'b1));
+   SRL16 reset_sr (
+                     .D(1'b0), 
+                     .CLK(clock_65mhz), 
+                     .Q(power_on_reset),
+                     .A0(1'b1), 
+                     .A1(1'b1), 
+                     .A2(1'b1), 
+                     .A3(1'b1)
+                  );
+
    defparam reset_sr.INIT = 16'hFFFF;
 
    // ENTER button is user reset
    wire reset,user_reset;
-   debounce db1(.reset(power_on_reset),.clock(clock_65mhz),.noisy(~button_enter),.clean(user_reset));
+   debounce db1(
+                  .reset(power_on_reset),
+                  .clock(clock_65mhz),
+                  .noisy(~button_enter),
+                  .clean(user_reset)
+               );
+
    assign reset = user_reset | power_on_reset;
    
    // UP and DOWN buttons for pong paddle
    wire up,down;
-   debounce db2(.reset(reset),.clock(clock_65mhz),.noisy(~button_up),.clean(up));
-   debounce db3(.reset(reset),.clock(clock_65mhz),.noisy(~button_down),.clean(down));
+   debounce db2(
+                  .reset(reset),
+                  .clock(clock_65mhz),
+                  .noisy(~button_up),
+                  .clean(up)
+               );
+
+   debounce db3(
+                  .reset(reset),
+                  .clock(clock_65mhz),
+                  .noisy(~button_down),
+                  .clean(down)
+               );
 
    // generate basic XVGA video signals
    wire [10:0] hcount;
    wire [9:0]  vcount;
    wire hsync,vsync,blank;
-   xvga xvga1(.vclock(clock_65mhz),.hcount(hcount),.vcount(vcount),
-              .hsync(hsync),.vsync(vsync),.blank(blank));
+   xvga xvga1(
+               .vclock(clock_65mhz),
+               .hcount(hcount),
+               .vcount(vcount),
+               .hsync(hsync),
+               .vsync(vsync),
+               .blank(blank)
+            );
 
    // feed XVGA signals to user's pong game
    wire [23:0] pixel;
    wire phsync,pvsync,pblank;
-   pong_game pg(.vclock(clock_65mhz),.reset(reset),
-                .up(up),.down(down),.pspeed(switch[7:4]),
-		.hcount(hcount),.vcount(vcount),
-                .hsync(hsync),.vsync(vsync),.blank(blank),
-		.phsync(phsync),.pvsync(pvsync),.pblank(pblank),.pixel(pixel));
+   pong_game pg(
+                  .vclock_in(clock_65mhz),
+                  .reset_in(reset),
+                  .up_in(up),
+                  .down_in(down),
+                  .pspeed_in(switch[7:4]),
+	               .hcount_in(hcount),
+                  .vcount_in(vcount),
+                  .hsync_in(hsync),
+                  .vsync_in(vsync),
+                  .blank_in(blank),
+                  .phsync_out(phsync),
+                  .pvsync_out(pvsync),
+                  .pblank_out(pblank),
+                  .pixel_out(pixel)
+               );
 
    // switch[1:0] selects which video generator to use:
    //  00: user's pong game
@@ -376,25 +432,30 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    wire border = (hcount==0 | hcount==1023 | vcount==0 | vcount==767);
    
    reg b,hs,vs;
-   always @(posedge clock_65mhz) begin
-      if (switch[1:0] == 2'b01) begin
-	 // 1 pixel outline of visible area (white)
-	 hs <= hsync;
-	 vs <= vsync;
-	 b <= blank;
-	 rgb <= {24{border}};
-      end else if (switch[1:0] == 2'b10) begin
-	 // color bars
-	 hs <= hsync;
-	 vs <= vsync;
-	 b <= blank;
-	 rgb <= {{8{hcount[8]}}, {8{hcount[7]}}, {8{hcount[6]}}} ;
-      end else begin
+   always @(posedge clock_65mhz) 
+   begin
+      if (switch[1:0] == 2'b01) 
+      begin
+         // 1 pixel outline of visible area (white)
+         hs <= hsync;
+         vs <= vsync;
+         b <= blank;
+      	rgb <= {24{border}};
+      end 
+      else if (switch[1:0] == 2'b10) 
+      begin         // color bars
+         hs <= hsync;
+         vs <= vsync;
+         b <= blank;
+         rgb <= {{8{hcount[8]}}, {8{hcount[7]}}, {8{hcount[6]}}} ;
+      end
+      else 
+      begin
          // default: pong
-	 hs <= phsync;
-	 vs <= pvsync;
-	 b <= pblank;
-	 rgb <= pixel;
+         hs <= phsync;
+         vs <= pvsync;
+         b <= pblank;
+         rgb <= pixel;
       end
    end
 
@@ -445,7 +506,8 @@ module xvga(input vclock,
    wire next_hblank,next_vblank;
    assign next_hblank = hreset ? 0 : hblankon ? 1 : hblank;
    assign next_vblank = vreset ? 0 : vblankon ? 1 : vblank;
-   always @(posedge vclock) begin
+   always @(posedge vclock) 
+   begin
       hcount <= hreset ? 0 : hcount + 1;
       hblank <= next_hblank;
       hsync <= hsyncon ? 0 : hsyncoff ? 1 : hsync;  // active low
@@ -464,37 +526,355 @@ endmodule
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-module pong_game (
-   input vclock,	// 65MHz clock
-   input reset,		// 1 to initialize module
-   input up,		// 1 when paddle should move up
-   input down,  	// 1 when paddle should move down
-   input [3:0] pspeed,  // puck speed in pixels/tick 
-   input [10:0] hcount,	// horizontal index of current pixel (0..1023)
-   input [9:0] 	vcount, // vertical index of current pixel (0..767)
-   input hsync,		// XVGA horizontal sync signal (active low)
-   input vsync,		// XVGA vertical sync signal (active low)
-   input blank,		// XVGA blanking (1 means output black pixel)
- 	
-   output phsync,	// pong game's horizontal sync
-   output pvsync,	// pong game's vertical sync
-   output pblank,	// pong game's blanking
-   output [23:0] pixel	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
-   );
+`define INSIDE(pixel_x, pixel_y, region_x, region_y, region_w, region_h) \
+			(((pixel_x > region_x) & (pixel_x < (region_x + region_w))) & ((pixel_y > region_y) & (pixel_y < (region_y + region_h))))
 
-   wire [2:0] checkerboard;
+`define DISTSQ(x1, x2, y1, y2) \
+			((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1))
+			
+`define INSIDERADIUS(x1, x2, y1, y2, r) \
+			((r*r) > `DISTSQ(x1, x2, y1, y2)) 
+
+
+
+module pong_game (
+   input         vclock_in, 	// 65MHz clock
+   input         reset_in,		// 1 to initialize module
+   input         up_in,		   // 1 when paddle should move up
+   input         down_in,     // 1 when paddle should move down
+   input [3:0]   pspeed_in,   // puck speed in pixels/tick 
+   input [10:0]  hcount_in,	// horizontal index of current pixel (0..1023)
+   input [9:0]   vcount_in,   // vertical index of current pixel (0..767)
+   input         hsync_in,    // XVGA horizontal sync signal (active low)
+   input         vsync_in,    // XVGA vertical sync signal (active low)
+   input         blank_in,    // XVGA blanking (1 means output black pixel)
+ 	
+   output        phsync_out, 	// pong game's horizontal sync
+   output        pvsync_out, 	// pong game's vertical sync
+   output        pblank_out, 	// pong game's blanking
+   output reg [23:0] pixel_out  	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
+   );
+	
+	localparam PADDLESTART_X = 100;
+	localparam PADDLESTART_Y = 300;
+	localparam PADDLE_WIDTH  = 10;
+	localparam PADDLE_HEIGHT = 168;
+	localparam SCREEN_WIDTH  = 1023;
+	localparam SCREEN_HEIGHT = 767;
+	
+	localparam PUCK_RADIUS   = 10;
+	localparam PUCK_STARTX   = SCREEN_WIDTH/2;
+	localparam PUCK_STARTY   = (SCREEN_HEIGHT+1)/2;
+	
 	
    // REPLACE ME! The code below just generates a color checkerboard
    // using 64 pixel by 64 pixel squares.
    
-   assign phsync = hsync;
-   assign pvsync = vsync;
-   assign pblank = blank;
-   assign checkerboard = hcount[8:6] + vcount[8:6];
-
+   assign phsync_out = hsync_in;
+   assign pvsync_out = vsync_in;
+   assign pblank_out = blank_in;
+	
+	reg[9:0] paddle_x = PADDLESTART_X;
+	reg[9:0] paddle_y = PADDLESTART_Y;
+	
+	reg[9:0] puck_x = PUCK_STARTX;
+	reg[9:0] puck_y = PUCK_STARTY;
+	
+	reg[9:0] paddle_x_next = PADDLESTART_X;
+	reg[9:0] paddle_y_next = PADDLESTART_Y;
+	
+	reg[9:0] puck_x_next = PUCK_STARTX;
+	reg[9:0] puck_y_next = PUCK_STARTY;
+	
+	// angle which the puck is travelling
+	reg [8:0]  angle = 0;
+	
+	reg [18:0] move_counter = 19'h7FFFF;
+	reg [18:0] puck_counter = 19'h7FFFF;
+	
+	wire [3:0]  puck_v_speed;
+	wire [3:0]  puck_h_speed;
+	
+	// 90 >> 7 is approx 1/sqrt(2)
+	assign puck_v_speed = (pspeed_in*90) >> 7;
+	assign puck_h_speed = (pspeed_in*90) >> 7;
+			
+	reg         down  = 0;
+	reg         right = 0;
+	reg         had_collision = 0;
+	
    // here we use three bits from hcount and vcount to generate the \
    // checkerboard
+	always @(posedge vclock_in or posedge reset_in)
+	begin
+		if (reset_in)
+		begin
+			paddle_x       <= PADDLESTART_X;
+			paddle_y       <= PADDLESTART_Y;
+			move_counter <= 19'h7FFFF;
+			puck_counter <= 19'h7FFFF;
+			
+			puck_x <= PUCK_STARTX;
+			puck_y <= PUCK_STARTY;
+			
+			puck_x_next   <= PUCK_STARTX;
+			puck_y_next   <= PUCK_STARTY;
+			paddle_x_next <= PADDLESTART_X;
+			paddle_y_next <= PADDLESTART_Y;
+			had_collision <= 0;
+		end
+		else
+		begin		
+			// Paddle logic
+			if (up_in)
+			begin
+				if ((move_counter == 0) & `INSIDE(paddle_x_next, paddle_y_next-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+				begin
+					paddle_y_next <= paddle_y - pspeed_in;
+					move_counter <= 19'h7FFFF;
+				end
+				else
+				begin
+					move_counter <= move_counter - 1;
+				end
+			end
+			else if (down_in)
+			begin
+				if (move_counter == 0 & `INSIDE(paddle_x_next, paddle_y_next+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+				begin
+					paddle_y_next <= paddle_y + pspeed_in;
+					move_counter <= 19'h7FFFF;
+				end
+				else
+				begin
+					move_counter <= move_counter - 1;
+				end
+			end
+			
+			paddle_x <= paddle_x_next;
+			paddle_y <= paddle_y_next;
+			puck_x <= puck_x_next;
+			puck_y <= puck_y_next;
+			// Puck logic
+			if (puck_counter == 0)
+			begin
+				puck_counter <= 19'h7FFFF;
+				// did the puck touch any of the vertical sides of the paddle?
+				// did the puck touch any of the horizontal sides of the paddle?
+				// is the corners in of the paddle inside the puck?
+				if (~had_collision & ( `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS)
+					  | `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y, puck_y_next, PUCK_RADIUS)
+					  | `INSIDERADIUS(paddle_x, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS)
+					  | `INSIDERADIUS(paddle_x, puck_x_next, paddle_y, puck_y_next, PUCK_RADIUS) 
+					 ))
+				begin
+					had_collision <= 1;
+					right <= ~right;
+					down  <= ~down;
+				end
+				else if (~had_collision & `INSIDE(puck_x_next-PUCK_RADIUS, puck_y_next, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+				begin
+					had_collision <= 1;
+					right        <= 1;
+				end
+				else if (~had_collision & `INSIDE(puck_x_next+PUCK_RADIUS, puck_y_next, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+				begin
+					had_collision <= 1;
+					right        <= 0; 
+				end
+				else if (~had_collision & `INSIDE(puck_x_next, puck_y_next-PUCK_RADIUS, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+				begin
+					had_collision <= 1;
+					down          <= 1;
+				end
+				else if (~had_collision & `INSIDE(puck_x_next, puck_y_next+PUCK_RADIUS, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+				begin
+					had_collision <= 1;
+					down        <= 0;
+				end
+				else // not hitting a corner
+				begin
+					had_collision <= 0;
+					if (right)
+					begin
+						if ((puck_x_next + PUCK_RADIUS) > SCREEN_WIDTH)
+						begin
+							right  <= 0;
+							puck_x_next <= puck_x - puck_h_speed;
+						end
+						else
+						begin
+							puck_x_next <= puck_x + puck_h_speed;
+						end
+					end
+					else
+					begin
+						if (puck_x_next < PUCK_RADIUS)
+						begin
+							right  <= 1;
+							puck_x_next <= puck_x + puck_h_speed;
+						end
+						else
+						begin
+							puck_x_next <= puck_x - puck_h_speed;
+						end
+					end
+					
+					if (down)
+					begin
+						if ((puck_y_next + PUCK_RADIUS) > SCREEN_HEIGHT)
+						begin
+							down  <= 0;
+							puck_y_next <= puck_y - puck_v_speed;
+						end
+						else
+						begin
+							puck_y_next <= puck_y + puck_v_speed;
+						end
+					end
+					else
+					begin
+						if (puck_y_next < PUCK_RADIUS)
+						begin
+							down   <= 1;
+							puck_y_next <= puck_y + puck_v_speed;
+						end
+						else
+						begin
+							puck_y_next <= puck_y - puck_v_speed;
+						end
+					end
+				end
+			end
+			else
+			begin
+				puck_counter <= puck_counter - 1;
+			end
+			
+			if (`INSIDE(hcount_in, vcount_in, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+			begin
+				pixel_out <= {8'hFF, 8'h00, 8'h00};
+			end
+			else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
+				pixel_out <= {8'hFF, 8'hFF, 8'hFF};
+			else
+			begin
+				pixel_out <= 24'b0;
+			end
+		end
+	end
+//
+//////////////////////////////////////////////////////////////////////////////////
+////
+//// sine_lookup: used to caluclate angles and stuff
+////
+//////////////////////////////////////////////////////////////////////////////////
+//function signed [7:0] sine_lookup;
+//	input [8:0] theta_in;
+//	begin
+//		if ((theta_in + 90) > 360)
+//		begin
+//			sine_lookup = cos_lookup(theta_in - 270);
+//		end
+//		else
+//		begin
+//			sine_lookup = cos_lookup(theta_in + 90);
+//		end
+//	end
+//endfunction
+//
+//////////////////////////////////////////////////////////////////////////////////
+////
+//// cosine_lookup: used to caluclate angles and stuff
+////
+//////////////////////////////////////////////////////////////////////////////////
+//function signed [7:0] cos_lookup;
+//	input [8:0] theta_in;
+//	
+//	reg   [7:0] theta_temp;
+//	reg   [6:0] theta;
+//	reg          invert;
+//	
+//	reg signed [7:0] cos_temp;
+//	begin
+//		if (theta_in > 180)
+//		begin
+//			theta_temp = 360 - theta_in;
+//		end
+//		else
+//		begin
+//			theta_temp = theta_in[7:0];
+//		end
+//		
+//		if (theta_temp > 90)
+//		begin
+//			invert = 1'b1;
+//			theta  = 180 - theta_temp;
+//		end
+//		else
+//		begin
+//			invert = 1'b0;
+//			theta  = theta_temp[6:0];
+//		end
+//		
+//		if (theta < 10)
+//		begin
+//			cos_temp = 127;
+//		end
+//		else if (theta < 20)
+//		begin
+//			cos_temp = 120;
+//		end
+//		else if (theta < 30)
+//		begin
+//			cos_temp = 111;
+//		end
+//		else if (theta < 40)
+//		begin
+//			cos_temp = 98;
+//		end
+//		else if (theta < 50)
+//		begin
+//			cos_temp = 82;
+//		end
+//		else if (theta < 60)
+//		begin
+//			cos_temp = 64;
+//		end
+//		else if (theta < 65)
+//		begin
+//			cos_temp = 54;
+//		end
+//		else if (theta < 70)
+//		begin
+//			cos_temp = 44;
+//		end
+//		else if (theta < 75)
+//		begin
+//			cos_temp = 33;
+//		end
+//		else if (theta < 80)
+//		begin
+//			cos_temp = 22;
+//		end
+//		else if (theta < 85)
+//		begin
+//			cos_temp = 11;
+//		end
+//		else if (theta < 90)
+//		begin
+//			cos_temp = 0;
+//		end
+//		
+//		if (invert)
+//		begin
+//			cos_lookup = -cos_temp;
+//		end
+//		else
+//		begin
+//			cos_lookup = cos_temp;
+//		end
+//	end
+//endfunction
 
-   assign pixel = {{8{checkerboard[2]}}, {8{checkerboard[1]}}, {8{checkerboard[0]}}} ;
-     
 endmodule
