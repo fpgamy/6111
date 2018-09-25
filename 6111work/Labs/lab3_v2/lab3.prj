@@ -1,0 +1,3 @@
+verilog work "./image_ds.v"
+verilog work "./colormap_ds.v"
+verilog work "lab3.v"

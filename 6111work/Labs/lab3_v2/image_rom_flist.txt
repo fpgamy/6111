@@ -1,0 +1,13 @@
+# Output products list for <image_rom>
+image_rom.asy
+image_rom.mif
+image_rom.ngc
+image_rom.sym
+image_rom.v
+image_rom.veo
+image_rom.vhd
+image_rom.vho
+image_rom.xco
+image_rom_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+image_rom_flist.txt
+image_rom_xmdf.tcl

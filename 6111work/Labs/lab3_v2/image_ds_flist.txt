@@ -1,0 +1,13 @@
+# Output products list for <image_ds>
+image_ds.asy
+image_ds.mif
+image_ds.ngc
+image_ds.sym
+image_ds.v
+image_ds.veo
+image_ds.vhd
+image_ds.vho
+image_ds.xco
+image_ds_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+image_ds_flist.txt
+image_ds_xmdf.tcl

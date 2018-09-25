@@ -1,8 +1,8 @@
 MO display_string NULL sources/lab3.v vlg18/display__string.bin 1537754345
 MO ascii2dots NULL sources/lab3.v vlg21/ascii2dots.bin 1537754345
-MO xvga NULL sources/lab3.v vlg02/xvga.bin 1537754802
+MO xvga NULL sources/lab3.v vlg02/xvga.bin 1537896585
 MO number_to_ascii NULL sources/lab3.v vlg13/number__to__ascii.bin 1537754345
-MO lab3 NULL sources/lab3.v vlg52/lab3.bin 1537754802
+MO lab3 NULL sources/lab3.v vlg52/lab3.bin 1537896585
 MO bin_to_ascii NULL sources/lab3.v vlg2F/bin__to__ascii.bin 1537754345
-MO pong_game NULL sources/lab3.v vlg5D/pong__game.bin 1537754802
-MO debounce NULL sources/lab3.v vlg1D/debounce.bin 1537754802
+MO pong_game NULL sources/lab3.v vlg5D/pong__game.bin 1537896585
+MO debounce NULL sources/lab3.v vlg1D/debounce.bin 1537896585

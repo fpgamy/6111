@@ -1,0 +1,6 @@
+MO xvga NULL lab3.v vlg02/xvga.bin 1537917570
+MO lab3 NULL lab3.v vlg52/lab3.bin 1537917570
+MO pong_game NULL lab3.v vlg5D/pong__game.bin 1537917570
+MO debounce NULL lab3.v vlg1D/debounce.bin 1537917570
+MO colormap_ds NULL ./colormap_ds.v vlg47/colormap__ds.bin 1537917570
+MO image_ds NULL ./image_ds.v vlg55/image__ds.bin 1537917570
