@@ -5,14 +5,14 @@ Parameter TMPDIR set to /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111w
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/lab3_v2/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: lab3.prj
@@ -109,11 +109,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "./image_ds.v" in library work
-Compiling verilog file "./colormap_ds.v" in library work
-Module <image_ds> compiled
+Compiling verilog file "./red_rom.v" in library work
+Compiling verilog file "./image_rom.v" in library work
+Module <red_rom> compiled
+Compiling verilog file "./blue_rom.v" in library work
+Module <image_rom> compiled
 Compiling verilog file "lab3.v" in library work
-Module <colormap_ds> compiled
+Module <blue_rom> compiled
 Module <debounce> compiled
 Module <lab3> compiled
 Module <xvga> compiled
@@ -132,20 +134,20 @@ Analyzing hierarchy for module <debounce> in library <work>.
 Analyzing hierarchy for module <xvga> in library <work>.
 
 Analyzing hierarchy for module <pong_game> in library <work> with parameters.
-	PADDLESTART_X = "00000000000000000000000011111010"
+	PADDLESTART_X = "00000000000000000000000100110110"
 	PADDLESTART_Y = "00000000000000000000000100101100"
 	PADDLE_HEIGHT = "00000000000000000000000010101000"
 	PADDLE_WIDTH = "00000000000000000000000000001010"
-	PUCK_RADIUS = "00000000000000000000000001111000"
+	PUCK_RADIUS = "00000000000000000000000010010110"
 	PUCK_STARTX = "00000000000000000000000111111111"
 	PUCK_STARTY = "00000000000000000000000110000000"
 	SCREEN_HEIGHT = "00000000000000000000001011111111"
 	SCREEN_WIDTH = "00000000000000000000001111111111"
 
-WARNING:Xst:2591 - "lab3.v" line 339: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "lab3.v" line 339: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "lab3.v" line 339: attribute on instance <CLKIN_PERIOD> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "lab3.v" line 339: attribute on instance <CLK_FEEDBACK> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "lab3.v" line 340: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "lab3.v" line 340: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "lab3.v" line 340: attribute on instance <CLKIN_PERIOD> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "lab3.v" line 340: attribute on instance <CLK_FEEDBACK> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -177,11 +179,11 @@ Analyzing module <xvga> in library <work>.
 Module <xvga> is correct for synthesis.
  
 Analyzing module <pong_game> in library <work>.
-	PADDLESTART_X = 32'sb00000000000000000000000011111010
+	PADDLESTART_X = 32'sb00000000000000000000000100110110
 	PADDLESTART_Y = 32'sb00000000000000000000000100101100
 	PADDLE_HEIGHT = 32'sb00000000000000000000000010101000
 	PADDLE_WIDTH = 32'sb00000000000000000000000000001010
-	PUCK_RADIUS = 32'sb00000000000000000000000001111000
+	PUCK_RADIUS = 32'sb00000000000000000000000010010110
 	PUCK_STARTX = 32'sb00000000000000000000000111111111
 	PUCK_STARTY = 32'sb00000000000000000000000110000000
 	SCREEN_HEIGHT = 32'sb00000000000000000000001011111111
@@ -204,13 +206,13 @@ INFO:Xst:2561 - Always blocking tristate driving signal <ram1_data> in unit <lab
 INFO:Xst:2561 - Always blocking tristate driving signal <daughtercard> in unit <lab3> is removed.
 INFO:Xst:2561 - Always blocking tristate driving signal <systemace_data> in unit <lab3> is removed.
 INFO:Xst:2561 - Always blocking tristate driving signal <tv_in_i2c_data> in unit <lab3> is removed.
-INFO:Xst:2679 - Register <paddle_x_next> in unit <pong_game> has a constant value of 0011111010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <paddle_x_next> in unit <pong_game> has a constant value of 0100110110 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <debounce>.
     Related source file is "lab3.v".
     Found 1-bit register for signal <clean>.
     Found 20-bit up counter for signal <count>.
-    Found 1-bit xor2 for signal <count$xor0000> created at line 20.
+    Found 1-bit xor2 for signal <count$xor0000> created at line 21.
     Found 1-bit register for signal <new>.
     Summary:
 	inferred   1 Counter(s).
@@ -235,114 +237,116 @@ Unit <xvga> synthesized.
 
 Synthesizing Unit <pong_game>.
     Related source file is "lab3.v".
-WARNING:Xst:653 - Signal <clk_in> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <image_red_intensity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <image_green_intensity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <angle> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 24-bit register for signal <pixel_out>.
-    Found 25-bit adder for signal <$add0002> created at line 720.
-    Found 25-bit adder for signal <$add0003> created at line 720.
-    Found 25-bit adder for signal <$add0004> created at line 815.
-    Found 11x11-bit multiplier for signal <$mult0000> created at line 720.
-    Found 11x11-bit multiplier for signal <$mult0001> created at line 815.
-    Found 12-bit subtractor for signal <$sub0000> created at line 682.
-    Found 12-bit subtractor for signal <$sub0001> created at line 729.
-    Found 12-bit subtractor for signal <$sub0002> created at line 739.
-    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 720.
-    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 720.
-    Found 12-bit subtractor for signal <add0002$addsub0000> created at line 720.
-    Found 12-bit subtractor for signal <add0002$addsub0001> created at line 720.
-    Found 11-bit comparator greater for signal <add0002$cmp_gt0000> created at line 720.
-    Found 11-bit comparator greater for signal <add0002$cmp_gt0001> created at line 720.
-    Found 12x12-bit multiplier for signal <add0002$mult0000> created at line 720.
-    Found 12x12-bit multiplier for signal <add0002$mult0001> created at line 720.
-    Found 12-bit subtractor for signal <add0004$addsub0000> created at line 815.
-    Found 12x12-bit multiplier for signal <add0004$mult0000> created at line 815.
-    Found 10-bit adder carry out for signal <add0005$addsub0000> created at line 734.
-    Found 10-bit adder carry out for signal <add0006$addsub0000> created at line 744.
+    Found 25-bit adder for signal <$add0002> created at line 711.
+    Found 25-bit adder for signal <$add0003> created at line 711.
+    Found 25-bit adder for signal <$add0004> created at line 806.
+    Found 11x11-bit multiplier for signal <$mult0000> created at line 711.
+    Found 11x11-bit multiplier for signal <$mult0001> created at line 806.
+    Found 12-bit subtractor for signal <$sub0000> created at line 673.
+    Found 12-bit subtractor for signal <$sub0001> created at line 720.
+    Found 12-bit subtractor for signal <$sub0002> created at line 730.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 711.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 711.
+    Found 12-bit subtractor for signal <add0002$addsub0000> created at line 711.
+    Found 12-bit subtractor for signal <add0002$addsub0001> created at line 711.
+    Found 11-bit comparator greater for signal <add0002$cmp_gt0000> created at line 711.
+    Found 11-bit comparator greater for signal <add0002$cmp_gt0001> created at line 711.
+    Found 12x12-bit multiplier for signal <add0002$mult0000> created at line 711.
+    Found 12x12-bit multiplier for signal <add0002$mult0001> created at line 711.
+    Found 12-bit subtractor for signal <add0004$addsub0000> created at line 806.
+    Found 12x12-bit multiplier for signal <add0004$mult0000> created at line 806.
+    Found 10-bit adder carry out for signal <add0005$addsub0000> created at line 725.
+    Found 10-bit adder carry out for signal <add0006$addsub0000> created at line 735.
     Found 1-bit register for signal <down>.
-    Found 10-bit comparator greatequal for signal <down$cmp_ge0000> created at line 794.
-    Found 11-bit comparator lessequal for signal <down$cmp_le0000> created at line 782.
+    Found 10-bit comparator greatequal for signal <down$cmp_ge0000> created at line 785.
+    Found 11-bit comparator lessequal for signal <down$cmp_le0000> created at line 773.
     Found 1-bit register for signal <had_collision>.
     Found 16-bit adder for signal <image_addr>.
-    Found 12-bit subtractor for signal <image_addr$sub0000> created at line 619.
-    Found 13-bit subtractor for signal <image_addr$sub0001> created at line 619.
+    Found 12-bit subtractor for signal <image_addr$addsub0000> created at line 620.
+    Found 12x10-bit multiplier for signal <image_addr$mult0000> created at line 620.
+    Found 13-bit subtractor for signal <image_addr$sub0000> created at line 620.
     Found 19-bit register for signal <move_counter>.
-    Found 11-bit adder for signal <move_counter$add0000> created at line 694.
-    Found 10-bit adder carry out for signal <move_counter$addsub0001> created at line 694.
-    Found 12-bit comparator greater for signal <move_counter$cmp_gt0000> created at line 682.
-    Found 11-bit comparator greater for signal <move_counter$cmp_gt0001> created at line 694.
-    Found 12-bit comparator less for signal <move_counter$cmp_lt0000> created at line 682.
-    Found 11-bit comparator less for signal <move_counter$cmp_lt0001> created at line 694.
+    Found 11-bit adder for signal <move_counter$add0000> created at line 685.
+    Found 10-bit adder carry out for signal <move_counter$addsub0001> created at line 685.
+    Found 12-bit comparator greater for signal <move_counter$cmp_gt0000> created at line 673.
+    Found 11-bit comparator greater for signal <move_counter$cmp_gt0001> created at line 685.
+    Found 12-bit comparator less for signal <move_counter$cmp_lt0000> created at line 673.
+    Found 11-bit comparator less for signal <move_counter$cmp_lt0001> created at line 685.
     Found 19-bit subtractor for signal <move_counter$share0000>.
-    Found 11-bit subtractor for signal <mult0000$addsub0000> created at line 720.
-    Found 11-bit subtractor for signal <mult0001$addsub0000> created at line 815.
-    Found 11-bit comparator greater for signal <mux0000$cmp_gt0000> created at line 720.
-    Found 11-bit comparator greater for signal <mux0001$cmp_gt0000> created at line 720.
-    Found 10-bit comparator greater for signal <mux0002$cmp_gt0000> created at line 720.
-    Found 11-bit comparator greater for signal <mux0003$cmp_gt0000> created at line 815.
-    Found 10-bit comparator greater for signal <mux0004$cmp_gt0000> created at line 815.
+    Found 11-bit subtractor for signal <mult0000$addsub0000> created at line 711.
+    Found 11-bit subtractor for signal <mult0001$addsub0000> created at line 806.
+    Found 11-bit comparator greater for signal <mux0000$cmp_gt0000> created at line 711.
+    Found 11-bit comparator greater for signal <mux0001$cmp_gt0000> created at line 711.
+    Found 10-bit comparator greater for signal <mux0002$cmp_gt0000> created at line 711.
+    Found 11-bit comparator greater for signal <mux0003$cmp_gt0000> created at line 806.
+    Found 10-bit comparator greater for signal <mux0004$cmp_gt0000> created at line 806.
     Found 10-bit register for signal <paddle_x>.
     Found 10-bit register for signal <paddle_y>.
     Found 10-bit register for signal <paddle_y_next>.
-    Found 12-bit comparator greatequal for signal <paddle_y_next$cmp_ge0000> created at line 682.
-    Found 11-bit comparator greatequal for signal <paddle_y_next$cmp_ge0001> created at line 694.
-    Found 12-bit comparator lessequal for signal <paddle_y_next$cmp_le0000> created at line 682.
-    Found 11-bit comparator lessequal for signal <paddle_y_next$cmp_le0001> created at line 694.
+    Found 12-bit comparator greatequal for signal <paddle_y_next$cmp_ge0000> created at line 673.
+    Found 11-bit comparator greatequal for signal <paddle_y_next$cmp_ge0001> created at line 685.
+    Found 12-bit comparator lessequal for signal <paddle_y_next$cmp_le0000> created at line 673.
+    Found 11-bit comparator lessequal for signal <paddle_y_next$cmp_le0001> created at line 685.
     Found 10-bit addsub for signal <paddle_y_next$mux0000>.
-    Found 11-bit comparator greater for signal <pixel_out$cmp_gt0000> created at line 811.
-    Found 10-bit comparator greater for signal <pixel_out$cmp_gt0001> created at line 811.
-    Found 26-bit comparator less for signal <pixel_out$cmp_gt0002> created at line 815.
-    Found 11-bit comparator less for signal <pixel_out$cmp_lt0000> created at line 811.
-    Found 11-bit comparator less for signal <pixel_out$cmp_lt0001> created at line 811.
+    Found 11-bit comparator greater for signal <pixel_out$cmp_gt0000> created at line 802.
+    Found 10-bit comparator greater for signal <pixel_out$cmp_gt0001> created at line 802.
+    Found 26-bit comparator less for signal <pixel_out$cmp_gt0002> created at line 806.
+    Found 11-bit comparator less for signal <pixel_out$cmp_lt0000> created at line 802.
+    Found 11-bit comparator less for signal <pixel_out$cmp_lt0001> created at line 802.
     Found 19-bit down counter for signal <puck_counter>.
-    Found 4x7-bit multiplier for signal <puck_v_speed$mult0000> created at line 603.
+    Found 4x7-bit multiplier for signal <puck_v_speed$mult0000> created at line 604.
     Found 10-bit register for signal <puck_x>.
-    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0000> created at line 744.
-    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0001> created at line 744.
-    Found 12-bit comparator greatequal for signal <puck_x$cmp_ge0002> created at line 739.
-    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0003> created at line 734.
-    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0004> created at line 734.
-    Found 12-bit comparator greatequal for signal <puck_x$cmp_ge0005> created at line 729.
-    Found 26-bit comparator less for signal <puck_x$cmp_gt0000> created at line 720.
-    Found 26-bit comparator less for signal <puck_x$cmp_gt0001> created at line 720.
-    Found 12-bit comparator greater for signal <puck_x$cmp_gt0002> created at line 729.
-    Found 11-bit comparator greater for signal <puck_x$cmp_gt0003> created at line 734.
-    Found 10-bit comparator greater for signal <puck_x$cmp_gt0004> created at line 739.
-    Found 12-bit comparator greater for signal <puck_x$cmp_gt0005> created at line 739.
-    Found 11-bit comparator greater for signal <puck_x$cmp_gt0006> created at line 744.
-    Found 10-bit comparator lessequal for signal <puck_x$cmp_le0000> created at line 744.
-    Found 11-bit comparator lessequal for signal <puck_x$cmp_le0001> created at line 744.
-    Found 12-bit comparator lessequal for signal <puck_x$cmp_le0002> created at line 739.
-    Found 11-bit comparator lessequal for signal <puck_x$cmp_le0003> created at line 734.
-    Found 10-bit comparator lessequal for signal <puck_x$cmp_le0004> created at line 734.
-    Found 12-bit comparator lessequal for signal <puck_x$cmp_le0005> created at line 729.
-    Found 26-bit comparator greatequal for signal <puck_x$cmp_le0006> created at line 720.
-    Found 26-bit comparator greatequal for signal <puck_x$cmp_le0007> created at line 720.
-    Found 10-bit comparator less for signal <puck_x$cmp_lt0000> created at line 707.
-    Found 12-bit comparator less for signal <puck_x$cmp_lt0001> created at line 729.
-    Found 11-bit comparator less for signal <puck_x$cmp_lt0002> created at line 729.
-    Found 11-bit comparator less for signal <puck_x$cmp_lt0003> created at line 734.
-    Found 11-bit comparator less for signal <puck_x$cmp_lt0004> created at line 739.
-    Found 12-bit comparator less for signal <puck_x$cmp_lt0005> created at line 739.
-    Found 11-bit comparator less for signal <puck_x$cmp_lt0006> created at line 744.
+    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0000> created at line 735.
+    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0001> created at line 735.
+    Found 12-bit comparator greatequal for signal <puck_x$cmp_ge0002> created at line 730.
+    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0003> created at line 725.
+    Found 11-bit comparator greatequal for signal <puck_x$cmp_ge0004> created at line 725.
+    Found 12-bit comparator greatequal for signal <puck_x$cmp_ge0005> created at line 720.
+    Found 26-bit comparator less for signal <puck_x$cmp_gt0000> created at line 711.
+    Found 26-bit comparator less for signal <puck_x$cmp_gt0001> created at line 711.
+    Found 12-bit comparator greater for signal <puck_x$cmp_gt0002> created at line 720.
+    Found 11-bit comparator greater for signal <puck_x$cmp_gt0003> created at line 725.
+    Found 10-bit comparator greater for signal <puck_x$cmp_gt0004> created at line 730.
+    Found 12-bit comparator greater for signal <puck_x$cmp_gt0005> created at line 730.
+    Found 11-bit comparator greater for signal <puck_x$cmp_gt0006> created at line 735.
+    Found 10-bit comparator lessequal for signal <puck_x$cmp_le0000> created at line 735.
+    Found 11-bit comparator lessequal for signal <puck_x$cmp_le0001> created at line 735.
+    Found 12-bit comparator lessequal for signal <puck_x$cmp_le0002> created at line 730.
+    Found 11-bit comparator lessequal for signal <puck_x$cmp_le0003> created at line 725.
+    Found 10-bit comparator lessequal for signal <puck_x$cmp_le0004> created at line 725.
+    Found 12-bit comparator lessequal for signal <puck_x$cmp_le0005> created at line 720.
+    Found 26-bit comparator greatequal for signal <puck_x$cmp_le0006> created at line 711.
+    Found 26-bit comparator greatequal for signal <puck_x$cmp_le0007> created at line 711.
+    Found 10-bit comparator less for signal <puck_x$cmp_lt0000> created at line 698.
+    Found 12-bit comparator less for signal <puck_x$cmp_lt0001> created at line 720.
+    Found 11-bit comparator less for signal <puck_x$cmp_lt0002> created at line 720.
+    Found 11-bit comparator less for signal <puck_x$cmp_lt0003> created at line 725.
+    Found 11-bit comparator less for signal <puck_x$cmp_lt0004> created at line 730.
+    Found 12-bit comparator less for signal <puck_x$cmp_lt0005> created at line 730.
+    Found 11-bit comparator less for signal <puck_x$cmp_lt0006> created at line 735.
     Found 10-bit register for signal <puck_x_next>.
-    Found 11-bit comparator greater for signal <puck_x_next$cmp_gt0000> created at line 754.
+    Found 11-bit comparator greater for signal <puck_x_next$cmp_gt0000> created at line 745.
     Found 10-bit addsub for signal <puck_x_next$mux0000>.
     Found 11-bit subtractor for signal <puck_x_tl>.
     Found 10-bit register for signal <puck_y>.
     Found 10-bit register for signal <puck_y_next>.
-    Found 9-bit adder for signal <puck_y_next$add0000> created at line 772.
-    Found 10-bit comparator greatequal for signal <puck_y_next$cmp_ge0000> created at line 780.
-    Found 11-bit comparator greater for signal <puck_y_next$cmp_gt0000> created at line 782.
-    Found 10-bit comparator less for signal <puck_y_next$cmp_lt0000> created at line 794.
+    Found 9-bit adder for signal <puck_y_next$add0000> created at line 763.
+    Found 10-bit comparator greatequal for signal <puck_y_next$cmp_ge0000> created at line 771.
+    Found 11-bit comparator greater for signal <puck_y_next$cmp_gt0000> created at line 773.
+    Found 10-bit comparator less for signal <puck_y_next$cmp_lt0000> created at line 785.
     Found 10-bit addsub for signal <puck_y_next$share0000>.
     Found 11-bit subtractor for signal <puck_y_tl>.
     Found 1-bit register for signal <right>.
-    Found 11-bit comparator lessequal for signal <right$cmp_le0000> created at line 754.
+    Found 11-bit comparator lessequal for signal <right$cmp_le0000> created at line 745.
     Summary:
 	inferred   1 Counter(s).
 	inferred  46 D-type flip-flop(s).
 	inferred  27 Adder/Subtractor(s).
-	inferred   6 Multiplier(s).
+	inferred   7 Multiplier(s).
 	inferred  55 Comparator(s).
 Unit <pong_game> synthesized.
 
@@ -674,8 +678,9 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 6
+# Multipliers                                          : 7
  11x11-bit multiplier                                  : 2
+ 12x10-bit multiplier                                  : 1
  12x12-bit multiplier                                  : 3
  4x7-bit multiplier                                    : 1
 # Adders/Subtractors                                   : 27
@@ -727,14 +732,19 @@ Macro Statistics
 =========================================================================
 
 Loading device for application Rf_Device from file '2v6000.nph' in environment /afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE.
-Reading core <image_ds.ngc>.
-Reading core <colormap_ds.ngc>.
-Loading core <image_ds> for timing and area information for instance <i_rom>.
-Loading core <colormap_ds> for timing and area information for instance <d_rom>.
+Reading core <image_rom.ngc>.
+Reading core <red_rom.ngc>.
+Reading core <green_rom.ngc>.
+Reading core <blue_rom.ngc>.
+Loading core <image_rom> for timing and area information for instance <i_rom>.
+Loading core <red_rom> for timing and area information for instance <r_rom>.
+Loading core <green_rom> for timing and area information for instance <g_rom>.
+Loading core <blue_rom> for timing and area information for instance <b_rom>.
 
 Synthesizing (advanced) Unit <pong_game>.
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_add0002_mult0001 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_image_addr_mult0000 by adding 1 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_add0002_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_add0002_mult0001 by adding 1 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0000 by adding 1 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0001 by adding 1 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_add0004_mult0000 by adding 1 register level(s).
@@ -748,36 +758,36 @@ INFO:Xst:2261 - The FF/Latch <pixel_out_1> in Unit <pong_game> is equivalent to 
 INFO:Xst:2261 - The FF/Latch <pixel_out_0> in Unit <pong_game> is equivalent to the following FF/Latch, which will be removed : <pixel_out_8> 
 INFO:Xst:2261 - The FF/Latch <pixel_out_7> in Unit <pong_game> is equivalent to the following FF/Latch, which will be removed : <pixel_out_15> 
 INFO:Xst:2261 - The FF/Latch <pixel_out_6> in Unit <pong_game> is equivalent to the following FF/Latch, which will be removed : <pixel_out_14> 
-WARNING:Xst:1293 - FF/Latch <2> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <2> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <1> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <3> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <3> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <4> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <7> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <7> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <5> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <6> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <8> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <6> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <8> has a constant value of 1 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <9> has a constant value of 0 in block <paddle_x>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 6
+# Multipliers                                          : 7
  11x11-bit multiplier                                  : 2
+ 12x10-bit multiplier                                  : 1
  12x12-bit multiplier                                  : 3
  4x7-bit multiplier                                    : 1
 # Adders/Subtractors                                   : 27
  10-bit adder carry out                                : 5
  10-bit addsub                                         : 3
  11-bit adder                                          : 1
- 11-bit subtractor                                     : 3
- 12-bit subtractor                                     : 6
+ 11-bit subtractor                                     : 4
+ 12-bit subtractor                                     : 7
  13-bit subtractor                                     : 1
  16-bit adder                                          : 1
  19-bit subtractor                                     : 1
  25-bit adder                                          : 3
- 8-bit subtractor                                      : 2
  9-bit adder                                           : 1
 # Counters                                             : 6
  10-bit up counter                                     : 1
@@ -812,10 +822,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <paddle_x_6> in Unit <pong_game> is equivalent to the following 5 FFs/Latches, which will be removed : <paddle_x_5> <paddle_x_7> <paddle_x_4> <paddle_x_3> <paddle_x_1> 
-INFO:Xst:2261 - The FF/Latch <paddle_x_9> in Unit <pong_game> is equivalent to the following 3 FFs/Latches, which will be removed : <paddle_x_8> <paddle_x_0> <paddle_x_2> 
+INFO:Xst:2261 - The FF/Latch <paddle_x_8> in Unit <pong_game> is equivalent to the following 4 FFs/Latches, which will be removed : <paddle_x_5> <paddle_x_4> <paddle_x_1> <paddle_x_2> 
+INFO:Xst:2261 - The FF/Latch <paddle_x_9> in Unit <pong_game> is equivalent to the following 4 FFs/Latches, which will be removed : <paddle_x_6> <paddle_x_7> <paddle_x_3> <paddle_x_0> 
 WARNING:Xst:1293 - FF/Latch <paddle_x_9> has a constant value of 0 in block <pong_game>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <paddle_x_6> has a constant value of 1 in block <pong_game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <paddle_x_8> has a constant value of 1 in block <pong_game>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <lab3> ...
 
@@ -828,6 +838,7 @@ Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block lab3, actual ratio is 1.
 FlipFlop pg/paddle_y_3 has been replicated 1 time(s)
 FlipFlop pg/paddle_y_4 has been replicated 1 time(s)
+FlipFlop pg/paddle_y_5 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -835,8 +846,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 238
- Flip-Flops                                            : 238
+# Registers                                            : 239
+ Flip-Flops                                            : 239
 
 =========================================================================
 
@@ -865,36 +876,37 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 1757
-#      GND                         : 3
-#      INV                         : 84
-#      LUT1                        : 94
-#      LUT2                        : 325
-#      LUT2_L                      : 2
-#      LUT3                        : 180
-#      LUT3_D                      : 1
-#      LUT4                        : 213
-#      LUT4_D                      : 3
+# BELS                             : 1856
+#      GND                         : 5
+#      INV                         : 96
+#      LUT1                        : 97
+#      LUT2                        : 309
+#      LUT2_D                      : 2
+#      LUT3                        : 177
+#      LUT3_D                      : 5
+#      LUT4                        : 241
+#      LUT4_D                      : 5
+#      LUT4_L                      : 1
 #      MULT_AND                    : 3
-#      MUXCY                       : 510
-#      MUXF5                       : 21
-#      VCC                         : 3
-#      XORCY                       : 315
-# FlipFlops/Latches                : 242
+#      MUXCY                       : 539
+#      MUXF5                       : 25
+#      MUXF6                       : 8
+#      VCC                         : 5
+#      XORCY                       : 338
+# FlipFlops/Latches                : 243
 #      FD                          : 5
 #      FDC                         : 7
 #      FDCE                        : 25
 #      FDE                         : 28
-#      FDP                         : 24
+#      FDP                         : 25
 #      FDPE                        : 45
 #      FDR                         : 11
 #      FDRE                        : 72
 #      FDS                         : 25
-# RAMS                             : 31
-#      RAMB16_S1_S1                : 24
+# RAMS                             : 47
+#      RAMB16_S1_S1                : 40
 #      RAMB16_S2_S2                : 4
-#      RAMB16_S36_S36              : 1
-#      RAMB16_S4_S4                : 2
+#      RAMB16_S36_S36              : 3
 # Shift Registers                  : 1
 #      SRL16                       : 1
 # Clock Buffers                    : 1
@@ -905,8 +917,8 @@ Cell Usage :
 #      OBUF                        : 240
 # DCMs                             : 1
 #      DCM                         : 1
-# MULTs                            : 6
-#      MULT18X18                   : 6
+# MULTs                            : 7
+#      MULT18X18                   : 7
 =========================================================================
 
 Device utilization summary:
@@ -914,15 +926,15 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                      483  out of  33792     1%  
- Number of Slice Flip Flops:            242  out of  67584     0%  
- Number of 4 input LUTs:                903  out of  67584     1%  
-    Number used as logic:               902
+ Number of Slices:                      497  out of  33792     1%  
+ Number of Slice Flip Flops:            243  out of  67584     0%  
+ Number of 4 input LUTs:                934  out of  67584     1%  
+    Number used as logic:               933
     Number used as Shift registers:       1
  Number of IOs:                         576
  Number of bonded IOBs:                 250  out of    684    36%  
- Number of BRAMs:                        31  out of    144    21%  
- Number of MULT18X18s:                    6  out of    144     4%  
+ Number of BRAMs:                        47  out of    144    32%  
+ Number of MULT18X18s:                    7  out of    144     4%  
  Number of GCLKs:                         1  out of     16     6%  
  Number of DCMs:                          1  out of     12     8%  
 
@@ -947,27 +959,26 @@ Clock Information:
 -----------------------------------+-------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                           | Load  |
 -----------------------------------+-------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX                                                                                     | 239   |
-analyzer1_data_0_OBUF              | NONE(pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.ram)       | 35    |
-pg/i_rom/BU2/dbiterr               | NONE(pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[29].ram.r/v2_init.ram/dpram.dp1x1.ram)| 30    |
+clock_27mhz                        | vclk1:CLKFX                                                                                     | 291   |
+pg/i_rom/BU2/dbiterr               | NONE(pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[43].ram.r/v2_init.ram/dpram.dp1x1.ram)| 44    |
 -----------------------------------+-------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+-------------------------+-------+
-Control Signal                     | Buffer(FF name)         | Load  |
------------------------------------+-------------------------+-------+
-reset(reset1:O)                    | NONE(pg/move_counter_11)| 101   |
------------------------------------+-------------------------+-------+
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset(reset1:O)                    | NONE(pg/puck_x_next_4) | 102   |
+-----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 66.864ns (Maximum Frequency: 14.956MHz)
-   Minimum input arrival time before clock: 14.463ns
-   Maximum output required time after clock: 9.830ns
+   Minimum period: 67.993ns (Maximum Frequency: 14.707MHz)
+   Minimum input arrival time before clock: 14.114ns
+   Maximum output required time after clock: 9.806ns
    Maximum combinational path delay: 7.189ns
 
 Timing Detail:
@@ -976,23 +987,25 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
-  Clock period: 66.864ns (frequency: 14.956MHz)
-  Total number of paths / destination ports: 538851849 / 507
+  Clock period: 67.993ns (frequency: 14.707MHz)
+  Total number of paths / destination ports: 618605637 / 1215
 -------------------------------------------------------------------------
-Delay:               27.860ns (Levels of Logic = 27)
+Delay:               28.331ns (Levels of Logic = 29)
   Source:            pg/paddle_y_4_1 (FF)
-  Destination:       pg/puck_x_2 (FF)
+  Destination:       pg/puck_y_2 (FF)
   Source Clock:      clock_27mhz rising 2.4X
   Destination Clock: clock_27mhz rising 2.4X
 
-  Data Path: pg/paddle_y_4_1 to pg/puck_x_2
+  Data Path: pg/paddle_y_4_1 to pg/puck_y_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              9   0.568   1.147  pg/paddle_y_4_1 (pg/paddle_y_4_1)
-     LUT4_D:I0->O         16   0.439   1.035  pg/Madd_add0001_addsub0000_cy<6>11 (pg/Madd_add0001_addsub0000_cy<6>)
-     LUT4:I2->O            6   0.439   0.794  pg/Madd_add0001_addsub0000_xor<9>11 (pg/add0001_addsub0000<9>)
-     MUXCY:DI->O           1   0.462   0.000  pg/Mcompar_mux0001_cmp_gt0000_cy<9> (pg/Mcompar_mux0001_cmp_gt0000_cy<9>)
+     FDC:C->Q             13   0.568   1.240  pg/paddle_y_4_1 (pg/paddle_y_4_1)
+     LUT2_D:I0->O          3   0.439   0.758  pg/Madd_add0001_addsub0000_xor<6>121 (pg/N251)
+     LUT4:I2->O            6   0.439   0.794  pg/Madd_add0001_addsub0000_xor<7>11 (pg/add0001_addsub0000<7>)
+     MUXCY:DI->O           1   0.462   0.000  pg/Mcompar_mux0001_cmp_gt0000_cy<7> (pg/Mcompar_mux0001_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.053   0.000  pg/Mcompar_mux0001_cmp_gt0000_cy<8> (pg/Mcompar_mux0001_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.053   0.000  pg/Mcompar_mux0001_cmp_gt0000_cy<9> (pg/Mcompar_mux0001_cmp_gt0000_cy<9>)
      MUXCY:CI->O          11   0.942   0.942  pg/Mcompar_mux0001_cmp_gt0000_cy<10> (pg/Mcompar_mux0001_cmp_gt0000_cy<10>)
      LUT3:I2->O            1   0.439   0.552  pg/_mux0001<0>1 (pg/_mux0001<0>)
      LUT4:I2->O            1   0.439   0.000  pg/Msub_add0002_addsub0001_lut<0> (pg/Msub_add0002_addsub0001_lut<0>)
@@ -1008,58 +1021,30 @@ Delay:               27.860ns (Levels of Logic = 27)
      MUXCY:CI->O           1   0.053   0.000  pg/Msub_add0002_addsub0001_cy<9> (pg/Msub_add0002_addsub0001_cy<9>)
      MUXCY:CI->O           0   0.053   0.000  pg/Msub_add0002_addsub0001_cy<10> (pg/Msub_add0002_addsub0001_cy<10>)
      XORCY:CI->O          14   1.274   0.978  pg/Msub_add0002_addsub0001_xor<11> (pg/add0002_addsub0001<11>)
-     MULT18X18:A11->P23    2   7.872   0.909  pg/Mmult_add0002_mult0001 (pg/add0002_mult0001<23>)
+     MULT18X18:A11->P23    2   7.872   0.910  pg/Mmult_add0002_mult0001 (pg/add0002_mult0001<23>)
      LUT2:I1->O            1   0.439   0.000  pg/Madd__add0002_lut<23> (pg/Madd__add0002_lut<23>)
      MUXCY:S->O            0   0.298   0.000  pg/Madd__add0002_cy<23> (pg/Madd__add0002_cy<23>)
-     XORCY:CI->O           2   1.274   0.735  pg/Madd__add0002_xor<24> (pg/_add0002<24>)
-     LUT3:I2->O            1   0.439   0.000  pg/Mcompar_puck_x_cmp_gt0000_lut<5> (pg/Mcompar_puck_x_cmp_gt0000_lut<5>)
-     MUXCY:S->O            1   0.298   0.000  pg/Mcompar_puck_x_cmp_gt0000_cy<5> (pg/Mcompar_puck_x_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           9   0.942   0.896  pg/Mcompar_puck_x_cmp_gt0000_cy<6> (pg/Mcompar_puck_x_cmp_gt0000_cy<6>)
-     LUT4_D:I2->O         18   0.439   1.231  pg/puck_y_mux0000<0>130 (pg/N0)
-     LUT2:I1->O            1   0.439   0.000  pg/puck_y_mux0000<6>1 (pg/puck_y_mux0000<6>)
-     FDCE:D                    0.370          pg/puck_y_6
+     XORCY:CI->O           2   1.274   0.910  pg/Madd__add0002_xor<24> (pg/_add0002<24>)
+     LUT2:I1->O            1   0.439   0.000  pg/Mcompar_puck_x_cmp_gt0000_lut<10> (pg/Mcompar_puck_x_cmp_gt0000_lut<10>)
+     MUXCY:S->O            1   0.298   0.000  pg/Mcompar_puck_x_cmp_gt0000_cy<10> (pg/Mcompar_puck_x_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           3   0.942   0.758  pg/Mcompar_puck_x_cmp_gt0000_cy<11> (pg/Mcompar_puck_x_cmp_gt0000_cy<11>)
+     LUT3_D:I2->O         13   0.439   0.988  pg/puck_x_and00131 (pg/puck_x_and0013)
+     LUT3:I2->O           10   0.439   0.885  pg/puck_y_next_not0002234 (pg/puck_x_next_not0002)
+     FDPE:CE                   0.240          pg/puck_x_next_2
     ----------------------------------------
-    Total                     27.860ns (18.640ns logic, 9.220ns route)
-                                       (66.9% logic, 33.1% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'analyzer1_data_0_OBUF'
-  Clock period: 4.619ns (frequency: 216.521MHz)
-  Total number of paths / destination ports: 160 / 16
--------------------------------------------------------------------------
-Delay:               4.619ns (Levels of Logic = 5)
-  Source:            pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_1 (FF)
-  Destination:       pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.ram (RAM)
-  Source Clock:      analyzer1_data_0_OBUF rising
-  Destination Clock: analyzer1_data_0_OBUF rising
-
-  Data Path: pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_1 to pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.ram
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              8   0.568   1.125  U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_1 (U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>)
-     LUT4:I0->O            1   0.439   0.551  U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>71 (U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>8)
-     LUT3:I2->O            1   0.439   0.000  U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_371 (U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_37)
-     MUXF5:I1->O           2   0.436   0.702  U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_2_f5_6 (douta(7))
-     end scope: 'BU2'
-     end scope: 'pg/i_rom'
-     begin scope: 'pg/d_rom'
-     begin scope: 'BU2'
-     RAMB16_S36_S36:ADDRA8        0.359          U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.ram
-    ----------------------------------------
-    Total                      4.619ns (2.241ns logic, 2.378ns route)
-                                       (48.5% logic, 51.5% route)
+    Total                     28.331ns (18.616ns logic, 9.715ns route)
+                                       (65.7% logic, 34.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 10978 / 179
+  Total number of paths / destination ports: 11674 / 179
 -------------------------------------------------------------------------
-Offset:              14.463ns (Levels of Logic = 16)
+Offset:              14.114ns (Levels of Logic = 15)
   Source:            switch<4> (PAD)
-  Destination:       pg/move_counter_18 (FF)
+  Destination:       pg/paddle_y_next_2 (FF)
   Destination Clock: clock_27mhz rising 2.4X
 
-  Data Path: switch<4> to pg/move_counter_18
+  Data Path: switch<4> to pg/paddle_y_next_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1071,24 +1056,23 @@ Offset:              14.463ns (Levels of Logic = 16)
      MUXCY:CI->O           1   0.053   0.000  pg/Madd_move_counter_addsub0001_cy<3> (pg/Madd_move_counter_addsub0001_cy<3>)
      MUXCY:CI->O           1   0.053   0.000  pg/Madd_move_counter_addsub0001_cy<4> (pg/Madd_move_counter_addsub0001_cy<4>)
      XORCY:CI->O           3   1.274   1.009  pg/Madd_move_counter_addsub0001_xor<5> (pg/move_counter_addsub0001<5>)
-     LUT4:I0->O            5   0.439   1.055  pg/Madd_move_counter_add0000_cy<6>11 (pg/Madd_move_counter_add0000_cy<6>)
-     LUT3:I0->O            2   0.439   0.735  pg/Madd_move_counter_add0000_cy<8>11 (pg/Madd_move_counter_add0000_cy<8>)
-     LUT3:I2->O            1   0.439   0.802  pg/Madd_move_counter_add0000_xor<10>11 (pg/move_counter_add0000<10>)
-     LUT4:I0->O            1   0.439   0.000  pg/Mcompar_move_counter_cmp_gt0001_lut<2> (pg/Mcompar_move_counter_cmp_gt0001_lut<2>)
-     MUXCY:S->O            2   1.187   0.987  pg/Mcompar_move_counter_cmp_gt0001_cy<2> (pg/Mcompar_move_counter_cmp_gt0001_cy<2>)
-     LUT3:I0->O            1   0.439   0.000  pg/move_counter_mux0000<0>2_F (N113)
-     MUXF5:I0->O          19   0.436   1.243  pg/move_counter_mux0000<0>2 (pg/N9)
-     LUT2:I1->O            1   0.439   0.000  pg/move_counter_mux0000<9>1 (pg/move_counter_mux0000<9>)
-     FDPE:D                    0.370          pg/move_counter_9
+     LUT4:I0->O            5   0.439   1.056  pg/Madd_move_counter_add0000_xor<10>111 (pg/N01)
+     LUT2:I0->O            2   0.439   0.741  pg/Madd_move_counter_add0000_xor<10>1_SW0 (N11)
+     LUT4:I3->O            1   0.439   0.551  pg/Madd_move_counter_add0000_xor<10>1 (pg/move_counter_add0000<10>)
+     LUT3:I2->O            1   0.439   0.000  pg/Mcompar_move_counter_cmp_gt0001_lut<2> (pg/Mcompar_move_counter_cmp_gt0001_lut<2>)
+     MUXCY:S->O            1   1.187   0.726  pg/Mcompar_move_counter_cmp_gt0001_cy<2> (pg/Mcompar_move_counter_cmp_gt0001_cy<2>)
+     LUT3:I1->O           20   0.439   1.081  pg/paddle_y_next_not0001121 (pg/N53)
+     LUT4:I3->O           10   0.439   0.885  pg/paddle_y_next_not00011 (pg/paddle_y_next_not0001)
+     FDPE:CE                   0.240          pg/paddle_y_next_2
     ----------------------------------------
-    Total                     14.463ns (7.675ns logic, 6.788ns route)
-                                       (53.1% logic, 46.9% route)
+    Total                     14.114ns (7.109ns logic, 7.005ns route)
+                                       (50.4% logic, 49.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
   Total number of paths / destination ports: 31 / 30
 -------------------------------------------------------------------------
-Offset:              9.830ns (Levels of Logic = 2)
+Offset:              9.806ns (Levels of Logic = 2)
   Source:            reset_sr (FF)
   Destination:       led<2> (PAD)
   Source Clock:      clock_27mhz rising 2.4X
@@ -1097,12 +1081,12 @@ Offset:              9.830ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRL16:CLK->Q         11   2.901   1.116  reset_sr (power_on_reset)
+     SRL16:CLK->Q         10   2.901   1.094  reset_sr (power_on_reset)
      LUT2:I1->O           17   0.439   1.012  led<2>1 (led_2_OBUF)
      OBUF:I->O                 4.361          led_2_OBUF (led<2>)
     ----------------------------------------
-    Total                      9.830ns (7.701ns logic, 2.128ns route)
-                                       (78.3% logic, 21.7% route)
+    Total                      9.806ns (7.701ns logic, 2.106ns route)
+                                       (78.5% logic, 21.5% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -1126,15 +1110,15 @@ Delay:               7.189ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.07 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.13 secs
  
 --> 
 
 
-Total memory usage is 495620 kilobytes
+Total memory usage is 505016 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  324 (   0 filtered)
-Number of infos    :   29 (   0 filtered)
+Number of warnings :  326 (   0 filtered)
+Number of infos    :   30 (   0 filtered)
 

@@ -1,3 +1,4 @@
+`default_nettype none
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Pushbutton Debounce Module (video version - 24 bits)  
@@ -560,7 +561,7 @@ module pong_game (
 	
 	localparam SCREEN_WIDTH  = 1023;
 	localparam SCREEN_HEIGHT = 767;
-	localparam PUCK_RADIUS   = 120;
+	localparam PUCK_RADIUS   = 150;
 	localparam PUCK_STARTX   = SCREEN_WIDTH/2;
 	localparam PUCK_STARTY   = (SCREEN_HEIGHT+1)/2;
 	
@@ -607,8 +608,8 @@ module pong_game (
 	reg         right = 0;
 	reg         had_collision = 0;
 	
-//	wire [7:0] image_red_intensity;
-//	wire [7:0] image_green_intensity;
+	wire [7:0] image_red_intensity;
+	wire [7:0] image_green_intensity;
 	wire [7:0] image_blue_intensity;
 	
 	wire [7:0] colour_addr;
@@ -616,42 +617,32 @@ module pong_game (
 	wire [10:0] puck_x_tl;
 	wire [10:0] puck_y_tl;
 	wire [15:0] image_addr;
-	assign image_addr = (vcount_in - puck_y_tl)*256 + (hcount_in - puck_x_tl);
-	assign puck_x_tl = puck_x - PUCK_RADIUS;
-	assign puck_y_tl = puck_y - PUCK_RADIUS;
+	assign image_addr = (vcount_in - puck_y_tl)*PUCK_RADIUS*2 + (hcount_in - puck_x_tl);
+	assign puck_x_tl = puck_x_next - PUCK_RADIUS;
+	assign puck_y_tl = puck_y_next - PUCK_RADIUS;
 	
-//	image_rom i_rom (
-//							.clka (clk_in     ),
-//							.addra((v_count - puck_y_tl)*300 + (h_count - puck_x_tl)),
-//							.douta(colour_addr)
-//							);
-//							
-//	red_rom   r_rom (
-//							.clka (clk_in      ),
-//							.addra(colour_addr ),
-//							.douta(image_red_intensity)
-//							);
-//							
-//	green_rom g_rom (
-//							.clka (clk_in      ),
-//							.addra(colour_addr ),
-//							.douta(image_green_intensity)
-//							);
-//							
-//	blue_rom  b_rom (
-//							.clka (clk_in      ),
-//							.addra(colour_addr ),
-//							.douta(image_blue_intensity)
-//							);
-	image_ds i_rom   (
-								.clka (clk_in     ),
-								.addra(image_addr),
-								.douta(colour_addr)
+	image_rom i_rom (
+							.clka (vclock_in     ),
+							.addra(image_addr),
+							.douta(colour_addr)
 							);
-	colormap_ds d_rom (
-								.clka (clk_in      ),
-								.addra(colour_addr ),
-								.douta(image_blue_intensity)
+							
+	red_rom   r_rom (
+							.clka (vclock_in      ),
+							.addra(colour_addr ),
+							.douta(image_red_intensity)
+							);
+							
+	green_rom g_rom (
+							.clka (vclock_in      ),
+							.addra(colour_addr ),
+							.douta(image_green_intensity)
+							);
+							
+	blue_rom  b_rom (
+							.clka (vclock_in      ),
+							.addra(colour_addr ),
+							.douta(image_blue_intensity)
 							);
 	
    // here we use three bits from hcount and vcount to generate the \
@@ -813,9 +804,7 @@ module pong_game (
 				pixel_out <= {8'hFF, 8'h00, 8'h00};
 			end
 			else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
-				// pixel_out <= {image_red_intensity, image_green_intensity, image_blue_intensity};
 				 pixel_out <= {image_blue_intensity, image_blue_intensity, image_blue_intensity};
-//				pixel_out <= {8'hFF, 8'hFF, 8'hFF};
 			else
 			begin
 				pixel_out <= 24'b0;

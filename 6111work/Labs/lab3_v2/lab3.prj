@@ -1,3 +1,4 @@
-verilog work "./image_ds.v"
-verilog work "./colormap_ds.v"
+verilog work "./red_rom.v"
+verilog work "./image_rom.v"
+verilog work "./blue_rom.v"
 verilog work "lab3.v"

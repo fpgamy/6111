@@ -1,6 +1,10 @@
-MO xvga NULL lab3.v vlg02/xvga.bin 1537917570
-MO lab3 NULL lab3.v vlg52/lab3.bin 1537917570
-MO pong_game NULL lab3.v vlg5D/pong__game.bin 1537917570
-MO debounce NULL lab3.v vlg1D/debounce.bin 1537917570
-MO colormap_ds NULL ./colormap_ds.v vlg47/colormap__ds.bin 1537917570
-MO image_ds NULL ./image_ds.v vlg55/image__ds.bin 1537917570
+MO image_rom NULL ./image_rom.v vlg60/image__rom.bin 1537920471
+MO xvga NULL lab3.v vlg02/xvga.bin 1537920471
+MO red_rom NULL ./red_rom.v vlg2C/red__rom.bin 1537920471
+MO lab3 NULL lab3.v vlg52/lab3.bin 1537920471
+MO pong_game NULL lab3.v vlg5D/pong__game.bin 1537920471
+MO debounce NULL lab3.v vlg1D/debounce.bin 1537920471
+MO blue_rom NULL ./blue_rom.v vlg71/blue__rom.bin 1537920471
+MO colormap_ds NULL ./colormap_ds.v vlg47/colormap__ds.bin 1537918961
+MO green_rom NULL ./green_rom.v vlg32/green__rom.bin 1537919250
+MO image_ds NULL ./image_ds.v vlg55/image__ds.bin 1537918961

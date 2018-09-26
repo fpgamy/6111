@@ -11,33 +11,33 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Tue Sep 25 19:19:48 2018
+Mapped Date    : Tue Sep 25 20:08:13 2018
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  358
+Number of warnings:  357
 Logic Utilization:
-  Number of Slice Flip Flops:           238 out of  67,584    1%
-  Number of 4 input LUTs:               779 out of  67,584    1%
+  Number of Slice Flip Flops:           241 out of  67,584    1%
+  Number of 4 input LUTs:               825 out of  67,584    1%
 Logic Distribution:
-  Number of occupied Slices:            478 out of  33,792    1%
-    Number of Slices containing only related logic:     478 out of     478 100%
-    Number of Slices containing unrelated logic:          0 out of     478   0%
+  Number of occupied Slices:            504 out of  33,792    1%
+    Number of Slices containing only related logic:     504 out of     504 100%
+    Number of Slices containing unrelated logic:          0 out of     504   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         875 out of  67,584    1%
-    Number used as logic:               778
-    Number used as a route-thru:         96
+  Total Number of 4 input LUTs:         922 out of  67,584    1%
+    Number used as logic:               824
+    Number used as a route-thru:         97
     Number used as Shift registers:       1
   Number of bonded IOBs:                576 out of     684   84%
-  Number of RAMB16s:                      9 out of     144    6%
-  Number of MULT18X18s:                   6 out of     144    4%
+  Number of RAMB16s:                     33 out of     144   22%
+  Number of MULT18X18s:                   7 out of     144    4%
   Number of BUFGMUXs:                     1 out of      16    6%
   Number of DCMs:                         1 out of      12    8%
 
-Peak Memory Usage:  495 MB
+Peak Memory Usage:  497 MB
 Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   1 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -80,7 +80,7 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network user3<28>_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 325
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 341
    more times for the following (max. 5 shown):
    user3<4>_IBUF,
    user3<29>_IBUF,
@@ -91,9 +91,6 @@ WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 325
 WARNING:LIT:162 - Only DFS outputs (CLKFX/FX180/CONCUR) of DCM symbol "vclk1"
    are routed, but CLKFB is not routed. Proper phase relationship of output
    clocks to CLKIN cannot be guaranteed.
-WARNING:Pack:266 - The function generator pg/right_and000055 failed to merge
-   with F5 multiplexer pg/puck_x_or00091_SW1_f5.  There is a conflict for the
-   FXMUX.  The design will exhibit suboptimal timing.
 WARNING:PhysDesignRules:367 - The signal <ram1_data<0>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <ram1_data<1>_IBUF> is incomplete. The
@@ -747,88 +744,88 @@ WARNING:PhysDesignRules:367 - The signal <tv_in_line_clock2_IBUF> is incomplete.
 WARNING:PhysDesignRules:367 - The signal <user4<9>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
-   block:<pg/d_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   block:<pg/b_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
    ram/spram.ram.B>:<RAMB16_RAMB16B>.
 
 Section 3 - Informational
@@ -843,9 +840,9 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  40 block(s) removed
-   9 block(s) optimized away
-  48 signal(s) removed
+  43 block(s) removed
+  10 block(s) optimized away
+  57 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -860,7 +857,75 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
+The signal "pg/g_rom/douta<7>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<6>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<5>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<4>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<3>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<2>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<1>" is sourceless and has been removed.
+The signal "pg/g_rom/douta<0>" is sourceless and has been removed.
+The signal "pg/g_rom/BU2/doutb<0>" is sourceless and has been removed.
+The signal "pg/g_rom/BU2/N1" is sourceless and has been removed.
+The signal "pg/r_rom/douta<7>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<6>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<5>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<4>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<3>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<2>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<1>" is sourceless and has been removed.
+The signal "pg/r_rom/douta<0>" is sourceless and has been removed.
+The signal "pg/r_rom/BU2/doutb<0>" is sourceless and has been removed.
+The signal "pg/r_rom/BU2/N1" is sourceless and has been removed.
 The signal "pg/i_rom/BU2/N1" is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5" is
+sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_0"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f51"
+is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_1"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f52"
+is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_2"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f53"
+is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_3"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f54"
+is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_4"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f55"
+is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_5"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f56"
+is sourceless and has been removed.
+ Sourceless block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f5_6"
+(MUX) removed.
+  The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3_f57"
+is sourceless and has been removed.
  Sourceless block
 "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_0" (FF)
 removed.
@@ -868,233 +933,160 @@ removed.
 "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<0>" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>71" (ROM)
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_5" (ROM)
 removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>8" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_5" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>61" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_52"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>7" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_52" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>51" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_54"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>6" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_54" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>41" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_56"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>5" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_56" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>31" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_58"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>4" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_58" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>21" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_510"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>3" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_510" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>11" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_512"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>2" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_512" is
 sourceless and has been removed.
    Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>1" (ROM)
-removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_514"
+(ROM) removed.
     The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>1" is
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_514" is
 sourceless and has been removed.
- Sourceless block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_1" (FF)
-removed.
-  The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta4<0>" is
 sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_3" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta3" is
 sourceless and has been removed.
 The signal
 "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<3>" is
 sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_31" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta4<1>" is
 sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_32" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta9" is
 sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_33" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta15<0>" is
 sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_34" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta14" is
 sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_35" is
-sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_36" is
-sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux_37" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena1" is sourceless
-and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena0" is sourceless
-and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena10" is
-sourceless and has been removed.
-The signal
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/enout_14_cm
-p_eq0000" is sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta18<3>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta25<1>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta18<2>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta25<0>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta18<1>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta17<1>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta18<0>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta17<0>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta3<3>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta10<1>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta3<2>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta10<0>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta3<1>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta2<1>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta3<0>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta2<0>" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta27" is
-sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta23" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta15<1>" is
 sourceless and has been removed.
 The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta20" is
 sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta15" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta26<0>" is
 sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta12" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta25" is
 sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta8" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta26<1>" is
 sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta5" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta31" is
 sourceless and has been removed.
-The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta0" is
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta37<0>" is
 sourceless and has been removed.
-Unused block "pg/d_rom/GND" (ZERO) removed.
-Unused block "pg/d_rom/VCC" (ONE) removed.
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta36" is
+sourceless and has been removed.
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta37<1>" is
+sourceless and has been removed.
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta42" is
+sourceless and has been removed.
+The signal "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena14" is
+sourceless and has been removed.
+The signal
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/enout_10_cm
+p_eq0000" is sourceless and has been removed.
+Unused block "pg/b_rom/GND" (ZERO) removed.
+Unused block "pg/b_rom/VCC" (ONE) removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/enout_14_cm
-p_eq00001" (ROM) removed.
-Unused block "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena01" (ROM)
-removed.
-Unused block "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena101" (ROM)
-removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[11].ram.r/v2_init.ram/dpra
-m.dp2x2.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[13].ram.r/v2_init.ram/dpra
-m.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[16].ram.r/v2_init.ram/dpra
-m.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[18].ram.r/v2_init.ram/dpra
-m.dp2x2.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[19].ram.r/v2_init.ram/dpra
-m.dp4x4.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2_init.ram/dpram
-.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[21].ram.r/v2_init.ram/dpra
-m.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[24].ram.r/v2_init.ram/dpra
-m.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[26].ram.r/v2_init.ram/dpra
-m.dp2x2.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[28].ram.r/v2_init.ram/dpra
-m.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2_init.ram/dpram
-.dp2x2.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2_init.ram/dpram
-.dp4x4.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2_init.ram/dpram
-.dp1x1.ram" () removed.
-Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[9].ram.r/v2_init.ram/dpram
-.dp1x1.ram" () removed.
+"pg/g_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram
+.ram" () removed.
+Unused block "pg/g_rom/BU2/XST_GND" (ZERO) removed.
+Unused block "pg/g_rom/BU2/XST_VCC" (ONE) removed.
+Unused block "pg/g_rom/GND" (ZERO) removed.
+Unused block "pg/g_rom/VCC" (ONE) removed.
 Unused block "pg/i_rom/GND" (ZERO) removed.
 Unused block "pg/i_rom/VCC" (ONE) removed.
-Unused block "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena11" (ROM)
-removed.
+Unused block
+"pg/r_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram
+.ram" () removed.
+Unused block "pg/r_rom/BU2/XST_GND" (ZERO) removed.
+Unused block "pg/r_rom/BU2/XST_VCC" (ONE) removed.
+Unused block "pg/r_rom/GND" (ZERO) removed.
+Unused block "pg/r_rom/VCC" (ONE) removed.
 Unused block
 "pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[10].ram.r/v2_init.ram/dpra
 m.dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[14].ram.r/v2_init.ram/dpra
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[15].ram.r/v2_init.ram/dpra
 m.dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpra
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[16].ram.r/v2_init.ram/dpra
+m.dp2x2.ram" () removed.
+Unused block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[21].ram.r/v2_init.ram/dpra
 m.dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[22].ram.r/v2_init.ram/dpra
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[26].ram.r/v2_init.ram/dpra
 m.dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[25].ram.r/v2_init.ram/dpra
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[27].ram.r/v2_init.ram/dpra
+m.dp2x2.ram" () removed.
+Unused block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[32].ram.r/v2_init.ram/dpra
 m.dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[29].ram.r/v2_init.ram/dpra
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[37].ram.r/v2_init.ram/dpra
 m.dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2_init.ram/dpram
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[38].ram.r/v2_init.ram/dpra
+m.dp2x2.ram" () removed.
+Unused block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[43].ram.r/v2_init.ram/dpra
+m.dp1x1.ram" () removed.
+Unused block
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2_init.ram/dpram
 .dp1x1.ram" () removed.
 Unused block
-"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2_init.ram/dpram
-.dp1x1.ram" () removed.
+"pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2_init.ram/dpram
+.dp2x2.ram" () removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-GND 		pg/d_rom/BU2/XST_GND
-VCC 		pg/d_rom/BU2/XST_VCC
-FDE 		pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_2
-   optimized to 0
+GND 		pg/b_rom/BU2/XST_GND
+VCC 		pg/b_rom/BU2/XST_VCC
+LUT4
+		pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/enout_10_c
+mp_eq00001
 FDE 		pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_3
    optimized to 0
+LUT3 		pg/i_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena141
 GND 		pg/i_rom/BU2/XST_GND
 VCC 		pg/i_rom/BU2/XST_VCC
 

@@ -1,5 +1,5 @@
 NUM_USER_FILES
-8
+6
 s
 user_file_1
 lab3.v
@@ -14,13 +14,13 @@ user_file_4
 red_rom.xco
 s
 user_file_5
-green_rom.xco
-s
-user_file_6
 blue_rom.xco
 s
+user_file_6
+green_rom.xco
+s
 user_file_7
-image_ds.xco
+colormap_ds.xco
 s
 user_file_8
 colormap_ds.xco
