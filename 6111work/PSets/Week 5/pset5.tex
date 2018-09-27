@@ -88,17 +88,17 @@ module mem_controller(
             output       cas_out
           );
 
-  localparam STATE_IDLE = 3'b000;
-  localparam STATE_ROW  = 3'b001;
-  localparam STATE_MUX  = 3'b011;
-  localparam STATE_COL  = 3'b010;
-  localparam STATE_HOLD = 3'b110;
+  localparam STATE_IDLE = 4'b1010;
+  localparam STATE_ROW  = 4'b0010;
+  localparam STATE_MUX  = 4'b0110;
+  localparam STATE_COL  = 4'b0100;
+  localparam STATE_HOLD = 4'b0101;
 
   reg [2:0] state = STATE_IDLE;
 
-  assign ras_out = (state == STATE_IDLE);
-  assign mux_out = ~((state == STATE_IDLE) | (state == STATE_ROW));
-  assign cas_out = ((state == STATE_IDLE) | (state == STATE_ROW) | (state == STATE_MUX));
+  assign ras_out = state[3];
+  assign mux_out = state[2];
+  assign cas_out = state[1];
 
   // state machine
   always @(posedge clk_in)
@@ -109,6 +109,7 @@ module mem_controller(
       STATE_MUX  : state <= STATE_COL;
       STATE_COL  : state <= STATE_HOLD;
       STATE_HOLD : state <= STATE_IDLE;
+      default    : state <= STATE_IDLE;
     endcase
   end
 
@@ -199,7 +200,7 @@ endmodule
 \end{lstlisting}
 
 \section{Problem C}
-It is glitch free as the states are encoded using grey codes, thus all change of states except from state hold to state idle requires only one bit change. For state hold to state idle there are two possible glitches: 110 to 100 to 000 or 110 to 010 to 000. In both cases the intermediate meta-state has identical output values to the initial hold state. Thus no output glitches occur.
+Outputs are encoded in the state which is synchronous, thus no glitches occur.
 \section{Problem D}
 \begin{figure}[!b]
   \centering
