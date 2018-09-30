@@ -565,10 +565,6 @@ module pong_game (
 	localparam PUCK_RADIUS   = 10;
 	localparam PUCK_STARTX   = SCREEN_WIDTH/2;
 	localparam PUCK_STARTY   = (SCREEN_HEIGHT+1)/2;
-	
-	
-   // REPLACE ME! The code below just generates a color checkerboard
-   // using 64 pixel by 64 pixel squares.
    
    assign phsync_out = hsync_in;
    assign pvsync_out = vsync_in;
@@ -586,9 +582,8 @@ module pong_game (
 	reg[9:0] puck_x_next = PUCK_STARTX;
 	reg[9:0] puck_y_next = PUCK_STARTY;
 	
-	// angle which the puck is travelling
-	reg [8:0]  angle = 0;
-	
+   // This makes sure that the movement logic is clocked at a
+   // rate which can be perceived by the human eye
 	reg [18:0] move_counter = 19'h7FFFF;
 	reg [18:0] puck_counter = 19'h7FFFF;
 	
@@ -596,15 +591,16 @@ module pong_game (
 	wire [3:0]  puck_h_speed;
 	
 	// 90 >> 7 is approx 1/sqrt(2)
+   // This makes sure that the speed is given by puck_v_speed
 	assign puck_v_speed = (pspeed_in*90) >> 7;
 	assign puck_h_speed = (pspeed_in*90) >> 7;
-			
+	
+
+   // Direction registers
 	reg         down  = 0;
 	reg         right = 0;
 	reg         had_collision = 0;
 	
-   // here we use three bits from hcount and vcount to generate the \
-   // checkerboard
 	always @(posedge vclock_in or posedge reset_in)
 	begin
 		if (reset_in)
@@ -626,29 +622,25 @@ module pong_game (
 		else
 		begin		
 			// Paddle logic
-			if (up_in)
+         if (move_counter == 0)
 			begin
-				if ((move_counter == 0) & `INSIDE(paddle_x_next, paddle_y_next-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+            // Should we move the paddle and is the paddle going to stay in the screen if we move up?
+				if (up_in & `INSIDE(paddle_x_next, paddle_y_next-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
 				begin
 					paddle_y_next <= paddle_y - pspeed_in;
+               // Make sure the next move does not happen too soon
 					move_counter <= 19'h7FFFF;
 				end
-				else
-				begin
-					move_counter <= move_counter - 1;
-				end
+            else if (down_in & `INSIDE(paddle_x_next, paddle_y_next+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+            begin
+               paddle_y_next <= paddle_y + pspeed_in;
+               // Make sure the next move does not happen too soon
+               move_counter <= 19'h7FFFF;
+            end
 			end
-			else if (down_in)
+         else
 			begin
-				if (move_counter == 0 & `INSIDE(paddle_x_next, paddle_y_next+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
-				begin
-					paddle_y_next <= paddle_y + pspeed_in;
-					move_counter <= 19'h7FFFF;
-				end
-				else
-				begin
-					move_counter <= move_counter - 1;
-				end
+				move_counter <= move_counter - 1;
 			end
 			
 			paddle_x <= paddle_x_next;
@@ -658,15 +650,15 @@ module pong_game (
 			// Puck logic
 			if (puck_counter == 0)
 			begin
+            // Make sure next move does not happen too fast
 				puck_counter <= 19'h7FFFF;
-				// did the puck touch any of the vertical sides of the paddle?
-				// did the puck touch any of the horizontal sides of the paddle?
-				// is the corners in of the paddle inside the puck?
-				if (~had_collision & ( `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS)
-					  | `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y, puck_y_next, PUCK_RADIUS)
-					  | `INSIDERADIUS(paddle_x, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS)
-					  | `INSIDERADIUS(paddle_x, puck_x_next, paddle_y, puck_y_next, PUCK_RADIUS) 
-					 ))
+				if (~had_collision & // Make sure we can't have 2 collisions between frames - puck gets "stuck"
+                  (   `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS) // 
+   					  | `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y, puck_y_next, PUCK_RADIUS)
+   					  | `INSIDERADIUS(paddle_x, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS)
+   					  | `INSIDERADIUS(paddle_x, puck_x_next, paddle_y, puck_y_next, PUCK_RADIUS) 
+					   )
+               )
 				begin
 					had_collision <= 1;
 					right <= ~right;

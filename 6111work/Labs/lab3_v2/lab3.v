@@ -565,15 +565,11 @@ module pong_game (
 	localparam PUCK_STARTX   = SCREEN_WIDTH/2;
 	localparam PUCK_STARTY   = (SCREEN_HEIGHT+1)/2;
 	
+   // Make sure that if the puck has touched the left wall it is past the x position of the paddle
 	localparam PADDLESTART_X = 10 + 2*PUCK_RADIUS;
 	localparam PADDLESTART_Y = 300;
 	localparam PADDLE_WIDTH  = 10;
 	localparam PADDLE_HEIGHT = 168;
-	
-	
-	
-   // REPLACE ME! The code below just generates a color checkerboard
-   // using 64 pixel by 64 pixel squares.
    
    assign phsync_out = hsync_in;
    assign pvsync_out = vsync_in;
@@ -585,25 +581,29 @@ module pong_game (
 	reg[9:0] puck_x = PUCK_STARTX;
 	reg[9:0] puck_y = PUCK_STARTY;
 	
+   // Paddle x next is not necessary, but it could be cool if you could move
+   // the paddle left and right! In this case paddle_x_next is necessary.
+   // In any case synthesis gets rid of this register in the current implementation
 	reg[9:0] paddle_x_next = PADDLESTART_X;
 	reg[9:0] paddle_y_next = PADDLESTART_Y;
 	
 	reg[9:0] puck_x_next = PUCK_STARTX;
 	reg[9:0] puck_y_next = PUCK_STARTY;
 	
-	// angle which the puck is travelling
-	reg [8:0]  angle = 0;
-	
+   // This makes sure that the movement logic is clocked at a
+   // rate which can be perceived by the human eye
 	reg [18:0] move_counter = 19'h7FFFF;
 	reg [18:0] puck_counter = 19'h7FFFF;
 	
 	wire [3:0] puck_v_speed;
 	wire [3:0] puck_h_speed;
 	
-	// 90 >> 7 is approx 1/sqrt(2)
+   // 90 >> 7 is approx 1/sqrt(2)
+   // This makes sure that the speed is given by puck_v_speed
 	assign puck_v_speed = (pspeed_in*90) >> 7;
 	assign puck_h_speed = (pspeed_in*90) >> 7;
 			
+   // Direction registers
 	reg         down  = 0;
 	reg         right = 0;
 	reg         had_collision = 0;
@@ -617,7 +617,10 @@ module pong_game (
 	wire [10:0] puck_x_tl;
 	wire [10:0] puck_y_tl;
 	wire [15:0] image_addr;
+
+   // Calculate the address based on pixel position
 	assign image_addr = (vcount_in - puck_y_tl)*PUCK_RADIUS*2 + (hcount_in - puck_x_tl);
+   // top left corner coordinates of puck
 	assign puck_x_tl = puck_x_next - PUCK_RADIUS;
 	assign puck_y_tl = puck_y_next - PUCK_RADIUS;
 	
@@ -626,18 +629,18 @@ module pong_game (
 							.addra(image_addr),
 							.douta(colour_addr)
 							);
+   // Uncomment for colour (limitations on labkit cause artifacts)							
+	// red_rom   r_rom (
+	// 						.clka (vclock_in      ),
+	// 						.addra(colour_addr ),
+	// 						.douta(image_red_intensity)
+	// 						);
 							
-	red_rom   r_rom (
-							.clka (vclock_in      ),
-							.addra(colour_addr ),
-							.douta(image_red_intensity)
-							);
-							
-	green_rom g_rom (
-							.clka (vclock_in      ),
-							.addra(colour_addr ),
-							.douta(image_green_intensity)
-							);
+	// green_rom g_rom (
+	// 						.clka (vclock_in      ),
+	// 						.addra(colour_addr ),
+	// 						.douta(image_green_intensity)
+	// 						);
 							
 	blue_rom  b_rom (
 							.clka (vclock_in      ),
@@ -645,8 +648,6 @@ module pong_game (
 							.douta(image_blue_intensity)
 							);
 	
-   // here we use three bits from hcount and vcount to generate the \
-   // checkerboard 
 	always @(posedge vclock_in or posedge reset_in)
 	begin
 		if (reset_in)
@@ -666,35 +667,33 @@ module pong_game (
 			had_collision <= 0;
 		end
 		else
-		begin		
-			// Paddle logic
-			if (up_in)
-			begin
-				if ((move_counter == 0) & `INSIDE(paddle_x_next, paddle_y_next-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
-				begin
-					paddle_y_next <= paddle_y - pspeed_in;
-					move_counter <= 19'h7FFFF;
-				end
-				else
-				begin
-					move_counter <= move_counter - 1;
-				end
-			end
-			else if (down_in)
-			begin
-				if (move_counter == 0 & `INSIDE(paddle_x_next, paddle_y_next+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
-				begin
-					paddle_y_next <= paddle_y + pspeed_in;
-					move_counter <= 19'h7FFFF;
-				end
-				else
-				begin
-					move_counter <= move_counter - 1;
-				end
-			end
+		begin
+         // Paddle logic
+         if (move_counter == 0)
+         begin
+            // Should we move the paddle and is the paddle going to stay in the screen if we move up?
+            if (up_in & `INSIDE(paddle_x_next, paddle_y_next-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+            begin
+               paddle_y_next <= paddle_y - pspeed_in;
+               // Make sure the next move does not happen too soon
+               move_counter <= 19'h7FFFF;
+            end //if (up_in & `INSIDE(paddle_x_next, paddle_y_next-pspeed_in, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+            else if (down_in & `INSIDE(paddle_x_next, paddle_y_next+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+            begin
+               paddle_y_next <= paddle_y + pspeed_in;
+               // Make sure the next move does not happen too soon
+               move_counter <= 19'h7FFFF;
+            end //if (down_in & `INSIDE(paddle_x_next, paddle_y_next+pspeed_in+PADDLE_HEIGHT, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+         end //if (move_counter == 0)
+         else
+         begin
+            move_counter <= move_counter - 1;
+         end
 			
 			paddle_x <= paddle_x_next;
 			paddle_y <= paddle_y_next;
+
+         // Only update the puck position if we haven't touched the LHS of the screen
 			if (puck_x_next >= PUCK_RADIUS)
 			begin
 				puck_x <= puck_x_next;
@@ -704,96 +703,101 @@ module pong_game (
 			// Puck logic
 			if (puck_counter == 0)
 			begin
+            // Make sure next move does not happen too fast
 				puck_counter <= 19'h7FFFF;
-				// did the puck touch any of the vertical sides of the paddle?
-				// did the puck touch any of the horizontal sides of the paddle?
-				// is the corners in of the paddle inside the puck?
+            // Make sure we can't have 2 collisions between frames - puck gets "stuck"
+            // Check if the bottom right corner of the paddle has had a collision
+            // Check if the top right corner of the paddle has had a collision
 				if ((~had_collision) && ( 
 				       `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y+PADDLE_HEIGHT, puck_y_next, PUCK_RADIUS)
 					  | `INSIDERADIUS(paddle_x+PADDLE_WIDTH, puck_x_next, paddle_y              , puck_y_next, PUCK_RADIUS) 
 					 ))
 				begin
+               // If there is a collision, make sure we don't get stuck to the object.
 					had_collision <= 1;
+               // This is a corner collision - reverse both x and y directions
 					right <= ~right;
 					down  <= ~down;
-				end
+				end //if ((~had_collision) && ( ...
 				else if (~had_collision & `INSIDE(puck_x_next-PUCK_RADIUS, puck_y_next, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
-				begin
+				begin // Collision with right wall of paddle
 					had_collision <= 1;
 					right        <= 1;
 				end
-				else if (~had_collision & `INSIDE(puck_x_next+PUCK_RADIUS, puck_y_next, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
-				begin
-					had_collision <= 1;
-					right        <= 0; 
-				end
 				else if (~had_collision & `INSIDE(puck_x_next, puck_y_next-PUCK_RADIUS, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
-				begin
+				begin // Collision with top wall of paddle
 					had_collision <= 1;
 					down          <= 1;
-				end
+				end // Collision with bottom wall of paddle
 				else if (~had_collision & `INSIDE(puck_x_next, puck_y_next+PUCK_RADIUS, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
 				begin
 					had_collision <= 1;
 					down        <= 0;
 				end
-				else // not hitting a corner
+				else // not hitting the paddle - need to collide with sides of the screen
 				begin
 					had_collision <= 0;
-					if (right)
+					if (right) // check for collision with right side of the display
 					begin
 						if ((puck_x_next + PUCK_RADIUS) > SCREEN_WIDTH)
-						begin
+						begin // Collision! Rebound left
 							right  <= 0;
 							puck_x_next <= puck_x - puck_h_speed;
 						end
 						else
-						begin
+						begin // No collision - move right
 							puck_x_next <= puck_x + puck_h_speed;
 						end
 					end
 					else
 					begin
-						if (puck_x_next < PUCK_RADIUS)
-						begin
-							right  <= 1;
+						if (puck_x_next < PUCK_RADIUS)// check for collision with left side of the display
+						begin // Collision! Respawn.
+                     // make the game a bit easier by making sure the puck
+                     // respawns moving away from the paddle
+							right  <= 1; 
+                     // reset puck position
 							puck_x   <= PUCK_STARTX;
 							puck_y   <= PUCK_STARTY;
 							puck_x_next   <= PUCK_STARTX + puck_h_speed;
 							puck_y_next   <= PUCK_STARTY + puck_v_speed;
 						end
 						else
-						begin
+						begin // No collision: move
 							puck_x_next <= puck_x - puck_h_speed;
 						end
 					end
-					
-					if (down & (puck_x_next >= PUCK_RADIUS))
-					begin
-						if ((puck_y_next + PUCK_RADIUS) > SCREEN_HEIGHT)
-						begin
-							down  <= 0;
-							puck_y_next <= puck_y - puck_v_speed;
-						end
-						else
-						begin
-							puck_y_next <= puck_y + puck_v_speed;
-						end
-					end
-					else if (puck_x_next >= PUCK_RADIUS)
-					begin
-						if (puck_y_next < PUCK_RADIUS)
-						begin
-							down   <= 1;
-							puck_y_next <= puck_y + puck_v_speed;
-						end
-						else
-						begin
-							puck_y_next <= puck_y - puck_v_speed;
-						end
-					end
-				end
-			end
+					// This is necessary to ensure the puck can collide with both the top and bottom
+               // edges of the screen simultaneously
+					if (puck_x_next >= PUCK_RADIUS) //we haven't lost yet
+               begin
+                  if (down) // We are moving down
+   					begin // Collision! Rebound off bottom of screen
+   						if ((puck_y_next + PUCK_RADIUS) > SCREEN_HEIGHT)
+   						begin
+   							down  <= 0;
+   							puck_y_next <= puck_y - puck_v_speed;
+   						end
+   						else // No collision - move down
+   						begin
+   							puck_y_next <= puck_y + puck_v_speed;
+   						end //if ((puck_y_next + PUCK_RADIUS) > SCREEN_HEIGHT)
+   					end //if (down) // We are moving down
+   					else // We are moving up
+   					begin
+   						if (puck_y_next < PUCK_RADIUS)
+   						begin // Collision! Rebound off top of screen
+   							down   <= 1;
+   							puck_y_next <= puck_y + puck_v_speed;
+   						end
+   						else // No collision - move up
+   						begin
+   							puck_y_next <= puck_y - puck_v_speed;
+   						end //if (puck_y_next < PUCK_RADIUS)
+   					end //if (down) // We are moving down
+               end //if (puck_x_next >= PUCK_RADIUS) //we haven't lost yet
+				end //if (puck_x_next >= PUCK_RADIUS) //we haven't lost yet
+			end //if (puck_counter == 0)
 			else
 			begin
 				puck_counter <= puck_counter - 1;
@@ -802,10 +806,12 @@ module pong_game (
 			if (`INSIDE(hcount_in, vcount_in, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
 			begin
 				pixel_out <= {8'hFF, 8'h00, 8'h00};
-			end
+			end //if (`INSIDE(hcount_in, vcount_in, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
 			else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
+         begin
 				 pixel_out <= {image_blue_intensity, image_blue_intensity, image_blue_intensity};
-			else
+			end //else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
+         else
 			begin
 				pixel_out <= 24'b0;
 			end

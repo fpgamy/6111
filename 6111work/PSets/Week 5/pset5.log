@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.9)  23 SEP 2018 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.9)  27 SEP 2018 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1029,47 +1029,43 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 45.
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 56.
+ [1
 
-! Extra }, or forgotten $.
-l.56 ...tt{IDLE}}{\texttt{RAS=1, MUX=0, CAS=1} } }
-                                                  ;
-? 
-! Emergency stop.
-l.56 ...tt{IDLE}}{\texttt{RAS=1, MUX=0, CAS=1} } }
-                                                  ;
-End of file on the terminal!
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 107.
 
- 
+ (/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 107.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 123.
+
+
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
+ [2]
+<screen.png, id=27, 1445.4pt x 813.0375pt>
+File: screen.png Graphic file (type png)
+<use screen.png>
+Package pdftex.def Info: screen.png  used on input line 207.
+(pdftex.def)             Requested size: 422.77664pt x 237.8094pt.
+ [3 <./screen.png (PNG copy)>] (./pset5.aux) ) 
 Here is how much of TeX's memory you used:
- 20667 strings out of 492642
- 401787 string characters out of 6135567
- 460759 words of memory out of 5000000
- 24146 multiletter control sequences out of 15000+600000
- 16762 words of font info for 63 fonts, out of 8000000 for 9000
+ 21230 strings out of 492642
+ 409245 string characters out of 6135567
+ 505759 words of memory out of 5000000
+ 24664 multiletter control sequences out of 15000+600000
+ 40058 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,69p,461b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-00000 for 9000
- 1141 hyphenation exceptions out of 8191
- 55i,11n,69p,461b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-texttt{RAS=1, \xoverline{MUX}, CAS=1} }
-                                                  $ };
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 20673 strings out of 492642
- 401939 string characters out of 6135567
- 460810 words of memory out of 5000000
- 24149 multiletter control sequences out of 15000+600000
- 16762 words of font info for 63 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 55i,11n,69p,461b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-/texmf-dist/fonts/enc/dvips/mnsymbol
+ 55i,11n,69p,461b,1578s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/
+dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol
 /MnSymbolA.enc}</usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol-Bold
 12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dis
@@ -1083,7 +1079,7 @@ fonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf-dist/fon
 ts/type1/public/cm-super/sfrm0600.pfb>
-Output written on pset5.pdf (3 pages, 298027 bytes).
+Output written on pset5.pdf (3 pages, 297249 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

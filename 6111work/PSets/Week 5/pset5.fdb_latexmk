@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1537727812 "/home/fpgamy/Documents/6111/6111work/PSets/Week 5/pset5.tex" "pset5.pdf" "pset5" 1537727813
-  "/home/fpgamy/Documents/6111/6111work/PSets/Week 5/pset5.tex" 1537727811 6204 04c6532b3789ba7622e48211c726cb45 ""
+["pdflatex"] 1538082699 "/home/fpgamy/Documents/6111/6111work/PSets/Week 5/pset5.tex" "pset5.pdf" "pset5" 1538082700
+  "/home/fpgamy/Documents/6111/6111work/PSets/Week 5/pset5.tex" 1538082698 5830 06c7723f6998bc30907bbd211de12b8b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1536122179 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1536122841 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1536122179 3332 103109f5612ad95229751940c61aada0 ""
@@ -241,10 +241,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1536122179 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1536493911 2756227 3af771b8c7802fcc4de3c67a29c4e776 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1536493890 7908118 aacf2d4af223c1e5a4a0596a9a2c63fc ""
-  "pset5.aux" 1537727813 530 d0172149b680fc5491705c1e8162cd28 ""
-  "pset5.tex" 1537727811 6204 04c6532b3789ba7622e48211c726cb45 ""
+  "pset5.aux" 1538082700 530 d0172149b680fc5491705c1e8162cd28 ""
+  "pset5.tex" 1538082698 5830 06c7723f6998bc30907bbd211de12b8b ""
   "screen.png" 1537727559 123303 3488455aef9cf0b6b0e8168321523c5c ""
   (generated)
-  "pset5.aux"
   "pset5.pdf"
+  "pset5.aux"
   "pset5.log"

@@ -379,11 +379,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 OUTPUT pset5.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
-INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT screen.png
 INPUT ./screen.png

@@ -1,0 +1,102 @@
+#! /usr/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55af3c552160 .scope module, "lpset6" "lpset6" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clock"
+    .port_info 1 /INPUT 1 "start"
+    .port_info 2 /INPUT 1 "data"
+    .port_info 3 /OUTPUT 1 "done"
+    .port_info 4 /OUTPUT 16 "r"
+L_0x55af3c5aecb0 .functor BUFZ 1, L_0x55af3c5aec10, C4<0>, C4<0>, C4<0>;
+o0x7fd3bc8f2018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55af3c552380_0 .net "clock", 0 0, o0x7fd3bc8f2018;  0 drivers
+v0x55af3c5ae610_0 .var "counter", 6 0;
+o0x7fd3bc8f2078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55af3c5ae6f0_0 .net "data", 0 0, o0x7fd3bc8f2078;  0 drivers
+v0x55af3c5ae790_0 .net "done", 0 0, L_0x55af3c5aecb0;  1 drivers
+v0x55af3c5ae850_0 .net "processed_48_bits", 0 0, L_0x55af3c5aec10;  1 drivers
+v0x55af3c5ae910_0 .var "r", 15 0;
+o0x7fd3bc8f2138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55af3c5ae9f0_0 .net "start", 0 0, o0x7fd3bc8f2138;  0 drivers
+v0x55af3c5aeab0_0 .var "start_latch", 0 0;
+E_0x55af3c5885e0 .event posedge, v0x55af3c552380_0;
+L_0x55af3c5aec10 .part v0x55af3c5ae610_0, 6, 1;
+    .scope S_0x55af3c552160;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55af3c5aeab0_0, 0, 1;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x55af3c5ae910_0, 0, 16;
+    %pushi/vec4 16, 0, 7;
+    %store/vec4 v0x55af3c5ae610_0, 0, 7;
+    %end;
+    .thread T_0;
+    .scope S_0x55af3c552160;
+T_1 ;
+    %wait E_0x55af3c5885e0;
+    %load/vec4 v0x55af3c5ae9f0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x55af3c5aeab0_0, 0;
+    %pushi/vec4 65535, 0, 16;
+    %assign/vec4 v0x55af3c5ae910_0, 0;
+    %pushi/vec4 16, 0, 7;
+    %assign/vec4 v0x55af3c5ae610_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0x55af3c5aeab0_0;
+    %load/vec4 v0x55af3c5ae850_0;
+    %inv;
+    %and;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.2, 8;
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 1, 15, 5;
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 1, 14, 5;
+    %xor;
+    %load/vec4 v0x55af3c5ae6f0_0;
+    %xor;
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 12, 2, 3;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 1, 15, 5;
+    %load/vec4 v0x55af3c5ae6f0_0;
+    %xor;
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 1, 1, 2;
+    %xor;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 1, 0, 2;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0x55af3c5ae910_0;
+    %parti/s 1, 15, 5;
+    %load/vec4 v0x55af3c5ae6f0_0;
+    %xor;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0x55af3c5ae910_0, 0;
+    %load/vec4 v0x55af3c5ae610_0;
+    %addi 1, 0, 7;
+    %assign/vec4 v0x55af3c5ae610_0, 0;
+    %jmp T_1.3;
+T_1.2 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55af3c5aeab0_0, 0;
+T_1.3 ;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/fpgamy/Documents/6111/6111work/PSets/Week 6/lpset6.v";

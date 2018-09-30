@@ -94,7 +94,7 @@ module mem_controller(
   localparam STATE_COL  = 4'b0100;
   localparam STATE_HOLD = 4'b0101;
 
-  reg [2:0] state = STATE_IDLE;
+  reg [3:0] state = STATE_IDLE;
 
   assign ras_out = state[3];
   assign mux_out = state[2];
