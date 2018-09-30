@@ -1,9 +1,3 @@
-`define assert(signal, value) \
-        if (signal !== value) \
-        begin \
-            $display("ASSERTION FAILED in %m at time %0t: signal != value", $time); \
-        end
-
 module soduku_solver_tb;
 //
 // INCLUDES
@@ -127,7 +121,6 @@ module soduku_solver_tb;
 							.board_in  (test_input),
 							.board_out (test_output)
 						);
-
 	initial
 	begin
 	    $dumpfile("test.vcd");
@@ -141,8 +134,9 @@ module soduku_solver_tb;
 					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
 					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
 					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
-					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
 					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0};
+		#10;
+		reset       = 0;
 		#10;
 
 		test_input  =  {4'd2, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
@@ -154,9 +148,7 @@ module soduku_solver_tb;
 					    4'd3, 4'd8, 4'd2, 4'd1, 4'd9, 4'd4, 4'd5, 4'd7, 4'd6,
 					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd9,
 					    4'd9, 4'd4, 4'd6, 4'd3, 4'd5, 4'd7, 4'd2, 4'd1, 4'd8};
-		#10;
-		
-		printstatus;
+		test_solver;
 
 		test_input  =  {4'd0, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
 					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd4,
@@ -167,9 +159,7 @@ module soduku_solver_tb;
 					    4'd3, 4'd8, 4'd2, 4'd1, 4'd9, 4'd4, 4'd5, 4'd7, 4'd6,
 					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd9,
 					    4'd9, 4'd4, 4'd6, 4'd3, 4'd5, 4'd7, 4'd2, 4'd1, 4'd8};
-		#10;
-		
-		printstatus;
+		test_solver;
 
 		test_input  =  {4'd0, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
 					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd4,
@@ -180,9 +170,7 @@ module soduku_solver_tb;
 					    4'd3, 4'd8, 4'd2, 4'd1, 4'd9, 4'd4, 4'd5, 4'd7, 4'd6,
 					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd9,
 					    4'd9, 4'd4, 4'd6, 4'd3, 4'd5, 4'd7, 4'd2, 4'd1, 4'd8};
-		#10;
-		
-		printstatus;
+		test_solver;
 
 		test_input  =  {4'd0, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
 					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd4,
@@ -193,15 +181,72 @@ module soduku_solver_tb;
 					    4'd3, 4'd8, 4'd2, 4'd1, 4'd9, 4'd4, 4'd5, 4'd7, 4'd6,
 					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd9,
 					    4'd9, 4'd4, 4'd6, 4'd3, 4'd5, 4'd0, 4'd2, 4'd1, 4'd8};
-		#10;
-		
-		printstatus;
+		test_solver;
+
+		test_input  =  {4'd2, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
+					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd4,
+					    4'd8, 4'd6, 4'd3, 4'd4, 4'd7, 4'd9, 4'd1, 4'd2, 4'd5,
+					    4'd4, 4'd3, 4'd5, 4'd9, 4'd6, 4'd1, 4'd7, 4'd8, 4'd2,
+					    4'd1, 4'd2, 4'd7, 4'd5, 4'd4, 4'd8, 4'd9, 4'd6, 4'd3,
+					    4'd6, 4'd9, 4'd8, 4'd7, 4'd3, 4'd2, 4'd4, 4'd5, 4'd1,
+					    4'd3, 4'd8, 4'd2, 4'd1, 4'd9, 4'd4, 4'd5, 4'd7, 4'd6,
+					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd9,
+					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8};
+		test_solver;
+
+		test_input  =  {4'd2, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd0,
+					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd0,
+					    4'd8, 4'd6, 4'd3, 4'd4, 4'd7, 4'd9, 4'd1, 4'd2, 4'd0,
+					    4'd4, 4'd3, 4'd5, 4'd9, 4'd6, 4'd1, 4'd7, 4'd8, 4'd0,
+					    4'd1, 4'd2, 4'd7, 4'd5, 4'd4, 4'd8, 4'd9, 4'd6, 4'd0,
+					    4'd6, 4'd9, 4'd8, 4'd7, 4'd3, 4'd2, 4'd4, 4'd5, 4'd0,
+					    4'd3, 4'd8, 4'd2, 4'd1, 4'd9, 4'd4, 4'd5, 4'd7, 4'd0,
+					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd0,
+					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8};
+		test_solver;
+
+		test_input  =  {4'd2, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
+					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd4,
+					    4'd8, 4'd6, 4'd0, 4'd0, 4'd7, 4'd9, 4'd0, 4'd2, 4'd5,
+					    4'd4, 4'd3, 4'd0, 4'd9, 4'd6, 4'd1, 4'd0, 4'd8, 4'd2,
+					    4'd1, 4'd2, 4'd7, 4'd5, 4'd4, 4'd8, 4'd9, 4'd6, 4'd3,
+					    4'd6, 4'd9, 4'd8, 4'd7, 4'd3, 4'd0, 4'd4, 4'd5, 4'd1,
+					    4'd3, 4'd8, 4'd0, 4'd1, 4'd9, 4'd0, 4'd0, 4'd7, 4'd6,
+					    4'd5, 4'd7, 4'd1, 4'd2, 4'd8, 4'd6, 4'd3, 4'd4, 4'd9,
+					    4'd9, 4'd4, 4'd6, 4'd3, 4'd5, 4'd7, 4'd2, 4'd1, 4'd8};
+		test_solver;
+
+
+		test_input  =  {4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0,
+					    4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0,
+					    4'd8, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0,
+					    4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0,
+					    4'd0, 4'd0, 4'd7, 4'd5, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0,
+					    4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd5, 4'd0,
+					    4'd0, 4'd0, 4'd2, 4'd0, 4'd9, 4'd0, 4'd0, 4'd7, 4'd0,
+					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6, 4'd3, 4'd0, 4'd0,
+					    4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8};
+		test_solver;
+
 
 		#50;
 		$finish;
 	end
 
 	always #5 clk = ~clk;
+
+	task test_solver;
+	begin
+		reset       = 1;
+		#20;
+		// printstatus;
+		// #20;
+		reset       = 0;
+		#20;		
+		printstatus;
+		#10;		
+	end
+	endtask
 
 	task printstatus;
 	begin

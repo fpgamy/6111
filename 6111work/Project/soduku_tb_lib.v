@@ -1,3 +1,9 @@
+`define assert(signal, value) \
+        if (signal !== value) \
+        begin \
+            $display("ASSERTION FAILED in %m at time %0t: signal != value", $time); \
+        end
+
 `define PRINTVEC(vec_in)\
 	$write("%d ", vec_in[0]);\
 	$write("%d ", vec_in[1]);\
