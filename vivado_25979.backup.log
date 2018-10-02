@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Oct  2 16:01:40 2018
+# Process ID: 25979
+# Current directory: /afs/athena.mit.edu/user/m/a/magson/Documents/6111
+# Command line: vivado
+# Log file: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/vivado.log
+# Journal file: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project Lab4 /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4 -part xc7a100tcsg324-3
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/local/xilinx-local/Vivado/2016.2/data/ip'.
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 5867.523 ; gain = 5.402 ; free physical = 998 ; free virtual = 12960
+add_files -norecurse {/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/display_8hex.v /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/labkit_lab4.v /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/synchronize.v /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/debounce.v}
+import_files -fileset constrs_1 -force -norecurse /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/Nexys4DDR_Master_lab4.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/debounce.v" into library work [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/debounce.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/display_8hex.v" into library work [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/display_8hex.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/labkit_lab4.v" into library work [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/labkit_lab4.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/synchronize.v" into library work [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/synchronize.v:1]
+[Tue Oct  2 16:05:17 2018] Launched synth_1...
+Run output will be captured here: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.runs/synth_1/runme.log
+launch_runs impl_1
+[Tue Oct  2 16:05:50 2018] Launched impl_1...
+Run output will be captured here: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Oct  2 16:06:47 2018] Launched impl_1...
+Run output will be captured here: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.2
+  **** Build date : Jun  2 2016-16:54:00
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+disconnect_hw_server localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+disconnect_hw_server localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  2 16:11:53 2018...

@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Oct  2 16:01:40 2018
+# Process ID: 25979
+# Current directory: /afs/athena.mit.edu/user/m/a/magson/Documents/6111
+# Command line: vivado
+# Log file: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/vivado.log
+# Journal file: /afs/athena.mit.edu/user/m/a/magson/Documents/6111/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project Lab4 /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4 -part xc7a100tcsg324-3
+add_files -norecurse {/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/display_8hex.v /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/labkit_lab4.v /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/synchronize.v /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/debounce.v}
+import_files -fileset constrs_1 -force -norecurse /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/Nexys4DDR_Master_lab4.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+disconnect_hw_server localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+disconnect_hw_server localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target

@@ -1,0 +1,56 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 25766
+
+Current time: 	10/2/18 4:00:13 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: NAME="Ubuntu"
+Version: 4.2.0-42-generic
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :2
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/var/local/xilinx-local/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	magson
+User home directory: /afs/athena.mit.edu/user/m/a/magson
+User working directory: /afs/athena.mit.edu/user/m/a/magson/Documents/6111
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /var/local/xilinx-local/Vivado
+RDI Data directory: /var/local/xilinx-local/Vivado/2016.2/data
+RDI Bin directory: /var/local/xilinx-local/Vivado/2016.2/bin
+
+Vivado preferences path: /afs/athena.mit.edu/user/m/a/magson/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /afs/athena.mit.edu/user/m/a/magson/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	183 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,860 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 26 MB (+24502kb) [00:00:06]
+// [Engine Memory]: 4,858 MB (+4942481kb) [00:00:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,870 MB. GUI used memory: 21 MB. Current time: 10/2/18 4:00:15 PM EDT
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create New Project"); // l:JideButton (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 30 MB (+3426kb) [00:00:15]
+// [GUI Memory]: 35 MB (+2959kb) [00:00:16]
+// [GUI Memory]: 42 MB (+6230kb) [00:00:16]
+// h:g (cv:JFrame): New Project: addNotify
+// Elapsed time: 23 seconds
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)

@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Tue Oct  2 18:51:45 2018">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="5b8a2d97350b4223afe7238001363464" type="ProjectID"/>
+<property name="ProjectIteration" value="5" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddSources" value="4" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="4" type="JavaHandler"/>
+<property name="LaunchOpenTarget" value="2" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="2" type="JavaHandler"/>
+<property name="NewProject" value="1" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="8" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="10" type="JavaHandler"/>
+<property name="OpenSource" value="1" type="JavaHandler"/>
+<property name="ProgramDevice" value="3" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="3" type="JavaHandler"/>
+<property name="RunBitgen" value="2" type="JavaHandler"/>
+<property name="RunImplementation" value="2" type="JavaHandler"/>
+<property name="RunSynthesis" value="1" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
+<property name="ToggleViewNavigator" value="5" type="JavaHandler"/>
+<property name="ToolsTemplates" value="1" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="1" type="JavaHandler"/>
+<property name="ViewTaskRTLAnalysis" value="1" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="FINISH, Finish" value="4" type="GuiResourceData"/>
+<property name="General, General" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="4" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_AND_NETLIST_FILES_OR_DIRECTORIES, Add or create design sources" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, Add or create constraints" value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, Add Files" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, alarm_fsm" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, clk_divider.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, f" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, fuel_pump_controller.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, siren_controller.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, time_controller.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, timer.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, clk_divider.v], 2, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, clk_divider.v], 2, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, time_controller.v], 5, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, time_controller.v], 5, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, timer.v], 4, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files, timer.v], 4, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Non-module Files], 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, alarm_fsm (alarm_fsm.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, clk_divider (clk_divider.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, debounce (debounce.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, labkit (labkit_lab4.v" value="26" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, synchronize (synchronize.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources], 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Implementation], 19, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Program Device], 28, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Program Device], 28, false, false, false, false, true, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug], 23, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Language Templates], 3, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Project Settings], 1, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Project Settings], 1, false, false, false, false, true, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, RTL Analysis, Open Elaborated Design], 14, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, RTL Analysis], 12, true" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Synthesis Settings], 16, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis], 15" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis], 15, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, XADC ;   , 3, XADC, 0, false" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, localhost (2" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, xc7a100t_0 (1" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, xilinx_tcf/Digilent/210292645877A (1" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, xilinx_tcf/Xilinx/00000000000000 (0" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.LogMonitor_MONITOR, 80, 68" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FLOW, Flow" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_TOOLS, Tools" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_UNSELECT_TYPE, Unselect Type" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_VIEW, View" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_WINDOW, Window" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_PROJECT_SUMMARY, Project Summary" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PlanAheadTab_SHOW_FLOW_NAVIGATOR, Flow Navigator" value="3" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="5" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="6" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="4" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="8" type="GuiResourceData"/>
+<property name="RDIResource.HToolBar_AUTOMATICALLY_SCROLL_TO_SELECTED_OBJECTS, Hardware_autoscroll_to_selection" value="1" type="GuiResourceData"/>
+<property name="RDIResource.MainWinMenuMgr_LAYOUT, Layout" value="2" type="GuiResourceData"/>
+<property name="Simulation, Simulation" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 106, 553" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 113, 417" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 136, 578" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 141, 565" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 142, 530" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 156, 362" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 157, 525" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 165, 427" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 165, 427, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 166, 511" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 178, 35" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 182, 26" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 185, 336" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 209, 509" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 218, 378" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 221, 259" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 226, 505" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 227, 512" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 228, 141" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 238, 322" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 249, 249" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 268, 542" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 269, 336" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 270, 448" value="2" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 273, 339" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 286, 412" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 294, 391" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 296, 509" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 309, 543" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 312, 501" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 313, 425" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 313, 521" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 314, 508" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 316, 428, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 317, 481" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 325, 429" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 325, 429, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 325, 496" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 359, 481" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 363, 474" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 370, 489" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 378, 549" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 382, 539" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 386, 362" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 386, 445" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 387, 335" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 393, 526" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 404, 525" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 407, 500" value="2" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 425, 505" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 427, 540" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 449, 408" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 452, 423" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 455, 422" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 465, 347" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 500, 387" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 517, 332" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 521, 282" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 57, 503" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 593, 336" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 601, 332" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 607, 345" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 72, 418" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 73, 468" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 750, 336" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 755, 335" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 79, 533" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 81, 402" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 82, 460" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 85, 480" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 87, 476" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 87, 476, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 93, 499" value="1" type="GuiResourceData"/>
+<property name="alarm_fsm.v, 97, 559" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 106, 65" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 106, 65, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 122, 9" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 126, 28" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 126, 28, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 128, 80" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 129, 168" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 129, 80, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 135, 188" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 137, 151" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 137, 163" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 145, 146" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 146, 157" value="2" type="GuiResourceData"/>
+<property name="clk_divider.v, 147, 251" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 149, 68" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 152, 269" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 155, 303" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 157, 23" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 158, 172" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 167, 174" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 167, 199" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 176, 174" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 181, 228" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 182, 218" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 182, 218, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 185, 20" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 187, 217" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 187, 217, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 191, 221" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 195, 11" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 199, 47" value="2" type="GuiResourceData"/>
+<property name="clk_divider.v, 209, 202" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 209, 202, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 211, 221" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 214, 277" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 222, 99" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 226, 18" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 230, 283" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 240, 341" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 253, 69" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 263, 98" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 301, 17" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 310, 13" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 310, 95" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 311, 86" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 323, 159" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 326, 117" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 337, 33" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 343, 57" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 353, 33" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 361, 26" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 364, 164" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 374, 145" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 384, 15" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 398, 51" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 399, 22" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 406, 6" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 427, 27" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 429, 59" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 445, 110" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 450, 94" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 461, 84" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 467, 249" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 468, 49" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 494, 59" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 497, 64" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 506, 67" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 69, 48" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 71, 64" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 88, 177" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 93, 173" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 93, 173, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 96, 67" value="1" type="GuiResourceData"/>
+<property name="clk_divider.v, 96, 67, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="display_8hex.v, 468, 400" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 107, 163" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 112, 305" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 137, 200" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 144, 459" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 144, 476" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 146, 504" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 181, 291" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 186, 305" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 2, 425" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 215, 459" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 23, 489" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 257, 203" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 3, 324" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 312, 449" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 330, 429" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 340, 254" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 349, 434" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 350, 485" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 353, 494" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 359, 375" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 362, 480" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 365, 231" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 380, 497" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 405, 219" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 411, 549" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 415, 474" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 416, 488" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 417, 463" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 418, 358" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 423, 155" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 440, 268" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 45, 224" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 453, 250" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 46, 289" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 464, 462" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 466, 528" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 5, 324" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 52, 118" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 520, 358" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 558, 500" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 559, 494" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 630, 545" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 640, 555" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 663, 529" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 76, 42" value="1" type="GuiResourceData"/>
+<property name="labkit_lab4.v, 78, 73" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 100, 362" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 100, 362, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 101, 360" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 103, 457" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 107, 298" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 107, 357" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 107, 357, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 107, 515" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 108, 485" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 108, 60" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 110, 457" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 111, 396" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 113, 515" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 114, 320" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 114, 426, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 114, 427" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 114, 427, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 114, 439" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 115, 426" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 116, 345" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 116, 414" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 116, 442" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 116, 442, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 116, 518" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 119, 483" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 120, 465" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 123, 523" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 126, 464" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 127, 353" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 127, 353, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 128, 292" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 128, 292, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 128, 434" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 132, 252" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 132, 419" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 132, 429" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 132, 443" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 136, 328" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 136, 328, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 139, 262" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 141, 169" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 141, 314" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 143, 294" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 145, 102" value="3" type="GuiResourceData"/>
+<property name="time_controller.v, 145, 102, false, false, false, false, true" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 145, 103" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 145, 385" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 147, 382" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 147, 477" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 147, 477, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 150, 188" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 150, 515" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 150, 515, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 151, 501" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 151, 501, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 153, 27" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 155, 378" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 155, 68" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 159, 503" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 16, 111" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 161, 476" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 161, 476, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 163, 447" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 163, 457" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 164, 292" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 164, 292, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 168, 326" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 168, 326, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 168, 496" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 169, 117, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 170, 295" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 170, 295, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 170, 372" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 171, 118" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 171, 163" value="5" type="GuiResourceData"/>
+<property name="time_controller.v, 171, 163, false, false, false, false, true" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 177, 476" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 177, 483" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 182, 43" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 183, 298" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 183, 390" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 183, 47" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 185, 6" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 187, 278" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 187, 553" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 19, 13" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 19, 13, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 19, 299" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 193, 260" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 193, 74" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 194, 332" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 196, 412" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 197, 448" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 197, 86" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 198, 293" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 198, 9" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 198, 9, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 200, 123" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 200, 123, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 200, 143, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 200, 380" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 200, 403" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 200, 541" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 201, 144" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 201, 521" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 202, 67" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 203, 520" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 203, 534" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 204, 466" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 205, 378" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 205, 474" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 208, 336" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 211, 326" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 213, 362" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 213, 362, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 214, 365" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 215, 370" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 219, 356" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 219, 356, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 220, 285" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 220, 423" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 221, 292" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 225, 350" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 225, 350, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 226, 7" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 229, 309" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 231, 288" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 231, 288, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 234, 324" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 238, 284" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 243, 292" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 246, 325" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 248, 269" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 249, 291" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 249, 347" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 249, 356" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 25, 485" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 251, 482" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 253, 249" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 255, 324" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 257, 497" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 258, 510" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 259, 307" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 259, 471" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 263, 340" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 264, 301" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 268, 11" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 269, 294" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 270, 323" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 272, 488" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 272, 488, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 272, 507" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 272, 507, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 273, 507" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 274, 329" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 274, 505" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 275, 290" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 275, 504" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 276, 503" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 276, 523" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 276, 523, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 277, 502" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 277, 503, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 278, 293" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 278, 453" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 279, 500" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 279, 500, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 28, 324" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 281, 289" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 281, 289, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 282, 11" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 283, 496" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 283, 496, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 287, 479" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 289, 458" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 290, 511" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 291, 469" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 291, 469, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 291, 545" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 291, 545, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 292, 477" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 292, 477, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 298, 17, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 298, 19" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 298, 321" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 298, 321, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 298, 583" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 300, 491" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 300, 491, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 300, 94" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 301, 88" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 302, 440" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 305, 249" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 305, 312" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 309, 14" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 309, 14, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 309, 15" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 309, 284" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 309, 323" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 309, 323, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 311, 237" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 311, 296" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 314, 206" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 315, 83" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 318, 182" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 32, 292" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 320, 194" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 322, 195" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 326, 127" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 326, 484" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 326, 484, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 327, 459" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 330, 174" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 332, 184" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 335, 507" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 340, 496" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 341, 301" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 344, 468" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 345, 353" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 345, 353, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 347, 449" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 348, 470" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 355, 468" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 357, 316" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 357, 316, false, false, false, false, true" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 359, 125" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 361, 184" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 361, 184, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 371, 532" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 371, 532, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 374, 537" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 375, 538" value="4" type="GuiResourceData"/>
+<property name="time_controller.v, 375, 538, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 375, 539" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 379, 108" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 385, 195" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 388, 96" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 390, 489" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 390, 489, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 391, 81" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 394, 92" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 395, 185" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 395, 185, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 399, 75" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 40, 260" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 40, 260, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 403, 326" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 406, 501" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 407, 493" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 412, 485" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 412, 485, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 412, 504" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 413, 489" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 413, 504, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 414, 502" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 414, 502, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 414, 6" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 416, 520, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 417, 467" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 417, 467, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 419, 472" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 419, 472, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 419, 522" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 424, 5" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 425, 97" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 435, 318" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 435, 483" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 437, 358" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 458, 451" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 459, 318" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 462, 475" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 462, 475, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 472, 474" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 472, 474, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 474, 543" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 477, 181" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 477, 181, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 481, 179" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 482, 318" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 489, 354" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 49, 532" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 495, 311" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 499, 313" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 499, 313, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 499, 324" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 499, 324, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 500, 486" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 502, 352" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 503, 486, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 506, 484" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 509, 497" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 51, 460" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 511, 290" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 511, 290, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 514, 197" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 524, 475" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 53, 124" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 53, 124, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 536, 17" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 545, 457" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 55, 485" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 568, 208" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 569, 348" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 617, 327" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 617, 327, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 622, 193" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 622, 193, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 64, 36" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 65, 149" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 65, 149, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 65, 165" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 66, 258" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 66, 258, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 66, 48" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 684, 303" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 688, 402" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 701, 315" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 71, 105" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 71, 105, false, false, false, false, true" value="2" type="GuiResourceData"/>
+<property name="time_controller.v, 72, 525" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 73, 312" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 77, 151" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 77, 151, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 91, 456" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 93, 282" value="1" type="GuiResourceData"/>
+<property name="time_controller.v, 98, 311" value="1" type="GuiResourceData"/>
+<property name="timer.v, 102, 113" value="1" type="GuiResourceData"/>
+<property name="timer.v, 102, 130" value="1" type="GuiResourceData"/>
+<property name="timer.v, 123, 91" value="1" type="GuiResourceData"/>
+<property name="timer.v, 140, 105" value="1" type="GuiResourceData"/>
+<property name="timer.v, 149, 99" value="1" type="GuiResourceData"/>
+<property name="timer.v, 175, 98" value="1" type="GuiResourceData"/>
+<property name="timer.v, 176, 101" value="1" type="GuiResourceData"/>
+<property name="timer.v, 180, 293" value="1" type="GuiResourceData"/>
+<property name="timer.v, 180, 293, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="timer.v, 187, 94" value="1" type="GuiResourceData"/>
+<property name="timer.v, 223, 340" value="1" type="GuiResourceData"/>
+<property name="timer.v, 225, 353" value="1" type="GuiResourceData"/>
+<property name="timer.v, 237, 351" value="1" type="GuiResourceData"/>
+<property name="timer.v, 241, 335" value="1" type="GuiResourceData"/>
+<property name="timer.v, 247, 284" value="1" type="GuiResourceData"/>
+<property name="timer.v, 250, 198" value="1" type="GuiResourceData"/>
+<property name="timer.v, 250, 318" value="1" type="GuiResourceData"/>
+<property name="timer.v, 253, 192" value="1" type="GuiResourceData"/>
+<property name="timer.v, 269, 70" value="1" type="GuiResourceData"/>
+<property name="timer.v, 270, 367" value="1" type="GuiResourceData"/>
+<property name="timer.v, 298, 281" value="1" type="GuiResourceData"/>
+<property name="timer.v, 305, 106" value="1" type="GuiResourceData"/>
+<property name="timer.v, 375, 13" value="1" type="GuiResourceData"/>
+<property name="timer.v, 377, 286" value="1" type="GuiResourceData"/>
+<property name="timer.v, 378, 279" value="1" type="GuiResourceData"/>
+<property name="timer.v, 381, 15" value="1" type="GuiResourceData"/>
+<property name="timer.v, 394, 361" value="1" type="GuiResourceData"/>
+<property name="timer.v, 398, 31" value="1" type="GuiResourceData"/>
+<property name="timer.v, 408, 5" value="1" type="GuiResourceData"/>
+<property name="timer.v, 412, 11" value="1" type="GuiResourceData"/>
+<property name="timer.v, 428, 32" value="1" type="GuiResourceData"/>
+<property name="timer.v, 439, 11" value="1" type="GuiResourceData"/>
+<property name="timer.v, 447, 5" value="1" type="GuiResourceData"/>
+<property name="timer.v, 567, 325" value="1" type="GuiResourceData"/>
+<property name="timer.v, 66, 49" value="1" type="GuiResourceData"/>
+<property name="timer.v, 67, 50" value="1" type="GuiResourceData"/>
+<property name="timer.v, 68, 25" value="1" type="GuiResourceData"/>
+<property name="timer.v, 70, 40" value="1" type="GuiResourceData"/>
+<property name="timer.v, 73, 55" value="1" type="GuiResourceData"/>
+<property name="timer.v, 76, 92" value="1" type="GuiResourceData"/>
+<property name="timer.v, 78, 70" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="4" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="1" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>
