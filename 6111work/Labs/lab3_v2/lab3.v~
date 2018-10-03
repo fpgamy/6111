@@ -820,7 +820,7 @@ module pong_game (
 			end //if (`INSIDE(hcount_in, vcount_in, paddle_x, paddle_y, PADDLE_WIDTH, PADDLE_HEIGHT))
 			else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
          begin
-				 pixel_out <= {image_blue_intensity >> 2, image_blue_intensity >> 2 , image_blue_intensity >> 2} + {background >> 2, background >> 2 , background >> 2};
+				 pixel_out <= {image_blue_intensity >> 2, image_blue_intensity >> 2 , image_blue_intensity >> 2} + background;
 			end //else if (`INSIDERADIUS(hcount_in, puck_x, vcount_in, puck_y, PUCK_RADIUS))
          else
 			begin

@@ -14,12 +14,6 @@ Loading design module
 "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/lab3_v2/blue_r
 om.ngc"...
 Loading design module
-"/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/lab3_v2/green_
-rom.ngc"...
-Loading design module
-"/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/lab3_v2/red_ro
-m.ngc"...
-Loading design module
 "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/lab3_v2/image_
 rom.ngc"...
 Reading in constraint information from 'labkit.ucf'...
@@ -326,7 +320,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 277
 
-Total memory usage is 233852 kilobytes
+Total memory usage is 233548 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1538510717">
-  <File Type="RDS-DCP" Name="labkit.dcp"/>
+  <File Type="RDS-UTIL" Name="labkit_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="labkit_drc_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="labkit_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="labkit.dcp"/>
   <File Type="VDS-TIMINGSUMMARY" Name="labkit_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="labkit_timing_summary_synth.pb"/>
   <File Type="RDS-RDS" Name="labkit.vds"/>
   <File Type="PA-TCL" Name="labkit.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="labkit_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="labkit_utilization_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../sources/display_8hex.v">

@@ -11,18 +11,6 @@ setMode -bs
 setMode -bs
 setMode -bs
 Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-Program -p 2 
-saveProjectFile -file "/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/lab3_v2/lab3_v2.ipf"
 setMode -bs
 deleteDevice -position 1
 deleteDevice -position 1
