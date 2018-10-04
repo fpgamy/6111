@@ -62,9 +62,9 @@ module alarm_fsm(
     reg start_time_out;
     reg driver_leaving = 1'b0;
     
-    always @(posedge clk_in)
-    begin
-        if (state == ARMED)
+    always @(posedge clk_in or posedge program_in)
+    begin    
+        if (program_in | (state == ARMED))
         begin
             status_out <= ~status_out;
         end
@@ -78,9 +78,13 @@ module alarm_fsm(
         end
     end
     
-    always @(posedge clk_in)
+    always @(posedge clk_in or posedge program_in)
     begin
-        if ( state == SOUND_ALARM )
+        if (program_in)
+        begin
+            siren_out <= 1'b0;
+        end
+        else if ( state == SOUND_ALARM )
         begin
             siren_out <= 1'b1;
         end
@@ -90,9 +94,13 @@ module alarm_fsm(
         end 
     end
     
-    always @(posedge clk_in)
+    always @(posedge clk_in or posedge program_in)
     begin
-        if (state == ARMED)
+        if (program_in)
+        begin
+            state <= ARMED;
+        end
+        else if (state == ARMED)
         begin
             if (ignition_in)
             begin

@@ -1,4 +1,6 @@
-module time_controller( set_in, sel_in, value_in, value_out );
+module time_controller( clk_in, reset_in, set_in, sel_in, value_in, value_out );
+    input        clk_in;
+    input        reset_in;
     input        set_in;
     input  [1:0] sel_in;
     input  [3:0] value_in;
@@ -14,11 +16,28 @@ module time_controller( set_in, sel_in, value_in, value_out );
     reg [3:0] t_driver_delay    = 4'd8;
     reg [3:0] t_passenger_delay = 4'd15;
     reg [3:0] t_alarm_on        = 4'd10;
-    
-    wire void = 1'b0;
-    
+
     assign value_out = mux4(sel_in, t_arm_delay, t_driver_delay, t_passenger_delay, t_alarm_on);
-    assign void      = deathcomequickly(sel_in, set_in, value_in);
+
+    always @(posedge clk_in or posedge reset_in)
+    begin
+        if (reset_in)
+        begin
+            t_arm_delay       <= 4'd6;
+            t_driver_delay    <= 4'd8;
+            t_passenger_delay <= 4'd15;
+            t_alarm_on        <= 4'd10;            
+        end
+        else if (set_in)
+        begin
+            case (sel_in)
+                SEL_ARM_DELAY        :    t_arm_delay       <= value_in;
+                SEL_DRIVER_DELAY     :    t_driver_delay    <= value_in;
+                SEL_PASSENGER_DELAY  :    t_passenger_delay <= value_in;
+                SEL_ALARM_ON         :    t_alarm_on        <= value_in;
+            endcase
+        end
+    end
     
     function mux4;
     input sel;
@@ -32,17 +51,4 @@ module time_controller( set_in, sel_in, value_in, value_out );
         endcase
     end
     endfunction
-    
-    function deathcomequickly;
-    input sel, en, value;
-    begin
-        case (sel)
-            SEL_ARM_DELAY        :    t_arm_delay       = en ? value : t_arm_delay;
-            SEL_DRIVER_DELAY     :    t_driver_delay    = en ? value : t_driver_delay;
-            SEL_PASSENGER_DELAY  :    t_passenger_delay = en ? value : t_passenger_delay;
-            SEL_ALARM_ON         :    t_alarm_on        = en ? value : t_alarm_on;
-        endcase
-    end
-    endfunction
-    
 endmodule

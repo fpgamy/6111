@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1538511271">
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="labkit_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="labkit_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="labkit_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="labkit_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="labkit_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="labkit_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="labkit_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="labkit_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="labkit_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="labkit_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="labkit_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="labkit_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="labkit_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="labkit_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="labkit_route_status.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="labkit.sysdef"/>
+  <File Type="ROUTE-TIMING-RPX" Name="labkit_timing_summary_routed.rpx"/>
+  <File Type="BG-BGN" Name="labkit.bgn"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="labkit_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-MMI" Name="labkit.mmi"/>
+  <File Type="ROUTE-TIMING-PB" Name="labkit_timing_summary_routed.pb"/>
+  <File Type="PLACE-UTIL-PB" Name="labkit_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="labkit_utilization_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="labkit_placed.dcp"/>
+  <File Type="BITSTR-NKY" Name="labkit.nky"/>
+  <File Type="PLACE-CLK" Name="labkit_clock_utilization_placed.rpt"/>
+  <File Type="PWROPT-TIMING" Name="labkit_timing_summary_pwropted.rpt"/>
+  <File Type="OPT-DRC" Name="labkit_drc_opted.rpt"/>
+  <File Type="RDI-RDI" Name="labkit.vdi"/>
+  <File Type="PWROPT-DRC" Name="labkit_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="labkit_pwropt.dcp"/>
+  <File Type="BITSTR-BMM" Name="labkit_bd.bmm"/>
   <File Type="PA-TCL" Name="labkit.tcl"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="labkit_postroute_physopt.dcp"/>
-  <File Type="INIT-TIMING" Name="labkit_timing_summary_init.rpt"/>
   <File Type="OPT-DCP" Name="labkit_opt.dcp"/>
-  <File Type="OPT-DRC" Name="labkit_drc_opted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="labkit_methodology_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="labkit.hwdef"/>
-  <File Type="OPT-TIMING" Name="labkit_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="labkit_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="labkit_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="labkit_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="labkit_placed.dcp"/>
+  <File Type="BITSTR-RBT" Name="labkit.rbt"/>
   <File Type="PLACE-IO" Name="labkit_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="labkit_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="labkit_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="labkit_utilization_placed.pb"/>
+  <File Type="OPT-TIMING" Name="labkit_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="labkit.hwdef"/>
+  <File Type="PLACE-TIMING" Name="labkit_timing_summary_placed.rpt"/>
+  <File Type="INIT-TIMING" Name="labkit_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="labkit_methodology_drc_opted.rpt"/>
   <File Type="PLACE-CTRL" Name="labkit_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="labkit_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="labkit_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="labkit_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="labkit_postplace_pwropt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="labkit_timing_summary_postroute_physopted.rpt"/>
   <File Type="BG-BIT" Name="labkit.bit"/>
@@ -28,35 +53,10 @@
   <File Type="ROUTE-SIMILARITY" Name="labkit_incremental_reuse_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="labkit.msk"/>
   <File Type="ROUTE-CLK" Name="labkit_clock_utilization_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="labkit.rbt"/>
-  <File Type="BITSTR-NKY" Name="labkit.nky"/>
-  <File Type="BITSTR-BMM" Name="labkit_bd.bmm"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="labkit_postroute_physopt_bb.dcp"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="labkit.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="labkit_timing_summary_postroute_physopted.pb"/>
   <File Type="BG-DRC" Name="labkit.drc"/>
-  <File Type="ROUTE-TIMING-PB" Name="labkit_timing_summary_routed.pb"/>
-  <File Type="BITSTR-MMI" Name="labkit.mmi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="labkit_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BG-BGN" Name="labkit.bgn"/>
-  <File Type="ROUTE-TIMING-RPX" Name="labkit_timing_summary_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="labkit.sysdef"/>
-  <File Type="ROUTE-STATUS-PB" Name="labkit_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="labkit_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="labkit_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="labkit_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="labkit_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="labkit_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="labkit_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="labkit_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="labkit_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="labkit_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="labkit_routed.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="labkit_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="labkit_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="labkit_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="labkit_timing_summary_postplace_pwropted.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../sources/display_8hex.v">
