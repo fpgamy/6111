@@ -22,7 +22,7 @@ module soduku_solver(
 
 	// 2D array of 4 bit BCD values
 	// Contains all the numbers in solved board
-	wire [3:0] solved [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
+	wire  [3:0] solved [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
 	// This monstrosity is because of the use of Verilog instead of SystemVerilog
 	assign board_out = {solved[0][0], solved[0][1], solved[0][2], solved[0][3], solved[0][4], solved[0][5], solved[0][6], solved[0][7], solved[0][8],
@@ -39,8 +39,10 @@ module soduku_solver(
 //
 	// Contains the current progress of the board 
 	// Uses one hot encoding
-	reg    [(GRID_SIZE-1):0] one_hot_board_reg [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
+	reg    [(GRID_SIZE-1):0] one_hot_board_reg   [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
+	// Contains 1s where the possible values are
+	reg    [(GRID_SIZE-1):0] possible_values_reg [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
 	// We define the squares, rows, columns as follows:
 	// 0 ..................... 8
@@ -161,7 +163,7 @@ module soduku_solver(
 						/*
 						Need to change the singleton solve function to a check possibilitiesl:
 						Take as input the column, row and square that is being worked on
-						Generate 10 masks:
+						Generate 6 masks:
 							- mask of values containing 1s for values in the row
 							- mask of values containing 1s for values in the column
 							- mask of values containing 1s for values in the square
@@ -171,12 +173,6 @@ module soduku_solver(
 							- mask of values containing 1s for values which can be present in other unsolved singletons in the row
 							- mask of values containing 1s for values which can be present in other unsolved singletons in the square
 							=> OR these masks. The 0 positions are the values which only this singleton can take.
-
-							- mask of values containing 1s of the exclusive possible values from the row of the adjacent square
-							- mask of values containing 1s of the exclusive possible values from the row of the next adjacent square
-							- mask of values containing 1s of the exclusive possible values from the column of the adjacent square
-							- mask of values containing 1s of the exclusive possible values from the column of the next adjacent square
-							=> OR these masks. The 0 positions are the values which this singleton can take
 						store the mask in some register somewhere
 						check if it is one-cold
 						*/
