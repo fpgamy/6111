@@ -59,20 +59,13 @@ function automatic [8:0] singleton_solve;
 input [8:0] row_missing_in;
 input [8:0] col_missing_in;
 input [8:0] square_missing_in;
+
 begin
-	if (valid_one_cold(row_missing_in))
+	if (valid_one_cold((row_missing_in | col_missing_in | square_missing_in)))
 	begin
-		singleton_solve = ~row_missing_in;
+		singleton_solve = ~(row_missing_in | col_missing_in | square_missing_in);
 	end
-	else if (valid_one_cold(col_missing_in))
-	begin
-		singleton_solve = ~col_missing_in;
-	end
-	else if (valid_one_cold(square_missing_in))
-	begin
-		singleton_solve = ~square_missing_in;
-	end
-	else 
+	else
 	begin
 		singleton_solve = 9'b0;
 	end

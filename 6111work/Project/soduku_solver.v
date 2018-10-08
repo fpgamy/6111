@@ -35,11 +35,6 @@ module soduku_solver(
 					    solved[7][0], solved[7][1], solved[7][2], solved[7][3], solved[7][4], solved[7][5], solved[7][6], solved[7][7], solved[7][8],
 					    solved[8][0], solved[8][1], solved[8][2], solved[8][3], solved[8][4], solved[8][5], solved[8][6], solved[8][7], solved[8][8]};
 
-//
-// INCLUDES
-//
-	`include "soduku_lib.v"
-//
 // REG/WIRE DEFINITIONS
 //
 	// Contains the current progress of the board 
@@ -87,6 +82,12 @@ module soduku_solver(
 	wire    [(GRID_SIZE-1):0] squares_missing      [0:(GRID_SIZE-1)];
 	// Determines if we need made a mistake (check for equality)
 	reg     [(GRID_SIZE-1):0] squares_missing_prev [0:(GRID_SIZE-1)];
+
+//
+// INCLUDES
+//
+	`include "soduku_lib.v"
+
 
 //
 // GENERATORS
@@ -157,6 +158,28 @@ module soduku_solver(
 					end
 					else if (one_hot_board_reg[row_genvar][col_genvar] == 0) 
 					begin
+						/*
+						Need to change the singleton solve function to a check possibilitiesl:
+						Take as input the column, row and square that is being worked on
+						Generate 10 masks:
+							- mask of values containing 1s for values in the row
+							- mask of values containing 1s for values in the column
+							- mask of values containing 1s for values in the square
+							=> OR these masks. The 0 positions are the only values which the singleton can take.
+							
+							- mask of values containing 1s for values which can be present in other unsolved singletons in the column
+							- mask of values containing 1s for values which can be present in other unsolved singletons in the row
+							- mask of values containing 1s for values which can be present in other unsolved singletons in the square
+							=> OR these masks. The 0 positions are the values which only this singleton can take.
+
+							- mask of values containing 1s of the exclusive possible values from the row of the adjacent square
+							- mask of values containing 1s of the exclusive possible values from the row of the next adjacent square
+							- mask of values containing 1s of the exclusive possible values from the column of the adjacent square
+							- mask of values containing 1s of the exclusive possible values from the column of the next adjacent square
+							=> OR these masks. The 0 positions are the values which this singleton can take
+						store the mask in some register somewhere
+						check if it is one-cold
+						*/
 						one_hot_board_reg[row_genvar][col_genvar] <= singleton_solve(
 																						rows_missing   [row_genvar],
 																						cols_missing   [col_genvar],
