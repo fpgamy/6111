@@ -17,6 +17,10 @@ module timer_tb;
 		#10;
 		start    = 1'b1;
 		#500;
+		start    = 1'b0;
+		#10;
+		start    = 1'b1;
+		#10;
 		$finish;
 	end
 

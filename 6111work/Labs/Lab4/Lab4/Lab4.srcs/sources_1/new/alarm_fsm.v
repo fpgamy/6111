@@ -96,17 +96,14 @@ module alarm_fsm(
     
     always @(posedge clk_in or posedge program_in)
     begin
-        if (program_in)
-        begin
-            state <= ARMED;
-        end
-        else if (state == ARMED)
+        if (program_in | (state == ARMED))
         begin
             if (ignition_in)
             begin
                 state <= DISARMED;
+                start_time_out <= 1'b0;
             end
-            else
+            else if (~program_in)
             begin
                 if (driver_door_in)
                 begin
@@ -120,30 +117,47 @@ module alarm_fsm(
                 end
                 state <= TRIGGERED;
             end
+            else 
+            begin
+                start_time_out <= 1'b0;
+                state <= ARMED;    
+            end
         end
         else if (state == TRIGGERED)
         begin
             if (ignition_in)
             begin
+                start_time_out <= 1'b0;
                 state <= DISARMED;
             end
             else if (expired_in)
             begin
+                start_time_out <= 1'b1;
                 state <= SOUND_ALARM;
                 interval_out <= SEL_ALARM_ON;
+            end
+            else 
+            begin
+                start_time_out <= 1'b0;
             end
         end
         else if (state == SOUND_ALARM)
         begin
             if (ignition_in | (expired_in & (~(driver_door_in | passenger_door_in))))
             begin
-               state <= DISARMED;
-            end            
+                state <= DISARMED;
+                start_time_out <= 1'b0;
+            end
+            else 
+            begin
+                start_time_out <= 1'b0;    
+            end
         end
         else if (state == DISARMED)
         begin
             if ((~ignition_in) & driver_door_in)
             begin
+                start_time_out <= 1'b0;
                 driver_leaving <= 1'b1;
             end
             else if (driver_leaving & (~driver_door_in))
@@ -154,6 +168,7 @@ module alarm_fsm(
             end
             else if (expired_in)
             begin
+                start_time_out <= 1'b0;
                 state <= ARMED;
             end
         end
