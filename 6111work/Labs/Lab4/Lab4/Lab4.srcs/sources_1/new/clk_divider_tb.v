@@ -1,3 +1,5 @@
+`timescale 1ns / 1ns
+
 module clk_divider_tb;
 	reg clk   = 1'b0;
 	reg reset = 1'b1;
@@ -16,9 +18,9 @@ module clk_divider_tb;
 		reset = 1'b0;
 		#10;
 		en    = 1'b1;
-		#500;
+		#2000000010;
 		$finish;
 	end
 
-	always #5 clk = ~clk;
+	always #20 clk = ~clk;
 endmodule

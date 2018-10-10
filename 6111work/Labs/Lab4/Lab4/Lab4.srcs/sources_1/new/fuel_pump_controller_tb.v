@@ -18,7 +18,7 @@ module fuel_pump_controller_tb;
 
 	initial
 	begin
-		$dumpfile("test.vcd");
+		$dumpfile("fuel_test.vcd");
 		$dumpvars(0, fuel_pump_controller_tb);
 		reset           = 1'b1;
 		brake           = 1'b0;

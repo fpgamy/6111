@@ -21,7 +21,8 @@
 
 
 module alarm_fsm( 
-                    clk_in, 
+                    clk_in,
+                    clk_1Hz_in,
                     ignition_in, 
                     driver_door_in, 
                     passenger_door_in, 
@@ -44,6 +45,7 @@ module alarm_fsm(
     localparam SEL_ALARM_ON        = 2'b11;
     
     input clk_in;
+    input clk_1Hz_in;
     input ignition_in;
     input driver_door_in;
     input passenger_door_in;
@@ -58,11 +60,10 @@ module alarm_fsm(
     reg status_out = 1'b0;   
     reg [1:0] state = DISARMED;
     reg [1:0] interval_out = SEL_PASSENGER_DELAY;
-    reg siren_out = 1'b0;
     reg start_time_out;
     reg driver_leaving = 1'b0;
     
-    always @(posedge clk_in or posedge program_in)
+    always @(posedge clk_1Hz_in or posedge program_in)
     begin    
         if (program_in | (state == ARMED))
         begin
@@ -77,22 +78,8 @@ module alarm_fsm(
             status_out <= 1'b0;
         end
     end
-    
-    always @(posedge clk_in or posedge program_in)
-    begin
-        if (program_in)
-        begin
-            siren_out <= 1'b0;
-        end
-        else if ( state == SOUND_ALARM )
-        begin
-            siren_out <= 1'b1;
-        end
-        else
-        begin
-            siren_out <= 1'b0;
-        end 
-    end
+
+    assign siren_out = set_siren(program_in, state);
     
     always @(posedge clk_in or posedge program_in)
     begin
@@ -109,13 +96,14 @@ module alarm_fsm(
                 begin
                     start_time_out <= 1'b1;
                     interval_out <= SEL_DRIVER_DELAY;
+                    state <= TRIGGERED;
                 end
                 else if (passenger_door_in)
                 begin
                     start_time_out <= 1'b1; 
                     interval_out <= SEL_PASSENGER_DELAY;
+                    state <= TRIGGERED;
                 end
-                state <= TRIGGERED;
             end
             else 
             begin
@@ -173,5 +161,23 @@ module alarm_fsm(
             end
         end
     end
-                  
+
+    function set_siren;
+    input       program_in;
+    input [1:0] state;
+    begin
+        if (program_in)
+        begin
+            set_siren = 1'b0;
+        end
+        else if ( state == SOUND_ALARM )
+        begin
+            set_siren = 1'b1;
+        end
+        else
+        begin
+            set_siren = 1'b0;
+        end 
+    end
+    endfunction       
 endmodule

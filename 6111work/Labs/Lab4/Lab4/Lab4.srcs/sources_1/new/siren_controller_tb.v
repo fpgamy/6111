@@ -12,7 +12,7 @@ module siren_controller_tb;
 
 	initial
 	begin
-		$dumpfile("test.vcd");
+		$dumpfile("siren_test.vcd");
 		$dumpvars(0, siren_controller_tb);
 		en       = 1'b0;
 		#10;

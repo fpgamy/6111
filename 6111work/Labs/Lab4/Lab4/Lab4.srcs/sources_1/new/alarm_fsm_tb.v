@@ -14,6 +14,7 @@ module alarm_fsm_tb;
 
 	alarm_fsm af1(
 					.clk_in(clk),
+					.clk_1Hz_in(clk),
 					.ignition_in(ignition),
 					.driver_door_in(driver_door),
 					.passenger_door_in(passenger_door),
@@ -26,7 +27,7 @@ module alarm_fsm_tb;
 					);
 	initial
 	begin
-		$dumpfile("test.vcd");
+		$dumpfile("alarm_test.vcd");
 		$dumpvars(0, alarm_fsm_tb);
 		reset_fsm;
 		#50;
@@ -71,7 +72,7 @@ module alarm_fsm_tb;
 		#10;
 		expired = 1'b1;
 		#100;
-		
+		expired = 1'b0;
 		driver_door = 1'b1;
 		#20;
 		ignition = 1'b1;
@@ -112,7 +113,7 @@ module alarm_fsm_tb;
 		reset_fsm;
 
 		passenger_door = 1'b1;
-
+		#10;
 		// does nothing
 		driver_door = 1'b1;
 		#10;
@@ -133,6 +134,7 @@ module alarm_fsm_tb;
 	begin
 		#10;
 		program = 1'b1;
+		expired = 1'b0;
 		#10;
 		program = 1'b0;
 		#10;

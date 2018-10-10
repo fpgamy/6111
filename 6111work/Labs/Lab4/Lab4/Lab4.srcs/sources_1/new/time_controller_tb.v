@@ -18,7 +18,7 @@ module time_controller_tb;
 
 	initial
 	begin
-		$dumpfile("test.vcd");
+		$dumpfile("timer_test.vcd");
 		$dumpvars(0, time_controller_tb);
 		value    = 4'b0;
 		res      = 1'b1;

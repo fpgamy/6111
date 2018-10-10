@@ -8,7 +8,7 @@ module timer_tb;
 
 	initial
 	begin
-		$dumpfile("test.vcd");
+		$dumpfile("timer_test.vcd");
 		$dumpvars(0, timer_tb);
 		value = 4'b0;
 		start    = 1'b0;
@@ -18,9 +18,10 @@ module timer_tb;
 		start    = 1'b1;
 		#500;
 		start    = 1'b0;
-		#10;
+		#500;
+		value = 4'd2;
 		start    = 1'b1;
-		#10;
+		#1000;
 		$finish;
 	end
 
