@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Wed Oct 10 16:59:44 2018
-| Host             : eecs-digital-24 running 64-bit Ubuntu 14.04.5 LTS
+| Date             : Wed Oct 10 18:02:57 2018
+| Host             : eecs-digital-23 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
 | Device           : xc7a100tcsg324-3
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.106 |
-| Dynamic (W)              | 0.009 |
+| Total On-Chip Power (W)  | 0.108 |
+| Dynamic (W)              | 0.011 |
 | Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 99.5  |
@@ -50,15 +50,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      775 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      225 |     63400 |            0.35 |
-|   CARRY4       |    <0.001 |       76 |     15850 |            0.48 |
-|   Register     |    <0.001 |      393 |    126800 |            0.31 |
+| Slice Logic    |     0.002 |      805 |       --- |             --- |
+|   LUT as Logic |     0.001 |      235 |     63400 |            0.37 |
+|   CARRY4       |    <0.001 |       87 |     15850 |            0.55 |
+|   Register     |    <0.001 |      411 |    126800 |            0.32 |
 |   Others       |     0.000 |       39 |       --- |             --- |
-| Signals        |     0.001 |      642 |       --- |             --- |
-| I/O            |     0.004 |       74 |       210 |           35.24 |
+| Signals        |     0.002 |      625 |       --- |             --- |
+| I/O            |     0.005 |       74 |       210 |           35.24 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.106 |          |           |                 |
+| Total          |     0.108 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,7 +68,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.005 |      0.015 |
+| Vccint    |       1.000 |     0.021 |       0.006 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -137,7 +137,7 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| labkit                         |     0.009 |
+| labkit                         |     0.011 |
 |   af1                          |    <0.001 |
 |   clockgen                     |    <0.001 |
 |   d8h                          |    <0.001 |
@@ -145,9 +145,9 @@ Table of Contents
 |   dbb2                         |    <0.001 |
 |   dbb3                         |    <0.001 |
 |   dbb4                         |    <0.001 |
-|   dbb5                         |    <0.001 |
 |   fc1                          |    <0.001 |
 |   gen_debouncers[0].debouncer  |    <0.001 |
+|   gen_debouncers[13].debouncer |    <0.001 |
 |   gen_debouncers[14].debouncer |    <0.001 |
 |   gen_debouncers[15].debouncer |    <0.001 |
 |   gen_debouncers[1].debouncer  |    <0.001 |
@@ -155,7 +155,7 @@ Table of Contents
 |   gen_debouncers[3].debouncer  |    <0.001 |
 |   gen_debouncers[4].debouncer  |    <0.001 |
 |   gen_debouncers[5].debouncer  |    <0.001 |
-|   sc1                          |    <0.001 |
+|   sc1                          |     0.002 |
 |   t1                           |    <0.001 |
 |   tc                           |    <0.001 |
 +--------------------------------+-----------+

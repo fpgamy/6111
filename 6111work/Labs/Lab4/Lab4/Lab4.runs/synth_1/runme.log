@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28101 
+INFO: Helper process launched with PID 6262 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1057.336 ; gain = 162.137 ; free physical = 2940 ; free virtual = 14043
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1057.336 ; gain = 162.137 ; free physical = 1409 ; free virtual = 13291
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/labkit_lab4.v:22]
 INFO: [Synth 8-638] synthesizing module 'debounce' [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/debounce.v:4]
@@ -59,7 +59,8 @@ WARNING: [Synth 8-5788] Register driver_leaving_reg in module alarm_fsm is has b
 INFO: [Synth 8-256] done synthesizing module 'alarm_fsm' (8#1) [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/alarm_fsm.v:23]
 INFO: [Synth 8-638] synthesizing module 'siren_controller' [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/siren_controller.v:1]
 	Parameter WARBLE_MAX bound to: 100000000 - type: integer 
-	Parameter VOLUME_TOGGLE bound to: 10'b0000011111 
+	Parameter FREQ_1 bound to: 51100 - type: integer 
+	Parameter FREQ_2 bound to: 25500 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'siren_controller' (9#1) [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/siren_controller.v:1]
 WARNING: [Synth 8-3848] Net timer_enable in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/labkit_lab4.v:64]
 INFO: [Synth 8-256] done synthesizing module 'labkit' (10#1) [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/labkit_lab4.v:22]
@@ -104,7 +105,7 @@ WARNING: [Synth 8-3917] design labkit has port LED[5] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[4] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[3] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 2898 ; free virtual = 14002
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 1364 ; free virtual = 13247
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -115,7 +116,7 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin second_timer:en_in to constant 0 [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/labkit_lab4.v:139]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 2898 ; free virtual = 14002
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 1364 ; free virtual = 13247
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -131,31 +132,32 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1464.477 ; gain = 0.000 ; free physical = 2625 ; free virtual = 13728
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1465.250 ; gain = 0.000 ; free physical = 1175 ; free virtual = 13058
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2624 ; free virtual = 13727
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1175 ; free virtual = 13057
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2624 ; free virtual = 13727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1175 ; free virtual = 13057
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2624 ; free virtual = 13727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1175 ; free virtual = 13057
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "expire_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "set_siren" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "freq_sel0" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "freq_sel" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2629 ; free virtual = 13733
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1174 ; free virtual = 13057
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -168,23 +170,22 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     28 Bit       Adders := 2     
 	   2 Input     24 Bit       Adders := 1     
-	   2 Input     20 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
+	               28 Bit    Registers := 3     
 	               24 Bit    Registers := 1     
-	               20 Bit    Registers := 1     
-	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 5     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 52    
 +---Muxes : 
+	   2 Input     28 Bit        Muxes := 2     
 	   2 Input     24 Bit        Muxes := 2     
-	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
 	  16 Input      7 Bit        Muxes := 8     
 	   4 Input      4 Bit        Muxes := 1     
@@ -264,14 +265,13 @@ Detailed RTL Component Info :
 Module siren_controller 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     20 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
+	   2 Input     28 Bit       Adders := 2     
 +---Registers : 
-	               20 Bit    Registers := 1     
-	               10 Bit    Registers := 2     
+	               28 Bit    Registers := 3     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -285,7 +285,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2629 ; free virtual = 13733
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1174 ; free virtual = 13057
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -300,7 +300,8 @@ INFO: [Synth 8-5546] ROM "dbb4/clean" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "dbb5/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "dbb5/clean" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "second_timer/clk_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "sc1/d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "sc1/freq_sel" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sc1/freq_sel0" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "gen_debouncers[0].debouncer/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_debouncers[0].debouncer/clean" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_debouncers[1].debouncer/count" won't be mapped to RAM because it is too sparse
@@ -375,9 +376,9 @@ WARNING: [Synth 8-3917] design labkit has port LED[4] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[3] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2629 ; free virtual = 13733
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1174 ; free virtual = 13057
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2629 ; free virtual = 13733
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1174 ; free virtual = 13057
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -412,6 +413,53 @@ INFO: [Synth 8-3886] merging instance 'second_timer/counter_reg[2]' (FDP) to 'se
 INFO: [Synth 8-3886] merging instance 'second_timer/counter_reg[1]' (FDP) to 'second_timer/counter_reg[0]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\second_timer/counter_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\second_timer/clk_out_reg )
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[0]' (FDE) to 'sc1/freq_sel_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[1]' (FDE) to 'sc1/freq_sel_reg[5]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[2]' (FDE) to 'sc1/freq_sel_reg[3]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[3]' (FDE) to 'sc1/freq_sel_reg[4]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[4]' (FDE) to 'sc1/freq_sel_reg[7]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[5]' (FDE) to 'sc1/freq_sel_reg[6]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[6]' (FDE) to 'sc1/freq_sel_reg[11]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[7]' (FDE) to 'sc1/freq_sel_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[8]' (FDE) to 'sc1/freq_sel_reg[9]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[9]' (FDE) to 'sc1/freq_sel_reg[14]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[10]' (FDE) to 'sc1/freq_sel_reg[15]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[11]' (FDE) to 'sc1/freq_sel_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[12]' (FDE) to 'sc1/freq_sel_reg[16]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sc1/freq_sel_reg[14] )
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[16]' (FDE) to 'sc1/freq_sel_reg[17]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[17]' (FDE) to 'sc1/freq_sel_reg[18]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[18]' (FDE) to 'sc1/freq_sel_reg[19]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[19]' (FDE) to 'sc1/freq_sel_reg[20]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[20]' (FDE) to 'sc1/freq_sel_reg[21]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[21]' (FDE) to 'sc1/freq_sel_reg[22]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[22]' (FDE) to 'sc1/freq_sel_reg[23]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[23]' (FDE) to 'sc1/freq_sel_reg[24]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[24]' (FDE) to 'sc1/freq_sel_reg[25]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[25]' (FDE) to 'sc1/freq_sel_reg[26]'
+INFO: [Synth 8-3886] merging instance 'sc1/freq_sel_reg[26]' (FDE) to 'sc1/freq_sel_reg[27]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc1/freq_sel_reg[27] )
+WARNING: [Synth 8-3332] Sequential element (dbb5/new_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[10]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[11]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[12]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[13]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[14]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[15]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[16]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[17]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[18]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (dbb5/count_reg[19]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (second_timer/counter_reg[23]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (second_timer/counter_reg[22]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (second_timer/counter_reg[21]) is unused and will be removed from module labkit.
@@ -438,6 +486,32 @@ WARNING: [Synth 8-3332] Sequential element (second_timer/counter_reg[1]) is unus
 WARNING: [Synth 8-3332] Sequential element (second_timer/counter_reg[0]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (second_timer/clk_out_reg) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (t1/expire_out_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[27]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[26]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[25]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[24]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[23]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[22]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[21]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[20]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[19]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[18]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[17]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[16]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[14]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[12]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[11]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[10]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (sc1/freq_sel_reg[0]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (gen_debouncers[6].debouncer/new_reg) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (gen_debouncers[6].debouncer/count_reg[0]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (gen_debouncers[6].debouncer/count_reg[1]) is unused and will be removed from module labkit.
@@ -465,58 +539,11 @@ WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_re
 WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[2]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[3]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[4]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[5]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[6]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[7]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[8]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[9]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[10]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[11]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[12]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[13]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[14]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[15]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[16]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[17]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[18]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[7].debouncer/count_reg[19]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/new_reg) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[0]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[1]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[2]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[3]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[4]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[5]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[6]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[7]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[8]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[9]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[10]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[11]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[12]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[13]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[14]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[15]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[16]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[17]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[18]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[8].debouncer/count_reg[19]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/new_reg) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[0]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[1]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[2]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[3]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[4]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[5]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[6]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[7]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[8]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (gen_debouncers[9].debouncer/count_reg[9]) is unused and will be removed from module labkit.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2629 ; free virtual = 13733
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1159 ; free virtual = 13042
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2629 ; free virtual = 13733
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1159 ; free virtual = 13042
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -530,10 +557,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2619 ; free virtual = 13722
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1117 ; free virtual = 12999
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2619 ; free virtual = 13722
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1099 ; free virtual = 12981
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -545,16 +572,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -571,7 +598,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -584,7 +611,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -596,25 +623,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -631,17 +658,17 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    76|
-|3     |LUT1   |   307|
-|4     |LUT2   |    30|
-|5     |LUT3   |    24|
-|6     |LUT4   |    15|
-|7     |LUT5   |    42|
-|8     |LUT6   |   109|
+|2     |CARRY4 |    87|
+|3     |LUT1   |   331|
+|4     |LUT2   |    37|
+|5     |LUT3   |    37|
+|6     |LUT4   |    46|
+|7     |LUT5   |    32|
+|8     |LUT6   |    45|
 |9     |FDCE   |    14|
 |10    |FDPE   |    12|
-|11    |FDRE   |   346|
-|12    |FDSE   |    13|
+|11    |FDRE   |   358|
+|12    |FDSE   |    19|
 |13    |LDC    |     8|
 |14    |IBUF   |    14|
 |15    |OBUF   |    60|
@@ -651,36 +678,36 @@ Report Instance Areas:
 +------+---------------------------------+----------------------+------+
 |      |Instance                         |Module                |Cells |
 +------+---------------------------------+----------------------+------+
-|1     |top                              |                      |  1071|
+|1     |top                              |                      |  1101|
 |2     |  af1                            |alarm_fsm             |    38|
 |3     |  clockgen                       |clock_quarter_divider |     4|
-|4     |  d8h                            |display_8hex          |    53|
-|5     |  dbb1                           |debounce              |    61|
-|6     |  dbb2                           |debounce_0            |    57|
-|7     |  dbb3                           |debounce_1            |    58|
-|8     |  dbb4                           |debounce_2            |    57|
-|9     |  dbb5                           |debounce_3            |    71|
-|10    |  fc1                            |fuel_pump_controller  |     4|
-|11    |  \gen_debouncers[0].debouncer   |debounce_4            |    57|
-|12    |  \gen_debouncers[14].debouncer  |debounce_5            |    57|
-|13    |  \gen_debouncers[15].debouncer  |debounce_6            |    58|
-|14    |  \gen_debouncers[1].debouncer   |debounce_7            |    57|
-|15    |  \gen_debouncers[2].debouncer   |debounce_8            |    57|
-|16    |  \gen_debouncers[3].debouncer   |debounce_9            |    57|
-|17    |  \gen_debouncers[4].debouncer   |debounce_10           |    57|
-|18    |  \gen_debouncers[5].debouncer   |debounce_11           |    57|
-|19    |  sc1                            |siren_controller      |   105|
+|4     |  d8h                            |display_8hex          |    56|
+|5     |  dbb1                           |debounce              |    58|
+|6     |  dbb2                           |debounce_0            |    54|
+|7     |  dbb3                           |debounce_1            |    54|
+|8     |  dbb4                           |debounce_2            |    54|
+|9     |  fc1                            |fuel_pump_controller  |     4|
+|10    |  \gen_debouncers[0].debouncer   |debounce_3            |    54|
+|11    |  \gen_debouncers[13].debouncer  |debounce_4            |    57|
+|12    |  \gen_debouncers[14].debouncer  |debounce_5            |    54|
+|13    |  \gen_debouncers[15].debouncer  |debounce_6            |    55|
+|14    |  \gen_debouncers[1].debouncer   |debounce_7            |    54|
+|15    |  \gen_debouncers[2].debouncer   |debounce_8            |    54|
+|16    |  \gen_debouncers[3].debouncer   |debounce_9            |    54|
+|17    |  \gen_debouncers[4].debouncer   |debounce_10           |    54|
+|18    |  \gen_debouncers[5].debouncer   |debounce_11           |    54|
+|19    |  sc1                            |siren_controller      |   183|
 |20    |  t1                             |timer                 |    11|
 |21    |  tc                             |time_controller       |    20|
 +------+---------------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2611 ; free virtual = 13714
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1089 ; free virtual = 12972
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 247 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1464.477 ; gain = 113.441 ; free physical = 2611 ; free virtual = 13714
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1464.477 ; gain = 569.277 ; free physical = 2610 ; free virtual = 13714
+Synthesis finished with 0 errors, 0 critical warnings and 273 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1465.250 ; gain = 113.441 ; free physical = 1088 ; free virtual = 12971
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.250 ; gain = 570.051 ; free physical = 1088 ; free virtual = 12971
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -689,8 +716,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-108 Infos, 189 Warnings, 0 Critical Warnings and 0 Errors encountered.
+136 Infos, 189 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1472.484 ; gain = 500.727 ; free physical = 2610 ; free virtual = 13714
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1504.504 ; gain = 0.000 ; free physical = 2608 ; free virtual = 13713
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 10 16:58:49 2018...
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1473.258 ; gain = 501.500 ; free physical = 1084 ; free virtual = 12967
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1505.277 ; gain = 0.000 ; free physical = 1083 ; free virtual = 12966
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 10 18:02:11 2018...

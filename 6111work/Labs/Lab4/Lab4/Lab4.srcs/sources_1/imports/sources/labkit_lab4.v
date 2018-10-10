@@ -82,7 +82,7 @@ module labkit(
     assign LED17_R = 0;
     assign JA[7:1] = 0;
     assign LED[15:3] = 0;
-
+    assign reset_sig = sw[13];
     generate
       genvar i;
       for (i = 0; i < 16; i = i + 1)
@@ -124,10 +124,10 @@ module labkit(
                       );
 
     debounce dbb5(
-                        .reset(1'b0),
+                        .reset(reset_sig),
                         .clock(CLK100MHZ),
                         .noisy(BTND),
-                        .clean(reset_sig)
+                        .clean(btnd)
                       );
 
 // create 25mhz system clock

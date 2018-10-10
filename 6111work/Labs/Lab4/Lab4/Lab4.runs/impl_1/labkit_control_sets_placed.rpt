@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Oct 10 16:59:29 2018
-| Host         : eecs-digital-24 running 64-bit Ubuntu 14.04.5 LTS
+| Date         : Wed Oct 10 18:02:42 2018
+| Host         : eecs-digital-23 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_control_sets -verbose -file labkit_control_sets_placed.rpt
 | Design       : labkit
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    50 |
-| Unused register locations in slices containing registers |   279 |
+| Number of unique control sets                            |    48 |
+| Unused register locations in slices containing registers |   277 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              48 |           21 |
-| No           | No                    | Yes                    |               9 |            6 |
-| No           | Yes                   | No                     |              35 |           15 |
-| Yes          | No                    | No                     |              24 |           17 |
+| No           | No                    | No                     |              50 |           22 |
+| No           | No                    | Yes                    |               9 |            4 |
+| No           | Yes                   | No                     |              61 |           24 |
+| Yes          | No                    | No                     |              14 |           14 |
 | Yes          | No                    | Yes                    |              17 |            6 |
 | Yes          | Yes                   | No                     |             260 |           65 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,59 +45,57 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------------------+------------------------------------+----------------------------------------------------+------------------+----------------+
-|                     Clock Signal                    |            Enable Signal           |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count |
-+-----------------------------------------------------+------------------------------------+----------------------------------------------------+------------------+----------------+
-|  gen_debouncers[15].debouncer/interval_out_reg[1]_C |                                    | dbb5/interval_out_reg[1]_P                         |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_4                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_5                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_6                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_7                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_8                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_9                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_3                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_2                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_11                    |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_10                    |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | af1/pwm_out_reg_0                  |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_1                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_reg_0                     |                                                    |                1 |              1 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/new_i_1_n_0                   |                                                    |                1 |              1 |
-|  clockgen/clock_25mhz                               |                                    |                                                    |                1 |              1 |
-|  af1/status_out_reg_LDC_i_1_n_0                     |                                    | af1/status_out_reg_LDC_i_2_n_0                     |                1 |              1 |
-|  clockgen/clock_25mhz                               |                                    | dbb3/state_reg[0]_C                                |                1 |              1 |
-|  clockgen/clock_25mhz                               | af1/state[0]_P_i_1_n_0             | dbb5/state_reg[0]_P                                |                1 |              1 |
-|  dbb5/interval_out_reg[1]_P                         |                                    | gen_debouncers[15].debouncer/interval_out_reg[1]_C |                1 |              1 |
-|  af1/seg_reg[2]_5                                   |                                    | af1/seg_reg[2]_6                                   |                1 |              1 |
-|  af1/seg_reg[2]_3                                   |                                    | af1/seg_reg[2]_4                                   |                1 |              1 |
-|  af1/seg_reg[2]_1                                   |                                    | af1/seg_reg[2]_2                                   |                1 |              1 |
-|  af1/seg_reg[2]                                     |                                    | af1/seg_reg[2]_0                                   |                1 |              1 |
-|  dbb5/state_reg[0]_P                                |                                    | dbb3/state_reg[0]_C                                |                1 |              1 |
-|  clockgen/clock_25mhz                               |                                    | gen_debouncers[15].debouncer/interval_out_reg[1]_C |                1 |              2 |
-|  clockgen/clock_25mhz                               |                                    | dbb5/interval_out_reg[1]_P                         |                1 |              2 |
-|  CLK100MHZ_IBUF_BUFG                                |                                    | d8h/strobe[6]_i_1_n_0                              |                1 |              3 |
-|  CLK100MHZ_IBUF_BUFG                                |                                    | d8h/p_0_in[0]                                      |                1 |              4 |
-|  clockgen/clock_25mhz                               | dbb1/E[0]                          | dbb5/reset_sig                                     |                2 |              4 |
-|  clockgen/clock_25mhz                               | dbb1/t_arm_delay_reg[3][0]         | dbb5/reset_sig                                     |                1 |              4 |
-|  clockgen/clock_25mhz                               | dbb1/t_driver_delay_reg[3][0]      | dbb5/reset_sig                                     |                1 |              4 |
-|  clockgen/clock_25mhz                               | dbb1/t_passenger_delay_reg[3][0]   | dbb5/reset_sig                                     |                1 |              4 |
-|  clockgen/clock_25mhz                               |                                    | dbb5/reset_sig                                     |                3 |              4 |
-|  CLK100MHZ_IBUF_BUFG                                | sc1/d_1                            |                                                    |                3 |             10 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[5].debouncer/count  | dbb5/new_reg_9                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb4/count                         | dbb5/new_reg_3                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb3/count                         | dbb5/new_reg_2                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[4].debouncer/count  | dbb5/new_reg_8                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb1/count                         | dbb5/new_reg_0                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb2/count                         | dbb5/new_reg_1                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                |                                    | sc1/d_1                                            |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | dbb5/count                         | dbb5/new_i_1_n_0                                   |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[14].debouncer/count | dbb5/new_reg_10                                    |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[0].debouncer/count  | dbb5/new_reg_4                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[15].debouncer/count | dbb5/new_reg_11                                    |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[2].debouncer/count  | dbb5/new_reg_6                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[1].debouncer/count  | dbb5/new_reg_5                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[3].debouncer/count  | dbb5/new_reg_7                                     |                5 |             20 |
-|  CLK100MHZ_IBUF_BUFG                                |                                    |                                                    |               20 |             47 |
-+-----------------------------------------------------+------------------------------------+----------------------------------------------------+------------------+----------------+
++-----------------------------------------------------+----------------------------------------------+----------------------------------------------------+------------------+----------------+
+|                     Clock Signal                    |                 Enable Signal                |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++-----------------------------------------------------+----------------------------------------------+----------------------------------------------------+------------------+----------------+
+|  clockgen/clock_25mhz                               |                                              |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[2].debouncer/new_i_1__5_n_0   |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[3].debouncer/new_i_1__6_n_0   |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[15].debouncer/new_i_1__11_n_0 |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[1].debouncer/new_i_1__4_n_0   |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[13].debouncer/new_i_1__9_n_0  |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[14].debouncer/new_i_1__10_n_0 |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[0].debouncer/new_i_1__3_n_0   |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[5].debouncer/new_i_1__8_n_0   |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb4/new_i_1__2_n_0                          |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | af1/pwm_out_reg_0                            |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb3/new_i_1__1_n_0                          |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[4].debouncer/new_i_1__7_n_0   |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb1/new_i_1_n_0                             |                                                    |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb2/new_i_1__0_n_0                          |                                                    |                1 |              1 |
+|  gen_debouncers[15].debouncer/interval_out_reg[1]_C |                                              | gen_debouncers[13].debouncer/interval_out_reg[1]_P |                1 |              1 |
+|  gen_debouncers[13].debouncer/state_reg[0]_P        |                                              | gen_debouncers[13].debouncer/state_reg[0]_C        |                1 |              1 |
+|  clockgen/clock_25mhz                               |                                              | gen_debouncers[13].debouncer/state_reg[0]_C        |                1 |              1 |
+|  af1/seg_reg[6]                                     |                                              | af1/seg_reg[6]_0                                   |                1 |              1 |
+|  af1/seg_reg[6]_1                                   |                                              | af1/seg_reg[6]_2                                   |                1 |              1 |
+|  af1/seg_reg[6]_3                                   |                                              | af1/seg_reg[6]_4                                   |                1 |              1 |
+|  af1/seg_reg[6]_5                                   |                                              | af1/seg_reg[6]_6                                   |                1 |              1 |
+|  af1/status_out_reg_LDC_i_1_n_0                     |                                              | af1/status_out_reg_LDC_i_2_n_0                     |                1 |              1 |
+|  clockgen/clock_25mhz                               | af1/state[0]_P_i_1_n_0                       | gen_debouncers[13].debouncer/state_reg[0]_P        |                1 |              1 |
+|  gen_debouncers[13].debouncer/interval_out_reg[1]_P |                                              | gen_debouncers[15].debouncer/interval_out_reg[1]_C |                1 |              1 |
+|  clockgen/clock_25mhz                               |                                              | gen_debouncers[13].debouncer/interval_out_reg[1]_P |                1 |              2 |
+|  clockgen/clock_25mhz                               |                                              | gen_debouncers[15].debouncer/interval_out_reg[1]_C |                1 |              2 |
+|  clockgen/clock_25mhz                               | dbb1/E[0]                                    | gen_debouncers[13].debouncer/sw_13                 |                1 |              4 |
+|  clockgen/clock_25mhz                               |                                              | gen_debouncers[13].debouncer/sw_13                 |                1 |              4 |
+|  clockgen/clock_25mhz                               | dbb1/t_passenger_delay_reg[3][0]             | gen_debouncers[13].debouncer/sw_13                 |                2 |              4 |
+|  clockgen/clock_25mhz                               | dbb1/t_driver_delay_reg[3][0]                | gen_debouncers[13].debouncer/sw_13                 |                1 |              4 |
+|  clockgen/clock_25mhz                               | dbb1/t_arm_delay_reg[3][0]                   | gen_debouncers[13].debouncer/sw_13                 |                1 |              4 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb4/count                                   | dbb4/new_i_1__2_n_0                                |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[5].debouncer/count            | gen_debouncers[5].debouncer/new_i_1__8_n_0         |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[13].debouncer/count           | gen_debouncers[13].debouncer/new_i_1__9_n_0        |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb1/count                                   | dbb1/new_i_1_n_0                                   |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[0].debouncer/count            | gen_debouncers[0].debouncer/new_i_1__3_n_0         |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[15].debouncer/count           | gen_debouncers[15].debouncer/new_i_1__11_n_0       |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb3/count                                   | dbb3/new_i_1__1_n_0                                |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[14].debouncer/count           | gen_debouncers[14].debouncer/new_i_1__10_n_0       |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[4].debouncer/count            | gen_debouncers[4].debouncer/new_i_1__7_n_0         |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | dbb2/count                                   | dbb2/new_i_1__0_n_0                                |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[1].debouncer/count            | gen_debouncers[1].debouncer/new_i_1__4_n_0         |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[3].debouncer/count            | gen_debouncers[3].debouncer/new_i_1__6_n_0         |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                | gen_debouncers[2].debouncer/count            | gen_debouncers[2].debouncer/new_i_1__5_n_0         |                5 |             20 |
+|  CLK100MHZ_IBUF_BUFG                                |                                              | sc1/count[27]_i_1_n_0                              |                8 |             25 |
+|  CLK100MHZ_IBUF_BUFG                                |                                              | sc1/freq_sel_1                                     |                8 |             28 |
+|  CLK100MHZ_IBUF_BUFG                                |                                              |                                                    |               21 |             49 |
++-----------------------------------------------------+----------------------------------------------+----------------------------------------------------+------------------+----------------+
 
 
