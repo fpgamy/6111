@@ -69,7 +69,7 @@ module alarm_fsm_tb;
 		passenger_door = 1'b0;
 		driver_door = 1'b0;
 		#10;
-		expired_in = 1'b1;
+		expired = 1'b1;
 		#100;
 		
 		driver_door = 1'b1;
@@ -90,7 +90,7 @@ module alarm_fsm_tb;
 		#20;
 		passenger_door = 1'b0;
 		driver_door    = 1'b0;
-		expired_in     = 1'b0;
+		expired     = 1'b0;
 
 		reset_fsm;
 
