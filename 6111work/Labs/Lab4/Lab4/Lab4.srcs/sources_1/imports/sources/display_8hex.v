@@ -16,7 +16,7 @@
 module display_8hex(
     input clk,                 // system clock
     input [31:0] data,         // 8 hex numbers, msb first
-    output reg [6:0] seg,      // seven segment display output
+    output reg [7:0] seg,      // seven segment display output
     output reg [7:0] strobe    // digit strobe
     );
 
@@ -46,39 +46,39 @@ module display_8hex(
       counter <= counter + 1;
       case (counter[bits:bits-2])
           3'b000: begin
-                  seg <= segments[data[31:28]];
+                  seg <= { 1'b0, segments[data[31:28]] };
                   strobe <= 8'b0111_1111 ;
                  end
 
           3'b001: begin
-                  seg <= segments[data[27:24]];
+                  seg <= {1'b0, segments[data[27:24]]};
                   strobe <= 8'b1011_1111 ;
                  end
 
           3'b010: begin
-                   seg <= segments[data[23:20]];
+                   seg <= {1'b0, segments[data[23:20]]};
                    strobe <= 8'b1101_1111 ;
                   end
           3'b011: begin
-                  seg <= segments[data[19:16]];
+                  seg <= {1'b0, segments[data[19:16]]};
                   strobe <= 8'b1110_1111;        
                  end
           3'b100: begin
-                  seg <= segments[data[15:12]];
+                  seg <= {1'b0, segments[data[15:12]]};
                   strobe <= 8'b1111_0111;
                  end
 
           3'b101: begin
-                  seg <= segments[data[11:8]];
+                  seg <= {1'b0, segments[data[11:8]]};
                   strobe <= 8'b1111_1011;
                  end
 
           3'b110: begin
-                   seg <= segments[data[7:4]];
+                   seg <= {1'b0, segments[data[7:4]]};
                    strobe <= 8'b1111_1101;
                   end
           3'b111: begin
-                  seg <= segments[data[3:0]];
+                  seg <= {1'b0, segments[data[3:0]]};
                   strobe <= 8'b1111_1110;
                  end
 

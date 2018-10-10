@@ -49,6 +49,8 @@ module fuel_pump_controller_tb;
 		#10;
 		brake           = 1'b1;
 		hidden_switch   = 1'b1;
+		#10;
+		ignition        = 1'b0;
 		#500;
 		$finish;
 	end

@@ -7,7 +7,7 @@ module siren_controller (clk_in, en_in, pwm_out);
     localparam WARBLE_MAX    = 100000000;
     localparam VOLUME_TOGGLE = 10'b0000011111;
     // Registers used in pwm
-	reg [9:0]  d;
+	reg [9:0]  d     = VOLUME_TOGGLE;
 	reg [9:0]  count = VOLUME_TOGGLE;
 	reg [19:0] warble_counter = WARBLE_MAX;
 	
@@ -19,7 +19,7 @@ module siren_controller (clk_in, en_in, pwm_out);
 	   if (warble_counter == 0)
 	   begin
 	       warble_counter <= WARBLE_MAX;
-	       count          <= ~count;
+	       d              <= ~d;
 	   end
 	   else
 	   begin
@@ -29,14 +29,21 @@ module siren_controller (clk_in, en_in, pwm_out);
 
 	always @(posedge clk_in)
 	begin
-		count <= count + 1'b1;
+		if (count == 0)
+		begin
+			count <= 10'h3FF;
+		end
+		else 
+		begin
+			count <= count - 1;
+		end
 		if (count > d)
 		begin
-			pwm_out <= 1'b0;
+			pwm_out <= en_in;
         end
 		else if (en_in)
 		begin
-			pwm_out <= 1'b1;
+			pwm_out <= 1'b0;
         end
 	end
 endmodule

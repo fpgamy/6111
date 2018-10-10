@@ -23,16 +23,24 @@ module fuel_pump_controller( clk_in,
             end
             else
             begin
-                if (brake_in & hidden_switch_in)
+                if (fuel_power_out & (~ignition_in))
                 begin
-                    if (ignition_on)
-                    begin
-                        fuel_power_out <= 1'b1;
-                    end
+                    ignition_on <= 1'b0;
+                    fuel_power_out <= 1'b0;
                 end
-                else if (ignition_in & (~ignition_on))
+                else 
                 begin
-                    ignition_on <= 1'b1;
+                    if (brake_in & hidden_switch_in)
+                    begin
+                        if (ignition_on)
+                        begin
+                            fuel_power_out <= 1'b1;
+                        end
+                    end
+                    else if (ignition_in & (~ignition_on))
+                    begin
+                        ignition_on <= 1'b1;
+                    end
                 end
             end
          

@@ -17,11 +17,11 @@ module siren_controller_tb;
 		en       = 1'b0;
 		#10;
 		en       = 1'b1;
-		#100;
+		#100000;
 		en       = 1'b0;
-		#100;
+		#10;
 		en       = 1'b1;
-		#500;
+		#5000000;
 		$finish;
 	end
 

@@ -3,6 +3,7 @@ module time_controller_tb;
 	reg  res             = 1'b1;
 	reg  set             = 1'b0;
 	reg  [1:0] sel       = 2'b00;
+	reg  [1:0] out_sel   = 2'b00;
 	reg  [3:0] value     = 4'b0;
 
 	wire [3:0] value_timer;
@@ -12,6 +13,7 @@ module time_controller_tb;
 							.reset_in(res),
 							.set_in(set),
 							.sel_in(sel),
+							.out_sel_in(out_sel),
 							.value_in(value),
 							.value_out(value_timer)
 					    );
@@ -24,46 +26,69 @@ module time_controller_tb;
 		res      = 1'b1;
 		set      = 1'b0;
 		sel      = 2'b0;
+		out_sel  = 2'b0;
 		#10;
 		res      = 1'b0;
 		#10;
 		sel      = 2'b01;
 		value    = 4'b1010;
 		#10;
+		out_sel  = 2'b01;
+		#10;
 		sel      = 2'b10;
 		value    = 4'b1110;
+		#10;
+		out_sel  = 2'b10;
 		#10;
 		sel      = 2'b11;
 		value    = 4'b1111;
 		#10;
+		out_sel  = 2'b11;
+		#10;
 		set      = 1'b1;
 		sel      = 2'b00;
 		value    = 4'b1010;
+		#10;
+		out_sel  = 2'b00;
 		#10
 		set      = 1'b0;
 		sel      = 2'b00;
 		value    = 4'b1010;
 		#10;
+		out_sel  = 2'b00;
+		#10;
 		set      = 1'b1;
 		sel      = 2'b01;
 		value    = 4'b1110;
 		#10;
+		out_sel  = 2'b01;
+		#10;
 		set      = 1'b0;
 		sel      = 2'b01;
+		#10;
+		out_sel  = 2'b01;
 		#10;
 		set      = 1'b1;
 		sel      = 2'b10;
 		value    = 4'b0010;
 		#10;
+		out_sel  = 2'b10;
+		#10;
 		set      = 1'b0;
 		sel      = 2'b10;
 		#10;
+		#10;
+		out_sel  = 2'b10;
 		set      = 1'b1;
 		sel      = 2'b11;
 		value    = 4'b1111;
 		#10;
+		out_sel  = 2'b11;
+		#10;
 		set      = 1'b0;
 		sel      = 2'b11;
+		#10;
+		out_sel  = 2'b11;
 		#500;
 		$finish;
 	end
