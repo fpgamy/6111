@@ -1,40 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1538510717">
-  <File Type="PA-TCL" Name="labkit.tcl"/>
-  <File Type="RDS-RDS" Name="labkit.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="labkit_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="labkit_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="labkit_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="labkit.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="labkit_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1539205105">
   <File Type="VDS-TIMING-PB" Name="labkit_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="labkit_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="labkit.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="labkit_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="labkit_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="labkit_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="labkit.vds"/>
+  <File Type="PA-TCL" Name="labkit.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../sources/display_8hex.v">
+    <File Path="$PSRCDIR/sources_1/new/time_controller.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../sources/labkit_lab4.v">
+    <File Path="$PSRCDIR/sources_1/new/timer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../sources/synchronize.v">
+    <File Path="$PSRCDIR/sources_1/new/siren_controller.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fuel_pump_controller.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/display_8hex.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/display_8hex.v"/>
+        <Attr Name="ImportTime" Val="1538510175"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/debounce.v"/>
+        <Attr Name="ImportTime" Val="1538510158"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alarm_fsm.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/labkit_lab4.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/labkit_lab4.v"/>
+        <Attr Name="ImportTime" Val="1538510098"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/synchronize.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../sources/debounce.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/synchronize.v"/>
+        <Attr Name="ImportTime" Val="1538510151"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

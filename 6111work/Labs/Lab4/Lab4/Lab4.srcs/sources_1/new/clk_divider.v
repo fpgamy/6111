@@ -1,4 +1,4 @@
-module clk_divider( clk_in, en_in, clk_out );
+module clk_divider( clk_in, reset_in, en_in, clk_out );
     parameter RATIO = 12499999;
     parameter WIDTH = $clog2(RATIO);
     input     clk_in, en_in, reset_in;

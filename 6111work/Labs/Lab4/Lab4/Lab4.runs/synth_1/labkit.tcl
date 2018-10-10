@@ -14,8 +14,15 @@ set_property parent.project_path /afs/athena.mit.edu/user/m/a/magson/Documents/6
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
-  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/display_8hex.v
-  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/sources/labkit_lab4.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/time_controller.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/timer.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/siren_controller.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/fuel_pump_controller.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/display_8hex.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/debounce.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/clk_divider.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/new/alarm_fsm.v
+  /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab4/Lab4/Lab4.srcs/sources_1/imports/sources/labkit_lab4.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
