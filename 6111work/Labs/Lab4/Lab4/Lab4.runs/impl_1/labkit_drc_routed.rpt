@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Oct 10 18:02:56 2018
+| Date         : Wed Oct 10 23:09:22 2018
 | Host         : eecs-digital-23 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_drc -file labkit_drc_routed.rpt -pb labkit_drc_routed.pb
 | Design       : labkit
@@ -23,7 +23,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 10
+             Violations found: 2
 
 2. REPORT DETAILS
 -----------------
@@ -38,46 +38,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-PDRC-153#1 Warning
-Gated clock check  
-Net af1/seg_reg[6] is a gated clock net sourced by a combinational pin af1/counter_reg[0]_LDC_i_1/O, cell af1/counter_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net af1/seg_reg[6]_1 is a gated clock net sourced by a combinational pin af1/counter_reg[1]_LDC_i_1/O, cell af1/counter_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net af1/seg_reg[6]_3 is a gated clock net sourced by a combinational pin af1/counter_reg[2]_LDC_i_1/O, cell af1/counter_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net af1/seg_reg[6]_5 is a gated clock net sourced by a combinational pin af1/counter_reg[3]_LDC_i_1/O, cell af1/counter_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net af1/status_out_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin af1/status_out_reg_LDC_i_1/O, cell af1/status_out_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net gen_debouncers[13].debouncer/interval_out_reg[1]_P is a gated clock net sourced by a combinational pin gen_debouncers[13].debouncer/interval_out_reg[1]_LDC_i_1/O, cell gen_debouncers[13].debouncer/interval_out_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net gen_debouncers[13].debouncer/state_reg[0]_P is a gated clock net sourced by a combinational pin gen_debouncers[13].debouncer/state_reg[0]_LDC_i_1/O, cell gen_debouncers[13].debouncer/state_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#8 Warning
-Gated clock check  
-Net gen_debouncers[15].debouncer/interval_out_reg[1]_C is a gated clock net sourced by a combinational pin gen_debouncers[15].debouncer/interval_out_reg[1]_LDC_i_2/O, cell gen_debouncers[15].debouncer/interval_out_reg[1]_LDC_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLIO-7#1 Warning

@@ -6,6 +6,8 @@ set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config  -ruleid {1}  -id {Synth 8-3917}  -suppress 
+set_msg_config  -ruleid {2}  -id {Synth 8-3332}  -suppress 
 create_project -in_memory -part xc7a100tcsg324-3
 
 set_param project.singleFileAddWarning.threshold 0

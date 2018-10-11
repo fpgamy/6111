@@ -1,14 +1,15 @@
+`default_nettype none
 module fuel_pump_controller( clk_in,
                              reset_in, // Probably attach this to the reprogram
                              brake_in, 
                              hidden_switch_in, 
                              ignition_in, 
                              fuel_power_out);
-         input  clk_in;
-         input  reset_in;
-         input  brake_in;
-         input  hidden_switch_in;
-         input  ignition_in;
+         input  wire clk_in;
+         input  wire reset_in;
+         input  wire brake_in;
+         input  wire hidden_switch_in;
+         input  wire ignition_in;
          output fuel_power_out;
          
          reg ignition_on    = 1'b0;

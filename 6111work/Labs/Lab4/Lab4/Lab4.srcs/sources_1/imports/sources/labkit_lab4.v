@@ -1,3 +1,4 @@
+`default_nettype none
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -20,20 +21,20 @@
 
 
 module labkit(
-   input CLK100MHZ,
-   input[15:0] SW, 
-   input BTNC, BTNU, BTNL, BTNR, BTND,
-   output[3:0] VGA_R, 
-   output[3:0] VGA_B, 
-   output[3:0] VGA_G,
-   output[7:0] JA, 
-   output VGA_HS, 
-   output VGA_VS, 
-   output LED16_B, LED16_G, LED16_R,
-   output LED17_B, LED17_G, LED17_R,
-   output[15:0] LED,
-   output[7:0] SEG,  // segments A-G (0-6), DP (7)
-   output[7:0] AN    // Display 0-7
+   input wire CLK100MHZ,
+   input wire [15:0] SW, 
+   input wire BTNC, BTNU, BTNL, BTNR, BTND,
+   output wire [3:0] VGA_R, 
+   output wire [3:0] VGA_B, 
+   output wire [3:0] VGA_G,
+   output wire [7:0] JA, 
+   output wire VGA_HS, 
+   output wire VGA_VS, 
+   output wire LED16_B, LED16_G, LED16_R,
+   output wire LED17_B, LED17_G, LED17_R,
+   output wire [15:0] LED,
+   output wire [7:0] SEG,  // segments A-G (0-6), DP (7)
+   output wire [7:0] AN    // Display 0-7
    );
 
 // Once the system has been armed, opening the driver's door the system begins a countdown. If the 
@@ -61,7 +62,7 @@ module labkit(
     wire clock_25mhz;
     wire clock_1hz;
     wire reset_sig;
-    wire timer_enable;
+    //wire timer_enable;
     wire [15:0] sw;
     wire reprog;
     wire brake_pedal;
@@ -81,7 +82,7 @@ module labkit(
     assign LED17_G = 0;
     assign LED17_R = 0;
     assign JA[7:1] = 0;
-    assign LED[15:3] = 0;
+    assign LED[15:12] = 0;
     assign reset_sig = sw[13];
     generate
       genvar i;
@@ -139,7 +140,7 @@ module labkit(
     clk_divider second_timer(
                               .clk_in(clock_25mhz), 
                               .reset_in(reset_sig), 
-                              .en_in(timer_enable), 
+                              .en_in(1'b1), 
                               .clk_out(clock_1hz)
                             );
 
@@ -162,7 +163,7 @@ module labkit(
                         .value_in(time_value),
                         .value_out(time_param_for_timer)
                         );
-
+    assign LED[11:8] = time_param_for_timer;
     wire start_timer;
     wire expire;
     wire [3:0] counter_val;
@@ -178,12 +179,16 @@ module labkit(
                     );
 
     timer t1(
+              .clk_in(clock_25mhz),
               .clk_1hz_in(clock_1hz),
               .start_in(start_timer),
               .value_in(time_param_for_timer),
               .counter_out(counter_val),
               .expire_out(expire)
             );
+            
+    assign LED[4] = expire;
+    assign LED[5] = start_timer;
 
     fuel_pump_controller fc1(
                               .clk_in(clock_25mhz),
@@ -195,18 +200,20 @@ module labkit(
                             );
 
     wire siren_en;
+    assign LED[3] = clock_1hz;
     alarm_fsm af1(
                     .clk_in(clock_25mhz),
                     .clk_1Hz_in(clock_1hz),
                     .ignition_in(ignition),
                     .driver_door_in(driver_door_sensor),
                     .passenger_door_in(passenger_door_sensor),
-                    .program_in(reset_sig),
+                    .program_in(reprog | reset_sig),
                     .expired_in(expire),
                     .siren_out(siren_en),
                     .start_time_out(start_timer),
                     .interval_out(interval_sel),
-                    .status_out(LED[1])
+                    .status_out(LED[1]),
+                    .state_out({LED[7], LED[6]})
                   );
 
     siren_controller sc1(
@@ -220,7 +227,7 @@ module labkit(
 
 endmodule
 
-module clock_quarter_divider(input clk100_mhz, output reg clock_25mhz = 0);
+module clock_quarter_divider(input wire clk100_mhz, output reg clock_25mhz = 0);
     reg counter = 0;
 
     // VERY BAD VERILOG
@@ -241,11 +248,11 @@ module clock_quarter_divider(input clk100_mhz, output reg clock_25mhz = 0);
     end
 endmodule
 
-module vga(input vga_clock,
+module vga(input wire vga_clock,
             output reg [9:0] hcount = 0,    // pixel number on current line
             output reg [9:0] vcount = 0,    // line number
             output reg vsync, hsync, 
-            output at_display_area);
+            output wire at_display_area);
 
    // Comments applies to XVGA 1024x768, left in for reference
    // horizontal: 1344 pixels total

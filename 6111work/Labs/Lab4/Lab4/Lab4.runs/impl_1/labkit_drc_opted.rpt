@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Oct 10 18:02:39 2018
+| Date         : Wed Oct 10 23:09:04 2018
 | Host         : eecs-digital-23 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_drc -file labkit_drc_opted.rpt
 | Design       : labkit

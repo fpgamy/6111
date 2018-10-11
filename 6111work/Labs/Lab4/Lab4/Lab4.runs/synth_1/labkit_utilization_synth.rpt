@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Oct 10 18:02:11 2018
+| Date         : Wed Oct 10 23:08:48 2018
 | Host         : eecs-digital-23 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_utilization -file labkit_utilization_synth.rpt -pb labkit_utilization_synth.pb
 | Design       : labkit
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  238 |     0 |     63400 |  0.38 |
-|   LUT as Logic          |  238 |     0 |     63400 |  0.38 |
+| Slice LUTs*             |  314 |     0 |     63400 |  0.50 |
+|   LUT as Logic          |  314 |     0 |     63400 |  0.50 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  411 |     0 |    126800 |  0.32 |
-|   Register as Flip Flop |  403 |     0 |    126800 |  0.32 |
-|   Register as Latch     |    8 |     0 |    126800 | <0.01 |
+| Slice Registers         |  459 |     0 |    126800 |  0.36 |
+|   Register as Flip Flop |  459 |     0 |    126800 |  0.36 |
+|   Register as Latch     |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -54,10 +54,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 12    |          Yes |           - |          Set |
-| 22    |          Yes |           - |        Reset |
-| 19    |          Yes |         Set |            - |
-| 358   |          Yes |       Reset |            - |
+| 25    |          Yes |           - |          Set |
+| 18    |          Yes |           - |        Reset |
+| 11    |          Yes |         Set |            - |
+| 405   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -112,7 +112,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         6 |  0.00 |
@@ -146,21 +146,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  358 |        Flop & Latch |
-| CARRY4   |   87 |          CarryLogic |
-| LUT1     |   71 |                 LUT |
+| FDRE     |  405 |        Flop & Latch |
+| CARRY4   |  100 |          CarryLogic |
+| LUT1     |   97 |                 LUT |
+| LUT4     |   90 |                 LUT |
+| LUT5     |   61 |                 LUT |
 | OBUF     |   60 |                  IO |
-| LUT4     |   46 |                 LUT |
-| LUT6     |   45 |                 LUT |
-| LUT3     |   37 |                 LUT |
-| LUT2     |   37 |                 LUT |
-| LUT5     |   32 |                 LUT |
-| FDSE     |   19 |        Flop & Latch |
+| LUT6     |   53 |                 LUT |
+| LUT2     |   34 |                 LUT |
+| LUT3     |   31 |                 LUT |
+| FDPE     |   25 |        Flop & Latch |
+| FDCE     |   18 |        Flop & Latch |
 | IBUF     |   14 |                  IO |
-| FDCE     |   14 |        Flop & Latch |
-| FDPE     |   12 |        Flop & Latch |
-| LDCE     |    8 |        Flop & Latch |
-| BUFG     |    1 |               Clock |
+| FDSE     |   11 |        Flop & Latch |
+| BUFG     |    2 |               Clock |
 +----------+------+---------------------+
 
 

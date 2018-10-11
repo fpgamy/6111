@@ -1,11 +1,12 @@
+`default_nettype none
 module time_controller( clk_in, reset_in, set_in, sel_in, out_sel_in, value_in, value_out );
-    input        clk_in;
-    input        reset_in;
-    input        set_in;
-    input  [1:0] sel_in;
-    input  [1:0] out_sel_in;
-    input  [3:0] value_in;
-    output [3:0] value_out;
+    input       wire clk_in;
+    input       wire reset_in;
+    input       wire set_in;
+    input  wire [1:0] sel_in;
+    input  wire [1:0] out_sel_in;
+    input  wire [3:0] value_in;
+    output wire [3:0] value_out;
     
     
     localparam SEL_ARM_DELAY       = 2'b00;
