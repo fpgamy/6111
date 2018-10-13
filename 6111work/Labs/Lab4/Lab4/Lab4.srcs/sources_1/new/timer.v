@@ -17,9 +17,11 @@ module timer ( clk_in, clk_1hz_in,  start_in, value_in, counter_out, expire_out 
     
     always @(posedge clk_in)
     begin
+        // used for detecting rising edges of 1hz clock
         clk_1hz_prev <= clk_1hz_in;
         if (start_in)
         begin
+            // we have to start now
             started <= 1'b1;
             expire_out <= 1'b0;
             counter_out <= value_in;
@@ -28,12 +30,14 @@ module timer ( clk_in, clk_1hz_in,  start_in, value_in, counter_out, expire_out 
         begin
             if (started & (~(|counter_out)))
             begin
+                // if we have started and our counter reached zero
+                // output that we have expired
                 started <= 1'b0;
-                counter_out    <= 0;
+                counter_out <= 0;
                 expire_out <= 1'b1;
             end
             else if (started & (clk_1hz_in & ~(clk_1hz_prev)))
-            begin
+            begin // 1hz rising edge
                 counter_out <= counter_out - 1;
             end
         end

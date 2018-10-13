@@ -4,10 +4,8 @@ module siren_controller (clk_in, en_in, pwm_out);
 	input wire en_in;
 	output pwm_out;
     
-    // Output a warbling tone which warbles in volume every 1 second
+    // Output a warbling tone which warbles in freq with period = every 10 second
     localparam WARBLE_MAX    = 10000000;
-    //localparam FREQ_1        = 51100;
-    //localparam FREQ_2        = 25500;
     // Registers used in pwm
 	reg [27:0]  count = 1;
 	reg [27:0] warble_counter = WARBLE_MAX;
@@ -20,6 +18,7 @@ module siren_controller (clk_in, en_in, pwm_out);
 	begin
 	   if (warble_counter == 0)
 	   begin
+	   		// gradually decrease the frequency
 	       warble_counter <= WARBLE_MAX;
 	       freq_sel <= (freq_sel < 51100) ? (100 + freq_sel) : 100; //(freq_sel == FREQ_1) ? FREQ_2 : FREQ_1;
 	   end
@@ -33,18 +32,22 @@ module siren_controller (clk_in, en_in, pwm_out);
 	begin
 		if (count == 0)
 		begin
+			// reset the count to the value of the freq_sel register
+			// ensure 50/50 mark space
 			count <= freq_sel*2;
 		end
 		else 
 		begin
+			// decrement the counter
 			count <= count - 1;
 		end
 		if (count > freq_sel)
 		begin
+			// switch if greater
 			pwm_out <= en_in;
         end
 		else if (en_in)
-		begin
+		begin // if smaller, pwm = 0
 			pwm_out <= 1'b0;
         end
 	end

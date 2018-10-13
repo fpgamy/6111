@@ -42,7 +42,8 @@ module display_8hex(
     assign segments[13] = 7'b010_0001;
     assign segments[14] = 7'b000_0110;
     assign segments[15] = 7'b000_1110;
-     
+    
+    // make sure decimal point is unlit
     always @(posedge clk) begin
       counter <= counter + 1;
       case (counter[bits:bits-2])

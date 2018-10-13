@@ -84,6 +84,9 @@ module labkit(
     assign JA[7:1] = 0;
     assign LED[15:12] = 0;
     assign reset_sig = sw[13];
+
+    // generate all the switch debouncers.
+    // this also synchronises to the clock
     generate
       genvar i;
       for (i = 0; i < 16; i = i + 1)
@@ -96,6 +99,7 @@ module labkit(
                           );
       end
     endgenerate
+    // button debouncers:
     debounce dbb1(
                         .reset(reset_sig),
                         .clock(CLK100MHZ),
@@ -143,7 +147,7 @@ module labkit(
                               .en_in(1'b1), 
                               .clk_out(clock_1hz)
                             );
-
+    // assign the switches to inputs of out FSM
     wire [1:0] time_param_selector;
     assign time_param_selector = {sw[1], sw[0]};
     wire [3:0] time_value;
@@ -154,6 +158,7 @@ module labkit(
     assign passenger_door_sensor = sw[14];
     wire [3:0] time_param_for_timer;
     wire [1:0] interval_sel;
+    // instantiate the timing controller
     time_controller tc(
                         .clk_in(clock_25mhz),
                         .reset_in(reset_sig),
@@ -163,21 +168,24 @@ module labkit(
                         .value_in(time_value),
                         .value_out(time_param_for_timer)
                         );
+    // debugging for time parameter
     assign LED[11:8] = time_param_for_timer;
     wire start_timer;
     wire expire;
     wire [3:0] counter_val;
     wire [31:0] counter_disp;
-
+    // debugging for counter display
     assign counter_disp = {27'b0, counter_val};
 
+
+    // output the count value from timer onto 7segs
     display_8hex d8h(
                       .clk(CLK100MHZ),
                       .data(counter_disp),
                       .seg(SEG),
                       .strobe(AN)
                     );
-
+    // create the timer which reads the time param from the controller
     timer t1(
               .clk_in(clock_25mhz),
               .clk_1hz_in(clock_1hz),
@@ -186,10 +194,11 @@ module labkit(
               .counter_out(counter_val),
               .expire_out(expire)
             );
-            
+    // debugging the timer output
     assign LED[4] = expire;
     assign LED[5] = start_timer;
-
+    // instantiate the fuel pump controller with the 
+    // relevant debounced switches
     fuel_pump_controller fc1(
                               .clk_in(clock_25mhz),
                               .reset_in(reset_sig),
@@ -200,7 +209,9 @@ module labkit(
                             );
 
     wire siren_en;
+    // clock debug
     assign LED[3] = clock_1hz;
+    // instantiate the alarm fsm
     alarm_fsm af1(
                     .clk_in(clock_25mhz),
                     .clk_1Hz_in(clock_1hz),
@@ -215,13 +226,13 @@ module labkit(
                     .status_out(LED[1]),
                     .state_out({LED[7], LED[6]})
                   );
-
+    // wire the siren enable from the fsm to the siren controller
     siren_controller sc1(
                           .clk_in(CLK100MHZ),
                           .en_in(siren_en),
                           .pwm_out(JA[0])
                         );
-
+    // assign the siren to an LED, so I don't annoy the rest of the lab.
     assign LED[2] = JA[0];
 
 

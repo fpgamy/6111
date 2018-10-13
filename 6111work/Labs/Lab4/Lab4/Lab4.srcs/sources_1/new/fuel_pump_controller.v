@@ -24,6 +24,8 @@ module fuel_pump_controller( clk_in,
             end
             else
             begin
+                // turn off the ignition as soon as 
+                // key is removed
                 if (fuel_power_out & (~ignition_in))
                 begin
                     ignition_on <= 1'b0;
@@ -32,14 +34,14 @@ module fuel_pump_controller( clk_in,
                 else 
                 begin
                     if (brake_in & hidden_switch_in)
-                    begin
+                    begin // both are pressed
                         if (ignition_on)
-                        begin
+                        begin // and the key is in
                             fuel_power_out <= 1'b1;
                         end
                     end
                     else if (ignition_in & (~ignition_on))
-                    begin
+                    begin // remember if the ignition was in
                         ignition_on <= 1'b1;
                     end
                 end

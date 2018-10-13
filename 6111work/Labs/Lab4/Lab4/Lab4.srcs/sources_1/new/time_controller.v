@@ -19,19 +19,20 @@ module time_controller( clk_in, reset_in, set_in, sel_in, out_sel_in, value_in, 
     reg [3:0] t_passenger_delay = 4'd15;
     reg [3:0] t_alarm_on        = 4'd10;
 
+    // the value output is simply a 4 input MUX
     assign value_out = mux4(out_sel_in, t_arm_delay, t_driver_delay, t_passenger_delay, t_alarm_on);
 
     always @(posedge clk_in or posedge reset_in)
     begin
         if (reset_in)
-        begin
+        begin // reset back to default
             t_arm_delay       <= 4'd6;
             t_driver_delay    <= 4'd8;
             t_passenger_delay <= 4'd15;
             t_alarm_on        <= 4'd10;            
         end
         else if (set_in)
-        begin
+        begin // set values based on select input
             case (sel_in)
                 SEL_ARM_DELAY        :    t_arm_delay       <= value_in;
                 SEL_DRIVER_DELAY     :    t_driver_delay    <= value_in;
@@ -44,7 +45,7 @@ module time_controller( clk_in, reset_in, set_in, sel_in, out_sel_in, value_in, 
     function [3:0] mux4;
     input [1:0] sel;
     input [3:0] s1, s2, s3, s4;
-    begin
+    begin // select 1 of 4 inputs
         case (sel)
             SEL_ARM_DELAY        :    mux4 = s1;
             SEL_DRIVER_DELAY     :    mux4 = s2;

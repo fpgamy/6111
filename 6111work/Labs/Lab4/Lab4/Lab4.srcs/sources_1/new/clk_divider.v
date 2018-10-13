@@ -6,26 +6,27 @@ module clk_divider( clk_in, reset_in, en_in, clk_out );
     output    clk_out;
     
     reg clk_out = 0;
+    // a counter used to divide by ratio
     reg [(WIDTH-1):0] counter = RATIO;
     
     always @(posedge clk_in or posedge reset_in)
     begin
         if (reset_in)
-        begin
+        begin // reset the counter
             clk_out <= 0;
             counter <= RATIO;
         end
         else if (~en_in)
-        begin
+        begin // reset the counter
             counter <= RATIO;
         end
         else if (counter == 0)
-        begin
+        begin // we are enabled, toggle counter if 0
             clk_out <= ~clk_out;
             counter <= RATIO;
         end
         else
-        begin
+        begin // count down from RATIO
             counter <= counter - 1;
         end
     end
