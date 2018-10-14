@@ -27,7 +27,7 @@ module crc_tf;
    );
 
    // this is the input data
-   reg [47:0] input_data = 48'h03_01_02_03_30_3A;
+   reg [31:0] input_data = 32'h03_01_02_03;
    integer i;      // required for "for" loop
 
    initial 
@@ -57,15 +57,15 @@ module crc_tf;
       // Add stimulus here
       start=1;
       #10 start = 0;
-      #5;	// change if necessary for your design
+      #5;   // change if necessary for your design
 
       for (i=0; i<48; i=i+1)
       begin
-         data = input_data[47];
+         data = input_data[31];
          // at each clock, left shift the data
          // note syntax for test bench "for" loop - no "always"
          // note the blocking assignment (immediate)
-         @(posedge data_clk) input_data = {input_data[46:0],1'b0};     
+         @(posedge data_clk) input_data = {input_data[31:0],1'b0};     
       end
 
       #5;
