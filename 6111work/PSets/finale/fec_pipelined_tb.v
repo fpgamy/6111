@@ -48,13 +48,13 @@ module fec_pipelined_tb;
 		// Wait 100 ns for global reset to finish
 		#100;
 
-		// Add stimulus here
+		// start
 		start=1;
 		#10 start = 0;
 		start=1;
       	#10 
       	start = 0;
-		#5;	// change if necessary for your design
+		#5;
 
 		for (i=0; i<32; i=i+1)
 		begin
