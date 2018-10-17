@@ -1,0 +1,76 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
+| Date         : Sun Oct 14 18:00:19 2018
+| Host         : eecs-digital-23 running 64-bit Ubuntu 14.04.5 LTS
+| Command      : report_control_sets -verbose -file labkit_control_sets_placed.rpt
+| Design       : labkit
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    81 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              22 |            9 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           13 |
+| Yes          | No                    | No                     |              40 |            8 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              94 |           30 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------+---------------------------------------+--------------------------------+------------------+----------------+
+|     Clock Signal     |             Enable Signal             |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------------+---------------------------------------+--------------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/MOSI_REG[6]_i_1_n_0 | adx/SPI_Interface/EN_LOAD_DIN  |                1 |              1 |
+|  clockgen/CLK        |                                       |                                |                1 |              2 |
+|  CLK100MHZ_IBUF_BUFG | adx/Cmd_Reg[0]_0                      | adx/Cmd_Reg[0][6]_i_1_n_0      |                1 |              4 |
+|  CLK100MHZ_IBUF_BUFG | adx/CE_Cnt_Num_Reads                  | adx/Reset_Cnt_Num_Reads        |                1 |              4 |
+|  CLK100MHZ_IBUF_BUFG | adx/StN_Spi_Trans                     | SW_IBUF[0]                     |                2 |              5 |
+|  CLK100MHZ_IBUF_BUFG | adx/Cmd_Reg[1][6]_i_2_n_0             | adx/Cmd_Reg[1]0_in[7]          |                2 |              5 |
+|  CLK100MHZ_IBUF_BUFG |                                       | adx/SPI_Interface/SCLK_2X_DIV0 |                2 |              6 |
+|  CLK100MHZ_IBUF_BUFG | adx/Cmd_Reg[2][6]_i_2_n_0             | adx/Cmd_Reg[2][7]              |                2 |              6 |
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/StN                 | SW_IBUF[0]                     |                2 |              6 |
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/MOSI_REG[6]_i_1_n_0 |                                |                1 |              6 |
+|  CLK100MHZ_IBUF_BUFG | adx/Shift_Cmd_Reg                     | SW_IBUF[0]                     |                1 |              7 |
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/E[0]                | SW_IBUF[0]                     |                3 |              7 |
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/EN_LOAD_DOUT        |                                |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/SHIFT_TICK_IN       |                                |                1 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                       | adx/Cnt_SS_Inactive0           |                3 |             10 |
+|  clockgen/CLK        |                                       | vga1/hreset                    |                3 |             10 |
+|  clockgen/CLK        | vga1/hreset                           | vga1/vcount0                   |                3 |             10 |
+|  CLK100MHZ_IBUF_BUFG | adx/StN_Adxl_Ctrl                     | SW_IBUF[0]                     |                5 |             11 |
+|  CLK100MHZ_IBUF_BUFG | adx/Data_Ready_1                      | SW_IBUF[0]                     |                3 |             12 |
+|  CLK100MHZ_IBUF_BUFG | adx/CE_Cnt_Num_Reads                  | adx/ACCEL_X_SUM0               |                4 |             16 |
+|  CLK100MHZ_IBUF_BUFG |                                       | adx/Reset_Sample_Rate_Div      |                5 |             17 |
+|  CLK100MHZ_IBUF_BUFG |                                       |                                |                8 |             20 |
+|  CLK100MHZ_IBUF_BUFG | adx/SPI_Interface/Shift_Data_Reg      |                                |                8 |             26 |
++----------------------+---------------------------------------+--------------------------------+------------------+----------------+
+
+

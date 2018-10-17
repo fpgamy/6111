@@ -1,0 +1,962 @@
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.srcs/constrs_1/imports/sources/Nexys4DDR_Master_lab4.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.srcs/constrs_1/imports/sources/Nexys4DDR_Master_lab4.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1372.605 ; gain = 70.031 ; free physical = 1109 ; free virtual = 13259
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 1d0c5ae71
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1d0c5ae71
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1792.035 ; gain = 0.000 ; free physical = 783 ; free virtual = 12931
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 12 cells.
+Phase 2 Constant Propagation | Checksum: 45568686
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1792.035 ; gain = 0.000 ; free physical = 783 ; free virtual = 12931
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 25 unconnected nets.
+INFO: [Opt 31-11] Eliminated 1 unconnected cells.
+Phase 3 Sweep | Checksum: 151223a1f
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1792.035 ; gain = 0.000 ; free physical = 783 ; free virtual = 12931
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1792.035 ; gain = 0.000 ; free physical = 783 ; free virtual = 12931
+Ending Logic Optimization Task | Checksum: 151223a1f
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1792.035 ; gain = 0.000 ; free physical = 783 ; free virtual = 12931
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 151223a1f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1792.035 ; gain = 0.000 ; free physical = 783 ; free virtual = 12931
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1792.035 ; gain = 489.461 ; free physical = 783 ; free virtual = 12931
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1824.051 ; gain = 0.000 ; free physical = 779 ; free virtual = 12929
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/labkit_drc_opted.rpt.
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1856.066 ; gain = 0.000 ; free physical = 778 ; free virtual = 12927
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1856.066 ; gain = 0.000 ; free physical = 778 ; free virtual = 12927
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop
+
+Phase 1.1.1.1 Pre-Place Cells
+Phase 1.1.1.1 Pre-Place Cells | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1856.066 ; gain = 0.000 ; free physical = 778 ; free virtual = 12927
+
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1856.066 ; gain = 0.000 ; free physical = 778 ; free virtual = 12927
+
+Phase 1.1.1.3 DSPChecker
+
+Phase 1.1.1.4 ClockRegionPlacementChecker
+
+Phase 1.1.1.6 IOLockPlacementChecker
+Phase 1.1.1.3 DSPChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.7 V7IOVoltageChecker
+
+Phase 1.1.1.5 IOBufferPlacementChecker
+Phase 1.1.1.4 ClockRegionPlacementChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.8 CheckerForUnsupportedConstraints
+Phase 1.1.1.7 V7IOVoltageChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.9 OverlappingPBlocksChecker
+Phase 1.1.1.8 CheckerForUnsupportedConstraints | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.10 ShapesExcludeCompatibilityChecker
+Phase 1.1.1.5 IOBufferPlacementChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.11 DisallowedInsts
+Phase 1.1.1.6 IOLockPlacementChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.12 CheckerForMandatoryPrePlacedCells
+Phase 1.1.1.9 OverlappingPBlocksChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+Phase 1.1.1.10 ShapesExcludeCompatibilityChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.13 IOStdCompatabilityChecker
+Phase 1.1.1.11 DisallowedInsts | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.14 Laguna PBlock Checker
+Phase 1.1.1.12 CheckerForMandatoryPrePlacedCells | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.15 CascadeElementConstraintsChecker
+Phase 1.1.1.13 IOStdCompatabilityChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+Phase 1.1.1.14 Laguna PBlock Checker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.16 ShapePlacementValidityChecker
+Phase 1.1.1.15 CascadeElementConstraintsChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+
+Phase 1.1.1.17 HdioRelatedChecker
+Phase 1.1.1.17 HdioRelatedChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+Phase 1.1.1.16 ShapePlacementValidityChecker | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 777 ; free virtual = 12926
+WARNING: [Place 30-879] Found overlapping PBlocks. The use of overlapping PBlocks is not recommended as it may lead to legalization errors or unplaced instances.
+WARNING: [Place 30-12] An IO Bus SW with more than one IO standard is found. Components associated with this bus are: 
+	SW[15] of IOStandard LVCMOS33
+	SW[14] of IOStandard LVCMOS33
+	SW[13] of IOStandard LVCMOS33
+	SW[12] of IOStandard LVCMOS33
+	SW[11] of IOStandard LVCMOS33
+	SW[10] of IOStandard LVCMOS33
+	SW[9] of IOStandard LVCMOS18
+	SW[8] of IOStandard LVCMOS18
+	SW[7] of IOStandard LVCMOS33
+	SW[6] of IOStandard LVCMOS33
+	SW[5] of IOStandard LVCMOS33
+	SW[4] of IOStandard LVCMOS33
+	SW[3] of IOStandard LVCMOS33
+	SW[2] of IOStandard LVCMOS33
+	SW[1] of IOStandard LVCMOS33
+	SW[0] of IOStandard LVCMOS33
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1.1.1.18 IO and Clk Clean Up
+
+Phase 1.1.1.18.1 Constructing HAPIClkRuleMgr
+Phase 1.1.1.18.1 Constructing HAPIClkRuleMgr | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.39 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+Phase 1.1.1.18 IO and Clk Clean Up | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+
+Phase 1.1.1.19 Implementation Feasibility check On IDelay
+Phase 1.1.1.19 Implementation Feasibility check On IDelay | Checksum: 2a54f4be
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+
+Phase 1.1.1.20 Commit IO Placement
+Phase 1.1.1.20 Commit IO Placement | Checksum: 47e1fdb8
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop | Checksum: 47e1fdb8
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ebcd23e1
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.41 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Make Others
+Phase 1.2.1.1 Make Others | Checksum: 101496553
+
+Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.43 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+
+Phase 1.2.1.2 Init Lut Pin Assignment
+Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: 101496553
+
+Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.43 . Memory (MB): peak = 1872.074 ; gain = 16.008 ; free physical = 776 ; free virtual = 12925
+Phase 1.2.1 Place Init Design | Checksum: 16cba7600
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.51 . Memory (MB): peak = 1885.727 ; gain = 29.660 ; free physical = 770 ; free virtual = 12919
+Phase 1.2 Build Placer Netlist Model | Checksum: 16cba7600
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.52 . Memory (MB): peak = 1885.727 ; gain = 29.660 ; free physical = 770 ; free virtual = 12919
+
+Phase 1.3 Constrain Clocks/Macros
+Phase 1.3 Constrain Clocks/Macros | Checksum: 16cba7600
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.52 . Memory (MB): peak = 1885.727 ; gain = 29.660 ; free physical = 770 ; free virtual = 12919
+Phase 1 Placer Initialization | Checksum: 16cba7600
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.52 . Memory (MB): peak = 1885.727 ; gain = 29.660 ; free physical = 770 ; free virtual = 12919
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 19d11be82
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12906
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19d11be82
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12906
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1d938799d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12905
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1dab8f489
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12905
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 1dab8f489
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12905
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 16e25c158
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12905
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 16e25c158
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 757 ; free virtual = 12905
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 142e093c9
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 753 ; free virtual = 12902
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 15253d85a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 753 ; free virtual = 12902
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 15253d85a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 753 ; free virtual = 12902
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 15253d85a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 752 ; free virtual = 12901
+Phase 3 Detail Placement | Checksum: 15253d85a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 752 ; free virtual = 12901
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 updateClock Trees: PCOPT
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 16c1feff0
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+
+Phase 4.1.2 Post Placement Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.421. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: 77db2f3e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+Phase 4.1 Post Commit Optimization | Checksum: 77db2f3e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 77db2f3e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+
+Phase 4.3 Uram Pipeline Register Optimization
+Phase 4.3 Uram Pipeline Register Optimization | Checksum: 77db2f3e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+
+Phase 4.4 Post Placement Cleanup
+Phase 4.4 Post Placement Cleanup | Checksum: 77db2f3e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+
+Phase 4.5 Placer Reporting
+Phase 4.5 Placer Reporting | Checksum: 77db2f3e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+
+Phase 4.6 Final Placement Cleanup
+Phase 4.6 Final Placement Cleanup | Checksum: 139cb7f8b
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 139cb7f8b
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+Ending Placer Task | Checksum: 120f8c0cb
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1941.754 ; gain = 85.688 ; free physical = 754 ; free virtual = 12902
+INFO: [Common 17-83] Releasing license: Implementation
+36 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1941.754 ; gain = 0.000 ; free physical = 751 ; free virtual = 12902
+report_io: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1941.754 ; gain = 0.000 ; free physical = 751 ; free virtual = 12900
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1941.754 ; gain = 0.000 ; free physical = 751 ; free virtual = 12900
+report_control_sets: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1941.754 ; gain = 0.000 ; free physical = 751 ; free virtual = 12901
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC 23-20] Rule violation (PLIO-7) Placement Constraints Check for IO constraints - An IO Bus SW[15:0] with more than one IO standard is found. Components associated with this bus are: LVCMOS18 (SW[9], SW[8]); LVCMOS33 (SW[15], SW[14], SW[13], SW[12], SW[11], SW[10], SW[7], SW[6], SW[5], SW[4], SW[3], SW[2], SW[1], SW[0]); 
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 53b77a1d ConstDB: 0 ShapeSum: cd4146ae RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 861065a1
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 1990.398 ; gain = 48.645 ; free physical = 612 ; free virtual = 12763
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 861065a1
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 1990.398 ; gain = 48.645 ; free physical = 612 ; free virtual = 12763
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 861065a1
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 1990.398 ; gain = 48.645 ; free physical = 583 ; free virtual = 12734
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 861065a1
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 1990.398 ; gain = 48.645 ; free physical = 583 ; free virtual = 12734
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 15e657a9f
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12719
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.487  | TNS=0.000  | WHS=-0.149 | THS=-11.295|
+
+Phase 2 Router Initialization | Checksum: 1367b3800
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12719
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 13311878b
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 39
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 1289a4695
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.348  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: cecae292
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+Phase 4 Rip-up And Reroute | Checksum: cecae292
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1810be073
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.408  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1810be073
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1810be073
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+Phase 5 Delay and Skew Optimization | Checksum: 1810be073
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1826abb4b
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.408  | TNS=0.000  | WHS=0.101  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1826abb4b
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+Phase 6 Post Hold Fix | Checksum: 1826abb4b
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0613657 %
+  Global Horizontal Routing Utilization  = 0.0439045 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 149080b61
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 149080b61
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 11afcac22
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=6.408  | TNS=0.000  | WHS=0.101  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 11afcac22
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+49 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1992.652 ; gain = 50.898 ; free physical = 568 ; free virtual = 12718
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1992.652 ; gain = 0.000 ; free physical = 565 ; free virtual = 12718
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/labkit_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:00:35 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 967.742 ; gain = 0.000 ; free physical = 1357 ; free virtual = 13508
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-4688-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-4688-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.551 ; gain = 0.000 ; free physical = 1114 ; free virtual = 13270
+Restored from archive | CPU: 0.020000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.551 ; gain = 0.000 ; free physical = 1114 ; free virtual = 13270
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:01:57 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 967.746 ; gain = 0.000 ; free physical = 1357 ; free virtual = 13510
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-4779-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-4779-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.555 ; gain = 0.000 ; free physical = 1113 ; free virtual = 13270
+Restored from archive | CPU: 0.020000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.555 ; gain = 0.000 ; free physical = 1113 ; free virtual = 13270
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:03:16 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 967.750 ; gain = 0.000 ; free physical = 1371 ; free virtual = 13513
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-4906-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-4906-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.559 ; gain = 0.000 ; free physical = 1123 ; free virtual = 13273
+Restored from archive | CPU: 0.010000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.559 ; gain = 0.000 ; free physical = 1123 ; free virtual = 13273
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:07:06 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 967.742 ; gain = 0.000 ; free physical = 1373 ; free virtual = 13518
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5030-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5030-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.551 ; gain = 0.000 ; free physical = 1104 ; free virtual = 13267
+Restored from archive | CPU: 0.020000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.551 ; gain = 0.000 ; free physical = 1104 ; free virtual = 13267
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:08:33 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 967.746 ; gain = 0.000 ; free physical = 1344 ; free virtual = 13535
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5335-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5335-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.555 ; gain = 0.000 ; free physical = 1100 ; free virtual = 13295
+Restored from archive | CPU: 0.020000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.555 ; gain = 0.000 ; free physical = 1100 ; free virtual = 13295
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:15:52 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 967.746 ; gain = 0.000 ; free physical = 1299 ; free virtual = 13479
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5548-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5548-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.555 ; gain = 0.000 ; free physical = 1055 ; free virtual = 13238
+Restored from archive | CPU: 0.020000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.555 ; gain = 0.000 ; free physical = 1055 ; free virtual = 13238
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:21:04 2018...
+
+*** Running vivado
+    with args -log labkit.vdi -applog -m64 -messageDb vivado.pb -mode batch -source labkit.tcl -notrace
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source labkit.tcl -notrace
+Command: open_checkpoint labkit_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 967.742 ; gain = 0.000 ; free physical = 1312 ; free virtual = 13477
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5659-eecs-digital-23/dcp/labkit.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5/accelerometer_lab/accelerometer_lab.runs/impl_1/.Xil/Vivado-5659-eecs-digital-23/dcp/labkit.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.551 ; gain = 0.000 ; free physical = 1067 ; free virtual = 13236
+Restored from archive | CPU: 0.020000 secs | Memory: 0.421928 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1246.551 ; gain = 0.000 ; free physical = 1067 ; free virtual = 13236
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.2 (64-bit) build 1577090
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC 23-20] Rule violation (NSTD-1) Unspecified I/O Standard - 4 out of 57 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+ERROR: [DRC 23-20] Rule violation (UCIO-1) Unconstrained Logical Port - 4 out of 57 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ACL_MISO, ACL_MOSI, ACL_SCLK, ACL_CSN.
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+INFO: [Vivado 12-3199] DRC finished with 2 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 14 18:24:11 2018...
