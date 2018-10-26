@@ -45,10 +45,12 @@ module fir31(
 	// When index reaches 31, it's done and the accumulator contains the desired filter output! 
 	// Now the module just waits until ready is asserted again and starts over.
 	reg signed [7:0] sample_buff [30:0];
+	reg signed [7:0] sample_temp = '0;
 	reg signed [17:0] acc;
 	reg [4:0] offset = 0;
 	reg [4:0] ind = 0;
 	reg ready_prev;
+	reg ind_temp;
 
 	always @(posedge clock) 
 	begin
@@ -60,40 +62,11 @@ module fir31(
 	begin
 		if (reset)
 		begin
-			sample_buff[1]  <= 8'sb0;
-			sample_buff[2]  <= 8'sb0;
-			sample_buff[3]  <= 8'sb0;
-			sample_buff[4]  <= 8'sb0;
-			sample_buff[5]  <= 8'sb0;
-			sample_buff[6]  <= 8'sb0;
-			sample_buff[7]  <= 8'sb0;
-			sample_buff[8]  <= 8'sb0;
-			sample_buff[9]  <= 8'sb0;
-			sample_buff[10] <= 8'sb0;
-			sample_buff[11] <= 8'sb0;
-			sample_buff[12] <= 8'sb0;
-			sample_buff[13] <= 8'sb0;
-			sample_buff[14] <= 8'sb0;
-			sample_buff[15] <= 8'sb0;
-			sample_buff[16] <= 8'sb0;
-			sample_buff[17] <= 8'sb0;
-			sample_buff[18] <= 8'sb0;
-			sample_buff[19] <= 8'sb0;
-			sample_buff[20] <= 8'sb0;
-			sample_buff[21] <= 8'sb0;
-			sample_buff[22] <= 8'sb0;
-			sample_buff[23] <= 8'sb0;
-			sample_buff[24] <= 8'sb0;
-			sample_buff[25] <= 8'sb0;
-			sample_buff[26] <= 8'sb0;
-			sample_buff[27] <= 8'sb0;
-			sample_buff[28] <= 8'sb0;
-			sample_buff[29] <= 8'sb0;
-			sample_buff[30] <= 8'sb0;
-			sample_buff[31] <= 8'sb0;
 			offset <= 0;
 			acc <= 0;
 			ind <= 0;
+			sample_temp <= 0;
+			ind_temp <= 0;
 		end
 		if ((~ready_prev) & ready)
 		begin
@@ -104,11 +77,18 @@ module fir31(
 		end
 		else
 		begin
-			acc <= acc + sample_buff[offset-ind-1]*coeffs31(ind);
-			y <= acc;
+			ind_temp <= ~&ind;
 			if (~&ind)
 			begin
+				sample_temp <= sample_buff[offset-ind-1];
+				acc <= acc + sample_buff[offset-ind-1]*coeffs31(ind);
 				ind <= ind + 1;
+			end
+			else
+			begin
+				y <= acc;
+				acc <= 0;
+				ind <= 0;
 			end
 		end
 	end
@@ -148,7 +128,7 @@ module fir31(
 			5'd28: coeffs31 = -10'sd3;
 			5'd29: coeffs31 = -10'sd1;
 			5'd30: coeffs31 = -10'sd1;
-			default: coeffs31 = 10'hXXX;
+			default: coeffs31 = 10'h0;
 		endcase
 	end
 	endfunction

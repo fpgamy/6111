@@ -5,14 +5,14 @@ Parameter TMPDIR set to /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111w
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5Rec/Lab5/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: lab5.prj
@@ -118,8 +118,6 @@ Module <tone750hz> compiled
 Module <lab5> compiled
 Module <recorder> compiled
 Module <mybram> compiled
-Module <fir31> compiled
-Module <coeffs31> compiled
 No errors in compilation
 Analysis of file <"lab5.prj"> succeeded.
  
@@ -1217,12 +1215,12 @@ Delay:               5.887ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.50 secs
+Total CPU time to Xst completion: 4.41 secs
  
 --> 
 
 
-Total memory usage is 471236 kilobytes
+Total memory usage is 471200 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  426 (   0 filtered)

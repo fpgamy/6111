@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-eecs-digital-20::  Wed Oct 17 17:51:13 2018
+eecs-digital-22::  Thu Oct 25 22:05:06 2018
 
 par -w -intstyle ise -ol std -t 1 lab5_map.ncd lab5.ncd lab5.pcf 
 
@@ -439,9 +439,9 @@ Phase 1: 2319 unrouted;       REAL time: 12 secs
 
 Phase 2: 1869 unrouted;       REAL time: 12 secs 
 
-Phase 3: 290 unrouted;       REAL time: 12 secs 
+Phase 3: 290 unrouted;       REAL time: 13 secs 
 
-Phase 4: 290 unrouted; (208067)      REAL time: 12 secs 
+Phase 4: 290 unrouted; (208067)      REAL time: 13 secs 
 
 Phase 5: 292 unrouted; (0)      REAL time: 13 secs 
 

@@ -11,7 +11,7 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Wed Oct 17 17:51:02 2018
+Mapped Date    : Thu Oct 25 22:04:56 2018
 
 Mapping design into LUTs...
 Running directed packing...

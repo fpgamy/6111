@@ -27,18 +27,17 @@
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps fir31_test glbl 
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: magson  Hostname: eecs-digital-20  ProcessID: 17022
-#           Attempting to use alternate WLF file "./wlftvJ0a7E".
+#           File in use by: magson  Hostname: eecs-digital-22  ProcessID: 15100
+#           Attempting to use alternate WLF file "./wlft2xO061".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvJ0a7E
+#           Using alternate file: ./wlft2xO061
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvJ0a7E
-# Design is being optimized...
+#           Using alternate file: ./wlft2xO061
+# Design is being optimized due to module recompilation...
 # Loading work.fir31_test(fast)
 # Loading work.fir31(fast)
 # Loading work.glbl(fast)
 # .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
 # .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
 # .main_pane.signals.interior.cs
-run 100ms
-# Break in Module fir31_test at fir31_test.v line 53
+run 10ms

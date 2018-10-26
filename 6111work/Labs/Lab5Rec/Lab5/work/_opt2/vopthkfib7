@@ -2,79 +2,86 @@ m255
 K3
 13
 T_opt
-Z0 ViW^cEZ91Z`W]<Qh`IS=FY1
-Z1 04 8 4 work coeffs31 fast 0
+Z0 VVo[@JdZWZ<An`nBLK3=jS1
+Z1 04 10 4 work fir31_test fast 0
 Z2 04 4 4 work glbl fast 0
-Z3 =1-f44d3044f36a-5bc7b11a-5d594-40ff
+Z3 =1-f44d30467a80-5bd28c68-928f7-3a8b
 Z4 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver
 Z5 OE;O;6.4a;39
 T_opt1
-Z6 VnbWX2_E9Q17o8lYI:792R2
-Z7 04 10 4 work fir31_test fast 0
+Z6 VdKY19:>Ab]imYLE=T?NVo3
+R1
 R2
-Z8 =1-f44d3044f36a-5bc7b438-5cebd-427e
+Z7 =1-f44d30467a80-5bd28cbf-b2c34-3aa6
 R4
 R5
 T_opt2
-Z9 V;O_D51PnU7>5?@1la1HEL3
-R7
+Z8 V:]LbTd1W:fSVLlJ]D?[kf3
+R1
 R2
-Z10 =1-f44d3044f36a-5bc7b499-cb2e8-42ae
+Z9 =1-f44d30467a80-5bd28d63-7d548-3ac3
+R4
+R5
+T_opt3
+Z10 VJnZYPX1nhYmLBdNR3aj5M3
+R1
+R2
+Z11 =1-f44d30467a80-5bd28bb0-58c5c-3a6c
 R4
 R5
 vcoeffs31
-Z11 I_F5TQz<M0]d<MJ0WAnaoV2
-Z12 V?D@h_E>QDQk0Z_?cj99J20
-Z13 d/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5Rec/Lab5
-Z14 w1539813436
-Z15 8coffs31.v
-Z16 Fcoffs31.v
+Z12 I_F5TQz<M0]d<MJ0WAnaoV2
+Z13 V?D@h_E>QDQk0Z_?cj99J20
+Z14 d/afs/athena.mit.edu/user/m/a/magson/Documents/6111/6111work/Labs/Lab5Rec/Lab5
+Z15 w1539813436
+Z16 8coffs31.v
+Z17 Fcoffs31.v
 L0 12
-Z17 OE;L;6.4a;39
+Z18 OE;L;6.4a;39
 r1
 31
-Z18 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
-Z19 !s100 kCLLdfhGmi>Bd_InM>Bde2
+Z19 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
+Z20 !s100 kCLLdfhGmi>Bd_InM>Bde2
 !s85 0
 vfir31
-Z20 I3DXED^EM]YmhU@WHnN6672
-Z21 Vnanfn15dTah0^V<Jd`dNC2
-R13
-Z22 w1539814011
-Z23 8fir31.v
-Z24 Ffir31.v
+Z21 Ioo`GX=EU7^k9V]Flf3ODe2
+Z22 Vnanfn15dTah0^V<Jd`dNC2
+R14
+Z23 w1540525405
+Z24 8fir31.v
+Z25 Ffir31.v
 L0 35
-R17
+R18
 r1
 31
-R18
-Z25 !s100 b<0gB`b=JXDbX8UAPmhII1
+R19
+Z26 !s100 CMElIe?mRPKTk[:gl3WRU1
 !s85 0
 vfir31_test
-Z26 I]9gRf73?Sh:i`34A@n?G@3
-Z27 VMg>TDO5Ef75kilNM7cOQ61
-R13
-Z28 w1539814443
-Z29 8fir31_test.v
-Z30 Ffir31_test.v
+Z27 I]9gRf73?Sh:i`34A@n?G@3
+Z28 VMg>TDO5Ef75kilNM7cOQ61
+R14
+Z29 w1539814443
+Z30 8fir31_test.v
+Z31 Ffir31_test.v
 L0 14
-R17
+R18
 r1
 31
-R18
-Z31 !s100 5SVB:XgFM4_WMgP2cO;1g3
+R19
+Z32 !s100 5SVB:XgFM4_WMgP2cO;1g3
 !s85 0
 vglbl
-Z32 IB;@1jEXmEfQXL`;Kf0IBZ3
-Z33 VnN]4Gon>inod6>M^M2[SV1
-R13
-Z34 w1202685744
-Z35 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
-Z36 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z33 IB;@1jEXmEfQXL`;Kf0IBZ3
+Z34 VnN]4Gon>inod6>M^M2[SV1
+R14
+Z35 w1202685744
+Z36 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z37 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
 L0 5
-R17
+R18
 r1
 31
-R18
-Z37 !s100 T?5S;>bN`@zG_25]R_4A33
+R19
+Z38 !s100 T?5S;>bN`@zG_25]R_4A33
 !s85 0
