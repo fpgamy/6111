@@ -687,10 +687,10 @@ module lab5   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	// previously from_ac97_data
    recorder r(.clock(clock_27mhz), .reset(reset), .ready(ready),
               .playback(playback), .filter(filter),
-              .from_ac97_data(tone),.to_ac97_data(to_ac97_data),.state_out(state), .write_out(wdebug));
+              .from_ac97_data(from_ac97_data), .to_ac97_data(to_ac97_data),.state_out(state), .write_out(wdebug));
 				  
 //   assign led[7:2] = playback ? ~{filter, volume} : ~{filter,5'h1F};
-	assign led = {~wdebug, ~volume, ~state};
+	assign led = {~wdebug, ~volume[3:0], ~filter, ~state};
 
    // output useful things to the logic analyzer connectors
    assign analyzer1_clock = ac97_bit_clock;
@@ -730,6 +730,7 @@ module recorder(
 	
 	// ram address
 	reg [ADDR_WIDTH-1:0] a = 0;
+	reg [ADDR_WIDTH-1:0] a_del = 0;
 	wire [ADDR_WIDTH-1:0] a_next;
 	reg [ADDR_WIDTH-1:0] recorded_a;
 	reg [DATA_WIDTH-1:0] decimated_data = 0;
@@ -739,25 +740,44 @@ module recorder(
 	reg ready_prev;
 	reg [1:0] state = 2'b0;
 	wire [DATA_WIDTH-1:0] ram_out;
+	wire [DATA_WIDTH-1:0] ram_out_2;
   reg [DATA_WIDTH-1:0] to_filter;
 
   wire signed [17:0] filtered;
+  reg [DATA_WIDTH-1:0] to_filter_2;
+
+  wire signed [17:0] filtered_2;
 
 	assign state_out = state;
 	assign write_out = write_enable;
 	
-  mybram #(.LOGSIZE(ADDR_WIDTH),.WIDTH(DATA_WIDTH))
+  mybram #(.LOGSIZE(ADDR_WIDTH), .WIDTH(DATA_WIDTH))
        samples_ram( .addr(a),
 							.clk(clock),
 							.we(write_enable),
 							.din(decimated_data),
+							//.min_echo_addr(0),
 							.dout(ram_out)
 						 );
+						 
+  mybram #(.LOGSIZE(ADDR_WIDTH), .WIDTH(DATA_WIDTH))
+	 samples2_ram( .addr(a_del),
+						.clk(clock),
+						.we(write_enable),
+						.din(decimated_data),
+						//.min_echo_addr(0),
+						.dout(ram_out_2)
+					 );
 
   fir31 filter31(.clock(clock), .reset(reset), 
     .ready(ready),
     .x(to_filter),
     .y(filtered));
+
+	fir31 filter31_2(.clock(clock), .reset(reset), 
+    .ready(ready),
+    .x(to_filter_2),
+    .y(filtered_2));
 						 
 	assign a_next = a + 1;
 	
@@ -799,40 +819,46 @@ module recorder(
 				end
 				else
 				begin
-          if (filter)
-          begin
-            to_filter <= from_ac97_data;
-            decimated_data <= filtered[17:10];
-          end
-          else 
-          begin
-            decimated_data <= from_ac97_data;
-          end
-          to_ac97_data <= decimated_data;
-					decimation_counter <= DECIMATION_FACTOR - 1;
+					 if (filter)
+					 begin
+						to_filter <= from_ac97_data;
+						decimated_data <= filtered[17:10];
+					 end
+					 else 
+					 begin
+						decimated_data <= from_ac97_data;
+					 end
+					 to_ac97_data <= decimated_data;
+					 decimation_counter <= DECIMATION_FACTOR - 1;
 				end
 			end
 			else if (state == PLAYBACK_MODE)
 			begin
-				if (|decimation_counter)
+				if (|decimation_counter) // if not zero
 				begin
 					decimation_counter <= decimation_counter - 1;
-          if (filter)
-          begin
-            to_filter <= 0;
-          end
+					 if (filter)
+					 begin
+						to_filter <= 0;
+						to_ac97_data <= filtered[14:7];
+					 end
+					 else 
+					 begin
+							to_ac97_data <= ram_out;
+					 end
 				end
 				else
 				begin
-          if (filter)
-          begin
-            to_filter <= ram_out;
-            to_ac97_data <= filtered[14:7];            
-          end
-          else 
-          begin
-  					to_ac97_data <= ram_out;
-          end
+					 if (filter)
+					 begin
+						to_filter <= ram_out;
+						to_filter_2 <= ram_out_2;
+						to_ac97_data <= (filtered[14:7] + filtered[14:7] + filtered_2[14:7]) >> 1;            
+					 end
+					 else 
+					 begin
+							to_ac97_data <= (ram_out >> 1) + (ram_out >> 2) + (ram_out_2 >> 2);
+					 end
 					decimation_counter <= DECIMATION_FACTOR - 1;
 				end
 			end
@@ -850,6 +876,7 @@ module recorder(
 		if (reset | (playback ^  playback_prev))
 		begin
 			a <= 0;
+			 a_del <= 0;
 			if (reset)
 			begin
 				recorded_a <= 0;
@@ -859,19 +886,28 @@ module recorder(
 				recorded_a <= a;
 			end
 		end
-		else if ((state == RECORD_MODE ) && (a_next != 0))
+		else if (ready & (~ready_prev))
 		begin
-			a <= a_next;
-		end
-		else if (state == PLAYBACK_MODE)
-		begin
-			if (a_next == recorded_a)
+			if ((state == RECORD_MODE ) && (a_next != 0) && ~(|decimation_counter))
 			begin
-				a <= 0;
-			end
-			else
-			begin
+				 a_del <= a_next;
 				a <= a_next;
+			end
+			else if (state == PLAYBACK_MODE)
+			begin
+				if (~(|decimation_counter))
+				begin
+					if (a_next == recorded_a)
+					begin
+						a <= 0;
+						 a_del <= 0;
+					end
+					else
+					begin
+						a <= a_next;
+						a_del <= (a_next > 2048) ? (a_next - 2048) : a_next;
+					end
+				end
 			end
 		end
 	end
@@ -909,7 +945,7 @@ endmodule
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-module echo_mybram #(parameter LOGSIZE=14, DELAY=4096, WIDTH=1)
+module echo_ram #(parameter LOGSIZE=14, DELAY=4096, WIDTH=1)
               (input wire [LOGSIZE-1:0] addr,
                input wire clk,
                input wire [WIDTH-1:0] din,
@@ -917,7 +953,6 @@ module echo_mybram #(parameter LOGSIZE=14, DELAY=4096, WIDTH=1)
                output reg [WIDTH-1:0] dout,
                input wire we);
    // let the tools infer the right number of BRAMs
-   (* ram_style = "block" *)
    wire [LOGSIZE-1:0] echo_addr;
    reg [WIDTH-1:0] mem[(1<<LOGSIZE)-1:0];
    assign echo_addr = ( addr > (min_echo_addr + DELAY) ) ? (addr - DELAY) : addr;

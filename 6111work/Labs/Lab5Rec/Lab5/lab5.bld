@@ -29,30 +29,6 @@ Done...
 Checking Partitions ...
 
 Checking expanded design ...
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<0>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<1>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<2>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<3>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<4>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<5>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<6>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
-WARNING:NgdBuild:483 - Attribute "INIT" on "tone<7>" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
 WARNING:NgdBuild:470 - bidirect pad net 'user3<28>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'user3<4>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'user3<29>' has no legal driver
@@ -340,9 +316,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 285
+  Number of warnings: 277
 
-Total memory usage is 231568 kilobytes
+Total memory usage is 236672 kilobytes
 
 Writing NGD file "lab5.ngd" ...
 
