@@ -739,15 +739,25 @@ module recorder(
 	reg ready_prev;
 	reg [1:0] state = 2'b0;
 	wire [DATA_WIDTH-1:0] ram_out;
+  reg [DATA_WIDTH-1:0] to_filter;
+
+  wire signed [17:0] filtered;
+
 	assign state_out = state;
 	assign write_out = write_enable;
-	mybram #(.LOGSIZE(ADDR_WIDTH),.WIDTH(DATA_WIDTH))
+	
+  mybram #(.LOGSIZE(ADDR_WIDTH),.WIDTH(DATA_WIDTH))
        samples_ram( .addr(a),
 							.clk(clock),
 							.we(write_enable),
 							.din(decimated_data),
 							.dout(ram_out)
 						 );
+
+  fir31 filter31(.clock(clock), .reset(reset), 
+    .ready(ready),
+    .x(to_filter),
+    .y(filtered));
 						 
 	assign a_next = a + 1;
 	
@@ -789,7 +799,16 @@ module recorder(
 				end
 				else
 				begin
-					decimated_data <= from_ac97_data;
+          if (filter)
+          begin
+            to_filter <= from_ac97_data;
+            decimated_data <= filtered[17:10];
+          end
+          else 
+          begin
+            decimated_data <= from_ac97_data;
+          end
+          to_ac97_data <= decimated_data;
 					decimation_counter <= DECIMATION_FACTOR - 1;
 				end
 			end
@@ -798,10 +817,22 @@ module recorder(
 				if (|decimation_counter)
 				begin
 					decimation_counter <= decimation_counter - 1;
+          if (filter)
+          begin
+            to_filter <= 0;
+          end
 				end
 				else
 				begin
-					to_ac97_data <= ram_out;
+          if (filter)
+          begin
+            to_filter <= ram_out;
+            to_ac97_data <= filtered[14:7];            
+          end
+          else 
+          begin
+  					to_ac97_data <= ram_out;
+          end
 					decimation_counter <= DECIMATION_FACTOR - 1;
 				end
 			end
@@ -867,6 +898,32 @@ module mybram #(parameter LOGSIZE=14, WIDTH=1)
    always @(posedge clk) begin
      if (we) mem[addr] <= din;
      dout <= mem[addr];
+   end
+endmodule
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Verilog equivalent to a BRAM, tools will infer the right thing!
+// number of locations = 1<<LOGSIZE, width in bits = WIDTH.
+// default is a 16K x 1 memory.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+module echo_mybram #(parameter LOGSIZE=14, DELAY=4096, WIDTH=1)
+              (input wire [LOGSIZE-1:0] addr,
+               input wire clk,
+               input wire [WIDTH-1:0] din,
+               input wire [LOGSIZE-1:0] min_echo_addr,
+               output reg [WIDTH-1:0] dout,
+               input wire we);
+   // let the tools infer the right number of BRAMs
+   (* ram_style = "block" *)
+   wire [LOGSIZE-1:0] echo_addr;
+   reg [WIDTH-1:0] mem[(1<<LOGSIZE)-1:0];
+   assign echo_addr = ( addr > (min_echo_addr + DELAY) ) ? (addr - DELAY) : addr;
+   always @(posedge clk) begin
+     if (we) mem[addr] <= din;
+     dout <= (mem[addr] >> 2) + (mem[addr] >> 1) + (mem[echo_addr] >> 2);
    end
 endmodule
 

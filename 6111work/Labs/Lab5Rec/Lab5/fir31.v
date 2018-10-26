@@ -1,36 +1,36 @@
-`default_nettype none
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    17:53:15 10/17/2018 
-// Design Name: 
-// Module Name:    fir31 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+// `default_nettype none
+// `timescale 1ns / 1ps
+// //////////////////////////////////////////////////////////////////////////////////
+// // Company: 
+// // Engineer: 
+// // 
+// // Create Date:    17:53:15 10/17/2018 
+// // Design Name: 
+// // Module Name:    fir31 
+// // Project Name: 
+// // Target Devices: 
+// // Tool versions: 
+// // Description: 
+// //
+// // Dependencies: 
+// //
+// // Revision: 
+// // Revision 0.01 - File Created
+// // Additional Comments: 
+// //
+// //////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////////
-//
-// 31-tap FIR filter, 8-bit signed data, 10-bit signed coefficients.
-// ready is asserted whenever there is a new sample on the X input,
-// the Y output should also be sampled at the same time.  Assumes at
-// least 32 clocks between ready assertions.  Note that since the
-// coefficients have been scaled by 2**10, so has the output (it's
-// expanded from 8 bits to 18 bits).  To get an 8-bit result from the
-// filter just divide by 2**10, ie, use Y[17:10].
-//
-///////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////
+// //
+// // 31-tap FIR filter, 8-bit signed data, 10-bit signed coefficients.
+// // ready is asserted whenever there is a new sample on the X input,
+// // the Y output should also be sampled at the same time.  Assumes at
+// // least 32 clocks between ready assertions.  Note that since the
+// // coefficients have been scaled by 2**10, so has the output (it's
+// // expanded from 8 bits to 18 bits).  To get an 8-bit result from the
+// // filter just divide by 2**10, ie, use Y[17:10].
+// //
+// ///////////////////////////////////////////////////////////////////////////////
 
 module fir31(
 	input wire clock,reset,ready,
@@ -44,20 +44,20 @@ module fir31(
 	// Remember to declare coeff and the sample memory as signed so that the multiply operation is performed correctly.
 	// When index reaches 31, it's done and the accumulator contains the desired filter output! 
 	// Now the module just waits until ready is asserted again and starts over.
-	reg signed [7:0] sample_buff [30:0];
-	reg signed [7:0] sample_temp = '0;
+	reg signed [7:0] sample_buff [31:0];
 	reg signed [17:0] acc;
 	reg [4:0] offset = 0;
 	reg [4:0] ind = 0;
+	wire [4:0] t_minus_tau;
 	reg ready_prev;
-	reg ind_temp;
 
 	always @(posedge clock) 
 	begin
 		ready_prev <= ready;
 	end
 
-	// for now just pass data through
+	assign t_minus_tau = offset-ind-1;
+
 	always @(posedge clock) 
 	begin
 		if (reset)
@@ -65,30 +65,62 @@ module fir31(
 			offset <= 0;
 			acc <= 0;
 			ind <= 0;
-			sample_temp <= 0;
-			ind_temp <= 0;
+			y <= 0;
+
+			// initialise array to all 0s
+			sample_buff[0]  <= 8'sb0;
+			sample_buff[1]  <= 8'sb0;
+			sample_buff[2]  <= 8'sb0;
+			sample_buff[3]  <= 8'sb0;
+			sample_buff[4]  <= 8'sb0;
+			sample_buff[5]  <= 8'sb0;
+			sample_buff[6]  <= 8'sb0;
+			sample_buff[7]  <= 8'sb0;
+			sample_buff[8]  <= 8'sb0;
+			sample_buff[9]  <= 8'sb0;
+			sample_buff[10] <= 8'sb0;
+			sample_buff[11] <= 8'sb0;
+			sample_buff[12] <= 8'sb0;
+			sample_buff[13] <= 8'sb0;
+			sample_buff[14] <= 8'sb0;
+			sample_buff[15] <= 8'sb0;
+			sample_buff[16] <= 8'sb0;
+			sample_buff[17] <= 8'sb0;
+			sample_buff[18] <= 8'sb0;
+			sample_buff[19] <= 8'sb0;
+			sample_buff[20] <= 8'sb0;
+			sample_buff[21] <= 8'sb0;
+			sample_buff[22] <= 8'sb0;
+			sample_buff[23] <= 8'sb0;
+			sample_buff[24] <= 8'sb0;
+			sample_buff[25] <= 8'sb0;
+			sample_buff[26] <= 8'sb0;
+			sample_buff[27] <= 8'sb0;
+			sample_buff[28] <= 8'sb0;
+			sample_buff[29] <= 8'sb0;
+			sample_buff[30] <= 8'sb0;
+			sample_buff[31] <= 8'sb0;
 		end
-		if ((~ready_prev) & ready)
+		else 
 		begin
-			acc <= 0;
-			ind <= 0;
-			offset <= offset + 1;
-			sample_buff[offset] <= x;
-		end
-		else
-		begin
-			ind_temp <= ~&ind;
-			if (~&ind)
+			if ((~ready_prev) & ready)
 			begin
-				sample_temp <= sample_buff[offset-ind-1];
-				acc <= acc + sample_buff[offset-ind-1]*coeffs31(ind);
-				ind <= ind + 1;
+				acc <= 0;
+				ind <= 0;
+				offset <= offset + 1;
+				sample_buff[offset] <= x;
 			end
 			else
 			begin
-				y <= acc;
-				acc <= 0;
-				ind <= 0;
+				if (~&ind)
+				begin
+					acc <= acc + sample_buff[t_minus_tau]*coeffs31(ind);
+					ind <= ind + 1;
+				end
+				else
+				begin
+					y <= acc;
+				end
 			end
 		end
 	end

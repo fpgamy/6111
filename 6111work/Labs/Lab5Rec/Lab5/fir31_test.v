@@ -21,6 +21,11 @@ module fir31_test();
 
   initial begin
     // open input/output files
+
+    // This is so we can plot stuff in vcd viewer
+    $dumpfile("test.vcd");
+    // This is so we can see all the signals
+    $dumpvars(0, fir31_test);
     fin = $fopen("fir31.samples","r");
     fout = $fopen("fir31.output","w");
     if (fin == 0 || fout == 0) begin
@@ -37,6 +42,8 @@ module fir31_test();
     reset = 1;
     #10
     reset = 0;
+    #1000000;
+    $finish;
   end
 
   // clk has 50% duty cycle, 10ns period
