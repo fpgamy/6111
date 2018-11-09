@@ -3,6 +3,7 @@ module soduku_solver(
 						reset_in       ,
 						board_in       ,
 						board_out      ,
+						done_out
 					);
 //
 // PARAMETERS
@@ -15,9 +16,10 @@ module soduku_solver(
 	input        clk_in, reset_in;
 	input  [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_in;
 	output [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_out;
+	output       done_out;
 	// 2D array of 4 bit BCD values
 	// Contains all the numbers in unsolved board
-	// Number = 0 implies missing value
+	// Number = 0 implies contains value
 	wire  [3:0] unsolved [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
 	// 2D array of 4 bit BCD values
@@ -42,7 +44,7 @@ module soduku_solver(
 	reg    [(GRID_SIZE-1):0] one_hot_board_reg   [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
 	// Contains 1s where the possible values are
-	reg    [(GRID_SIZE-1):0] possible_values_reg [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
+	reg    [(GRID_SIZE-1):0] pvr [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
 	// We define the squares, rows, columns as follows:
 	// 0 ..................... 8
@@ -72,19 +74,20 @@ module soduku_solver(
 	// Determines if we need to start backtracking
 	reg     [(GRID_SIZE-1):0] squares_solved_prev;
 
-	// Contains zeros where the numbers are missing
-	wire    [(GRID_SIZE-1):0] rows_missing         [0:(GRID_SIZE-1)];
+	// Contains zeros where the numbers are contains
+	wire    [(GRID_SIZE-1):0] rows_contains         [0:(GRID_SIZE-1)];
 	// Determines if we need made a mistake (check for equality)
-	reg     [(GRID_SIZE-1):0] rows_missing_prev    [0:(GRID_SIZE-1)];
+	reg     [(GRID_SIZE-1):0] rows_contains_prev    [0:(GRID_SIZE-1)];
 	
-	wire    [(GRID_SIZE-1):0] cols_missing         [0:(GRID_SIZE-1)];
+	wire    [(GRID_SIZE-1):0] cols_contains         [0:(GRID_SIZE-1)];
 	// Determines if we need made a mistake (check for equality)
-	reg     [(GRID_SIZE-1):0] cols_missing_prev    [0:(GRID_SIZE-1)];
+	reg     [(GRID_SIZE-1):0] cols_contains_prev    [0:(GRID_SIZE-1)];
 
-	wire    [(GRID_SIZE-1):0] squares_missing      [0:(GRID_SIZE-1)];
+	wire    [(GRID_SIZE-1):0] squares_contains      [0:(GRID_SIZE-1)];
 	// Determines if we need made a mistake (check for equality)
-	reg     [(GRID_SIZE-1):0] squares_missing_prev [0:(GRID_SIZE-1)];
+	reg     [(GRID_SIZE-1):0] squares_contains_prev [0:(GRID_SIZE-1)];
 
+	assign done_out = &{rows_solved, cols_solved, squares_solved};
 //
 // INCLUDES
 //
@@ -105,82 +108,210 @@ module soduku_solver(
 		begin: row_generator
 			for (col_genvar = 0; col_genvar < (GRID_SIZE); col_genvar = col_genvar + 1)
 			begin: col_generator
-				wire    [(GRID_SIZE-1):0] squares_missing_single;
+				wire    [(GRID_SIZE-1):0] squares_contains_single;
+				wire    [(GRID_SIZE-1):0] single_candidate_mask;
+				wire    [(GRID_SIZE-1):0] single_position_mask_temp;
+				wire    [(GRID_SIZE-1):0] single_position_mask;
+				wire    [(GRID_SIZE-1):0] single_pos_row;
+				wire    [(GRID_SIZE-1):0] single_pos_col;
+				wire    [(GRID_SIZE-1):0] single_pos_sq;
+
+
+				wire    [(GRID_SIZE-1):0] possibilities_mask;
+
+				assign single_pos_row = {
+					valid_one_hot({pvr[row_genvar][8][8], pvr[row_genvar][7][8], pvr[row_genvar][6][8], pvr[row_genvar][5][8], pvr[row_genvar][4][8], pvr[row_genvar][3][8], pvr[row_genvar][2][8], pvr[row_genvar][1][8], pvr[row_genvar][0][8]}),
+					valid_one_hot({pvr[row_genvar][8][7], pvr[row_genvar][7][7], pvr[row_genvar][6][7], pvr[row_genvar][5][7], pvr[row_genvar][4][7], pvr[row_genvar][3][7], pvr[row_genvar][2][7], pvr[row_genvar][1][7], pvr[row_genvar][0][7]}),
+					valid_one_hot({pvr[row_genvar][8][6], pvr[row_genvar][7][6], pvr[row_genvar][6][6], pvr[row_genvar][5][6], pvr[row_genvar][4][6], pvr[row_genvar][3][6], pvr[row_genvar][2][6], pvr[row_genvar][1][6], pvr[row_genvar][0][6]}),
+					valid_one_hot({pvr[row_genvar][8][5], pvr[row_genvar][7][5], pvr[row_genvar][6][5], pvr[row_genvar][5][5], pvr[row_genvar][4][5], pvr[row_genvar][3][5], pvr[row_genvar][2][5], pvr[row_genvar][1][5], pvr[row_genvar][0][5]}),
+					valid_one_hot({pvr[row_genvar][8][4], pvr[row_genvar][7][4], pvr[row_genvar][6][4], pvr[row_genvar][5][4], pvr[row_genvar][4][4], pvr[row_genvar][3][4], pvr[row_genvar][2][4], pvr[row_genvar][1][4], pvr[row_genvar][0][4]}),
+					valid_one_hot({pvr[row_genvar][8][3], pvr[row_genvar][7][3], pvr[row_genvar][6][3], pvr[row_genvar][5][3], pvr[row_genvar][4][3], pvr[row_genvar][3][3], pvr[row_genvar][2][3], pvr[row_genvar][1][3], pvr[row_genvar][0][3]}),
+					valid_one_hot({pvr[row_genvar][8][2], pvr[row_genvar][7][2], pvr[row_genvar][6][2], pvr[row_genvar][5][2], pvr[row_genvar][4][2], pvr[row_genvar][3][2], pvr[row_genvar][2][2], pvr[row_genvar][1][2], pvr[row_genvar][0][2]}),
+					valid_one_hot({pvr[row_genvar][8][1], pvr[row_genvar][7][1], pvr[row_genvar][6][1], pvr[row_genvar][5][1], pvr[row_genvar][4][1], pvr[row_genvar][3][1], pvr[row_genvar][2][1], pvr[row_genvar][1][1], pvr[row_genvar][0][1]}),
+					valid_one_hot({pvr[row_genvar][8][0], pvr[row_genvar][7][0], pvr[row_genvar][6][0], pvr[row_genvar][5][0], pvr[row_genvar][4][0], pvr[row_genvar][3][0], pvr[row_genvar][2][0], pvr[row_genvar][1][0], pvr[row_genvar][0][0]})
+				};
+
+				assign single_pos_col = {
+					valid_one_hot({pvr[8][col_genvar][8], pvr[7][col_genvar][8], pvr[6][col_genvar][8], pvr[5][col_genvar][8], pvr[4][col_genvar][8], pvr[3][col_genvar][8], pvr[2][col_genvar][8], pvr[1][col_genvar][8], pvr[0][col_genvar][8]}),
+					valid_one_hot({pvr[8][col_genvar][7], pvr[7][col_genvar][7], pvr[6][col_genvar][7], pvr[5][col_genvar][7], pvr[4][col_genvar][7], pvr[3][col_genvar][7], pvr[2][col_genvar][7], pvr[1][col_genvar][7], pvr[0][col_genvar][7]}),
+					valid_one_hot({pvr[8][col_genvar][6], pvr[7][col_genvar][6], pvr[6][col_genvar][6], pvr[5][col_genvar][6], pvr[4][col_genvar][6], pvr[3][col_genvar][6], pvr[2][col_genvar][6], pvr[1][col_genvar][6], pvr[0][col_genvar][6]}),
+					valid_one_hot({pvr[8][col_genvar][5], pvr[7][col_genvar][5], pvr[6][col_genvar][5], pvr[5][col_genvar][5], pvr[4][col_genvar][5], pvr[3][col_genvar][5], pvr[2][col_genvar][5], pvr[1][col_genvar][5], pvr[0][col_genvar][5]}),
+					valid_one_hot({pvr[8][col_genvar][4], pvr[7][col_genvar][4], pvr[6][col_genvar][4], pvr[5][col_genvar][4], pvr[4][col_genvar][4], pvr[3][col_genvar][4], pvr[2][col_genvar][4], pvr[1][col_genvar][4], pvr[0][col_genvar][4]}),
+					valid_one_hot({pvr[8][col_genvar][3], pvr[7][col_genvar][3], pvr[6][col_genvar][3], pvr[5][col_genvar][3], pvr[4][col_genvar][3], pvr[3][col_genvar][3], pvr[2][col_genvar][3], pvr[1][col_genvar][3], pvr[0][col_genvar][3]}),
+					valid_one_hot({pvr[8][col_genvar][2], pvr[7][col_genvar][2], pvr[6][col_genvar][2], pvr[5][col_genvar][2], pvr[4][col_genvar][2], pvr[3][col_genvar][2], pvr[2][col_genvar][2], pvr[1][col_genvar][2], pvr[0][col_genvar][2]}),
+					valid_one_hot({pvr[8][col_genvar][1], pvr[7][col_genvar][1], pvr[6][col_genvar][1], pvr[5][col_genvar][1], pvr[4][col_genvar][1], pvr[3][col_genvar][1], pvr[2][col_genvar][1], pvr[1][col_genvar][1], pvr[0][col_genvar][1]}),
+					valid_one_hot({pvr[8][col_genvar][0], pvr[7][col_genvar][0], pvr[6][col_genvar][0], pvr[5][col_genvar][0], pvr[4][col_genvar][0], pvr[3][col_genvar][0], pvr[2][col_genvar][0], pvr[1][col_genvar][0], pvr[0][col_genvar][0]})
+				};
+
 				if (row_genvar >= 6)
 				begin
 					if (col_genvar >= 6)
 					begin
-						assign squares_missing_single = squares_missing[8];
+						assign squares_contains_single = squares_contains[8];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[6][6][8], pvr[6][7][8], pvr[6][8][8], pvr[7][6][8], pvr[7][7][8], pvr[7][8][8], pvr[8][6][8], pvr[8][7][8], pvr[8][8][8]}),
+							valid_one_hot({pvr[6][6][7], pvr[6][7][7], pvr[6][8][7], pvr[7][6][7], pvr[7][7][7], pvr[7][8][7], pvr[8][6][7], pvr[8][7][7], pvr[8][8][7]}),
+							valid_one_hot({pvr[6][6][6], pvr[6][7][6], pvr[6][8][6], pvr[7][6][6], pvr[7][7][6], pvr[7][8][6], pvr[8][6][6], pvr[8][7][6], pvr[8][8][6]}),
+							valid_one_hot({pvr[6][6][5], pvr[6][7][5], pvr[6][8][5], pvr[7][6][5], pvr[7][7][5], pvr[7][8][5], pvr[8][6][5], pvr[8][7][5], pvr[8][8][5]}),
+							valid_one_hot({pvr[6][6][4], pvr[6][7][4], pvr[6][8][4], pvr[7][6][4], pvr[7][7][4], pvr[7][8][4], pvr[8][6][4], pvr[8][7][4], pvr[8][8][4]}),
+							valid_one_hot({pvr[6][6][3], pvr[6][7][3], pvr[6][8][3], pvr[7][6][3], pvr[7][7][3], pvr[7][8][3], pvr[8][6][3], pvr[8][7][3], pvr[8][8][3]}),
+							valid_one_hot({pvr[6][6][2], pvr[6][7][2], pvr[6][8][2], pvr[7][6][2], pvr[7][7][2], pvr[7][8][2], pvr[8][6][2], pvr[8][7][2], pvr[8][8][2]}),
+							valid_one_hot({pvr[6][6][1], pvr[6][7][1], pvr[6][8][1], pvr[7][6][1], pvr[7][7][1], pvr[7][8][1], pvr[8][6][1], pvr[8][7][1], pvr[8][8][1]}),
+							valid_one_hot({pvr[6][6][0], pvr[6][7][0], pvr[6][8][0], pvr[7][6][0], pvr[7][7][0], pvr[7][8][0], pvr[8][6][0], pvr[8][7][0], pvr[8][8][0]})
+						};
 					end
 					else if (col_genvar >= 3)
 					begin
-						assign squares_missing_single = squares_missing[7];						
+						assign squares_contains_single = squares_contains[7];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[6][3][8], pvr[6][4][8], pvr[6][5][8], pvr[7][3][8], pvr[7][4][8], pvr[7][5][8], pvr[8][3][8], pvr[8][4][8], pvr[8][5][8]}),
+							valid_one_hot({pvr[6][3][7], pvr[6][4][7], pvr[6][5][7], pvr[7][3][7], pvr[7][4][7], pvr[7][5][7], pvr[8][3][7], pvr[8][4][7], pvr[8][5][7]}),
+							valid_one_hot({pvr[6][3][6], pvr[6][4][6], pvr[6][5][6], pvr[7][3][6], pvr[7][4][6], pvr[7][5][6], pvr[8][3][6], pvr[8][4][6], pvr[8][5][6]}),
+							valid_one_hot({pvr[6][3][5], pvr[6][4][5], pvr[6][5][5], pvr[7][3][5], pvr[7][4][5], pvr[7][5][5], pvr[8][3][5], pvr[8][4][5], pvr[8][5][5]}),
+							valid_one_hot({pvr[6][3][4], pvr[6][4][4], pvr[6][5][4], pvr[7][3][4], pvr[7][4][4], pvr[7][5][4], pvr[8][3][4], pvr[8][4][4], pvr[8][5][4]}),
+							valid_one_hot({pvr[6][3][3], pvr[6][4][3], pvr[6][5][3], pvr[7][3][3], pvr[7][4][3], pvr[7][5][3], pvr[8][3][3], pvr[8][4][3], pvr[8][5][3]}),
+							valid_one_hot({pvr[6][3][2], pvr[6][4][2], pvr[6][5][2], pvr[7][3][2], pvr[7][4][2], pvr[7][5][2], pvr[8][3][2], pvr[8][4][2], pvr[8][5][2]}),
+							valid_one_hot({pvr[6][3][1], pvr[6][4][1], pvr[6][5][1], pvr[7][3][1], pvr[7][4][1], pvr[7][5][1], pvr[8][3][1], pvr[8][4][1], pvr[8][5][1]}),
+							valid_one_hot({pvr[6][3][0], pvr[6][4][0], pvr[6][5][0], pvr[7][3][0], pvr[7][4][0], pvr[7][5][0], pvr[8][3][0], pvr[8][4][0], pvr[8][5][0]})
+						};
 					end
 					else 
 					begin
-						assign squares_missing_single = squares_missing[6];						
+						assign squares_contains_single = squares_contains[6];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[6][0][8], pvr[6][1][8], pvr[6][2][8], pvr[7][0][8], pvr[7][1][8], pvr[7][2][8], pvr[8][0][8], pvr[8][1][8], pvr[8][2][8]}),
+							valid_one_hot({pvr[6][0][7], pvr[6][1][7], pvr[6][2][7], pvr[7][0][7], pvr[7][1][7], pvr[7][2][7], pvr[8][0][7], pvr[8][1][7], pvr[8][2][7]}),
+							valid_one_hot({pvr[6][0][6], pvr[6][1][6], pvr[6][2][6], pvr[7][0][6], pvr[7][1][6], pvr[7][2][6], pvr[8][0][6], pvr[8][1][6], pvr[8][2][6]}),
+							valid_one_hot({pvr[6][0][5], pvr[6][1][5], pvr[6][2][5], pvr[7][0][5], pvr[7][1][5], pvr[7][2][5], pvr[8][0][5], pvr[8][1][5], pvr[8][2][5]}),
+							valid_one_hot({pvr[6][0][4], pvr[6][1][4], pvr[6][2][4], pvr[7][0][4], pvr[7][1][4], pvr[7][2][4], pvr[8][0][4], pvr[8][1][4], pvr[8][2][4]}),
+							valid_one_hot({pvr[6][0][3], pvr[6][1][3], pvr[6][2][3], pvr[7][0][3], pvr[7][1][3], pvr[7][2][3], pvr[8][0][3], pvr[8][1][3], pvr[8][2][3]}),
+							valid_one_hot({pvr[6][0][2], pvr[6][1][2], pvr[6][2][2], pvr[7][0][2], pvr[7][1][2], pvr[7][2][2], pvr[8][0][2], pvr[8][1][2], pvr[8][2][2]}),
+							valid_one_hot({pvr[6][0][1], pvr[6][1][1], pvr[6][2][1], pvr[7][0][1], pvr[7][1][1], pvr[7][2][1], pvr[8][0][1], pvr[8][1][1], pvr[8][2][1]}),
+							valid_one_hot({pvr[6][0][0], pvr[6][1][0], pvr[6][2][0], pvr[7][0][0], pvr[7][1][0], pvr[7][2][0], pvr[8][0][0], pvr[8][1][0], pvr[8][2][0]})
+						};
 					end
 				end
 				else if (row_genvar >= 3)
 				begin
 					if (col_genvar >= 6)
 					begin
-						assign squares_missing_single = squares_missing[5];							
+						assign squares_contains_single = squares_contains[5];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[3][6][8], pvr[3][7][8], pvr[3][8][8], pvr[4][6][8], pvr[4][7][8], pvr[4][8][8], pvr[5][6][8], pvr[5][7][8], pvr[5][8][8]}),
+							valid_one_hot({pvr[3][6][7], pvr[3][7][7], pvr[3][8][7], pvr[4][6][7], pvr[4][7][7], pvr[4][8][7], pvr[5][6][7], pvr[5][7][7], pvr[5][8][7]}),
+							valid_one_hot({pvr[3][6][6], pvr[3][7][6], pvr[3][8][6], pvr[4][6][6], pvr[4][7][6], pvr[4][8][6], pvr[5][6][6], pvr[5][7][6], pvr[5][8][6]}),
+							valid_one_hot({pvr[3][6][5], pvr[3][7][5], pvr[3][8][5], pvr[4][6][5], pvr[4][7][5], pvr[4][8][5], pvr[5][6][5], pvr[5][7][5], pvr[5][8][5]}),
+							valid_one_hot({pvr[3][6][4], pvr[3][7][4], pvr[3][8][4], pvr[4][6][4], pvr[4][7][4], pvr[4][8][4], pvr[5][6][4], pvr[5][7][4], pvr[5][8][4]}),
+							valid_one_hot({pvr[3][6][3], pvr[3][7][3], pvr[3][8][3], pvr[4][6][3], pvr[4][7][3], pvr[4][8][3], pvr[5][6][3], pvr[5][7][3], pvr[5][8][3]}),
+							valid_one_hot({pvr[3][6][2], pvr[3][7][2], pvr[3][8][2], pvr[4][6][2], pvr[4][7][2], pvr[4][8][2], pvr[5][6][2], pvr[5][7][2], pvr[5][8][2]}),
+							valid_one_hot({pvr[3][6][1], pvr[3][7][1], pvr[3][8][1], pvr[4][6][1], pvr[4][7][1], pvr[4][8][1], pvr[5][6][1], pvr[5][7][1], pvr[5][8][1]}),
+							valid_one_hot({pvr[3][6][0], pvr[3][7][0], pvr[3][8][0], pvr[4][6][0], pvr[4][7][0], pvr[4][8][0], pvr[5][6][0], pvr[5][7][0], pvr[5][8][0]})
+						};
 					end
 					else if (col_genvar >= 3)
 					begin
-						assign squares_missing_single = squares_missing[4];						
+						assign squares_contains_single = squares_contains[4];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[3][3][8], pvr[3][4][8], pvr[3][5][8], pvr[4][3][8], pvr[4][4][8], pvr[4][5][8], pvr[5][3][8], pvr[5][4][8], pvr[5][5][8]}),
+							valid_one_hot({pvr[3][3][7], pvr[3][4][7], pvr[3][5][7], pvr[4][3][7], pvr[4][4][7], pvr[4][5][7], pvr[5][3][7], pvr[5][4][7], pvr[5][5][7]}),
+							valid_one_hot({pvr[3][3][6], pvr[3][4][6], pvr[3][5][6], pvr[4][3][6], pvr[4][4][6], pvr[4][5][6], pvr[5][3][6], pvr[5][4][6], pvr[5][5][6]}),
+							valid_one_hot({pvr[3][3][5], pvr[3][4][5], pvr[3][5][5], pvr[4][3][5], pvr[4][4][5], pvr[4][5][5], pvr[5][3][5], pvr[5][4][5], pvr[5][5][5]}),
+							valid_one_hot({pvr[3][3][4], pvr[3][4][4], pvr[3][5][4], pvr[4][3][4], pvr[4][4][4], pvr[4][5][4], pvr[5][3][4], pvr[5][4][4], pvr[5][5][4]}),
+							valid_one_hot({pvr[3][3][3], pvr[3][4][3], pvr[3][5][3], pvr[4][3][3], pvr[4][4][3], pvr[4][5][3], pvr[5][3][3], pvr[5][4][3], pvr[5][5][3]}),
+							valid_one_hot({pvr[3][3][2], pvr[3][4][2], pvr[3][5][2], pvr[4][3][2], pvr[4][4][2], pvr[4][5][2], pvr[5][3][2], pvr[5][4][2], pvr[5][5][2]}),
+							valid_one_hot({pvr[3][3][1], pvr[3][4][1], pvr[3][5][1], pvr[4][3][1], pvr[4][4][1], pvr[4][5][1], pvr[5][3][1], pvr[5][4][1], pvr[5][5][1]}),
+							valid_one_hot({pvr[3][3][0], pvr[3][4][0], pvr[3][5][0], pvr[4][3][0], pvr[4][4][0], pvr[4][5][0], pvr[5][3][0], pvr[5][4][0], pvr[5][5][0]})
+						};
 					end
 					else 
 					begin
-						assign squares_missing_single = squares_missing[3];						
+						assign squares_contains_single = squares_contains[3];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[3][0][8], pvr[3][1][8], pvr[3][2][8], pvr[4][0][8], pvr[4][1][8], pvr[4][2][8], pvr[5][0][8], pvr[5][1][8], pvr[5][2][8]}),
+							valid_one_hot({pvr[3][0][7], pvr[3][1][7], pvr[3][2][7], pvr[4][0][7], pvr[4][1][7], pvr[4][2][7], pvr[5][0][7], pvr[5][1][7], pvr[5][2][7]}),
+							valid_one_hot({pvr[3][0][6], pvr[3][1][6], pvr[3][2][6], pvr[4][0][6], pvr[4][1][6], pvr[4][2][6], pvr[5][0][6], pvr[5][1][6], pvr[5][2][6]}),
+							valid_one_hot({pvr[3][0][5], pvr[3][1][5], pvr[3][2][5], pvr[4][0][5], pvr[4][1][5], pvr[4][2][5], pvr[5][0][5], pvr[5][1][5], pvr[5][2][5]}),
+							valid_one_hot({pvr[3][0][4], pvr[3][1][4], pvr[3][2][4], pvr[4][0][4], pvr[4][1][4], pvr[4][2][4], pvr[5][0][4], pvr[5][1][4], pvr[5][2][4]}),
+							valid_one_hot({pvr[3][0][3], pvr[3][1][3], pvr[3][2][3], pvr[4][0][3], pvr[4][1][3], pvr[4][2][3], pvr[5][0][3], pvr[5][1][3], pvr[5][2][3]}),
+							valid_one_hot({pvr[3][0][2], pvr[3][1][2], pvr[3][2][2], pvr[4][0][2], pvr[4][1][2], pvr[4][2][2], pvr[5][0][2], pvr[5][1][2], pvr[5][2][2]}),
+							valid_one_hot({pvr[3][0][1], pvr[3][1][1], pvr[3][2][1], pvr[4][0][1], pvr[4][1][1], pvr[4][2][1], pvr[5][0][1], pvr[5][1][1], pvr[5][2][1]}),
+							valid_one_hot({pvr[3][0][0], pvr[3][1][0], pvr[3][2][0], pvr[4][0][0], pvr[4][1][0], pvr[4][2][0], pvr[5][0][0], pvr[5][1][0], pvr[5][2][0]})
+						};
 					end					
 				end
 				else 
 				begin
 					if (col_genvar >= 6)
 					begin
-						assign squares_missing_single = squares_missing[2];							
+						assign squares_contains_single = squares_contains[2];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[0][6][8], pvr[0][7][8], pvr[0][8][8], pvr[1][6][8], pvr[1][7][8], pvr[1][8][8], pvr[2][6][8], pvr[2][7][8], pvr[2][8][8]}),
+							valid_one_hot({pvr[0][6][7], pvr[0][7][7], pvr[0][8][7], pvr[1][6][7], pvr[1][7][7], pvr[1][8][7], pvr[2][6][7], pvr[2][7][7], pvr[2][8][7]}),
+							valid_one_hot({pvr[0][6][6], pvr[0][7][6], pvr[0][8][6], pvr[1][6][6], pvr[1][7][6], pvr[1][8][6], pvr[2][6][6], pvr[2][7][6], pvr[2][8][6]}),
+							valid_one_hot({pvr[0][6][5], pvr[0][7][5], pvr[0][8][5], pvr[1][6][5], pvr[1][7][5], pvr[1][8][5], pvr[2][6][5], pvr[2][7][5], pvr[2][8][5]}),
+							valid_one_hot({pvr[0][6][4], pvr[0][7][4], pvr[0][8][4], pvr[1][6][4], pvr[1][7][4], pvr[1][8][4], pvr[2][6][4], pvr[2][7][4], pvr[2][8][4]}),
+							valid_one_hot({pvr[0][6][3], pvr[0][7][3], pvr[0][8][3], pvr[1][6][3], pvr[1][7][3], pvr[1][8][3], pvr[2][6][3], pvr[2][7][3], pvr[2][8][3]}),
+							valid_one_hot({pvr[0][6][2], pvr[0][7][2], pvr[0][8][2], pvr[1][6][2], pvr[1][7][2], pvr[1][8][2], pvr[2][6][2], pvr[2][7][2], pvr[2][8][2]}),
+							valid_one_hot({pvr[0][6][1], pvr[0][7][1], pvr[0][8][1], pvr[1][6][1], pvr[1][7][1], pvr[1][8][1], pvr[2][6][1], pvr[2][7][1], pvr[2][8][1]}),
+							valid_one_hot({pvr[0][6][0], pvr[0][7][0], pvr[0][8][0], pvr[1][6][0], pvr[1][7][0], pvr[1][8][0], pvr[2][6][0], pvr[2][7][0], pvr[2][8][0]})
+						};
 					end
 					else if (col_genvar >= 3)
 					begin
-						assign squares_missing_single = squares_missing[1];	
+						assign squares_contains_single = squares_contains[1];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[0][3][8], pvr[0][4][8], pvr[0][5][8], pvr[1][3][8], pvr[1][4][8], pvr[1][5][8], pvr[2][3][8], pvr[2][4][8], pvr[2][5][8]}),
+							valid_one_hot({pvr[0][3][7], pvr[0][4][7], pvr[0][5][7], pvr[1][3][7], pvr[1][4][7], pvr[1][5][7], pvr[2][3][7], pvr[2][4][7], pvr[2][5][7]}),
+							valid_one_hot({pvr[0][3][6], pvr[0][4][6], pvr[0][5][6], pvr[1][3][6], pvr[1][4][6], pvr[1][5][6], pvr[2][3][6], pvr[2][4][6], pvr[2][5][6]}),
+							valid_one_hot({pvr[0][3][5], pvr[0][4][5], pvr[0][5][5], pvr[1][3][5], pvr[1][4][5], pvr[1][5][5], pvr[2][3][5], pvr[2][4][5], pvr[2][5][5]}),
+							valid_one_hot({pvr[0][3][4], pvr[0][4][4], pvr[0][5][4], pvr[1][3][4], pvr[1][4][4], pvr[1][5][4], pvr[2][3][4], pvr[2][4][4], pvr[2][5][4]}),
+							valid_one_hot({pvr[0][3][3], pvr[0][4][3], pvr[0][5][3], pvr[1][3][3], pvr[1][4][3], pvr[1][5][3], pvr[2][3][3], pvr[2][4][3], pvr[2][5][3]}),
+							valid_one_hot({pvr[0][3][2], pvr[0][4][2], pvr[0][5][2], pvr[1][3][2], pvr[1][4][2], pvr[1][5][2], pvr[2][3][2], pvr[2][4][2], pvr[2][5][2]}),
+							valid_one_hot({pvr[0][3][1], pvr[0][4][1], pvr[0][5][1], pvr[1][3][1], pvr[1][4][1], pvr[1][5][1], pvr[2][3][1], pvr[2][4][1], pvr[2][5][1]}),
+							valid_one_hot({pvr[0][3][0], pvr[0][4][0], pvr[0][5][0], pvr[1][3][0], pvr[1][4][0], pvr[1][5][0], pvr[2][3][0], pvr[2][4][0], pvr[2][5][0]})
+						};
 					end
 					else 
 					begin
-						assign squares_missing_single = squares_missing[0];	
+						assign squares_contains_single = squares_contains[0];
+						assign single_pos_sq = {
+							valid_one_hot({pvr[0][0][8], pvr[0][1][8], pvr[0][2][8], pvr[1][0][8], pvr[1][1][8], pvr[1][2][8], pvr[2][0][8], pvr[2][1][8], pvr[2][2][8]}),
+							valid_one_hot({pvr[0][0][7], pvr[0][1][7], pvr[0][2][7], pvr[1][0][7], pvr[1][1][7], pvr[1][2][7], pvr[2][0][7], pvr[2][1][7], pvr[2][2][7]}),
+							valid_one_hot({pvr[0][0][6], pvr[0][1][6], pvr[0][2][6], pvr[1][0][6], pvr[1][1][6], pvr[1][2][6], pvr[2][0][6], pvr[2][1][6], pvr[2][2][6]}),
+							valid_one_hot({pvr[0][0][5], pvr[0][1][5], pvr[0][2][5], pvr[1][0][5], pvr[1][1][5], pvr[1][2][5], pvr[2][0][5], pvr[2][1][5], pvr[2][2][5]}),
+							valid_one_hot({pvr[0][0][4], pvr[0][1][4], pvr[0][2][4], pvr[1][0][4], pvr[1][1][4], pvr[1][2][4], pvr[2][0][4], pvr[2][1][4], pvr[2][2][4]}),
+							valid_one_hot({pvr[0][0][3], pvr[0][1][3], pvr[0][2][3], pvr[1][0][3], pvr[1][1][3], pvr[1][2][3], pvr[2][0][3], pvr[2][1][3], pvr[2][2][3]}),
+							valid_one_hot({pvr[0][0][2], pvr[0][1][2], pvr[0][2][2], pvr[1][0][2], pvr[1][1][2], pvr[1][2][2], pvr[2][0][2], pvr[2][1][2], pvr[2][2][2]}),
+							valid_one_hot({pvr[0][0][1], pvr[0][1][1], pvr[0][2][1], pvr[1][0][1], pvr[1][1][1], pvr[1][2][1], pvr[2][0][1], pvr[2][1][1], pvr[2][2][1]}),
+							valid_one_hot({pvr[0][0][0], pvr[0][1][0], pvr[0][2][0], pvr[1][0][0], pvr[1][1][0], pvr[1][2][0], pvr[2][0][0], pvr[2][1][0], pvr[2][2][0]})
+						};
 					end					
 				end
+
+				assign single_candidate_mask 	  = ~rows_contains[row_genvar] & ~cols_contains[col_genvar] & ~squares_contains_single;
+				assign single_position_mask_temp  = (single_pos_row | single_pos_col | single_pos_sq) & pvr[row_genvar][col_genvar];
+				assign single_position_mask       = (|single_position_mask_temp) ? single_position_mask_temp : 9'b111_111_111;
+				assign possibilities_mask   	  = pvr[row_genvar][col_genvar] & single_candidate_mask & single_position_mask;
 
 				always @(posedge clk_in or posedge reset_in)
 				begin
 					if (reset_in)
 					begin
-						one_hot_board_reg[row_genvar][col_genvar] <= one_hot(unsolved[row_genvar][col_genvar]);
+						one_hot_board_reg[row_genvar][col_genvar]   <= one_hot(unsolved[row_genvar][col_genvar]);
+						
+						// If the board has a set value, it can only be that value
+						// if not, the cell could be anything
+						pvr[row_genvar][col_genvar] <= |(one_hot(unsolved[row_genvar][col_genvar])) ? 
+																			one_hot(unsolved[row_genvar][col_genvar])
+																			: 9'b111_111_111;
 					end
 					else if (one_hot_board_reg[row_genvar][col_genvar] == 0) 
 					begin
-						/*
-						Need to change the singleton solve function to a check possibilitiesl:
-						Take as input the column, row and square that is being worked on
-						Generate 6 masks:
-							- mask of values containing 1s for values in the row
-							- mask of values containing 1s for values in the column
-							- mask of values containing 1s for values in the square
-							=> OR these masks. The 0 positions are the only values which the singleton can take.
-							
-							- mask of values containing 1s for values which can be present in other unsolved singletons in the column
-							- mask of values containing 1s for values which can be present in other unsolved singletons in the row
-							- mask of values containing 1s for values which can be present in other unsolved singletons in the square
-							=> OR these masks. The 0 positions are the values which only this singleton can take.
-						store the mask in some register somewhere
-						check if it is one-cold
-						*/
-						one_hot_board_reg[row_genvar][col_genvar] <= singleton_solve(
-																						rows_missing   [row_genvar],
-																						cols_missing   [col_genvar],
-																						squares_missing_single
-																					);
+						if (valid_one_hot(possibilities_mask))
+						begin
+							one_hot_board_reg[row_genvar][col_genvar] <= possibilities_mask;
+						end
+						pvr[row_genvar][col_genvar] <= possibilities_mask;
 					end
 				end
 
@@ -194,8 +325,8 @@ module soduku_solver(
 	generate
 		genvar solved_genvar;
 		for (solved_genvar = 0; solved_genvar < (GRID_SIZE); solved_genvar = solved_genvar + 1)
-		begin: missing_generator
-			assign rows_missing[solved_genvar] = (
+		begin: contains_generator
+			assign rows_contains[solved_genvar] = (
 													one_hot_board_reg[solved_genvar][0]
 												|   one_hot_board_reg[solved_genvar][1]
 												|   one_hot_board_reg[solved_genvar][2]
@@ -206,7 +337,7 @@ module soduku_solver(
 												|   one_hot_board_reg[solved_genvar][7]
 												|   one_hot_board_reg[solved_genvar][8]
 											);
-			assign cols_missing[solved_genvar] = (
+			assign cols_contains[solved_genvar] = (
 													one_hot_board_reg[0][solved_genvar]
 												|   one_hot_board_reg[1][solved_genvar]
 												|   one_hot_board_reg[2][solved_genvar]
@@ -217,8 +348,8 @@ module soduku_solver(
 												|   one_hot_board_reg[7][solved_genvar]
 												|   one_hot_board_reg[8][solved_genvar]
 											);
-			assign rows_solved[solved_genvar] = &(rows_missing[solved_genvar]);
-			assign cols_solved[solved_genvar] = &(cols_missing[solved_genvar]);
+			assign rows_solved[solved_genvar] = &(rows_contains[solved_genvar]);
+			assign cols_solved[solved_genvar] = &(cols_contains[solved_genvar]);
 		end
 	endgenerate
 
@@ -229,7 +360,7 @@ module soduku_solver(
 		begin: squares_generator
 			for (col_square_genvar = 0; col_square_genvar < 3; col_square_genvar = col_square_genvar + 1)
 			begin
-				assign squares_missing[(row_square_genvar * 3) + col_square_genvar] = (
+				assign squares_contains[(row_square_genvar * 3) + col_square_genvar] = (
 																					one_hot_board_reg[row_square_genvar * 3 + 0][col_square_genvar * 3 + 0]
 																				|   one_hot_board_reg[row_square_genvar * 3 + 0][col_square_genvar * 3 + 1]
 																				|   one_hot_board_reg[row_square_genvar * 3 + 0][col_square_genvar * 3 + 2]
@@ -240,7 +371,7 @@ module soduku_solver(
 																				|   one_hot_board_reg[row_square_genvar * 3 + 2][col_square_genvar * 3 + 1]
 																				|   one_hot_board_reg[row_square_genvar * 3 + 2][col_square_genvar * 3 + 2]
 																			   );
-				assign squares_solved[(row_square_genvar * 3) + col_square_genvar] = &(squares_missing[(row_square_genvar * 3) + col_square_genvar]);
+				assign squares_solved[(row_square_genvar * 3) + col_square_genvar] = &(squares_contains[(row_square_genvar * 3) + col_square_genvar]);
 			end
 		end
 	endgenerate

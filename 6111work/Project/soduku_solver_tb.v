@@ -14,7 +14,7 @@ module soduku_solver_tb;
 
 	// 2D array of 4 bit BCD values
 	// Contains all the numbers in unsolved board
-	// Number = 0 implies missing value
+	// Number = 1 implies contains value
 
 	reg  [4*(GRID_SIZE)*(GRID_SIZE)-1:0] test_input;
 	wire [4*(GRID_SIZE)*(GRID_SIZE)-1:0] test_output;
@@ -22,7 +22,12 @@ module soduku_solver_tb;
 	// 2D array of 4 bit BCD values
 	// Contains all the numbers in solved board
 	wire [3:0] solved [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
+	wire done;
+	reg  done_signal;
 
+	reg [127:0] clk_counter;
+	reg [127:0] clk_counter_start;
+	reg [127:0] clk_counter_end;
 
 	generate
 		genvar row_genvar;
@@ -52,12 +57,16 @@ module soduku_solver_tb;
 							.clk_in    (clk)       ,
 							.reset_in  (reset)     ,
 							.board_in  (test_input),
-							.board_out (test_output)
+							.board_out (test_output),
+							.done_out  (done)
 						);
 	initial
 	begin
 	    $dumpfile("test.vcd");
 		$dumpvars(0,soduku_solver_tb);
+		clk_counter 		= 0;
+		clk_counter_start 	= 0;
+		clk_counter_end 	= 0;
 		clk         = 0;
 		reset       = 1;
 		test_input  =  {4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
@@ -224,28 +233,52 @@ module soduku_solver_tb;
 		$finish;
 	end
 
-	always #5 clk = ~clk;
+	always #5 
+	begin
+		clk = ~clk;
+		if (clk)
+		begin
+`ifdef VERBOSE
+			printstatus;
+`endif
+			clk_counter = clk_counter + 1;
+		end
+	end
 
 	task test_solver;
 	begin
 		reset       = 1;
 		#20;
-		// printstatus;
-		// #20;
 		reset       = 0;
 		#10;
 
-`ifdef EASY
-		#1000;
-`endif
+		done_signal = 0;
+		clk_counter_start = clk_counter;
+		fork
 
-`ifdef INTERMEDIATE
+		begin
+`ifdef EASY
 		#10000;
 `endif
 
-`ifdef HARD
+`ifdef INTERMEDIATE
 		#100000;
 `endif
+
+`ifdef HARD
+		#1000000;
+`endif
+		done_signal = 1'b1;
+		end
+
+		begin
+			@(posedge done_signal or posedge done)
+			begin
+				clk_counter_end <= clk_counter;
+			end
+		end
+
+		join
 
 		printstatus;
 		#10;		
@@ -261,6 +294,9 @@ module soduku_solver_tb;
 
 		$display("One Hot: ");
 		`PRINTGRIDONEHOT(ss1.one_hot_board_reg);
+
+		$display("Possibilities Grid: ");
+		`PRINTGRIDONEHOT(ss1.pvr);
 
 		$display("Rows Solved: ");
 		$display("%b %b %b %b %b %b %b %b %b", ss1.rows_solved[0],
@@ -315,19 +351,21 @@ module soduku_solver_tb;
 
 		$display("");
 
-		$display("Rows Missing: ");
-		`PRINTVECBIN(ss1.rows_missing);
+		$display("Rows contains: ");
+		`PRINTVECBIN(ss1.rows_contains);
 
-		$display("Columns Missing: ");
-		`PRINTVECBIN(ss1.cols_missing);
+		$display("Columns contains: ");
+		`PRINTVECBIN(ss1.cols_contains);
 
-		$display("Squares Missing: ");
-		`PRINTVECBIN(ss1.squares_missing);
+		$display("Squares contains: ");
+		`PRINTVECBIN(ss1.squares_contains);
 
 		$display("Output: ");
 		`PRINTGRID(solved);
 
 		$display("");
+		$display("Clock Cycles: ");
+		$display("%d", (clk_counter_end - clk_counter_start));
 	end
 	endtask
 endmodule

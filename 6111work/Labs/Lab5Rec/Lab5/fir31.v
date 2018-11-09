@@ -114,6 +114,7 @@ module fir31(
 			begin
 				if (~&ind)
 				begin
+					// compute the convolutions
 					acc <= acc + sample_buff[t_minus_tau]*coeffs31(ind);
 					ind <= ind + 1;
 				end
