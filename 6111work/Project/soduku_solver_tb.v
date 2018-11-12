@@ -298,6 +298,12 @@ module soduku_solver_tb;
 		$display("Possibilities Grid: ");
 		`PRINTGRIDONEHOT(ss1.pvr);
 
+		$display("Candidate Rows: ");
+		`PRINTCANDIDATELINE(ss1.candidate_line_rows_reg);
+
+		$display("Candidate Columns: ");
+		`PRINTCANDIDATELINE(ss1.candidate_line_cols_reg);
+
 		$display("Rows Solved: ");
 		$display("%b %b %b %b %b %b %b %b %b", ss1.rows_solved[0],
 											   ss1.rows_solved[1],

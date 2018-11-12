@@ -60,7 +60,6 @@ module soduku_solver(
 	// |       |       |       | .
 	// |   6   |   7   |   8   | .
 	// |_______|_______|_______| 8
-
 	// Contains ones where the rows are solved
 	wire    [(GRID_SIZE-1):0] rows_solved;
 	// Determines if we need to start backtracking
@@ -86,6 +85,12 @@ module soduku_solver(
 	wire    [(GRID_SIZE-1):0] squares_contains      [0:(GRID_SIZE-1)];
 	// Determines if we need made a mistake (check for equality)
 	reg     [(GRID_SIZE-1):0] squares_contains_prev [0:(GRID_SIZE-1)];
+
+	// candidate line [i][j] is the mask of values which exist on the ith square on the jth line in the square. 
+	// candidate lines rows 
+	reg     [(GRID_SIZE-1):0] candidate_line_rows_reg   [(GRID_SIZE-1):0] [2:0];
+	// candidate lines columns
+	reg     [(GRID_SIZE-1):0] candidate_line_cols_reg   [(GRID_SIZE-1):0] [2:0];
 
 	assign done_out = &{rows_solved, cols_solved, squares_solved};
 //
@@ -116,8 +121,9 @@ module soduku_solver(
 				wire    [(GRID_SIZE-1):0] single_pos_col;
 				wire    [(GRID_SIZE-1):0] single_pos_sq;
 
-
 				wire    [(GRID_SIZE-1):0] possibilities_mask;
+				wire    [(GRID_SIZE-1):0] candidate_line_r;
+				wire    [(GRID_SIZE-1):0] candidate_line_c;
 
 				assign single_pos_row = {
 					valid_one_hot({pvr[row_genvar][8][8], pvr[row_genvar][7][8], pvr[row_genvar][6][8], pvr[row_genvar][5][8], pvr[row_genvar][4][8], pvr[row_genvar][3][8], pvr[row_genvar][2][8], pvr[row_genvar][1][8], pvr[row_genvar][0][8]}),
@@ -148,6 +154,8 @@ module soduku_solver(
 					if (col_genvar >= 6)
 					begin
 						assign squares_contains_single = squares_contains[8];
+						assign candidate_line_c =  candidate_line_cols_reg[2][col_genvar-6] & candidate_line_cols_reg[5][col_genvar-6];
+						assign candidate_line_r = candidate_line_rows_reg[6][row_genvar-6] & candidate_line_rows_reg[7][row_genvar-6];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[6][6][8], pvr[6][7][8], pvr[6][8][8], pvr[7][6][8], pvr[7][7][8], pvr[7][8][8], pvr[8][6][8], pvr[8][7][8], pvr[8][8][8]}),
 							valid_one_hot({pvr[6][6][7], pvr[6][7][7], pvr[6][8][7], pvr[7][6][7], pvr[7][7][7], pvr[7][8][7], pvr[8][6][7], pvr[8][7][7], pvr[8][8][7]}),
@@ -163,6 +171,8 @@ module soduku_solver(
 					else if (col_genvar >= 3)
 					begin
 						assign squares_contains_single = squares_contains[7];
+						assign candidate_line_c =  candidate_line_cols_reg[1][col_genvar-3] & candidate_line_cols_reg[4][col_genvar-3];
+						assign candidate_line_r = candidate_line_rows_reg[6][row_genvar-6] & candidate_line_rows_reg[8][row_genvar-6];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[6][3][8], pvr[6][4][8], pvr[6][5][8], pvr[7][3][8], pvr[7][4][8], pvr[7][5][8], pvr[8][3][8], pvr[8][4][8], pvr[8][5][8]}),
 							valid_one_hot({pvr[6][3][7], pvr[6][4][7], pvr[6][5][7], pvr[7][3][7], pvr[7][4][7], pvr[7][5][7], pvr[8][3][7], pvr[8][4][7], pvr[8][5][7]}),
@@ -178,6 +188,8 @@ module soduku_solver(
 					else 
 					begin
 						assign squares_contains_single = squares_contains[6];
+						assign candidate_line_c =  candidate_line_cols_reg[0][col_genvar] & candidate_line_cols_reg[3][col_genvar];
+						assign candidate_line_r = candidate_line_rows_reg[7][row_genvar-6] & candidate_line_rows_reg[8][row_genvar-6];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[6][0][8], pvr[6][1][8], pvr[6][2][8], pvr[7][0][8], pvr[7][1][8], pvr[7][2][8], pvr[8][0][8], pvr[8][1][8], pvr[8][2][8]}),
 							valid_one_hot({pvr[6][0][7], pvr[6][1][7], pvr[6][2][7], pvr[7][0][7], pvr[7][1][7], pvr[7][2][7], pvr[8][0][7], pvr[8][1][7], pvr[8][2][7]}),
@@ -196,6 +208,8 @@ module soduku_solver(
 					if (col_genvar >= 6)
 					begin
 						assign squares_contains_single = squares_contains[5];
+						assign candidate_line_c =  candidate_line_cols_reg[2][col_genvar-6] & candidate_line_cols_reg[8][col_genvar-6];
+						assign candidate_line_r = candidate_line_rows_reg[3][row_genvar-3] & candidate_line_rows_reg[4][row_genvar-3];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[3][6][8], pvr[3][7][8], pvr[3][8][8], pvr[4][6][8], pvr[4][7][8], pvr[4][8][8], pvr[5][6][8], pvr[5][7][8], pvr[5][8][8]}),
 							valid_one_hot({pvr[3][6][7], pvr[3][7][7], pvr[3][8][7], pvr[4][6][7], pvr[4][7][7], pvr[4][8][7], pvr[5][6][7], pvr[5][7][7], pvr[5][8][7]}),
@@ -211,6 +225,8 @@ module soduku_solver(
 					else if (col_genvar >= 3)
 					begin
 						assign squares_contains_single = squares_contains[4];
+						assign candidate_line_c =  candidate_line_cols_reg[1][col_genvar-3] & candidate_line_cols_reg[7][col_genvar-3];
+						assign candidate_line_r = candidate_line_rows_reg[3][row_genvar-3] & candidate_line_rows_reg[5][row_genvar-3];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[3][3][8], pvr[3][4][8], pvr[3][5][8], pvr[4][3][8], pvr[4][4][8], pvr[4][5][8], pvr[5][3][8], pvr[5][4][8], pvr[5][5][8]}),
 							valid_one_hot({pvr[3][3][7], pvr[3][4][7], pvr[3][5][7], pvr[4][3][7], pvr[4][4][7], pvr[4][5][7], pvr[5][3][7], pvr[5][4][7], pvr[5][5][7]}),
@@ -226,6 +242,8 @@ module soduku_solver(
 					else 
 					begin
 						assign squares_contains_single = squares_contains[3];
+						assign candidate_line_c =  candidate_line_cols_reg[0][col_genvar] & candidate_line_cols_reg[6][col_genvar];
+						assign candidate_line_r = candidate_line_rows_reg[4][row_genvar-3] & candidate_line_rows_reg[5][row_genvar-3];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[3][0][8], pvr[3][1][8], pvr[3][2][8], pvr[4][0][8], pvr[4][1][8], pvr[4][2][8], pvr[5][0][8], pvr[5][1][8], pvr[5][2][8]}),
 							valid_one_hot({pvr[3][0][7], pvr[3][1][7], pvr[3][2][7], pvr[4][0][7], pvr[4][1][7], pvr[4][2][7], pvr[5][0][7], pvr[5][1][7], pvr[5][2][7]}),
@@ -244,6 +262,8 @@ module soduku_solver(
 					if (col_genvar >= 6)
 					begin
 						assign squares_contains_single = squares_contains[2];
+						assign candidate_line_c =  candidate_line_cols_reg[5][col_genvar-6] & candidate_line_cols_reg[8][col_genvar-6];
+						assign candidate_line_r = candidate_line_rows_reg[0][row_genvar] & candidate_line_rows_reg[1][row_genvar];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[0][6][8], pvr[0][7][8], pvr[0][8][8], pvr[1][6][8], pvr[1][7][8], pvr[1][8][8], pvr[2][6][8], pvr[2][7][8], pvr[2][8][8]}),
 							valid_one_hot({pvr[0][6][7], pvr[0][7][7], pvr[0][8][7], pvr[1][6][7], pvr[1][7][7], pvr[1][8][7], pvr[2][6][7], pvr[2][7][7], pvr[2][8][7]}),
@@ -259,6 +279,8 @@ module soduku_solver(
 					else if (col_genvar >= 3)
 					begin
 						assign squares_contains_single = squares_contains[1];
+						assign candidate_line_c =  candidate_line_cols_reg[4][col_genvar-3] & candidate_line_cols_reg[7][col_genvar-3];
+						assign candidate_line_r = candidate_line_rows_reg[0][row_genvar] & candidate_line_rows_reg[2][row_genvar];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[0][3][8], pvr[0][4][8], pvr[0][5][8], pvr[1][3][8], pvr[1][4][8], pvr[1][5][8], pvr[2][3][8], pvr[2][4][8], pvr[2][5][8]}),
 							valid_one_hot({pvr[0][3][7], pvr[0][4][7], pvr[0][5][7], pvr[1][3][7], pvr[1][4][7], pvr[1][5][7], pvr[2][3][7], pvr[2][4][7], pvr[2][5][7]}),
@@ -274,6 +296,8 @@ module soduku_solver(
 					else 
 					begin
 						assign squares_contains_single = squares_contains[0];
+						assign candidate_line_c =  candidate_line_cols_reg[3][col_genvar] & candidate_line_cols_reg[6][col_genvar];
+						assign candidate_line_r = candidate_line_rows_reg[1][row_genvar] & candidate_line_rows_reg[2][row_genvar];
 						assign single_pos_sq = {
 							valid_one_hot({pvr[0][0][8], pvr[0][1][8], pvr[0][2][8], pvr[1][0][8], pvr[1][1][8], pvr[1][2][8], pvr[2][0][8], pvr[2][1][8], pvr[2][2][8]}),
 							valid_one_hot({pvr[0][0][7], pvr[0][1][7], pvr[0][2][7], pvr[1][0][7], pvr[1][1][7], pvr[1][2][7], pvr[2][0][7], pvr[2][1][7], pvr[2][2][7]}),
@@ -291,7 +315,11 @@ module soduku_solver(
 				assign single_candidate_mask 	  = ~rows_contains[row_genvar] & ~cols_contains[col_genvar] & ~squares_contains_single;
 				assign single_position_mask_temp  = (single_pos_row | single_pos_col | single_pos_sq) & pvr[row_genvar][col_genvar];
 				assign single_position_mask       = (|single_position_mask_temp) ? single_position_mask_temp : 9'b111_111_111;
-				assign possibilities_mask   	  = pvr[row_genvar][col_genvar] & single_candidate_mask & single_position_mask;
+				assign possibilities_mask   	  = pvr[row_genvar][col_genvar] 
+													& single_candidate_mask 
+													& single_position_mask 
+													& (~candidate_line_c) 
+													& ~(candidate_line_r);
 
 				always @(posedge clk_in or posedge reset_in)
 				begin
@@ -375,4 +403,327 @@ module soduku_solver(
 			end
 		end
 	endgenerate
+
+	reg [3:0] square_counter;
+	always @(posedge clk_in or posedge reset_in)
+	begin
+		if (reset_in)
+		begin
+			square_counter <= 0;
+			`RESET_3_BY_9(candidate_line_rows_reg)
+			`RESET_3_BY_9(candidate_line_cols_reg)
+		end
+		else
+		begin
+			case (square_counter)
+				4'd0:
+					begin
+						candidate_line_rows_reg[0][0] <= get_exclusive_line_possibilities(
+																						(pvr[0][0] | pvr[0][1] | pvr[0][2]),
+																						(pvr[1][0] | pvr[1][1] | pvr[1][2]),
+																						(pvr[2][0] | pvr[2][1] | pvr[2][2])
+																					 );
+						candidate_line_rows_reg[0][1] <= get_exclusive_line_possibilities(
+																						(pvr[1][0] | pvr[1][1] | pvr[1][2]),
+																						(pvr[0][0] | pvr[0][1] | pvr[0][2]),
+																						(pvr[2][0] | pvr[2][1] | pvr[2][2])
+																					 );
+						candidate_line_rows_reg[0][2] <= get_exclusive_line_possibilities(
+																						(pvr[2][0] | pvr[2][1] | pvr[2][2]),
+																						(pvr[0][0] | pvr[0][1] | pvr[0][2]),
+																						(pvr[1][0] | pvr[1][1] | pvr[1][2])
+																					 );
+						candidate_line_cols_reg[0][0] <= get_exclusive_line_possibilities(
+																						(pvr[0][0] | pvr[1][0] | pvr[2][0]),
+																						(pvr[0][1] | pvr[1][1] | pvr[2][1]),
+																						(pvr[0][2] | pvr[1][2] | pvr[2][2])
+																					 );
+						candidate_line_cols_reg[0][1] <= get_exclusive_line_possibilities(
+																						(pvr[0][1] | pvr[1][1] | pvr[2][1]),
+																						(pvr[0][0] | pvr[1][0] | pvr[2][0]),
+																						(pvr[0][2] | pvr[1][2] | pvr[2][2])
+																					 );
+						candidate_line_cols_reg[0][2] <= get_exclusive_line_possibilities(
+																						(pvr[0][2] | pvr[1][2] | pvr[2][2]),
+																						(pvr[0][0] | pvr[1][0] | pvr[2][0]),
+																						(pvr[0][1] | pvr[1][1] | pvr[2][1])
+																					 );
+					end
+				4'd1:
+					begin
+						candidate_line_rows_reg[1][0] <= get_exclusive_line_possibilities(
+																						(pvr[0][3] | pvr[0][4] | pvr[0][5]),
+																						(pvr[1][3] | pvr[1][4] | pvr[1][5]),
+																						(pvr[2][3] | pvr[2][4] | pvr[2][5])
+																					 );
+						candidate_line_rows_reg[1][1] <= get_exclusive_line_possibilities(
+																						(pvr[1][3] | pvr[1][4] | pvr[1][5]),
+																						(pvr[0][3] | pvr[0][4] | pvr[0][5]),
+																						(pvr[2][3] | pvr[2][4] | pvr[2][5])
+																					 );
+						candidate_line_rows_reg[1][2] <= get_exclusive_line_possibilities(
+																						(pvr[2][3] | pvr[2][4] | pvr[2][5]),
+																						(pvr[0][3] | pvr[0][4] | pvr[0][5]),
+																						(pvr[1][3] | pvr[1][4] | pvr[1][5])
+																					 );
+						candidate_line_cols_reg[1][0] <= get_exclusive_line_possibilities(
+																						(pvr[0][3] | pvr[1][3] | pvr[2][3]),
+																						(pvr[0][4] | pvr[1][4] | pvr[2][4]),
+																						(pvr[0][5] | pvr[1][5] | pvr[2][5])
+																					 );
+						candidate_line_cols_reg[1][1] <= get_exclusive_line_possibilities(
+																						(pvr[0][4] | pvr[1][4] | pvr[2][4]),
+																						(pvr[0][3] | pvr[1][3] | pvr[2][3]),
+																						(pvr[0][5] | pvr[1][5] | pvr[2][5])
+																					 );
+						candidate_line_cols_reg[1][2] <= get_exclusive_line_possibilities(
+																						(pvr[0][5] | pvr[1][5] | pvr[2][5]),
+																						(pvr[0][3] | pvr[1][3] | pvr[2][3]),
+																						(pvr[0][4] | pvr[1][4] | pvr[2][4])
+																					 );					
+					end
+				4'd2:
+					begin
+						candidate_line_rows_reg[2][0] <= get_exclusive_line_possibilities(
+																						(pvr[0][6] | pvr[0][7] | pvr[0][8]),
+																						(pvr[1][6] | pvr[1][7] | pvr[1][8]),
+																						(pvr[2][6] | pvr[2][7] | pvr[2][8])
+																					 );
+						candidate_line_rows_reg[2][1] <= get_exclusive_line_possibilities(
+																						(pvr[1][6] | pvr[1][7] | pvr[1][8]),
+																						(pvr[0][6] | pvr[0][7] | pvr[0][8]),
+																						(pvr[2][6] | pvr[2][7] | pvr[2][8])
+																					 );
+						candidate_line_rows_reg[2][2] <= get_exclusive_line_possibilities(
+																						(pvr[2][6] | pvr[2][7] | pvr[2][8]),
+																						(pvr[0][6] | pvr[0][7] | pvr[0][8]),
+																						(pvr[1][6] | pvr[1][7] | pvr[1][8])
+																					 );
+						candidate_line_cols_reg[2][0] <= get_exclusive_line_possibilities(
+																						(pvr[0][6] | pvr[1][6] | pvr[2][6]),
+																						(pvr[0][7] | pvr[1][7] | pvr[2][7]),
+																						(pvr[0][8] | pvr[1][8] | pvr[2][8])
+																					 );
+						candidate_line_cols_reg[2][1] <= get_exclusive_line_possibilities(
+																						(pvr[0][7] | pvr[1][7] | pvr[2][7]),
+																						(pvr[0][6] | pvr[1][6] | pvr[2][6]),
+																						(pvr[0][8] | pvr[1][8] | pvr[2][8])
+																					 );
+						candidate_line_cols_reg[2][2] <= get_exclusive_line_possibilities(
+																						(pvr[0][8] | pvr[1][8] | pvr[2][8]),
+																						(pvr[0][6] | pvr[1][6] | pvr[2][6]),
+																						(pvr[0][7] | pvr[1][7] | pvr[2][7])
+																					 );	
+					end
+				4'd3:
+					begin
+						candidate_line_rows_reg[3][0] <= get_exclusive_line_possibilities(
+																						(pvr[3][0] | pvr[3][1] | pvr[3][2]),
+																						(pvr[4][0] | pvr[4][1] | pvr[4][2]),
+																						(pvr[5][0] | pvr[5][1] | pvr[5][2])
+																					 );
+						candidate_line_rows_reg[3][1] <= get_exclusive_line_possibilities(
+																						(pvr[4][0] | pvr[4][1] | pvr[4][2]),
+																						(pvr[3][0] | pvr[3][1] | pvr[3][2]),
+																						(pvr[5][0] | pvr[5][1] | pvr[5][2])
+																					 );
+						candidate_line_rows_reg[3][2] <= get_exclusive_line_possibilities(
+																						(pvr[5][0] | pvr[5][1] | pvr[5][2]),
+																						(pvr[3][0] | pvr[3][1] | pvr[3][2]),
+																						(pvr[4][0] | pvr[4][1] | pvr[4][2])
+																					 );
+						candidate_line_cols_reg[3][0] <= get_exclusive_line_possibilities(
+																						(pvr[3][0] | pvr[4][0] | pvr[5][0]),
+																						(pvr[3][1] | pvr[4][1] | pvr[5][1]),
+																						(pvr[3][2] | pvr[4][2] | pvr[5][2])
+																					 );
+						candidate_line_cols_reg[3][1] <= get_exclusive_line_possibilities(
+																						(pvr[3][1] | pvr[4][1] | pvr[5][1]),
+																						(pvr[3][0] | pvr[4][0] | pvr[5][0]),
+																						(pvr[3][2] | pvr[4][2] | pvr[5][2])
+																					 );
+						candidate_line_cols_reg[3][2] <= get_exclusive_line_possibilities(
+																						(pvr[3][2] | pvr[4][2] | pvr[5][2]),
+																						(pvr[3][0] | pvr[4][0] | pvr[5][0]),
+																						(pvr[3][1] | pvr[4][1] | pvr[5][1])
+																					 );
+					end
+				4'd4:
+					begin
+						candidate_line_rows_reg[4][0] <= get_exclusive_line_possibilities(
+																						(pvr[3][3] | pvr[3][4] | pvr[3][5]),
+																						(pvr[4][3] | pvr[4][4] | pvr[4][5]),
+																						(pvr[5][3] | pvr[5][4] | pvr[5][5])
+																					 );
+						candidate_line_rows_reg[4][1] <= get_exclusive_line_possibilities(
+																						(pvr[4][3] | pvr[4][4] | pvr[4][5]),
+																						(pvr[3][3] | pvr[3][4] | pvr[3][5]),
+																						(pvr[5][3] | pvr[5][4] | pvr[5][5])
+																					 );
+						candidate_line_rows_reg[4][2] <= get_exclusive_line_possibilities(
+																						(pvr[5][3] | pvr[5][4] | pvr[5][5]),
+																						(pvr[3][3] | pvr[3][4] | pvr[3][5]),
+																						(pvr[4][3] | pvr[4][4] | pvr[4][5])
+																					 );
+						candidate_line_cols_reg[4][0] <= get_exclusive_line_possibilities(
+																						(pvr[3][3] | pvr[4][3] | pvr[5][3]),
+																						(pvr[3][4] | pvr[4][4] | pvr[5][4]),
+																						(pvr[3][5] | pvr[4][5] | pvr[5][5])
+																					 );
+						candidate_line_cols_reg[4][1] <= get_exclusive_line_possibilities(
+																						(pvr[3][4] | pvr[4][4] | pvr[5][4]),
+																						(pvr[3][3] | pvr[4][3] | pvr[5][3]),
+																						(pvr[3][5] | pvr[4][5] | pvr[5][5])
+																					 );
+						candidate_line_cols_reg[4][2] <= get_exclusive_line_possibilities(
+																						(pvr[3][5] | pvr[4][5] | pvr[5][5]),
+																						(pvr[3][3] | pvr[4][3] | pvr[5][3]),
+																						(pvr[3][4] | pvr[4][4] | pvr[5][4])
+																					 );					
+					end
+				4'd5:
+					begin
+						candidate_line_rows_reg[5][0] <= get_exclusive_line_possibilities(
+																						(pvr[3][6] | pvr[3][7] | pvr[3][8]),
+																						(pvr[4][6] | pvr[4][7] | pvr[4][8]),
+																						(pvr[5][6] | pvr[5][7] | pvr[5][8])
+																					 );
+						candidate_line_rows_reg[5][1] <= get_exclusive_line_possibilities(
+																						(pvr[4][6] | pvr[4][7] | pvr[4][8]),
+																						(pvr[3][6] | pvr[3][7] | pvr[3][8]),
+																						(pvr[5][6] | pvr[5][7] | pvr[5][8])
+																					 );
+						candidate_line_rows_reg[5][2] <= get_exclusive_line_possibilities(
+																						(pvr[5][6] | pvr[5][7] | pvr[5][8]),
+																						(pvr[3][6] | pvr[3][7] | pvr[3][8]),
+																						(pvr[4][6] | pvr[4][7] | pvr[4][8])
+																					 );
+						candidate_line_cols_reg[5][0] <= get_exclusive_line_possibilities(
+																						(pvr[3][6] | pvr[4][6] | pvr[5][6]),
+																						(pvr[3][7] | pvr[4][7] | pvr[5][7]),
+																						(pvr[3][8] | pvr[4][8] | pvr[5][8])
+																					 );
+						candidate_line_cols_reg[5][1] <= get_exclusive_line_possibilities(
+																						(pvr[3][7] | pvr[4][7] | pvr[5][7]),
+																						(pvr[3][6] | pvr[4][6] | pvr[5][6]),
+																						(pvr[3][8] | pvr[4][8] | pvr[5][8])
+																					 );
+						candidate_line_cols_reg[5][2] <= get_exclusive_line_possibilities(
+																						(pvr[3][8] | pvr[4][8] | pvr[5][8]),
+																						(pvr[3][6] | pvr[4][6] | pvr[5][6]),
+																						(pvr[3][7] | pvr[4][7] | pvr[5][7])
+																					 );	
+					end
+				4'd6:
+					begin
+						candidate_line_rows_reg[6][0] <= get_exclusive_line_possibilities(
+																						(pvr[6][0] | pvr[6][1] | pvr[6][2]),
+																						(pvr[7][0] | pvr[7][1] | pvr[7][2]),
+																						(pvr[8][0] | pvr[8][1] | pvr[8][2])
+																					 );
+						candidate_line_rows_reg[6][1] <= get_exclusive_line_possibilities(
+																						(pvr[7][0] | pvr[7][1] | pvr[7][2]),
+																						(pvr[6][0] | pvr[6][1] | pvr[6][2]),
+																						(pvr[8][0] | pvr[8][1] | pvr[8][2])
+																					 );
+						candidate_line_rows_reg[6][2] <= get_exclusive_line_possibilities(
+																						(pvr[8][0] | pvr[8][1] | pvr[8][2]),
+																						(pvr[6][0] | pvr[6][1] | pvr[6][2]),
+																						(pvr[7][0] | pvr[7][1] | pvr[7][2])
+																					 );
+						candidate_line_cols_reg[6][0] <= get_exclusive_line_possibilities(
+																						(pvr[6][0] | pvr[7][0] | pvr[8][0]),
+																						(pvr[6][1] | pvr[7][1] | pvr[8][1]),
+																						(pvr[6][2] | pvr[7][2] | pvr[8][2])
+																					 );
+						candidate_line_cols_reg[6][1] <= get_exclusive_line_possibilities(
+																						(pvr[6][1] | pvr[7][1] | pvr[8][1]),
+																						(pvr[6][0] | pvr[7][0] | pvr[8][0]),
+																						(pvr[6][2] | pvr[7][2] | pvr[8][2])
+																					 );
+						candidate_line_cols_reg[6][2] <= get_exclusive_line_possibilities(
+																						(pvr[6][2] | pvr[7][2] | pvr[8][2]),
+																						(pvr[6][0] | pvr[7][0] | pvr[8][0]),
+																						(pvr[6][1] | pvr[7][1] | pvr[8][1])
+																					 );
+					end
+				4'd7:
+					begin
+						candidate_line_rows_reg[7][0] <= get_exclusive_line_possibilities(
+																						(pvr[6][3] | pvr[6][4] | pvr[6][5]),
+																						(pvr[7][3] | pvr[7][4] | pvr[7][5]),
+																						(pvr[8][3] | pvr[8][4] | pvr[8][5])
+																					 );
+						candidate_line_rows_reg[7][1] <= get_exclusive_line_possibilities(
+																						(pvr[7][3] | pvr[7][4] | pvr[7][5]),
+																						(pvr[6][3] | pvr[6][4] | pvr[6][5]),
+																						(pvr[8][3] | pvr[8][4] | pvr[8][5])
+																					 );
+						candidate_line_rows_reg[7][2] <= get_exclusive_line_possibilities(
+																						(pvr[8][3] | pvr[8][4] | pvr[8][5]),
+																						(pvr[6][3] | pvr[6][4] | pvr[6][5]),
+																						(pvr[7][3] | pvr[7][4] | pvr[7][5])
+																					 );
+						candidate_line_cols_reg[7][0] <= get_exclusive_line_possibilities(
+																						(pvr[6][3] | pvr[7][3] | pvr[8][3]),
+																						(pvr[6][4] | pvr[7][4] | pvr[8][4]),
+																						(pvr[6][5] | pvr[7][5] | pvr[8][5])
+																					 );
+						candidate_line_cols_reg[7][1] <= get_exclusive_line_possibilities(
+																						(pvr[6][4] | pvr[7][4] | pvr[8][4]),
+																						(pvr[6][3] | pvr[7][3] | pvr[8][3]),
+																						(pvr[6][5] | pvr[7][5] | pvr[8][5])
+																					 );
+						candidate_line_cols_reg[7][2] <= get_exclusive_line_possibilities(
+																						(pvr[6][5] | pvr[7][5] | pvr[8][5]),
+																						(pvr[6][3] | pvr[7][3] | pvr[8][3]),
+																						(pvr[6][4] | pvr[7][4] | pvr[8][4])
+																					 );					
+					end
+				4'd8:
+					begin
+						candidate_line_rows_reg[8][0] <= get_exclusive_line_possibilities(
+																						(pvr[6][6] | pvr[6][7] | pvr[6][8]),
+																						(pvr[7][6] | pvr[7][7] | pvr[7][8]),
+																						(pvr[8][6] | pvr[8][7] | pvr[8][8])
+																					 );
+						candidate_line_rows_reg[8][1] <= get_exclusive_line_possibilities(
+																						(pvr[7][6] | pvr[7][7] | pvr[7][8]),
+																						(pvr[6][6] | pvr[6][7] | pvr[6][8]),
+																						(pvr[8][6] | pvr[8][7] | pvr[8][8])
+																					 );
+						candidate_line_rows_reg[8][2] <= get_exclusive_line_possibilities(
+																						(pvr[8][6] | pvr[8][7] | pvr[8][8]),
+																						(pvr[6][6] | pvr[6][7] | pvr[6][8]),
+																						(pvr[7][6] | pvr[7][7] | pvr[7][8])
+																					 );
+						candidate_line_cols_reg[8][0] <= get_exclusive_line_possibilities(
+																						(pvr[6][6] | pvr[7][6] | pvr[8][6]),
+																						(pvr[6][7] | pvr[7][7] | pvr[8][7]),
+																						(pvr[6][8] | pvr[7][8] | pvr[8][8])
+																					 );
+						candidate_line_cols_reg[8][1] <= get_exclusive_line_possibilities(
+																						(pvr[6][7] | pvr[7][7] | pvr[8][7]),
+																						(pvr[6][6] | pvr[7][6] | pvr[8][6]),
+																						(pvr[6][8] | pvr[7][8] | pvr[8][8])
+																					 );
+						candidate_line_cols_reg[8][2] <= get_exclusive_line_possibilities(
+																						(pvr[6][8] | pvr[7][8] | pvr[8][8]),
+																						(pvr[6][6] | pvr[7][6] | pvr[8][6]),
+																						(pvr[6][7] | pvr[7][7] | pvr[8][7])
+																					 );	
+					end
+				default: ;
+			endcase
+
+			if (square_counter < 8)
+			begin
+				square_counter <= square_counter + 1;
+			end
+			else 
+			begin
+				square_counter <= 0;	
+			end
+		end
+	end
 endmodule

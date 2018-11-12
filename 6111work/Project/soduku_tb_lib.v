@@ -323,3 +323,60 @@
 	$write("%c[1;34m",27);\
 	$display("");\
 	$write("%c[0m",27);
+
+
+`define PRINTCANDIDATELINE(grid_in)\
+	$write("%c[1;34m",27);\
+	$write("%b ", grid_in[0][0]);\
+	$write("%b ", grid_in[0][1]);\
+	$write("%b ", grid_in[0][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;31m",27);\
+	$display("");\
+	$write("%b ", grid_in[1][0]);\
+	$write("%b ", grid_in[1][1]);\
+	$write("%b ", grid_in[1][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;34m",27);\
+	$display("");\
+	$write("%b ", grid_in[2][0]);\
+	$write("%b ", grid_in[2][1]);\
+	$write("%b ", grid_in[2][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;31m",27);\
+	$display("");\
+	$write("%b ", grid_in[3][0]);\
+	$write("%b ", grid_in[3][1]);\
+	$write("%b ", grid_in[3][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;34m",27);\
+	$display("");\
+	$write("%b ", grid_in[4][0]);\
+	$write("%b ", grid_in[4][1]);\
+	$write("%b ", grid_in[4][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;31m",27);\
+	$display("");\
+	$write("%b ", grid_in[5][0]);\
+	$write("%b ", grid_in[5][1]);\
+	$write("%b ", grid_in[5][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;34m",27);\
+	$display("");\
+	$write("%b ", grid_in[6][0]);\
+	$write("%b ", grid_in[6][1]);\
+	$write("%b ", grid_in[6][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;31m",27);\
+	$display("");\
+	$write("%b ", grid_in[7][0]);\
+	$write("%b ", grid_in[7][1]);\
+	$write("%b ", grid_in[7][2]);\
+	$write("%c[0m",27);\
+	$write("%c[1;34m",27);\
+	$display("");\
+	$write("%b ", grid_in[8][0]);\
+	$write("%b ", grid_in[8][1]);\
+	$write("%b ", grid_in[8][2]);\
+	$display("");\
+	$write("%c[0m",27);

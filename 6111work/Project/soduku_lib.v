@@ -1,4 +1,36 @@
 //
+// DEFINITIONS
+//
+`define RESET_3_BY_9(GRID) \
+GRID[0][0] <= 0;\
+GRID[1][0] <= 0;\
+GRID[2][0] <= 0;\
+GRID[3][0] <= 0;\
+GRID[4][0] <= 0;\
+GRID[5][0] <= 0;\
+GRID[6][0] <= 0;\
+GRID[7][0] <= 0;\
+GRID[8][0] <= 0;\
+GRID[0][1] <= 0;\
+GRID[1][1] <= 0;\
+GRID[2][1] <= 0;\
+GRID[3][1] <= 0;\
+GRID[4][1] <= 0;\
+GRID[5][1] <= 0;\
+GRID[6][1] <= 0;\
+GRID[7][1] <= 0;\
+GRID[8][1] <= 0;\
+GRID[0][2] <= 0;\
+GRID[1][2] <= 0;\
+GRID[2][2] <= 0;\
+GRID[3][2] <= 0;\
+GRID[4][2] <= 0;\
+GRID[5][2] <= 0;\
+GRID[6][2] <= 0;\
+GRID[7][2] <= 0;\
+GRID[8][2] <= 0;\
+
+//
 // FUNCTIONS
 //
 function automatic [8:0] one_hot;
@@ -52,5 +84,12 @@ begin
 		9'b1_0000_0000	: valid_one_hot = 1'b1;
 		default			: valid_one_hot = 1'b0;
 	endcase
+end
+endfunction
+
+function automatic [8:0] get_exclusive_line_possibilities;
+input [8:0] p1, p2, p3;
+begin
+	get_exclusive_line_possibilities = p1 & (~p2) & (~p3);
 end
 endfunction
