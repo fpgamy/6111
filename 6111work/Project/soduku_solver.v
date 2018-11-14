@@ -87,9 +87,10 @@ module soduku_solver(
 	wire    [(GRID_SIZE-1):0] col_groups [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire    [(GRID_SIZE-1):0] squ_groups [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 
-	reg     [6:0]             done_countdown [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
-	wire    [6:0]             done_countdown_orred;
-	wire                      timeout;
+	reg     [(GRID_SIZE*GRID_SIZE-1):0] error_detected;
+	reg     [6:0]             			done_countdown [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
+	wire    [6:0]             			done_countdown_orred;
+	wire                      			timeout;
 	
 // INCLUDES
 //
@@ -323,7 +324,8 @@ module soduku_solver(
 				begin
 					if (reset_in)
 					begin
-						done_countdown[row_genvar][col_genvar] <= 7'd127; 
+						done_countdown[row_genvar][col_genvar] <= 7'd127;
+						error_detected[row_genvar*GRID_SIZE + col_genvar] <= 1'b0;
 						one_hot_board_reg[row_genvar][col_genvar]    <= one_hot(unsolved[row_genvar][col_genvar]);
 						
 						// If the board has a set value, it can only be that value
@@ -334,6 +336,10 @@ module soduku_solver(
 					end
 					else if (one_hot_board_reg[row_genvar][col_genvar] == 0) 
 					begin
+						if (possibilities_mask == 0)
+						begin
+							error_detected[row_genvar*GRID_SIZE + col_genvar] <= 1;
+						end
 						if (valid_one_hot(possibilities_mask))
 						begin
 							one_hot_board_reg[row_genvar][col_genvar] <= possibilities_mask;
@@ -422,7 +428,7 @@ module soduku_solver(
 	
 	assign done_countdown_orred = `OR_GRID(done_countdown);
 	assign timeout = ~|done_countdown_orred;
-	assign done_out = (&{rows_solved, cols_solved, squares_solved}) | timeout;
+	assign done_out = (&{rows_solved, cols_solved, squares_solved}) | timeout | (|error_detected);
 
 //
 // SEQUENTIAL
