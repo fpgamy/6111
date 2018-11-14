@@ -212,6 +212,17 @@ module soduku_solver_tb;
 						4'd0, 4'd0, 4'd0, 4'd3, 4'd2, 4'd0, 4'd4, 4'd0, 4'd0, 
 						4'd0, 4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6};
 		test_solver;
+
+		test_input  =  {4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 4'd9, 4'd1, 4'd2, 
+					    4'd0, 4'd0, 4'd0, 4'd8, 4'd9, 4'd1, 4'd5, 4'd6, 4'd0, 
+					    4'd5, 4'd1, 4'd9, 4'd0, 4'd2, 4'd6, 4'd3, 4'd8, 4'd0, 
+					    4'd6, 4'd4, 4'd2, 4'd5, 4'd7, 4'd3, 4'd8, 4'd9, 4'd1, 
+					    4'd0, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd3, 4'd6, 
+					    4'd0, 4'd3, 4'd0, 4'd2, 4'd6, 4'd0, 4'd7, 4'd4, 4'd5, 
+					    4'd0, 4'd0, 4'd5, 4'd0, 4'd8, 4'd0, 4'd4, 4'd7, 4'd9, 
+					    4'd0, 4'd8, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 
+					    4'd4, 4'd9, 4'd0, 4'd6, 4'd0, 4'd0, 4'd1, 4'd0, 4'd8};
+		test_solver;
 `endif
 
 `ifdef HARD
@@ -232,6 +243,35 @@ module soduku_solver_tb;
 		#50;
 		$finish;
 	end
+
+`ifdef VERBOSE
+	`define NAKED_TEST
+	`define HIDDEN_TEST
+`endif
+
+`ifdef NAKED_TEST
+	always @(posedge ss1.naked_group_detected)
+	begin
+		$display("NAKED GROUP DETECTED");
+		$display("ROW COUNTER:    %d", ss1.row_counter);
+		$display("COLUMN COUNTER: %d", ss1.col_counter);
+		$display("pvr: %b", ss1.pvr[ss1.row_counter][ss1.col_counter]);
+		printstatus;
+	end
+`endif
+
+`ifdef HIDDEN_TEST
+	// wire test_h;
+	// assign test_h = ((ss1.col_counter == 5) && (ss1.row_counter == 2));
+	always @(posedge ss1.hidden_group_detected)// or posedge test_h)
+	begin
+		$display("HIDDEN GROUP DETECTED");
+		$display("ROW COUNTER:    %d", ss1.row_counter);
+		$display("COLUMN COUNTER: %d", ss1.col_counter);
+		$display("pvr: %b", ss1.pvr[ss1.row_counter][ss1.col_counter]);
+		printstatus;
+	end
+`endif
 
 	always #5 
 	begin
@@ -297,6 +337,51 @@ module soduku_solver_tb;
 
 		$display("Possibilities Grid: ");
 		`PRINTGRIDONEHOT(ss1.pvr);
+
+		$display("Hidden Group Grid: ");
+		`PRINTGRIDONEHOT(ss1.gmr);
+
+`ifdef HIDDEN_TEST
+		$display("Hidden Group in Row");
+		$display("%b", ss1.hidden_group_detected_row);
+		$display("Hidden Group in Col");
+		$display("%b", ss1.hidden_group_detected_col);
+		$display("Hidden Group in Square");
+		$display("%b", ss1.hidden_group_detected_sq);
+		$display("number_of_ones_in_mask");
+		$display("%d", ss1.number_of_ones_in_mask);
+		$display("number_of_zero_masks_rows");
+		$display("%d", ss1.number_of_zero_masks_rows);
+		$display("number_of_zero_masks_cols");
+		$display("%d", ss1.number_of_zero_masks_cols);
+		$display("number_of_zero_masks_sqs");
+		$display("%d", ss1.number_of_zero_masks_sqs);
+		$display("Hidden Rows Mask");
+		$display("%b", ss1.hidden_rows_mask);
+		$display("Hidden Cols Mask");
+		$display("%b", ss1.hidden_cols_mask);
+		$display("Hidden Sqs Mask");
+		$display("%b", ss1.hidden_sqs_mask);
+`endif
+
+`ifdef NAKED_TEST
+		$display("Naked Group in Row");
+		$display("%b", ss1.naked_group_detected_row);
+		$display("Naked Group in Col");
+		$display("%b", ss1.naked_group_detected_col);
+		$display("Naked Group in Square");
+		$display("%b", ss1.naked_group_detected_sq);
+		$display("number_of_ones_in_mask");
+		$display("%d", ss1.number_of_ones_in_mask);
+		$display("Naked Rows Mask");
+		$display("%b", ss1.naked_rows_mask);
+		$display("Naked Cols Mask");
+		$display("%b", ss1.naked_cols_mask);
+		$display("Naked Sqs Mask");
+		$display("%b", ss1.naked_sqs_mask);
+`endif
+
+
 
 		$display("Candidate Rows: ");
 		`PRINTCANDIDATELINE(ss1.candidate_line_rows_reg);
