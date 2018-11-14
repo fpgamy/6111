@@ -223,10 +223,78 @@ module soduku_solver_tb;
 					    4'd0, 4'd8, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 
 					    4'd4, 4'd9, 4'd0, 4'd6, 4'd0, 4'd0, 4'd1, 4'd0, 4'd8};
 		test_solver;
+
+		test_input  =  {4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6, 4'd0, 4'd1,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8, 4'd3, 4'd4, 4'd7,
+						4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd3, 4'd8, 4'd2, 4'd0,
+						4'd4, 4'd0, 4'd0, 4'd0, 4'd8, 4'd7, 4'd2, 4'd0, 4'd0,
+						4'd3, 4'd0, 4'd0, 4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8, 4'd0,
+						4'd8, 4'd1, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd2, 4'd4, 4'd0, 4'd6};
+		test_solver;
+
+		test_input  =  {4'd0, 4'd0, 4'd9, 4'd5, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 4'd6, 4'd1,
+						4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0,
+						4'd0, 4'd5, 4'd0, 4'd0, 4'd9, 4'd0, 4'd4, 4'd2, 4'd0,
+						4'd0, 4'd0, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9,
+						4'd0, 4'd1, 4'd0, 4'd2, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0,
+						4'd8, 4'd9, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd3, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd1, 4'd0, 4'd0};
+		test_solver;
 `endif
 
 `ifdef HARD
+		test_input  =  {4'd5, 4'd0, 4'd0, 4'd0, 4'd8, 4'd0, 4'd0, 4'd0, 4'd3,
+						4'd0, 4'd9, 4'd0, 4'd2, 4'd1, 4'd0, 4'd7, 4'd0, 4'd0,
+						4'd0, 4'd1, 4'd0, 4'd0, 4'd3, 4'd0, 4'd2, 4'd0, 4'd6,
+						4'd0, 4'd6, 4'd1, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd9, 4'd7, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0,
+						4'd3, 4'd8, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd2,
+						4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd0, 4'd0, 4'd0};
+		test_solver;
 
+		test_input  =  {4'd4, 4'd5, 4'd7, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd2, 4'd9, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd7, 4'd0, 4'd0, 4'd5, 4'd0, 4'd0, 4'd0, 4'd1,
+						4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd2, 4'd6, 4'd0, 4'd4,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd5, 4'd0, 4'd9, 4'd7,
+						4'd0, 4'd0, 4'd6, 4'd2, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0};
+		test_solver;
+
+		test_input  =  {4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd2, 4'd0, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0, 4'd1,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8, 4'd0, 4'd0, 4'd0,
+						4'd9, 4'd0, 4'd0, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd1, 4'd0, 4'd7, 4'd5, 4'd0, 4'd9, 4'd0,
+						4'd7, 4'd0, 4'd5, 4'd4, 4'd0, 4'd1, 4'd0, 4'd2, 4'd8,
+						4'd1, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0,
+						4'd0, 4'd8, 4'd0, 4'd0, 4'd0, 4'd4, 4'd0, 4'd1, 4'd5,
+						4'd4, 4'd5, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd7, 4'd0};
+		test_solver;
+
+		test_input  =  {4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd3,
+						4'd2, 4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0,
+						4'd1, 4'd0, 4'd5, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd2, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 4'd6, 4'd9, 4'd1,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0,
+						4'd0, 4'd4, 4'd0, 4'd3, 4'd1, 4'd0, 4'd9, 4'd0, 4'd2,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd7, 4'd5, 4'd0, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0};
+		test_solver;
+
+`endif
+
+`ifdef WHS
 		// "Worlds hardest soduku"
 		test_input  =  {4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0,
 					    4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0,
@@ -306,7 +374,11 @@ module soduku_solver_tb;
 `endif
 
 `ifdef HARD
-		#1000000;
+		#100000;
+`endif
+
+`ifdef WHS
+		#10000;
 `endif
 		done_signal = 1'b1;
 		end
@@ -457,6 +529,37 @@ module soduku_solver_tb;
 		$display("");
 		$display("Clock Cycles: ");
 		$display("%d", (clk_counter_end - clk_counter_start));
+
+`ifdef WHS
+		$display("Countdown:");
+		`PRINTGRID(ss1.done_countdown);
+		$display("Countdown ORed:");
+		$display("%d", ss1.done_countdown_orred);
+		$display("Timeout:");
+		$display("%d", ss1.timeout);
+`endif
+
+`ifndef VERBOSE
+		if ((&ss1.rows_solved) & (&ss1.cols_solved) & (&ss1.squares_solved))
+		begin
+			$display("%c[5;38m",27);
+			$display("***************************************");
+			$display("*********** TEST CASE PASS ************");
+			$write("***************************************");
+			$write("%c[0m",27);
+			$display("");
+		end
+		else 
+		begin
+			$display("%c[5;33m",27);
+			$display("***************************************");
+			$display("*********** TEST CASE FAIL ************");
+			$write("***************************************");
+			$display("%c[0m",27);
+			$display("");
+		end
+`endif
+
 	end
 	endtask
 endmodule

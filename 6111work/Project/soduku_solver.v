@@ -87,8 +87,10 @@ module soduku_solver(
 	wire    [(GRID_SIZE-1):0] col_groups [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire    [(GRID_SIZE-1):0] squ_groups [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 
-	assign done_out = &{rows_solved, cols_solved, squares_solved};
-//
+	reg     [6:0]             done_countdown [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
+	wire    [6:0]             done_countdown_orred;
+	wire                      timeout;
+	
 // INCLUDES
 //
 	`include "soduku_lib.v"
@@ -97,7 +99,7 @@ module soduku_solver(
 //
 // GENERATORS
 //
-
+	
 	// !!DISGUSTING-CODE WARNING!!
 	// GET YOUR SICK BAG READY.
 	generate
@@ -321,7 +323,8 @@ module soduku_solver(
 				begin
 					if (reset_in)
 					begin
-						one_hot_board_reg[row_genvar][col_genvar]   <= one_hot(unsolved[row_genvar][col_genvar]);
+						done_countdown[row_genvar][col_genvar] <= 7'd127; 
+						one_hot_board_reg[row_genvar][col_genvar]    <= one_hot(unsolved[row_genvar][col_genvar]);
 						
 						// If the board has a set value, it can only be that value
 						// if not, the cell could be anything
@@ -336,6 +339,19 @@ module soduku_solver(
 							one_hot_board_reg[row_genvar][col_genvar] <= possibilities_mask;
 						end
 						pvr[row_genvar][col_genvar] <= possibilities_mask;
+
+						if ((possibilities_mask == pvr[row_genvar][col_genvar]) && (done_countdown[row_genvar][col_genvar] > 0))
+						begin
+							done_countdown[row_genvar][col_genvar] <= done_countdown[row_genvar][col_genvar] - 1;
+						end
+						else if (done_countdown[row_genvar][col_genvar] > 0)
+						begin
+							done_countdown[row_genvar][col_genvar] <= 7'd127;							
+						end
+					end
+					else if (done_countdown[row_genvar][col_genvar] > 0)
+					begin
+						done_countdown[row_genvar][col_genvar] <= 0;
 					end
 				end
 
@@ -399,6 +415,20 @@ module soduku_solver(
 			end
 		end
 	endgenerate
+
+//
+// DONE/TIMEOUT 
+//
+	
+	assign done_countdown_orred = `OR_GRID(done_countdown);
+	assign timeout = ~|done_countdown_orred;
+	assign done_out = (&{rows_solved, cols_solved, squares_solved}) | timeout;
+
+//
+// SEQUENTIAL
+//
+
+	// Naked group and Hidden group alg
 
 	reg  [3:0] row_counter;
 	reg  [3:0] col_counter;
@@ -811,6 +841,7 @@ module soduku_solver(
 		end
 	end
 
+	// Candidate line alg
 	reg [3:0] square_counter;
 	always @(posedge clk_in or posedge reset_in)
 	begin

@@ -84,6 +84,89 @@ GRID[8][6] = VALUE;\
 GRID[8][7] = VALUE;\
 GRID[8][8] = VALUE
 
+`define OR_GRID(GRID) \
+GRID[0][0] |\
+GRID[0][1] |\
+GRID[0][2] |\
+GRID[0][3] |\
+GRID[0][4] |\
+GRID[0][5] |\
+GRID[0][6] |\
+GRID[0][7] |\
+GRID[0][8] |\
+GRID[1][0] |\
+GRID[1][1] |\
+GRID[1][2] |\
+GRID[1][3] |\
+GRID[1][4] |\
+GRID[1][5] |\
+GRID[1][6] |\
+GRID[1][7] |\
+GRID[1][8] |\
+GRID[2][0] |\
+GRID[2][1] |\
+GRID[2][2] |\
+GRID[2][3] |\
+GRID[2][4] |\
+GRID[2][5] |\
+GRID[2][6] |\
+GRID[2][7] |\
+GRID[2][8] |\
+GRID[3][0] |\
+GRID[3][1] |\
+GRID[3][2] |\
+GRID[3][3] |\
+GRID[3][4] |\
+GRID[3][5] |\
+GRID[3][6] |\
+GRID[3][7] |\
+GRID[3][8] |\
+GRID[4][0] |\
+GRID[4][1] |\
+GRID[4][2] |\
+GRID[4][3] |\
+GRID[4][4] |\
+GRID[4][5] |\
+GRID[4][6] |\
+GRID[4][7] |\
+GRID[4][8] |\
+GRID[5][0] |\
+GRID[5][1] |\
+GRID[5][2] |\
+GRID[5][3] |\
+GRID[5][4] |\
+GRID[5][5] |\
+GRID[5][6] |\
+GRID[5][7] |\
+GRID[5][8] |\
+GRID[6][0] |\
+GRID[6][1] |\
+GRID[6][2] |\
+GRID[6][3] |\
+GRID[6][4] |\
+GRID[6][5] |\
+GRID[6][6] |\
+GRID[6][7] |\
+GRID[6][8] |\
+GRID[7][0] |\
+GRID[7][1] |\
+GRID[7][2] |\
+GRID[7][3] |\
+GRID[7][4] |\
+GRID[7][5] |\
+GRID[7][6] |\
+GRID[7][7] |\
+GRID[7][8] |\
+GRID[8][0] |\
+GRID[8][1] |\
+GRID[8][2] |\
+GRID[8][3] |\
+GRID[8][4] |\
+GRID[8][5] |\
+GRID[8][6] |\
+GRID[8][7] |\
+GRID[8][8]
+
 `define RESET_3_BY_9(GRID) \
 GRID[0][0] <= 0;\
 GRID[1][0] <= 0;\
