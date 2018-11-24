@@ -8,10 +8,11 @@ module soduku_solver(
 //
 // PARAMETERS
 //
-	localparam   GRID_SIZE = 9;
+	localparam   GRID_SIZE   = 9;
+	localparam   MAX_GUESSES = 1024;
 //
 // PORT DECLARATIONS
-//	
+//
 	// Input clock and reset signal
 	input        clk_in, reset_in;
 	input  [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_in;
@@ -39,19 +40,29 @@ module soduku_solver(
 
 // REG/WIRE DEFINITIONS
 //
-	// Contains the current progress of the board 
+	// Contains the current progress of the board
 	// Uses one hot encoding
 	reg    [(GRID_SIZE-1):0] one_hot_board_reg   [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
 	// Contains 1s where the possible values are
 	reg    [(GRID_SIZE-1):0] pvr [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
 
-	// Masks of the pvr due to the gidden and naked groups
+	// Contains the past 16 pre-guess pvrs
+	reg    [(GRID_SIZE-1):0]   pvr_prevs [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)] [0:(MAX_GUESSES-1)];
+
+	// Masks of the pvr due to the hidden and naked groups
 	reg    [(GRID_SIZE-1):0] gmr [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
+
+	// A grid containing masks for guesses
+	reg    [(GRID_SIZE-1):0] guesses   [0:(MAX_GUESSES-1)];
+	// the row we will guess next
+	reg 	[3:0]			 guess_row [0:(MAX_GUESSES-1)];
+	// the column we will guess next
+	reg     [3:0]			 guess_col [0:(MAX_GUESSES-1)];
 
 	// We define the squares, rows, columns as follows:
 	// 0 ..................... 8
-	// _________________________ 
+	// _________________________
 	// |       |       |       | 0
 	// |   0   |   1   |   2   | .
 	// |       |       |       | .
@@ -63,6 +74,7 @@ module soduku_solver(
 	// |       |       |       | .
 	// |   6   |   7   |   8   | .
 	// |_______|_______|_______| 8
+
 	// Contains ones where the rows are solved
 	wire    [(GRID_SIZE-1):0] rows_solved;
 	// Contains ones where the columns are solved
@@ -70,15 +82,15 @@ module soduku_solver(
 	// Contains ones where the squares are solved
 	wire    [(GRID_SIZE-1):0] squares_solved;
 
-	// Contains zeros where the numbers are contains
+	// Contains ones where the numbers are contained
 	wire    [(GRID_SIZE-1):0] rows_contains         [0:(GRID_SIZE-1)];
-	
+
 	wire    [(GRID_SIZE-1):0] cols_contains         [0:(GRID_SIZE-1)];
 
 	wire    [(GRID_SIZE-1):0] squares_contains      [0:(GRID_SIZE-1)];
 
-	// candidate line [i][j] is the mask of values which exist on the ith square on the jth line in the square. 
-	// candidate lines rows 
+	// candidate line [i][j] is the mask of values which exist on the ith square on the jth line in the square.
+	// candidate lines rows
 	reg     [(GRID_SIZE-1):0] candidate_line_rows_reg   [(GRID_SIZE-1):0] [2:0];
 	// candidate lines columns
 	reg     [(GRID_SIZE-1):0] candidate_line_cols_reg   [(GRID_SIZE-1):0] [2:0];
@@ -91,7 +103,10 @@ module soduku_solver(
 	reg     [6:0]             			done_countdown [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire    [6:0]             			done_countdown_orred;
 	wire                      			timeout;
-	
+
+	// the depth in the pvr_prevs we need to restore from
+	reg     [15:0]						guess_number;
+
 // INCLUDES
 //
 	`include "soduku_lib.v"
@@ -100,7 +115,6 @@ module soduku_solver(
 //
 // GENERATORS
 //
-	
 	// !!DISGUSTING-CODE WARNING!!
 	// GET YOUR SICK BAG READY.
 	generate
@@ -122,6 +136,8 @@ module soduku_solver(
 				wire    [(GRID_SIZE-1):0] possibilities_mask;
 				wire    [(GRID_SIZE-1):0] candidate_line_r;
 				wire    [(GRID_SIZE-1):0] candidate_line_c;
+
+				wire 					  guess_this_cell;
 
 				assign single_pos_row = {
 					valid_one_hot({pvr[row_genvar][8][8], pvr[row_genvar][7][8], pvr[row_genvar][6][8], pvr[row_genvar][5][8], pvr[row_genvar][4][8], pvr[row_genvar][3][8], pvr[row_genvar][2][8], pvr[row_genvar][1][8], pvr[row_genvar][0][8]}),
@@ -183,7 +199,7 @@ module soduku_solver(
 							valid_one_hot({pvr[6][3][0], pvr[6][4][0], pvr[6][5][0], pvr[7][3][0], pvr[7][4][0], pvr[7][5][0], pvr[8][3][0], pvr[8][4][0], pvr[8][5][0]})
 						};
 					end
-					else 
+					else
 					begin
 						assign squares_contains_single = squares_contains[6];
 						assign candidate_line_c =  candidate_line_cols_reg[0][col_genvar] & candidate_line_cols_reg[3][col_genvar];
@@ -237,7 +253,7 @@ module soduku_solver(
 							valid_one_hot({pvr[3][3][0], pvr[3][4][0], pvr[3][5][0], pvr[4][3][0], pvr[4][4][0], pvr[4][5][0], pvr[5][3][0], pvr[5][4][0], pvr[5][5][0]})
 						};
 					end
-					else 
+					else
 					begin
 						assign squares_contains_single = squares_contains[3];
 						assign candidate_line_c =  candidate_line_cols_reg[0][col_genvar] & candidate_line_cols_reg[6][col_genvar];
@@ -255,7 +271,7 @@ module soduku_solver(
 						};
 					end
 				end
-				else 
+				else
 				begin
 					if (col_genvar >= 6)
 					begin
@@ -291,7 +307,7 @@ module soduku_solver(
 							valid_one_hot({pvr[0][3][0], pvr[0][4][0], pvr[0][5][0], pvr[1][3][0], pvr[1][4][0], pvr[1][5][0], pvr[2][3][0], pvr[2][4][0], pvr[2][5][0]})
 						};
 					end
-					else 
+					else
 					begin
 						assign squares_contains_single = squares_contains[0];
 						assign candidate_line_c =  candidate_line_cols_reg[3][col_genvar] & candidate_line_cols_reg[6][col_genvar];
@@ -307,34 +323,53 @@ module soduku_solver(
 							valid_one_hot({pvr[0][0][1], pvr[0][1][1], pvr[0][2][1], pvr[1][0][1], pvr[1][1][1], pvr[1][2][1], pvr[2][0][1], pvr[2][1][1], pvr[2][2][1]}),
 							valid_one_hot({pvr[0][0][0], pvr[0][1][0], pvr[0][2][0], pvr[1][0][0], pvr[1][1][0], pvr[1][2][0], pvr[2][0][0], pvr[2][1][0], pvr[2][2][0]})
 						};
-					end					
+					end
 				end
 
-				assign single_candidate_mask 	  = ~rows_contains[row_genvar] & ~cols_contains[col_genvar] & ~squares_contains_single;
+				assign single_candidate_mask 	  = (~rows_contains[row_genvar]) & (~cols_contains[col_genvar]) & (~squares_contains_single);
 				assign single_position_mask_temp  = (single_pos_row | single_pos_col | single_pos_sq) & pvr[row_genvar][col_genvar];
 				assign single_position_mask       = (|single_position_mask_temp) ? single_position_mask_temp : 9'b111_111_111;
-				assign possibilities_mask   	  = pvr[row_genvar][col_genvar] 
-													& single_candidate_mask 
-													& single_position_mask 
-													& (~candidate_line_c) 
-													& ~(candidate_line_r)
-													& gmr[row_genvar][col_genvar];
+				assign guess_this_cell 			  = (timeout == 1) && (row_genvar == guess_row[guess_number]) && (col_genvar == guess_col[guess_number]);
+				assign possibilities_mask   	  = pvr[row_genvar][col_genvar]
+													& single_candidate_mask
+													& single_position_mask
+													& (~candidate_line_c)
+													& (~candidate_line_r)
+													& gmr[row_genvar][col_genvar]
+													& (guess_this_cell ? (guesses[guess_number]) : (9'b111_111_111));
 
 				always @(posedge clk_in or posedge reset_in)
 				begin
 					if (reset_in)
 					begin
-						done_countdown[row_genvar][col_genvar] <= 7'd127;
+						done_countdown[row_genvar][col_genvar]            <= 7'd127;
 						error_detected[row_genvar*GRID_SIZE + col_genvar] <= 1'b0;
-						one_hot_board_reg[row_genvar][col_genvar]    <= one_hot(unsolved[row_genvar][col_genvar]);
-						
+						one_hot_board_reg[row_genvar][col_genvar]         <= one_hot(unsolved[row_genvar][col_genvar]);
 						// If the board has a set value, it can only be that value
 						// if not, the cell could be anything
-						pvr[row_genvar][col_genvar] <= |(one_hot(unsolved[row_genvar][col_genvar])) ? 
+						pvr[row_genvar][col_genvar] <= |(one_hot(unsolved[row_genvar][col_genvar])) ?
 																			one_hot(unsolved[row_genvar][col_genvar])
 																			: 9'b111_111_111;
+						`RESET_PREVS(pvr_prevs[row_genvar][col_genvar], |(one_hot(unsolved[row_genvar][col_genvar])) ?
+																			one_hot(unsolved[row_genvar][col_genvar])
+																			: 9'b111_111_111);
 					end
-					else if (one_hot_board_reg[row_genvar][col_genvar] == 0) 
+					else if (((|error_detected) || duplicate_error_detected_reg) & (|guess_number))
+					begin
+						error_detected[row_genvar*GRID_SIZE + col_genvar] <= 1'b0;
+						done_countdown[row_genvar][col_genvar] <= 7'd127;
+						pvr[row_genvar][col_genvar] <= pvr_prevs[row_genvar][col_genvar][guess_number-1];
+
+						if (valid_one_hot(pvr_prevs[row_genvar][col_genvar][guess_number-1]))
+						begin
+							one_hot_board_reg[row_genvar][col_genvar] <= pvr_prevs[row_genvar][col_genvar][guess_number-1];
+						end
+						else
+						begin
+							one_hot_board_reg[row_genvar][col_genvar] <= 0;
+						end
+					end
+					else if (one_hot_board_reg[row_genvar][col_genvar] == 0)
 					begin
 						if (possibilities_mask == 0)
 						begin
@@ -346,18 +381,31 @@ module soduku_solver(
 						end
 						pvr[row_genvar][col_genvar] <= possibilities_mask;
 
-						if ((possibilities_mask == pvr[row_genvar][col_genvar]) && (done_countdown[row_genvar][col_genvar] > 0))
+						if (timeout)
+						begin
+							done_countdown[row_genvar][col_genvar] <= 7'd127;
+						end
+						else if ((possibilities_mask == pvr[row_genvar][col_genvar]) && (done_countdown[row_genvar][col_genvar] > 0))
 						begin
 							done_countdown[row_genvar][col_genvar] <= done_countdown[row_genvar][col_genvar] - 1;
 						end
 						else if (done_countdown[row_genvar][col_genvar] > 0)
-						begin
-							done_countdown[row_genvar][col_genvar] <= 7'd127;							
+						begin // something changed
+							done_countdown[row_genvar][col_genvar] <= 7'd127;
 						end
 					end
 					else if (done_countdown[row_genvar][col_genvar] > 0)
-					begin
+					begin // already solved
 						done_countdown[row_genvar][col_genvar] <= 0;
+					end
+
+					if ((timeout == 0) && (row_genvar == guess_row[guess_number]) && (col_genvar == guess_col[guess_number]))
+					begin
+						pvr_prevs[row_genvar][col_genvar][guess_number] <= (~guesses[guess_number]) & pvr[row_genvar][col_genvar];
+					end
+					else if (~timeout)
+					begin
+						pvr_prevs[row_genvar][col_genvar][guess_number] <= pvr[row_genvar][col_genvar];
 					end
 				end
 
@@ -423,12 +471,12 @@ module soduku_solver(
 	endgenerate
 
 //
-// DONE/TIMEOUT 
+// DONE/TIMEOUT
 //
-	
+
 	assign done_countdown_orred = `OR_GRID(done_countdown);
 	assign timeout = ~|done_countdown_orred;
-	assign done_out = (&{rows_solved, cols_solved, squares_solved}) | timeout | (|error_detected);
+	assign done_out = (&{rows_solved, cols_solved, squares_solved});// | timeout | (|error_detected);
 
 //
 // SEQUENTIAL
@@ -479,7 +527,7 @@ module soduku_solver(
 	wire                      naked_group_detected_col;
 	wire                      naked_group_detected_sq;
 	wire 					  naked_group_detected;
-	
+
 	generate
 		genvar a_genvar;
 		for (a_genvar = 0; a_genvar < (GRID_SIZE); a_genvar = a_genvar + 1)
@@ -499,7 +547,7 @@ module soduku_solver(
 															pvr[6][3+a_genvar],
 															pvr[6][6+a_genvar]
 															);
-				assign anded_masks_sq[a_genvar]  = pvr[row_counter][col_counter] & pvr_sq[a_genvar];				
+				assign anded_masks_sq[a_genvar]  = pvr[row_counter][col_counter] & pvr_sq[a_genvar];
 			end
 			else if (a_genvar < 6)
 			begin
@@ -516,7 +564,7 @@ module soduku_solver(
 															);
 				assign anded_masks_sq[a_genvar]  = pvr[row_counter][col_counter] & pvr_sq[a_genvar];
 			end
-			else 
+			else
 			begin
 				assign pvr_sq[a_genvar]			 = mux9mask(sq_number,
 															pvr[2][0+a_genvar-6],
@@ -528,8 +576,8 @@ module soduku_solver(
 															pvr[8][0+a_genvar-6],
 															pvr[8][3+a_genvar-6],
 															pvr[8][6+a_genvar-6]
-															);	
-				assign anded_masks_sq[a_genvar]  = pvr[row_counter][col_counter] & pvr_sq[a_genvar];			
+															);
+				assign anded_masks_sq[a_genvar]  = pvr[row_counter][col_counter] & pvr_sq[a_genvar];
 			end
 		end
 	endgenerate
@@ -540,9 +588,9 @@ module soduku_solver(
 	assign hidden_cols_mask          = `HIDDEN_GROUP_MASK(anded_masks_col);
 	assign hidden_sqs_mask           = `HIDDEN_GROUP_MASK(anded_masks_sq);
 	// also need to check the ANDED masks
-	`SET_ARR_TO_SUM(naked_rows_sum_1, anded_masks_row);   
+	`SET_ARR_TO_SUM(naked_rows_sum_1, anded_masks_row);
 	assign naked_rows_mask_1		 = (`NAKED_GROUP_MASK(naked_rows_sum_1, number_of_ones_in_mask));
-	`SET_ARR_TO_SUM(naked_rows_sum_2, pvr[row_counter]); 
+	`SET_ARR_TO_SUM(naked_rows_sum_2, pvr[row_counter]);
 	assign naked_rows_mask_2		 = (`NAKED_GROUP_MASK(naked_rows_sum_2, number_of_ones_in_mask));
 	`SET_ARR_TO_SUM(naked_cols_sum_1, anded_masks_col);
 	assign naked_cols_mask_1		 = (`NAKED_GROUP_MASK(naked_cols_sum_1, number_of_ones_in_mask));
@@ -552,7 +600,7 @@ module soduku_solver(
 	assign naked_sqs_mask_1 		 = (`NAKED_GROUP_MASK(naked_sqs_sum_1, number_of_ones_in_mask));
 	`SET_ARR_TO_SUM(naked_sqs_sum_2, pvr_sq);
 	assign naked_sqs_mask_2			 = (`NAKED_GROUP_MASK(naked_sqs_sum_2, number_of_ones_in_mask));
-	
+
 	assign naked_cols_mask           = naked_cols_mask_1 & naked_cols_mask_2;
 	assign naked_rows_mask           = naked_rows_mask_1 & naked_rows_mask_2;
 	assign naked_sqs_mask            = naked_sqs_mask_1 & naked_sqs_mask_2;
@@ -581,7 +629,11 @@ module soduku_solver(
 			row_counter <= 0;
 			col_counter <= 0;
 		end
-		else 
+		else if ((|error_detected) || duplicate_error_detected_reg)
+		begin
+			`RESET_GRID(gmr, 9'b111_111_111);
+		end
+		else
 		begin
 			if (row_counter == 4'd8)
 			begin
@@ -589,15 +641,15 @@ module soduku_solver(
 				begin
 					col_counter <= 4'b0;
 				end
-				else 
+				else
 				begin
-					col_counter <= col_counter + 1;	
+					col_counter <= col_counter + 1;
 				end
 				row_counter <= 4'b0;
 			end
-			else 
+			else
 			begin
-				row_counter <= row_counter + 1;	
+				row_counter <= row_counter + 1;
 			end
 
 			if (hidden_group_detected_row)
@@ -633,7 +685,7 @@ module soduku_solver(
 							gmr[1][5] <= hidden_sqs_mask[5] ? anded_masks_sq[5] : gmr[1][5];
 							gmr[2][3] <= hidden_sqs_mask[6] ? anded_masks_sq[6] : gmr[2][3];
 							gmr[2][4] <= hidden_sqs_mask[7] ? anded_masks_sq[7] : gmr[2][4];
-							gmr[2][5] <= hidden_sqs_mask[8] ? anded_masks_sq[8] : gmr[2][5];							
+							gmr[2][5] <= hidden_sqs_mask[8] ? anded_masks_sq[8] : gmr[2][5];
 						end
 					2:
 						begin
@@ -669,7 +721,7 @@ module soduku_solver(
 							gmr[4][5] <= hidden_sqs_mask[5] ? anded_masks_sq[5] : gmr[4][5];
 							gmr[5][3] <= hidden_sqs_mask[6] ? anded_masks_sq[6] : gmr[5][3];
 							gmr[5][4] <= hidden_sqs_mask[7] ? anded_masks_sq[7] : gmr[5][4];
-							gmr[5][5] <= hidden_sqs_mask[8] ? anded_masks_sq[8] : gmr[5][5];							
+							gmr[5][5] <= hidden_sqs_mask[8] ? anded_masks_sq[8] : gmr[5][5];
 						end
 					5:
 						begin
@@ -705,7 +757,7 @@ module soduku_solver(
 							gmr[7][5] <= hidden_sqs_mask[5] ? anded_masks_sq[5] : gmr[7][5];
 							gmr[8][3] <= hidden_sqs_mask[6] ? anded_masks_sq[6] : gmr[8][3];
 							gmr[8][4] <= hidden_sqs_mask[7] ? anded_masks_sq[7] : gmr[8][4];
-							gmr[8][5] <= hidden_sqs_mask[8] ? anded_masks_sq[8] : gmr[8][5];							
+							gmr[8][5] <= hidden_sqs_mask[8] ? anded_masks_sq[8] : gmr[8][5];
 						end
 					8:
 						begin
@@ -755,7 +807,7 @@ module soduku_solver(
 							gmr[1][5] <= ~naked_sqs_mask[5] ? ~pvr[row_counter][col_counter] : gmr[1][5];
 							gmr[2][3] <= ~naked_sqs_mask[6] ? ~pvr[row_counter][col_counter] : gmr[2][3];
 							gmr[2][4] <= ~naked_sqs_mask[7] ? ~pvr[row_counter][col_counter] : gmr[2][4];
-							gmr[2][5] <= ~naked_sqs_mask[8] ? ~pvr[row_counter][col_counter] : gmr[2][5];							
+							gmr[2][5] <= ~naked_sqs_mask[8] ? ~pvr[row_counter][col_counter] : gmr[2][5];
 						end
 					2:
 						begin
@@ -791,7 +843,7 @@ module soduku_solver(
 							gmr[4][5] <= ~naked_sqs_mask[5] ? ~pvr[row_counter][col_counter] : gmr[4][5];
 							gmr[5][3] <= ~naked_sqs_mask[6] ? ~pvr[row_counter][col_counter] : gmr[5][3];
 							gmr[5][4] <= ~naked_sqs_mask[7] ? ~pvr[row_counter][col_counter] : gmr[5][4];
-							gmr[5][5] <= ~naked_sqs_mask[8] ? ~pvr[row_counter][col_counter] : gmr[5][5];							
+							gmr[5][5] <= ~naked_sqs_mask[8] ? ~pvr[row_counter][col_counter] : gmr[5][5];
 						end
 					5:
 						begin
@@ -827,7 +879,7 @@ module soduku_solver(
 							gmr[7][5] <= ~naked_sqs_mask[5] ? ~pvr[row_counter][col_counter] : gmr[7][5];
 							gmr[8][3] <= ~naked_sqs_mask[6] ? ~pvr[row_counter][col_counter] : gmr[8][3];
 							gmr[8][4] <= ~naked_sqs_mask[7] ? ~pvr[row_counter][col_counter] : gmr[8][4];
-							gmr[8][5] <= ~naked_sqs_mask[8] ? ~pvr[row_counter][col_counter] : gmr[8][5];							
+							gmr[8][5] <= ~naked_sqs_mask[8] ? ~pvr[row_counter][col_counter] : gmr[8][5];
 						end
 					8:
 						begin
@@ -854,6 +906,11 @@ module soduku_solver(
 		if (reset_in)
 		begin
 			square_counter <= 0;
+			`RESET_3_BY_9(candidate_line_rows_reg);
+			`RESET_3_BY_9(candidate_line_cols_reg);
+		end
+		else if ((|error_detected) || duplicate_error_detected_reg)
+		begin
 			`RESET_3_BY_9(candidate_line_rows_reg);
 			`RESET_3_BY_9(candidate_line_cols_reg);
 		end
@@ -924,7 +981,7 @@ module soduku_solver(
 																						(pvr[0][5] | pvr[1][5] | pvr[2][5]),
 																						(pvr[0][3] | pvr[1][3] | pvr[2][3]),
 																						(pvr[0][4] | pvr[1][4] | pvr[2][4])
-																					 );					
+																					 );
 					end
 				4'd2:
 					begin
@@ -957,7 +1014,7 @@ module soduku_solver(
 																						(pvr[0][8] | pvr[1][8] | pvr[2][8]),
 																						(pvr[0][6] | pvr[1][6] | pvr[2][6]),
 																						(pvr[0][7] | pvr[1][7] | pvr[2][7])
-																					 );	
+																					 );
 					end
 				4'd3:
 					begin
@@ -1023,7 +1080,7 @@ module soduku_solver(
 																						(pvr[3][5] | pvr[4][5] | pvr[5][5]),
 																						(pvr[3][3] | pvr[4][3] | pvr[5][3]),
 																						(pvr[3][4] | pvr[4][4] | pvr[5][4])
-																					 );					
+																					 );
 					end
 				4'd5:
 					begin
@@ -1056,7 +1113,7 @@ module soduku_solver(
 																						(pvr[3][8] | pvr[4][8] | pvr[5][8]),
 																						(pvr[3][6] | pvr[4][6] | pvr[5][6]),
 																						(pvr[3][7] | pvr[4][7] | pvr[5][7])
-																					 );	
+																					 );
 					end
 				4'd6:
 					begin
@@ -1122,7 +1179,7 @@ module soduku_solver(
 																						(pvr[6][5] | pvr[7][5] | pvr[8][5]),
 																						(pvr[6][3] | pvr[7][3] | pvr[8][3]),
 																						(pvr[6][4] | pvr[7][4] | pvr[8][4])
-																					 );					
+																					 );
 					end
 				4'd8:
 					begin
@@ -1155,7 +1212,7 @@ module soduku_solver(
 																						(pvr[6][8] | pvr[7][8] | pvr[8][8]),
 																						(pvr[6][6] | pvr[7][6] | pvr[8][6]),
 																						(pvr[6][7] | pvr[7][7] | pvr[8][7])
-																					 );	
+																					 );
 					end
 				default: ;
 			endcase
@@ -1164,9 +1221,66 @@ module soduku_solver(
 			begin
 				square_counter <= square_counter + 1;
 			end
-			else 
+			else
 			begin
-				square_counter <= 0;	
+				square_counter <= 0;
+			end
+		end
+	end
+
+	// the lowest number of ones in the grid
+	reg 	[3:0]						min_ones_reg;
+	reg 								duplicate_error_detected_reg;
+	always @(posedge clk_in or posedge reset_in)
+	begin
+		if (reset_in)
+		begin
+			min_ones_reg <= 4'd9;
+			guess_number <= 16'b0;
+			`RESET_PREVS(guess_col, 10);
+			`RESET_PREVS(guess_row, 10);
+			`RESET_PREVS(guesses, 0);
+			duplicate_error_detected_reg <= 0;
+		end
+		else
+		begin
+			if ((`SUM_L9_MASK(naked_rows_sum_2) == 9) && (~rows_solved[row_counter]))
+			begin
+				// $display("DUPLICATE");
+				duplicate_error_detected_reg <= 1'b1;
+			end
+			else if ((`SUM_L9_MASK(naked_cols_sum_2) == 9) && (~cols_solved[col_counter]))
+			begin
+				// $display("DUPLICATE");
+				duplicate_error_detected_reg <= 1'b1;
+			end
+			else if ((`SUM_L9_MASK(naked_sqs_sum_2) == 9) && (~squares_solved[sq_number]))
+			begin
+				// $display("DUPLICATE");
+				duplicate_error_detected_reg <= 1'b1;
+			end
+			else
+			begin
+				duplicate_error_detected_reg <= 1'b0;
+			end
+
+			if (timeout)
+			begin
+				min_ones_reg <= 4'd9;
+				guess_number <= guess_number + 1;
+			end
+			else if (((|error_detected) || duplicate_error_detected_reg) & (|guess_number))
+			begin //error at guess_number-1
+				min_ones_reg <= 4'd9;
+				guess_number <= guess_number - 1;
+				guesses[guess_number-1]   <= `GEN_GUESS(pvr_prevs[guess_row[guess_number-1]][guess_col[guess_number-1]][guess_number-1]);
+			end
+			if (((number_of_ones_in_mask < min_ones_reg) && (number_of_ones_in_mask > 1)) || (~valid_one_hot(pvr[row_counter][col_counter]) && valid_one_hot(pvr[guess_row[guess_number]][guess_col[guess_number]])))
+			begin
+				min_ones_reg			<= number_of_ones_in_mask;
+				guesses[guess_number]   <= `GEN_GUESS(pvr[row_counter][col_counter]);
+				guess_col[guess_number] <= col_counter;
+				guess_row[guess_number] <= row_counter;
 			end
 		end
 	end

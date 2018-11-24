@@ -23,7 +23,9 @@ module soduku_solver_tb;
 	// Contains all the numbers in solved board
 	wire [3:0] solved [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire done;
-	reg  done_signal;
+
+	reg  [15:0] test_counter;
+	reg  [15:0] pass_counter;
 
 	reg [127:0] clk_counter;
 	reg [127:0] clk_counter_start;
@@ -40,7 +42,7 @@ module soduku_solver_tb;
 				assign solved[row_genvar][col_genvar] = test_output[(36*(9-row_genvar)-(col_genvar*4)-1):(36*(9-row_genvar)-(col_genvar*4)-4)];
 			end
 		end
-		
+
 	endgenerate
 
 	// solution =  {4'd8, 4'd1, 4'd2, 4'd7, 4'd5, 4'd3, 4'd6, 4'd4, 4'd9,
@@ -52,7 +54,7 @@ module soduku_solver_tb;
 	// 		        4'd5, 4'd2, 4'd1, 4'd9, 4'd7, 4'd4, 4'd3, 4'd6, 4'd8,
 	// 		        4'd4, 4'd3, 4'd8, 4'd5, 4'd2, 4'd6, 4'd9, 4'd1, 4'd7,
 	// 		        4'd7, 4'd9, 4'd6, 4'd3, 4'd1, 4'd8, 4'd4, 4'd5, 4'd2};
-	
+
 	soduku_solver ss1   (
 							.clk_in    (clk)       ,
 							.reset_in  (reset)     ,
@@ -67,6 +69,8 @@ module soduku_solver_tb;
 		clk_counter 		= 0;
 		clk_counter_start 	= 0;
 		clk_counter_end 	= 0;
+		test_counter        = 0;
+		pass_counter        = 0;
 		clk         = 0;
 		reset       = 1;
 		test_input  =  {4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
@@ -81,7 +85,7 @@ module soduku_solver_tb;
 		reset       = 0;
 		#10;
 
-`ifdef BASIC 
+`ifdef BASIC
 
 		test_input  =  {4'd2, 4'd5, 4'd4, 4'd8, 4'd1, 4'd3, 4'd6, 4'd9, 4'd7,
 					    4'd7, 4'd1, 4'd9, 4'd6, 4'd2, 4'd5, 4'd8, 4'd3, 4'd4,
@@ -175,14 +179,14 @@ module soduku_solver_tb;
 					    4'd0, 4'd9, 4'd0, 4'd3, 4'd2, 4'd0, 4'd0, 4'd5, 4'd0};
 		test_solver;
 
-		test_input  =  {4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0, 
-						4'd5, 4'd4, 4'd3, 4'd0, 4'd2, 4'd0, 4'd0, 4'd0, 4'd6, 
-						4'd7, 4'd0, 4'd8, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0, 
-						4'd0, 4'd0, 4'd1, 4'd3, 4'd0, 4'd0, 4'd7, 4'd0, 4'd8, 
-						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 
-						4'd8, 4'd7, 4'd0, 4'd4, 4'd0, 4'd0, 4'd2, 4'd1, 4'd0, 
-						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 
-						4'd0, 4'd0, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 
+		test_input  =  {4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0,
+						4'd5, 4'd4, 4'd3, 4'd0, 4'd2, 4'd0, 4'd0, 4'd0, 4'd6,
+						4'd7, 4'd0, 4'd8, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd1, 4'd3, 4'd0, 4'd0, 4'd7, 4'd0, 4'd8,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5,
+						4'd8, 4'd7, 4'd0, 4'd4, 4'd0, 4'd0, 4'd2, 4'd1, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0,
+						4'd0, 4'd0, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2,
 						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0};
 		test_solver;
 
@@ -190,37 +194,48 @@ module soduku_solver_tb;
 
 `ifdef INTERMEDIATE
 
-		test_input  =  {4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 
-						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 
-						4'd4, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 
-						4'd7, 4'd2, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6, 
-						4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd7, 4'd2, 4'd5, 4'd0, 
-						4'd0, 4'd0, 4'd5, 4'd1, 4'd0, 4'd0, 4'd0, 4'd9, 4'd4, 
-						4'd0, 4'd6, 4'd9, 4'd0, 4'd0, 4'd5, 4'd0, 4'd4, 4'd0, 
-						4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 
+		test_input  =  {4'd0, 4'd4, 4'd0, 4'd8, 4'd0, 4'd0, 4'd5, 4'd7, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd4,
+						4'd0, 4'd8, 4'd0, 4'd0, 4'd1, 4'd4, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd6,
+						4'd0, 4'd0, 4'd3, 4'd1, 4'd0, 4'd8, 4'd7, 4'd0, 4'd0,
+						4'd0, 4'd7, 4'd0, 4'd0, 4'd2, 4'd0, 4'd0, 4'd1, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd6, 4'd2,
+						4'd0, 4'd1, 4'd0, 4'd2, 4'd0, 4'd6, 4'd4, 4'd5, 4'd3,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0};
+		test_solver;
+
+		test_input  =  {4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd4, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd7, 4'd2, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6,
+						4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd7, 4'd2, 4'd5, 4'd0,
+						4'd0, 4'd0, 4'd5, 4'd1, 4'd0, 4'd0, 4'd0, 4'd9, 4'd4,
+						4'd0, 4'd6, 4'd9, 4'd0, 4'd0, 4'd5, 4'd0, 4'd4, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0,
 						4'd0, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd5, 4'd0, 4'd0};
 
 		test_solver;
 
-		test_input  =  {4'd4, 4'd1, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 
-						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd8, 
-						4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 
-						4'd0, 4'd0, 4'd3, 4'd0, 4'd1, 4'd0, 4'd6, 4'd0, 4'd9, 
-						4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 
-						4'd0, 4'd5, 4'd2, 4'd0, 4'd6, 4'd0, 4'd3, 4'd0, 4'd0, 
-						4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd0, 
-						4'd0, 4'd0, 4'd0, 4'd3, 4'd2, 4'd0, 4'd4, 4'd0, 4'd0, 
+		test_input  =  {4'd4, 4'd1, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd8,
+						4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0,
+						4'd0, 4'd0, 4'd3, 4'd0, 4'd1, 4'd0, 4'd6, 4'd0, 4'd9,
+						4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd5, 4'd2, 4'd0, 4'd6, 4'd0, 4'd3, 4'd0, 4'd0,
+						4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd3, 4'd2, 4'd0, 4'd4, 4'd0, 4'd0,
 						4'd0, 4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6};
 		test_solver;
 
-		test_input  =  {4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 4'd9, 4'd1, 4'd2, 
-					    4'd0, 4'd0, 4'd0, 4'd8, 4'd9, 4'd1, 4'd5, 4'd6, 4'd0, 
-					    4'd5, 4'd1, 4'd9, 4'd0, 4'd2, 4'd6, 4'd3, 4'd8, 4'd0, 
-					    4'd6, 4'd4, 4'd2, 4'd5, 4'd7, 4'd3, 4'd8, 4'd9, 4'd1, 
-					    4'd0, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd3, 4'd6, 
-					    4'd0, 4'd3, 4'd0, 4'd2, 4'd6, 4'd0, 4'd7, 4'd4, 4'd5, 
-					    4'd0, 4'd0, 4'd5, 4'd0, 4'd8, 4'd0, 4'd4, 4'd7, 4'd9, 
-					    4'd0, 4'd8, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 
+		test_input  =  {4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd5, 4'd9, 4'd1, 4'd2,
+					    4'd0, 4'd0, 4'd0, 4'd8, 4'd9, 4'd1, 4'd5, 4'd6, 4'd0,
+					    4'd5, 4'd1, 4'd9, 4'd0, 4'd2, 4'd6, 4'd3, 4'd8, 4'd0,
+					    4'd6, 4'd4, 4'd2, 4'd5, 4'd7, 4'd3, 4'd8, 4'd9, 4'd1,
+					    4'd0, 4'd5, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd3, 4'd6,
+					    4'd0, 4'd3, 4'd0, 4'd2, 4'd6, 4'd0, 4'd7, 4'd4, 4'd5,
+					    4'd0, 4'd0, 4'd5, 4'd0, 4'd8, 4'd0, 4'd4, 4'd7, 4'd9,
+					    4'd0, 4'd8, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3,
 					    4'd4, 4'd9, 4'd0, 4'd6, 4'd0, 4'd0, 4'd1, 4'd0, 4'd8};
 		test_solver;
 
@@ -248,6 +263,17 @@ module soduku_solver_tb;
 `endif
 
 `ifdef HARD
+		test_input  = {4'd0, 4'd2, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd1, 4'd6, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd4, 4'd0, 4'd0, 4'd2, 4'd0, 4'd3, 4'd0, 4'd0, 4'd0,
+						4'd8, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd4, 4'd6,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd4, 4'd0, 4'd2, 4'd3,
+						4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9,
+						4'd9, 4'd0, 4'd0, 4'd0, 4'd0, 4'd2, 4'd0, 4'd0, 4'd8};
+		test_solver;
+
 		test_input  =  {4'd5, 4'd0, 4'd0, 4'd0, 4'd8, 4'd0, 4'd0, 4'd0, 4'd3,
 						4'd0, 4'd9, 4'd0, 4'd2, 4'd1, 4'd0, 4'd7, 4'd0, 4'd0,
 						4'd0, 4'd1, 4'd0, 4'd0, 4'd3, 4'd0, 4'd2, 4'd0, 4'd6,
@@ -309,6 +335,10 @@ module soduku_solver_tb;
 `endif
 
 		#50;
+		$display("***************************************");
+		$display("PASSED: %d/%d", pass_counter, test_counter);
+		$write("***************************************");
+		$display("");
 		$finish;
 	end
 
@@ -341,7 +371,7 @@ module soduku_solver_tb;
 	end
 `endif
 
-	always #5 
+	always #5
 	begin
 		clk = ~clk;
 		if (clk)
@@ -349,51 +379,51 @@ module soduku_solver_tb;
 `ifdef VERBOSE
 			printstatus;
 `endif
+			if (ss1.timeout)
+			begin
+				$display("Possibilities Grid: ");
+				`PRINTGRIDONEHOT(ss1.pvr);
+				$display("Rows Guessed: ");
+				`PRINTVEC16(ss1.guess_row);
+				$display("Cols Guessed: ");
+				`PRINTVEC16(ss1.guess_col);
+				$display("Guess Values: ");
+				`PRINTVECBIN16(ss1.guesses);
+				$display("Guess number");
+				$display("%d", ss1.guess_number);
+
+				$display("Previous grid possibilities");
+				`PRINTPREVGRIDONEHOT(ss1.pvr_prevs,ss1.guess_number-1);
+				$display("");
+				`PRINTPREVGRIDONEHOT(ss1.pvr_prevs,ss1.guess_number);
+				$display("Output: ");
+				`PRINTGRID(solved);
+			end
+			`assert_leq(ss1.guess_number, 1024)
+			`assert_neq((|ss1.error_detected & ~|ss1.guess_number), 1)
+			// $display("DONE: %d", done);
 			clk_counter = clk_counter + 1;
 		end
 	end
 
 	task test_solver;
 	begin
-		reset       = 1;
+		test_counter = test_counter + 1;
+		reset        = 1;
 		#20;
-		reset       = 0;
+		reset        = 0;
 		#10;
 
-		done_signal = 0;
 		clk_counter_start = clk_counter;
-		fork
 
+		@(posedge (done & clk))
 		begin
-`ifdef EASY
-		#10000;
-`endif
-
-`ifdef INTERMEDIATE
-		#100000;
-`endif
-
-`ifdef HARD
-		#100000;
-`endif
-
-`ifdef WHS
-		#10000;
-`endif
-		done_signal = 1'b1;
+			pass_counter    = pass_counter + 1;
+			clk_counter_end = clk_counter;
+			printstatus;
 		end
 
-		begin
-			@(posedge done_signal or posedge done)
-			begin
-				clk_counter_end <= clk_counter;
-			end
-		end
-
-		join
-
-		printstatus;
-		#10;		
+		#10;
 	end
 	endtask
 
@@ -410,10 +440,11 @@ module soduku_solver_tb;
 		$display("Possibilities Grid: ");
 		`PRINTGRIDONEHOT(ss1.pvr);
 
+`ifdef HIDDEN_TEST
 		$display("Hidden Group Grid: ");
 		`PRINTGRIDONEHOT(ss1.gmr);
-
-`ifdef HIDDEN_TEST
+		$display("Timeout countdown: ");
+		`PRINTGRID(ss1.done_countdown);
 		$display("Hidden Group in Row");
 		$display("%b", ss1.hidden_group_detected_row);
 		$display("Hidden Group in Col");
@@ -453,13 +484,11 @@ module soduku_solver_tb;
 		$display("%b", ss1.naked_sqs_mask);
 `endif
 
+		// $display("Candidate Rows: ");
+		// `PRINTCANDIDATELINE(ss1.candidate_line_rows_reg);
 
-
-		$display("Candidate Rows: ");
-		`PRINTCANDIDATELINE(ss1.candidate_line_rows_reg);
-
-		$display("Candidate Columns: ");
-		`PRINTCANDIDATELINE(ss1.candidate_line_cols_reg);
+		// $display("Candidate Columns: ");
+		// `PRINTCANDIDATELINE(ss1.candidate_line_cols_reg);
 
 		$display("Rows Solved: ");
 		$display("%b %b %b %b %b %b %b %b %b", ss1.rows_solved[0],
@@ -523,21 +552,35 @@ module soduku_solver_tb;
 		$display("Squares contains: ");
 		`PRINTVECBIN(ss1.squares_contains);
 
+		$display("ROW COUNTER:    %d", ss1.row_counter);
+		$display("COLUMN COUNTER: %d", ss1.col_counter);
+
+		$display("Rows Guessed: ");
+		`PRINTVEC16(ss1.guess_row);
+		$display("Cols Guessed: ");
+		`PRINTVEC16(ss1.guess_col);
+		$display("Guess Values: ");
+		`PRINTVECBIN16(ss1.guesses);
+		$display("Guess number");
+		$display("%d", ss1.guess_number);
+		$display("Timed_out?: ");
+		$display("%b", ss1.timeout);
+		$display("Error Detected");
+		$display("%b", (ss1.duplicate_error_detected_reg | (|ss1.error_detected)));
+		$display("%b", ss1.error_detected);
+		$display("Previous grid possibilities");
+		`PRINTPREVGRIDONEHOT(ss1.pvr_prevs,ss1.guess_number-1);
+		$display("");
+		`PRINTPREVGRIDONEHOT(ss1.pvr_prevs,ss1.guess_number);
+
+
 		$display("Output: ");
 		`PRINTGRID(solved);
 
 		$display("");
 		$display("Clock Cycles: ");
 		$display("%d", (clk_counter_end - clk_counter_start));
-
-`ifdef WHS
-		$display("Countdown:");
-		`PRINTGRID(ss1.done_countdown);
-		$display("Countdown ORed:");
-		$display("%d", ss1.done_countdown_orred);
-		$display("Timeout:");
-		$display("%d", ss1.timeout);
-`endif
+		$display("DONE: %d", done);
 
 `ifndef VERBOSE
 		if ((&ss1.rows_solved) & (&ss1.cols_solved) & (&ss1.squares_solved))
@@ -549,7 +592,7 @@ module soduku_solver_tb;
 			$write("%c[0m",27);
 			$display("");
 		end
-		else 
+		else
 		begin
 			$display("%c[5;33m",27);
 			$display("***************************************");
