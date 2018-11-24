@@ -45,16 +45,6 @@ module soduku_solver_tb;
 
 	endgenerate
 
-	// solution =  {4'd8, 4'd1, 4'd2, 4'd7, 4'd5, 4'd3, 4'd6, 4'd4, 4'd9,
-	// 		        4'd9, 4'd4, 4'd3, 4'd6, 4'd8, 4'd2, 4'd1, 4'd7, 4'd5,
-	// 		        4'd6, 4'd7, 4'd5, 4'd4, 4'd9, 4'd1, 4'd2, 4'd8, 4'd3,
-	// 		        4'd1, 4'd5, 4'd4, 4'd2, 4'd3, 4'd7, 4'd8, 4'd9, 4'd6,
-	// 		        4'd3, 4'd6, 4'd9, 4'd8, 4'd4, 4'd5, 4'd7, 4'd2, 4'd1,
-	// 		        4'd2, 4'd8, 4'd7, 4'd1, 4'd6, 4'd9, 4'd5, 4'd3, 4'd4,
-	// 		        4'd5, 4'd2, 4'd1, 4'd9, 4'd7, 4'd4, 4'd3, 4'd6, 4'd8,
-	// 		        4'd4, 4'd3, 4'd8, 4'd5, 4'd2, 4'd6, 4'd9, 4'd1, 4'd7,
-	// 		        4'd7, 4'd9, 4'd6, 4'd3, 4'd1, 4'd8, 4'd4, 4'd5, 4'd2};
-
 	soduku_solver ss1   (
 							.clk_in    (clk)       ,
 							.reset_in  (reset)     ,
@@ -379,6 +369,28 @@ module soduku_solver_tb;
 `ifdef VERBOSE
 			printstatus;
 `endif
+`ifdef GUESS
+			if (|ss1.error_detected)
+			begin
+				$display("ROW COUNTER:    %d", ss1.row_counter);
+				$display("COLUMN COUNTER: %d", ss1.col_counter);
+				$display("Error Detected");
+				$display("%b", (|ss1.error_detected));
+				$display("%b", ss1.error_detected);
+
+				$display("Possibilities Grid: ");
+				`PRINTGRIDONEHOT(ss1.pvr);
+				$display("Rows Guessed: ");
+				`PRINTVEC16(ss1.guess_row);
+				$display("Cols Guessed: ");
+				`PRINTVEC16(ss1.guess_col);
+				$display("Guess Values: ");
+				`PRINTVECBIN16(ss1.guesses);
+				$display("Guess number");
+				$display("%d", ss1.guess_number);
+				$display("Output: ");
+				`PRINTGRID(solved);
+			end
 			if (ss1.timeout)
 			begin
 				$display("Possibilities Grid: ");
@@ -399,7 +411,8 @@ module soduku_solver_tb;
 				$display("Output: ");
 				`PRINTGRID(solved);
 			end
-			`assert_leq(ss1.guess_number, 1024)
+`endif
+			`assert_leq(ss1.guess_number, 127)
 			`assert_neq((|ss1.error_detected & ~|ss1.guess_number), 1)
 			// $display("DONE: %d", done);
 			clk_counter = clk_counter + 1;
@@ -566,7 +579,7 @@ module soduku_solver_tb;
 		$display("Timed_out?: ");
 		$display("%b", ss1.timeout);
 		$display("Error Detected");
-		$display("%b", (ss1.duplicate_error_detected_reg | (|ss1.error_detected)));
+		$display("%b", (|ss1.error_detected));
 		$display("%b", ss1.error_detected);
 		$display("Previous grid possibilities");
 		`PRINTPREVGRIDONEHOT(ss1.pvr_prevs,ss1.guess_number-1);
