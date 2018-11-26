@@ -18,6 +18,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
+`define INSIDE(pixel_x, pixel_y, region_x, region_y, region_w, region_h) \
+      (((pixel_x > region_x) & (pixel_x < (region_x + region_w))) & ((pixel_y > region_y) & (pixel_y < (region_y + region_h))))
 
 module labkit(
    input CLK100MHZ,
@@ -37,19 +39,14 @@ module labkit(
    );
 
 
-// create 25mhz system clock for 640 x 480 VGA timing - in xvga.v
-//    wire clock_25mhz;
-//    clock_quarter_divider clockgen(.clk100_mhz(CLK100MHZ), .clock_25mhz(clock_25mhz));
-
-
 // create 65mhz system clock for 1024 x 768 XVGA timing
-    clk_wiz_0_clk_wiz clkdivider(.clk_in1(CLK100MHZ), .clk_out1(clock_65mhz));
+    clk_wiz_0_clk_wiz clkdivider(.clk_in1(CLK100MHZ), .clk_out1(clock_25mhz));
 
 
 //  instantiate 7-segment display;
     wire [31:0] data;
     wire [6:0] segments;
-    display_8hex display(.clk(clock_65mhz),.data(data), .seg(segments), .strobe(AN));
+    display_8hex display(.clk(clock_25mhz),.data(data), .seg(segments), .strobe(AN));
     assign SEG[6:0] = segments;
     assign SEG[7] = 1'b1;
 
@@ -67,19 +64,10 @@ module labkit(
     assign LED17_G = BTNC;
     assign LED17_B = BTNR;
 
-
-//
-//////////////////////////////////////////////////////////////////////////////////
-
-
-
-//////////////////////////////////////////////////////////////////////////////////
-// sample Verilog to generate color bars or border
-
     wire [10:0] hcount;
     wire [9:0] vcount;
     wire hsync, vsync, at_display_area;
-    xvga xvga1(.vclock(clock_65mhz),.hcount(hcount),.vcount(vcount),
+    xvga xvga1(.vclock(clock_25mhz),.hcount(hcount),.vcount(vcount),
           .hsync(hsync),.vsync(vsync),.blank(blank));
     wire [11:0] rgb;   // rgb is 12 bits
 
@@ -95,8 +83,8 @@ module labkit(
     assign VGA_G = ~blank ? rgb[7:4] : 0;
     assign VGA_B = ~blank ? rgb[3:0] : 0;
 
-    synchronize syn1 (.clk(clock_65mhz), .in(hsync), .out(hsync2));
-    synchronize syn2 (.clk(clock_65mhz), .in(vsync), .out(vsync2));
+    synchronize syn1 (.clk(clock_25mhz), .in(hsync), .out(hsync2));
+    synchronize syn2 (.clk(clock_25mhz), .in(vsync), .out(vsync2));
 
     assign VGA_HS = ~hsync2;
     assign VGA_VS = ~vsync2;

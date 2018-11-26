@@ -23,6 +23,7 @@ module soduku_solver_tb;
 	// Contains all the numbers in solved board
 	wire [3:0] solved [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire done;
+	wire invalid;
 
 	reg  [15:0] test_counter;
 	reg  [15:0] pass_counter;
@@ -46,11 +47,12 @@ module soduku_solver_tb;
 	endgenerate
 
 	soduku_solver ss1   (
-							.clk_in    (clk)       ,
-							.reset_in  (reset)     ,
-							.board_in  (test_input),
-							.board_out (test_output),
-							.done_out  (done)
+							.clk_in     (clk)        ,
+							.reset_in   (reset)      ,
+							.board_in   (test_input) ,
+							.board_out  (test_output),
+							.done_out   (done)       ,
+							.invalid_out(invalid)
 						);
 	initial
 	begin
@@ -306,6 +308,18 @@ module soduku_solver_tb;
 						4'd0, 4'd4, 4'd0, 4'd3, 4'd1, 4'd0, 4'd9, 4'd0, 4'd2,
 						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
 						4'd7, 4'd5, 4'd0, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0};
+		test_solver;
+
+
+		test_input  =  {4'd8, 4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd7, 4'd0, 4'd2, 4'd0, 4'd9, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd5, 4'd7, 4'd0, 4'd8,
+						4'd0, 4'd0, 4'd4, 4'd0, 4'd5, 4'd0, 4'd0, 4'd8, 4'd0,
+						4'd5, 4'd0, 4'd1, 4'd2, 4'd0, 4'd4, 4'd6, 4'd0, 4'd7,
+						4'd0, 4'd6, 4'd0, 4'd0, 4'd7, 4'd0, 4'd4, 4'd0, 4'd0,
+						4'd3, 4'd0, 4'd9, 4'd1, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd2, 4'd0, 4'd4, 4'd0, 4'd8, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd2};
 		test_solver;
 
 `endif
