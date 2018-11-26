@@ -3,7 +3,6 @@
 # 
 
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-1
@@ -13,21 +12,45 @@ set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.cache/wt [current_project]
 set_property parent.project_path /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/one.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/two.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/three.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/four.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/five.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/six.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/seven.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/eight.coe
-add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/nine.coe
+set_property include_dirs /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project [current_fileset]
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/one.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/two.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/three.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/four.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/five.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/six.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/seven.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/eight.coe
+add_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/nine.coe
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/one_image_48_48/one_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/one_image_48_48/one_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/two_image_48_48/two_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/two_image_48_48/two_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/three_image_48_48/three_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/three_image_48_48/three_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/four_image_48_48/four_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/four_image_48_48/four_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/five_image_48_48/five_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/five_image_48_48/five_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/six_image_48_48/six_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/six_image_48_48/six_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/seven_image_48_48/seven_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/seven_image_48_48/seven_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/eight_image_48_48/eight_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/eight_image_48_48/eight_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/nine_image_48_48/nine_image_48_48.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/nine_image_48_48/nine_image_48_48.dcp]
+add_files -quiet /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
 read_verilog -library xil_defaultlib {
+  /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v
+  /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v
+  /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/synchronize.v
   /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/xvga.v
-  /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/clk_wiz_0_clk_wiz.v
   /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/display_8hex.v
   /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v
 }

@@ -39,7 +39,7 @@ module labkit(
    );
 
 
-// create 65mhz system clock for 1024 x 768 XVGA timing
+// create 25mhz system clock for XVGA timing
     clk_wiz_0_clk_wiz clkdivider(.clk_in1(CLK100MHZ), .clk_out1(clock_25mhz));
 
 

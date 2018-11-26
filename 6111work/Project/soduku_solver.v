@@ -6,11 +6,15 @@ module soduku_solver(
 						done_out       ,
 						invalid_out
 					);
+// INCLUDES
+//
+	`include "common_lib.v"
+	`include "soduku_lib.v"
+	// `include "soduku_tb_lib.v"
+
 //
 // PARAMETERS
 //
-	localparam   GRID_SIZE   = 9;
-	localparam   MAX_GUESSES = 128;
 	localparam   DONE_COUNTDOWN_START = 127;
 //
 // PORT DECLARATIONS
@@ -111,12 +115,6 @@ module soduku_solver(
 
 	// the depth in the pvr_prevs we need to restore from
 	reg     [15:0]						guess_number;
-
-// INCLUDES
-//
-	`include "soduku_lib.v"
-	// `include "soduku_tb_lib.v"
-
 
 //
 // GENERATORS
