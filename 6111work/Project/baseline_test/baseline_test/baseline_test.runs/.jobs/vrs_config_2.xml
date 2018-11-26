@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="two_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/two_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

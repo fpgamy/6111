@@ -1,5 +1,0 @@
-MO binary_to_seven_seg_decoder NULL ../sources/binary_to_seven_seg_decoder.v vlg12/binary__to__seven__seg__decoder.bin 1537124442
-MO counter_from_0_to_9 NULL ../sources/counter_from_0_to_9.v vlg40/counter__from__0__to__9.bin 1537118578
-MO debounce NULL debounce.v vlg1D/debounce.bin 1537124442
-MO labkit NULL labkit.v vlg7B/labkit.bin 1537124442
-MO counter NULL ../sources/counter.v vlg10/counter.bin 1537124442
