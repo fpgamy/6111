@@ -3,8 +3,7 @@ module soduku_solver(
 						reset_in       ,
 						board_in       ,
 						board_out      ,
-						done_out       ,
-						invalid_out
+						done_out
 					);
 // INCLUDES
 //
@@ -15,7 +14,7 @@ module soduku_solver(
 //
 // PARAMETERS
 //
-	localparam   DONE_COUNTDOWN_START = 127;
+	localparam   DONE_COUNTDOWN_START = 81;
 //
 // PORT DECLARATIONS
 //
@@ -24,7 +23,7 @@ module soduku_solver(
 	input  [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_in;
 	output [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_out;
 	output       done_out;
-	output 		 invalid_out;
+	
 	// 2D array of 4 bit BCD values
 	// Contains all the numbers in unsolved board
 	// Number = 0 implies contains value
@@ -45,7 +44,9 @@ module soduku_solver(
 					    solved[7][0], solved[7][1], solved[7][2], solved[7][3], solved[7][4], solved[7][5], solved[7][6], solved[7][7], solved[7][8],
 					    solved[8][0], solved[8][1], solved[8][2], solved[8][3], solved[8][4], solved[8][5], solved[8][6], solved[8][7], solved[8][8]};
 
-	assign invalid_out = (|error_detected) & (~|guess_number);
+    // the depth in the pvr_prevs we need to restore from
+    reg     [15:0]                        guess_number;
+    reg     [(GRID_SIZE*GRID_SIZE-1):0] error_detected;
 
 // REG/WIRE DEFINITIONS
 //
@@ -108,13 +109,10 @@ module soduku_solver(
 	wire    [(GRID_SIZE-1):0] col_groups [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire    [(GRID_SIZE-1):0] squ_groups [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 
-	reg     [(GRID_SIZE*GRID_SIZE-1):0] error_detected;
 	reg     [6:0]             			done_countdown [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire    [6:0]             			done_countdown_orred;
 	wire                      			timeout;
 
-	// the depth in the pvr_prevs we need to restore from
-	reg     [15:0]						guess_number;
 
 //
 // GENERATORS

@@ -60,7 +60,7 @@ module labkit(
 //
 //  modify these lines as needed and insert your lab here
 
-    assign LED[15:2] = SW[15:2];
+    assign LED[15:1] = SW[15:1];
     //assign JB[7:0] = 8'b0;
     assign data = {28'h0123456, SW[3:0]};   // display 0123456 + SW
     assign LED16_R = BTNL;                  // left button -> red led
@@ -104,8 +104,8 @@ module labkit(
                             4'd3, 4'd0, 4'd9, 4'd1, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0,
                             4'd0, 4'd0, 4'd2, 4'd0, 4'd4, 4'd0, 4'd8, 4'd0, 4'd0,
                             4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd2};
-    soduku_solver my_love(.clk_in(clock_25mhz), .reset_in(reset_reg[4]), .board_in(board), .board_out(board_solved), .done_out(LED[0]), .invalid_out(LED[1]));
-    display_grid #(.CELL_PIXELS(CELL_PIXELS)) dg1(.clk_in(clock_25mhz), .x_in(hcount - GRID_START_X), .y_in(vcount - GRID_START_Y), .board_in(board), .rgb_out(sudoku_rgb));
+    soduku_solver my_love(.clk_in(clock_25mhz), .reset_in(reset_reg[4]), .board_in(board), .board_out(board_solved), .done_out(LED[0]));
+    display_grid #(.CELL_PIXELS(CELL_PIXELS)) dg1(.clk_in(clock_25mhz), .x_in(hcount - GRID_START_X), .y_in(vcount - GRID_START_Y), .board_in(board_solved), .rgb_out(sudoku_rgb));
 // the following lines are required for the Nexys4 VGA circuit
     assign VGA_R = ~blank ? rgb[11:8]: 0;
     assign VGA_G = ~blank ? rgb[7:4] : 0;
