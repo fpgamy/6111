@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543204741">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543266671">
   <File Type="VDS-TIMING-PB" Name="labkit_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="labkit_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="labkit.dcp"/>
@@ -10,19 +10,33 @@
   <File Type="PA-TCL" Name="labkit.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/baseline_test/xvga.v">
+    <File Path="$PSRCDIR/sources_1/imports/Project/soduku_solver.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../xvga.v"/>
-        <Attr Name="ImportTime" Val="1543199630"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../soduku_solver.v"/>
+        <Attr Name="ImportTime" Val="1543254531"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/baseline_test/clk_wiz_0_clk_wiz.v">
+    <File Path="$PSRCDIR/sources_1/new/display_grid.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../clk_wiz_0_clk_wiz.v"/>
-        <Attr Name="ImportTime" Val="1543203557"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/synchronize.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/xvga.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../xvga.v"/>
+        <Attr Name="ImportTime" Val="1543199630"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -46,56 +60,74 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../one.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/one.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../one.coe"/>
+        <Attr Name="ImportTime" Val="1543201380"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../two.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/two.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../two.coe"/>
+        <Attr Name="ImportTime" Val="1543201394"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../three.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/three.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../three.coe"/>
+        <Attr Name="ImportTime" Val="1543201389"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../four.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/four.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../four.coe"/>
+        <Attr Name="ImportTime" Val="1543201363"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../five.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/five.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../five.coe"/>
+        <Attr Name="ImportTime" Val="1543201402"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../six.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/six.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../six.coe"/>
+        <Attr Name="ImportTime" Val="1543201386"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../seven.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/seven.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../seven.coe"/>
+        <Attr Name="ImportTime" Val="1543201384"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../eight.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/eight.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../eight.coe"/>
+        <Attr Name="ImportTime" Val="1543201398"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../nine.coe">
+    <File Path="$PSRCDIR/sources_1/imports/baseline_test/nine.coe">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../nine.coe"/>
+        <Attr Name="ImportTime" Val="1543201375"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -121,9 +153,17 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="nine_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="eight_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="seven_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="six_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="five_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="four_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="three_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="two_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
 </GenRun>

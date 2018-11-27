@@ -1,0 +1,54 @@
+localparam   GRID_SIZE = 9;
+localparam   MAX_GUESSES = 128;
+
+function automatic [3:0] get_square;
+input [3:0] r_count, c_count;
+begin
+	if (r_count >= 6)
+	begin
+		if (c_count >= 6)
+		begin
+			get_square = 8;
+		end
+		else if (c_count >= 3)
+		begin
+			get_square = 7;
+		end
+		else
+		begin
+			get_square = 6;
+		end
+	end
+	else if (r_count >= 3)
+	begin
+		if (c_count >= 6)
+		begin
+			get_square = 5;
+		end
+		else if (c_count >= 3)
+		begin
+			get_square = 4;
+		end
+		else
+		begin
+			get_square = 3;
+		end
+	end
+	else
+	begin
+		if (c_count >= 6)
+		begin
+			get_square = 2;
+		end
+		else if (c_count >= 3)
+		begin
+			get_square = 1;
+		end
+		else
+		begin
+			get_square = 0;
+		end
+	end
+end
+endfunction
+

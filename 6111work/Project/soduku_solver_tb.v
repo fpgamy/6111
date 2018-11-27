@@ -2,13 +2,12 @@ module soduku_solver_tb;
 //
 // INCLUDES
 //
+	`include "common_lib.v"
 	`include "soduku_tb_lib.v"
-
 
 //
 // VARIABLES
 //
-	localparam   GRID_SIZE = 9;
 	reg        clk;
 	reg        reset;
 
@@ -23,6 +22,7 @@ module soduku_solver_tb;
 	// Contains all the numbers in solved board
 	wire [3:0] solved [(GRID_SIZE-1):0] [(GRID_SIZE-1):0];
 	wire done;
+	wire invalid;
 
 	reg  [15:0] test_counter;
 	reg  [15:0] pass_counter;
@@ -39,18 +39,19 @@ module soduku_solver_tb;
 		begin
 			for (col_genvar = 0; col_genvar < GRID_SIZE; col_genvar = col_genvar + 1)
 			begin
-				assign solved[row_genvar][col_genvar] = test_output[(36*(9-row_genvar)-(col_genvar*4)-1):(36*(9-row_genvar)-(col_genvar*4)-4)];
+				assign solved[row_genvar][col_genvar] = test_output[(4*GRID_SIZE*(GRID_SIZE-row_genvar)-(col_genvar*4)-1):(4*GRIDSIZE*(GRID_SIZE-row_genvar)-(col_genvar*4)-4)];
 			end
 		end
 
 	endgenerate
 
 	soduku_solver ss1   (
-							.clk_in    (clk)       ,
-							.reset_in  (reset)     ,
-							.board_in  (test_input),
-							.board_out (test_output),
-							.done_out  (done)
+							.clk_in     (clk)        ,
+							.reset_in   (reset)      ,
+							.board_in   (test_input) ,
+							.board_out  (test_output),
+							.done_out   (done)       ,
+							.invalid_out(invalid)
 						);
 	initial
 	begin
@@ -308,6 +309,18 @@ module soduku_solver_tb;
 						4'd7, 4'd5, 4'd0, 4'd0, 4'd0, 4'd6, 4'd0, 4'd0, 4'd0};
 		test_solver;
 
+
+		test_input  =  {4'd8, 4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd7, 4'd0, 4'd2, 4'd0, 4'd9, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd5, 4'd7, 4'd0, 4'd8,
+						4'd0, 4'd0, 4'd4, 4'd0, 4'd5, 4'd0, 4'd0, 4'd8, 4'd0,
+						4'd5, 4'd0, 4'd1, 4'd2, 4'd0, 4'd4, 4'd6, 4'd0, 4'd7,
+						4'd0, 4'd6, 4'd0, 4'd0, 4'd7, 4'd0, 4'd4, 4'd0, 4'd0,
+						4'd3, 4'd0, 4'd9, 4'd1, 4'd8, 4'd0, 4'd0, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd2, 4'd0, 4'd4, 4'd0, 4'd8, 4'd0, 4'd0,
+						4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd3, 4'd0, 4'd0, 4'd2};
+		test_solver;
+
 `endif
 
 `ifdef WHS
@@ -412,7 +425,7 @@ module soduku_solver_tb;
 				`PRINTGRID(solved);
 			end
 `endif
-			`assert_leq(ss1.guess_number, 127)
+			`assert_leq(ss1.guess_number, MAX_GUESSES-1)
 			`assert_neq((|ss1.error_detected & ~|ss1.guess_number), 1)
 			// $display("DONE: %d", done);
 			clk_counter = clk_counter + 1;
