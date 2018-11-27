@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Nov 27 12:32:05 2018">
+<application name="pa" timeStamp="Tue Nov 27 15:20:47 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f76e6547e5dd4d72bc4cda719a15d53c" type="ProjectID"/>
-<property name="ProjectIteration" value="85" type="ProjectIteration"/>
+<property name="ProjectIteration" value="91" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -18,7 +18,7 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="AddSources" value="7" type="JavaHandler"/>
-<property name="AutoConnectTarget" value="3" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="4" type="JavaHandler"/>
 <property name="CoreView" value="6" type="JavaHandler"/>
 <property name="CreateBlockDesign" value="1" type="JavaHandler"/>
 <property name="CreateHardwareDashboards" value="2" type="JavaHandler"/>
@@ -26,25 +26,25 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditDelete" value="3" type="JavaHandler"/>
 <property name="EditPaste" value="2" type="JavaHandler"/>
 <property name="LaunchOpenTarget" value="1" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="47" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="48" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="OpenFile" value="4" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="53" type="JavaHandler"/>
-<property name="OpenRecentTarget" value="11" type="JavaHandler"/>
-<property name="ProgramDevice" value="51" type="JavaHandler"/>
+<property name="OpenFile" value="6" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="55" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="13" type="JavaHandler"/>
+<property name="ProgramDevice" value="52" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="15" type="JavaHandler"/>
 <property name="RecustomizeCore" value="8" type="JavaHandler"/>
 <property name="RefreshDevice" value="1" type="JavaHandler"/>
-<property name="ReportTimingSummary" value="2" type="JavaHandler"/>
-<property name="ReportUtilization" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="54" type="JavaHandler"/>
-<property name="RunImplementation" value="38" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="3" type="JavaHandler"/>
+<property name="ReportUtilization" value="2" type="JavaHandler"/>
+<property name="RunBitgen" value="57" type="JavaHandler"/>
+<property name="RunImplementation" value="42" type="JavaHandler"/>
 <property name="RunSchematic" value="1" type="JavaHandler"/>
 <property name="RunSynthesis" value="11" type="JavaHandler"/>
-<property name="SaveFileProxyHandler" value="2" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="3" type="JavaHandler"/>
 <property name="ShowSource" value="1" type="JavaHandler"/>
 <property name="ShowView" value="14" type="JavaHandler"/>
-<property name="ViewTaskImplementation" value="4" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="6" type="JavaHandler"/>
 <property name="ViewTaskProjectManager" value="12" type="JavaHandler"/>
 <property name="ui.views.b.aG" value="1" type="JavaHandler"/>
 <property name="ui.views.b.h.e" value="1" type="JavaHandler"/>
