@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="frame_buffer_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.runs/frame_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="video_clk_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.runs/video_clk_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="frame_buffer_synth_1"/>
+		<Parent Id="video_clk_synth_1"/>
+	</Run>
+</Runs>
+

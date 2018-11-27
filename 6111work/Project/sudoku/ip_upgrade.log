@@ -1,0 +1,37 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
+| Date         : Mon Nov 12 15:57:06 2018
+| Host         : eecs-digital-21 running 64-bit Ubuntu 14.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'video_clk'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of video_clk from xilinx.com:ip:clk_wiz:5.2 (Rev. 1) to xilinx.com:ip:clk_wiz:5.3 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
+| Date         : Mon Nov 12 15:50:06 2018
+| Host         : eecs-digital-21 running 64-bit Ubuntu 14.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'frame_buffer'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of frame_buffer (xilinx.com:ip:blk_mem_gen:8.3) from (Rev. 1) to (Rev. 3)
+

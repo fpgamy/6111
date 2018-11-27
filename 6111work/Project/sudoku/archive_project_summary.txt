@@ -1,0 +1,183 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = camera_simple_frame_buffer
+Directory = /home/wbraun/camera_simple_frame_buffer
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = /home/wbraun/camera_simple_frame_buffer/camera_simple_frame_buffer.cache/compile_simlib/xsim
+
+Section (2) - Excluded Runs
+---------------------------
+The run results were excluded for the following runs in the archived project:-
+
+<synth_1>
+<frame_buffer_synth_1>
+<video_clk_synth_1>
+<impl_1>
+<frame_buffer_impl_1>
+<video_clk_impl_1>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<frame_buffer>
+None
+
+<video_clk>
+None
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+<sources_1>
+None
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./camera_simple_frame_buffer.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config.v
+./camera_simple_frame_buffer.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v
+./camera_simple_frame_buffer.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v
+./camera_simple_frame_buffer.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_read.v
+./camera_simple_frame_buffer.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_configure.v
+./camera_simple_frame_buffer.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v
+
+<constrs_1>
+./camera_simple_frame_buffer.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
+
+<sim_1>
+None
+
+<frame_buffer>
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/doc/blk_mem_gen_v8_3_changelog.txt
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer.vho
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer.veo
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/summary.log
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/sim/frame_buffer.vhd
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer.dcp
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer_stub.v
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer_stub.vhdl
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer_sim_netlist.v
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer_sim_netlist.vhdl
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer_ooc.xdc
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/synth/frame_buffer.vhd
+./camera_simple_frame_buffer.srcs/sources_1/ip/frame_buffer/frame_buffer.xml
+
+<video_clk>
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk.xci
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/doc/clk_wiz_v5_2_changelog.txt
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_board.xdc
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk.veo
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_clk_wiz.v
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk.v
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk.dcp
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_stub.v
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_stub.vhdl
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_sim_netlist.v
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_sim_netlist.vhdl
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk.xdc
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk_ooc.xdc
+./camera_simple_frame_buffer.srcs/sources_1/ip/video_clk/video_clk.xml
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+None
+
+<frame_buffer>
+None
+
+<video_clk>
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = /home/wbraun/vivado.jou
+Archived Location = ./camera_simple_frame_buffer/vivado.jou
+
+Source File = /home/wbraun/vivado.log
+Archived Location = ./camera_simple_frame_buffer/vivado.log
+

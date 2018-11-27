@@ -1,0 +1,1030 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/three_16_d_1/three_16_d.dcp]
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22163 
+WARNING: [Synth 8-1102] /* in comment [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v:201]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1066.520 ; gain = 171.324 ; free physical = 1963 ; free virtual = 12430
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:4]
+	Parameter GRID_SIZE bound to: 9 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter CHOOSE_XY1 bound to: 1 - type: integer 
+	Parameter CHOOSE_XY2 bound to: 2 - type: integer 
+	Parameter RESIZING bound to: 3 - type: integer 
+	Parameter RECOGNIZING bound to: 4 - type: integer 
+	Parameter SOLVING bound to: 5 - type: integer 
+	Parameter OUTPUT bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/display_8hex.v:16]
+	Parameter bits bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'display_8hex' (1#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'pwr_reset' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/reset.v:23]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sr_reg' and it is trimmed from '24' to '23' bits. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/reset.v:32]
+INFO: [Synth 8-256] done synthesizing module 'pwr_reset' (2#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/reset.v:23]
+INFO: [Synth 8-638] synthesizing module 'debounce' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/debounce.v:4]
+	Parameter DELAY bound to: 250000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (3#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/debounce.v:4]
+INFO: [Synth 8-638] synthesizing module 'clk_prescale' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/clk_prescale.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_prescale' (4#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/clk_prescale.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:147]
+INFO: [Synth 8-638] synthesizing module 'video_clk' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/video_clk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'video_clk' (5#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/video_clk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'camera' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera.v:1]
+INFO: [Synth 8-638] synthesizing module 'camera_configure' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_configure.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'OV7670_config_rom' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v:22]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000000110110 is unreachable [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v:29]
+INFO: [Synth 8-256] done synthesizing module 'OV7670_config_rom' (6#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v:22]
+INFO: [Synth 8-638] synthesizing module 'OV7670_config' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter FSM_IDLE bound to: 0 - type: integer 
+	Parameter FSM_SEND_CMD bound to: 1 - type: integer 
+	Parameter FSM_DONE bound to: 2 - type: integer 
+	Parameter FSM_TIMER bound to: 3 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config.v:58]
+INFO: [Synth 8-256] done synthesizing module 'OV7670_config' (7#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config.v:23]
+INFO: [Synth 8-638] synthesizing module 'SCCB_interface' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter SCCB_FREQ bound to: 100000 - type: integer 
+	Parameter CAMERA_ADDR bound to: 8'b01000010 
+	Parameter FSM_IDLE bound to: 0 - type: integer 
+	Parameter FSM_START_SIGNAL bound to: 1 - type: integer 
+	Parameter FSM_LOAD_BYTE bound to: 2 - type: integer 
+	Parameter FSM_TX_BYTE_1 bound to: 3 - type: integer 
+	Parameter FSM_TX_BYTE_2 bound to: 4 - type: integer 
+	Parameter FSM_TX_BYTE_3 bound to: 5 - type: integer 
+	Parameter FSM_TX_BYTE_4 bound to: 6 - type: integer 
+	Parameter FSM_END_SIGNAL_1 bound to: 7 - type: integer 
+	Parameter FSM_END_SIGNAL_2 bound to: 8 - type: integer 
+	Parameter FSM_END_SIGNAL_3 bound to: 9 - type: integer 
+	Parameter FSM_END_SIGNAL_4 bound to: 10 - type: integer 
+	Parameter FSM_DONE bound to: 11 - type: integer 
+	Parameter FSM_TIMER bound to: 12 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v:72]
+INFO: [Synth 8-256] done synthesizing module 'SCCB_interface' (8#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v:23]
+INFO: [Synth 8-256] done synthesizing module 'camera_configure' (9#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_configure.v:23]
+INFO: [Synth 8-638] synthesizing module 'camera_read' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_read.v:21]
+	Parameter WAIT_FRAME_START bound to: 0 - type: integer 
+	Parameter ROW_CAPTURE bound to: 1 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_read.v:42]
+INFO: [Synth 8-256] done synthesizing module 'camera_read' (10#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_read.v:21]
+INFO: [Synth 8-638] synthesizing module 'camera_address_gen' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v:1]
+	Parameter VCOUNT_MAX bound to: 479 - type: integer 
+	Parameter HCOUNT_MAX bound to: 639 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'camera_address_gen' (11#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v:1]
+INFO: [Synth 8-256] done synthesizing module 'camera' (12#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera.v:1]
+INFO: [Synth 8-638] synthesizing module 'video_playback' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:1]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter CHOOSE_XY1 bound to: 1 - type: integer 
+	Parameter CHOOSE_XY2 bound to: 2 - type: integer 
+	Parameter TARGET_WIDTH bound to: 144 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'video_playback' (13#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:1]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (14#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'frame_parser' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:3]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter DIV_X_START bound to: 1 - type: integer 
+	Parameter DIV_X_END bound to: 2 - type: integer 
+	Parameter DIV_Y_START bound to: 3 - type: integer 
+	Parameter DIV_Y_END bound to: 4 - type: integer 
+	Parameter RESCALING bound to: 5 - type: integer 
+	Parameter SCREENWIDTH bound to: 640 - type: integer 
+	Parameter SCREENHEIGHT bound to: 480 - type: integer 
+	Parameter TARGET bound to: 144 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'divider' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/Downloads/divider.v:10]
+	Parameter WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider' (15#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/Downloads/divider.v:10]
+INFO: [Synth 8-638] synthesizing module 'frame_transfer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/frame_transfer.v:23]
+	Parameter TARGET bound to: 144 - type: integer 
+	Parameter MAX_CYCLES bound to: 20738 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter TRANSFERRING bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frame_transfer' (16#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/frame_transfer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:100]
+INFO: [Synth 8-256] done synthesizing module 'frame_parser' (17#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:3]
+INFO: [Synth 8-638] synthesizing module 'rescaled_frame_buffer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/rescaled_frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rescaled_frame_buffer' (18#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/rescaled_frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'bram_quarantine' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:23]
+INFO: [Synth 8-638] synthesizing module 'one_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/one_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'one_16_d' (19#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/one_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'two_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/two_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'two_16_d' (20#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/two_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'three_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/three_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'three_16_d' (21#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/three_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'four_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/four_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'four_16_d' (22#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/four_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'five_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/five_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'five_16_d' (23#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/five_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'six_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/six_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'six_16_d' (24#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/six_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'seven_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/seven_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'seven_16_d' (25#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/seven_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'eight_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/eight_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'eight_16_d' (26#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/eight_16_d_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'nine_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/nine_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'nine_16_d' (27#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/realtime/nine_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'bram_quarantine' (28#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:23]
+WARNING: [Synth 8-3848] Net RGB1_Blue in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:8]
+WARNING: [Synth 8-3848] Net RGB1_Green in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:8]
+WARNING: [Synth 8-3848] Net RGB1_Red in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:8]
+WARNING: [Synth 8-3848] Net RGB2_Blue in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:9]
+WARNING: [Synth 8-3848] Net RGB2_Green in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:9]
+WARNING: [Synth 8-3848] Net RGB2_Red in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:9]
+WARNING: [Synth 8-3848] Net camera_sda in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:32]
+WARNING: [Synth 8-3848] Net rom_addr in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:303]
+INFO: [Synth 8-256] done synthesizing module 'top' (29#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:4]
+WARNING: [Synth 8-3917] design top has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port JA[4] driven by constant 1
+WARNING: [Synth 8-3917] design top has port JA[0] driven by constant 0
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[18]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[17]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[16]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[15]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[14]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[13]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[12]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[11]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[10]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[9]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[8]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[7]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[6]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[5]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[4]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[3]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[2]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[1]
+WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[0]
+WARNING: [Synth 8-3331] design camera_address_gen has unconnected port camera_pixel[11]
+WARNING: [Synth 8-3331] design camera_address_gen has unconnected port camera_pixel[6]
+WARNING: [Synth 8-3331] design camera_address_gen has unconnected port camera_pixel[5]
+WARNING: [Synth 8-3331] design camera_address_gen has unconnected port camera_pixel[0]
+WARNING: [Synth 8-3331] design top has unconnected port LED[15]
+WARNING: [Synth 8-3331] design top has unconnected port LED[14]
+WARNING: [Synth 8-3331] design top has unconnected port LED[13]
+WARNING: [Synth 8-3331] design top has unconnected port LED[12]
+WARNING: [Synth 8-3331] design top has unconnected port LED[11]
+WARNING: [Synth 8-3331] design top has unconnected port LED[10]
+WARNING: [Synth 8-3331] design top has unconnected port LED[9]
+WARNING: [Synth 8-3331] design top has unconnected port LED[8]
+WARNING: [Synth 8-3331] design top has unconnected port LED[7]
+WARNING: [Synth 8-3331] design top has unconnected port LED[6]
+WARNING: [Synth 8-3331] design top has unconnected port LED[5]
+WARNING: [Synth 8-3331] design top has unconnected port LED[4]
+WARNING: [Synth 8-3331] design top has unconnected port LED[3]
+WARNING: [Synth 8-3331] design top has unconnected port LED[2]
+WARNING: [Synth 8-3331] design top has unconnected port RGB1_Blue
+WARNING: [Synth 8-3331] design top has unconnected port RGB1_Green
+WARNING: [Synth 8-3331] design top has unconnected port RGB1_Red
+WARNING: [Synth 8-3331] design top has unconnected port RGB2_Blue
+WARNING: [Synth 8-3331] design top has unconnected port RGB2_Green
+WARNING: [Synth 8-3331] design top has unconnected port RGB2_Red
+WARNING: [Synth 8-3331] design top has unconnected port JC[7]
+WARNING: [Synth 8-3331] design top has unconnected port JC[6]
+WARNING: [Synth 8-3331] design top has unconnected port JC[5]
+WARNING: [Synth 8-3331] design top has unconnected port JC[4]
+WARNING: [Synth 8-3331] design top has unconnected port JC[3]
+WARNING: [Synth 8-3331] design top has unconnected port JC[2]
+WARNING: [Synth 8-3331] design top has unconnected port JC[1]
+WARNING: [Synth 8-3331] design top has unconnected port JC[0]
+WARNING: [Synth 8-3331] design top has unconnected port JD[7]
+WARNING: [Synth 8-3331] design top has unconnected port JD[6]
+WARNING: [Synth 8-3331] design top has unconnected port JD[5]
+WARNING: [Synth 8-3331] design top has unconnected port JD[4]
+WARNING: [Synth 8-3331] design top has unconnected port JD[3]
+WARNING: [Synth 8-3331] design top has unconnected port JD[2]
+WARNING: [Synth 8-3331] design top has unconnected port JD[1]
+WARNING: [Synth 8-3331] design top has unconnected port JD[0]
+WARNING: [Synth 8-3331] design top has unconnected port SW[14]
+WARNING: [Synth 8-3331] design top has unconnected port SW[13]
+WARNING: [Synth 8-3331] design top has unconnected port SW[12]
+WARNING: [Synth 8-3331] design top has unconnected port SW[11]
+WARNING: [Synth 8-3331] design top has unconnected port SW[10]
+WARNING: [Synth 8-3331] design top has unconnected port SW[9]
+WARNING: [Synth 8-3331] design top has unconnected port SW[8]
+WARNING: [Synth 8-3331] design top has unconnected port SW[7]
+WARNING: [Synth 8-3331] design top has unconnected port SW[6]
+WARNING: [Synth 8-3331] design top has unconnected port SW[5]
+WARNING: [Synth 8-3331] design top has unconnected port SW[4]
+WARNING: [Synth 8-3331] design top has unconnected port SW[3]
+WARNING: [Synth 8-3331] design top has unconnected port SW[2]
+WARNING: [Synth 8-3331] design top has unconnected port CPU_RESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1098.777 ; gain = 203.582 ; free physical = 1929 ; free virtual = 12397
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin display:data[15] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[14] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[13] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[12] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[11] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[10] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[9] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[8] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[7] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[6] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[5] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin display:data[4] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:79]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[7] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[6] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[5] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[4] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[3] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[2] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[1] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+WARNING: [Synth 8-3295] tying undriven pin bram_quarantine_1:addr[0] to constant 0 [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:314]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1098.777 ; gain = 203.582 ; free physical = 1929 ; free virtual = 12397
+---------------------------------------------------------------------------------
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/three_16_d_1/three_16_d.dcp]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'eight_16_d' instantiated as 'bram_quarantine_1/eight_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:73]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'five_16_d' instantiated as 'bram_quarantine_1/five_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:58]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'four_16_d' instantiated as 'bram_quarantine_1/four_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:53]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'frame_buffer' instantiated as 'frame_buffer_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:258]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'nine_16_d' instantiated as 'bram_quarantine_1/nine_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:78]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'one_16_d' instantiated as 'bram_quarantine_1/one_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:38]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'rescaled_frame_buffer' instantiated as 'rescaled_fb_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:296]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'seven_16_d' instantiated as 'bram_quarantine_1/seven_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:68]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'six_16_d' instantiated as 'bram_quarantine_1/six_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:63]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'three_16_d' instantiated as 'bram_quarantine_1/three_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:48]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'two_16_d' instantiated as 'bram_quarantine_1/two_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:43]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'video_clk' instantiated as 'video_clk_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:214]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_2/video_clk_in_context.xdc] for cell 'video_clk_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_2/video_clk_in_context.xdc] for cell 'video_clk_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_3/rescaled_frame_buffer_in_context.xdc] for cell 'rescaled_fb_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_3/rescaled_frame_buffer_in_context.xdc] for cell 'rescaled_fb_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_4/one_16_d_in_context.xdc] for cell 'bram_quarantine_1/one_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_4/one_16_d_in_context.xdc] for cell 'bram_quarantine_1/one_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_5/nine_16_d_in_context.xdc] for cell 'bram_quarantine_1/nine_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_5/nine_16_d_in_context.xdc] for cell 'bram_quarantine_1/nine_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_6/five_16_d_in_context.xdc] for cell 'bram_quarantine_1/five_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_6/five_16_d_in_context.xdc] for cell 'bram_quarantine_1/five_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_7/six_16_d_in_context.xdc] for cell 'bram_quarantine_1/six_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_7/six_16_d_in_context.xdc] for cell 'bram_quarantine_1/six_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_8/four_16_d_in_context.xdc] for cell 'bram_quarantine_1/four_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_8/four_16_d_in_context.xdc] for cell 'bram_quarantine_1/four_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_9/seven_16_d_in_context.xdc] for cell 'bram_quarantine_1/seven_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_9/seven_16_d_in_context.xdc] for cell 'bram_quarantine_1/seven_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_10/two_16_d_in_context.xdc] for cell 'bram_quarantine_1/two_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_10/two_16_d_in_context.xdc] for cell 'bram_quarantine_1/two_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_11/eight_16_d_in_context.xdc] for cell 'bram_quarantine_1/eight_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_11/eight_16_d_in_context.xdc] for cell 'bram_quarantine_1/eight_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_12/three_16_d_in_context.xdc] for cell 'bram_quarantine_1/three_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_12/three_16_d_in_context.xdc] for cell 'bram_quarantine_1/three_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1471.484 ; gain = 0.004 ; free physical = 1662 ; free virtual = 12131
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/three_16_d_1/three_16_d.dcp]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK_100M. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_2/video_clk_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_100M. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-22158-eecs-digital-17/dcp_2/video_clk_in_context.xdc, line 4).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FSM_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "timer0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "FSM_state0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FSM_state0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "timer0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:76]
+INFO: [Synth 8-5544] ROM "dividend" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "accl_x" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:172]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:161]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:157]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:176]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top'
+INFO: [Synth 8-5544] ROM "frame_parser_start" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                          0000001 |                             0000
+              CHOOSE_XY1 |                          0000010 |                             0001
+              CHOOSE_XY2 |                          0000100 |                             0010
+                RESIZING |                          0001000 |                             0011
+             RECOGNIZING |                          0010000 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 10    
+	   3 Input     10 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 6     
+	               10 Bit    Registers := 15    
+	                8 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 39    
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   7 Input     32 Bit        Muxes := 1     
+	  14 Input     32 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 3     
+	   2 Input     19 Bit        Muxes := 3     
+	   2 Input     17 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 18    
+	   7 Input     10 Bit        Muxes := 6     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	  14 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 3     
+	  14 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	  14 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 76    
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 5     
+	  14 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 6     
+Module display_8hex 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 8     
+Module pwr_reset 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+Module clk_prescale 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+Module OV7670_config_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module OV7670_config 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 4     
+Module SCCB_interface 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  14 Input     32 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  14 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
+	  14 Input      2 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 1     
+Module camera_read 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input     16 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module camera_address_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module video_playback 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     20 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module frame_transfer 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module frame_parser 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 5     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 13    
+	   7 Input     10 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   7 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'camera_address_gen_1/vcount_reg[11:0]' into 'camera_address_gen_1/vcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v:20]
+INFO: [Synth 8-4471] merging register 'camera_address_gen_1/hcount_reg[11:0]' into 'camera_address_gen_1/hcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v:20]
+INFO: [Synth 8-5545] ROM "camera_configure_1/config_1/timer0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "camera_configure_1/SCCB1/timer0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP camera_address_gen_1/memory_addr, operation Mode is: C'+A2*(B:0x280).
+DSP Report: register camera_address_gen_1/vcount_reg is absorbed into DSP camera_address_gen_1/memory_addr.
+DSP Report: register camera_address_gen_1/hcount_reg is absorbed into DSP camera_address_gen_1/memory_addr.
+DSP Report: operator camera_address_gen_1/memory_addr is absorbed into DSP camera_address_gen_1/memory_addr.
+DSP Report: operator camera_address_gen_1/memory_addr0 is absorbed into DSP camera_address_gen_1/memory_addr.
+INFO: [Synth 8-4471] merging register 'vcount_reg[11:0]' into 'vcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:40]
+INFO: [Synth 8-4471] merging register 'vcount_reg[11:0]' into 'vcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:40]
+INFO: [Synth 8-4471] merging register 'hcount_reg[11:0]' into 'hcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:40]
+INFO: [Synth 8-4471] merging register 'hcount_reg[11:0]' into 'hcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:40]
+DSP Report: Generating DSP memory_addr1, operation Mode is: C'+A2*(B:0x90).
+DSP Report: register vcount_reg is absorbed into DSP memory_addr1.
+DSP Report: register hcount_reg is absorbed into DSP memory_addr1.
+DSP Report: operator memory_addr1 is absorbed into DSP memory_addr1.
+DSP Report: operator memory_addr2 is absorbed into DSP memory_addr1.
+DSP Report: Generating DSP memory_addr0, operation Mode is: C'+A2*(B:0x280).
+DSP Report: register vcount_reg is absorbed into DSP memory_addr0.
+DSP Report: register hcount_reg is absorbed into DSP memory_addr0.
+DSP Report: operator memory_addr0 is absorbed into DSP memory_addr0.
+DSP Report: operator memory_addr1 is absorbed into DSP memory_addr0.
+INFO: [Synth 8-4471] merging register 'vcount_reg[9:0]' into 'vcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:69]
+INFO: [Synth 8-4471] merging register 'hcount_reg[9:0]' into 'hcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:69]
+DSP Report: Generating DSP read_addr, operation Mode is: C'+(A:0x280)*B2.
+DSP Report: register vcount_reg is absorbed into DSP read_addr.
+DSP Report: register hcount_reg is absorbed into DSP read_addr.
+DSP Report: operator read_addr is absorbed into DSP read_addr.
+DSP Report: operator read_addr0 is absorbed into DSP read_addr.
+INFO: [Synth 8-5546] ROM "deb_btnc/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnc/clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnl/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnl/clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnr/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnr/clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnu/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnu/clean" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnd/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "deb_btnd/clean" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design top has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port JA[4] driven by constant 1
+WARNING: [Synth 8-3917] design top has port JA[0] driven by constant 0
+WARNING: [Synth 8-3331] design top has unconnected port LED[15]
+WARNING: [Synth 8-3331] design top has unconnected port LED[14]
+WARNING: [Synth 8-3331] design top has unconnected port LED[13]
+WARNING: [Synth 8-3331] design top has unconnected port LED[12]
+WARNING: [Synth 8-3331] design top has unconnected port LED[11]
+WARNING: [Synth 8-3331] design top has unconnected port LED[10]
+WARNING: [Synth 8-3331] design top has unconnected port LED[9]
+WARNING: [Synth 8-3331] design top has unconnected port LED[8]
+WARNING: [Synth 8-3331] design top has unconnected port LED[7]
+WARNING: [Synth 8-3331] design top has unconnected port LED[6]
+WARNING: [Synth 8-3331] design top has unconnected port LED[5]
+WARNING: [Synth 8-3331] design top has unconnected port LED[4]
+WARNING: [Synth 8-3331] design top has unconnected port LED[3]
+WARNING: [Synth 8-3331] design top has unconnected port LED[2]
+WARNING: [Synth 8-3331] design top has unconnected port RGB1_Blue
+WARNING: [Synth 8-3331] design top has unconnected port RGB1_Green
+WARNING: [Synth 8-3331] design top has unconnected port RGB1_Red
+WARNING: [Synth 8-3331] design top has unconnected port RGB2_Blue
+WARNING: [Synth 8-3331] design top has unconnected port RGB2_Green
+WARNING: [Synth 8-3331] design top has unconnected port RGB2_Red
+WARNING: [Synth 8-3331] design top has unconnected port JC[7]
+WARNING: [Synth 8-3331] design top has unconnected port JC[6]
+WARNING: [Synth 8-3331] design top has unconnected port JC[5]
+WARNING: [Synth 8-3331] design top has unconnected port JC[4]
+WARNING: [Synth 8-3331] design top has unconnected port JC[3]
+WARNING: [Synth 8-3331] design top has unconnected port JC[2]
+WARNING: [Synth 8-3331] design top has unconnected port JC[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1665 ; free virtual = 12133
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+----------------------------------+---------------+----------------+
+|Module Name       | RTL Object                       | Depth x Width | Implemented As | 
++------------------+----------------------------------+---------------+----------------+
+|OV7670_config_rom | dout_reg                         | 256x16        | Block RAM      | 
+|camera            | camera_configure_1/rom1/dout_reg | 256x16        | Block RAM      | 
++------------------+----------------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|camera         | C'+A2*(B:0x280) | 12     | 10     | 12     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|video_playback | C'+A2*(B:0x90)  | 12     | 8      | 12     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|video_playback | C'+A2*(B:0x280) | 12     | 10     | 12     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|frame_parser   | C'+(A:0x280)*B2 | 10     | 10     | 10     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'camera_1/camera_configure_1/config_1/FSM_return_state_reg[2]' (FDE) to 'camera_1/camera_configure_1/config_1/FSM_return_state_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\camera_1/camera_configure_1/config_1/FSM_return_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_1/camera_configure_1/config_1/FSM_return_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\frame_parser_1/divider_1/divisor_copy_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\frame_parser_1/divider_1/negative_output_reg )
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[7]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[7]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[6]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[6]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[5]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[5]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[4]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[4]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[3]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[3]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[2]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[2]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[1]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[1]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[0]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[0]'
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/divisor_copy_reg[18]' (FDE) to 'frame_parser_1/divider_1/divisor_copy_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\frame_parser_1/divider_1/divisor_copy_reg[17] )
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[8]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_1/camera_configure_1/config_1/FSM_state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[9]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[9]'
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_state_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_return_state_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_return_state_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_return_state_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/divisor_copy_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/divisor_copy_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/negative_output_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[16]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1664 ; free virtual = 12133
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1664 ; free virtual = 12133
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'video_clk_1/clk_out1' to pin 'video_clk_1/bbstub_clk_out1/O {JB[1]}'
+INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1471.484 ; gain = 576.289 ; free physical = 1634 ; free virtual = 12102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1502.488 ; gain = 607.293 ; free physical = 1586 ; free virtual = 12054
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/bit_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/bit_reg[4]) is unused and will be removed from module top.
+INFO: [Synth 8-4480] The timing for the instance camera_1/camera_configure_1/rom1/dout_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop frame_parser_1/divider_1/dividend_copy_reg[19] is being inverted and renamed to frame_parser_1/divider_1/dividend_copy_reg[19]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top         | video_playback_1/blank_delay_2_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top         | reset_1/sr_reg[15]                 | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |video_clk             |         1|
+|2     |frame_buffer          |         1|
+|3     |rescaled_frame_buffer |         1|
+|4     |one_16_d              |         1|
+|5     |two_16_d              |         1|
+|6     |three_16_d            |         1|
+|7     |four_16_d             |         1|
+|8     |five_16_d             |         1|
+|9     |six_16_d              |         1|
+|10    |seven_16_d            |         1|
+|11    |eight_16_d            |         1|
+|12    |nine_16_d             |         1|
++------+----------------------+----------+
+
+Report Cell Usage: 
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |eight_16_d            |     1|
+|2     |five_16_d             |     1|
+|3     |four_16_d             |     1|
+|4     |frame_buffer          |     1|
+|5     |nine_16_d             |     1|
+|6     |one_16_d              |     1|
+|7     |rescaled_frame_buffer |     1|
+|8     |seven_16_d            |     1|
+|9     |six_16_d              |     1|
+|10    |three_16_d            |     1|
+|11    |two_16_d              |     1|
+|12    |video_clk             |     1|
+|13    |BUFG                  |     1|
+|14    |CARRY4                |   123|
+|15    |DSP48E1               |     4|
+|16    |LUT1                  |   325|
+|17    |LUT2                  |   134|
+|18    |LUT3                  |    68|
+|19    |LUT4                  |   138|
+|20    |LUT5                  |    64|
+|21    |LUT6                  |   154|
+|22    |RAMB18E1              |     1|
+|23    |SRL16E                |     2|
+|24    |FDRE                  |   608|
+|25    |FDSE                  |    14|
+|26    |IBUF                  |    19|
+|27    |OBUF                  |    35|
+|28    |OBUFT                 |    22|
++------+----------------------+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------+------+
+|      |Instance                 |Module             |Cells |
++------+-------------------------+-------------------+------+
+|1     |top                      |                   |  1746|
+|2     |  bram_quarantine_1      |bram_quarantine    |     9|
+|3     |  camera_1               |camera             |   468|
+|4     |    camera_address_gen_1 |camera_address_gen |   104|
+|5     |    camera_configure_1   |camera_configure   |   339|
+|6     |      SCCB1              |SCCB_interface     |   180|
+|7     |      config_1           |OV7670_config      |   141|
+|8     |      rom1               |OV7670_config_rom  |    18|
+|9     |    camera_read_1        |camera_read        |    25|
+|10    |  clk_prescale_1         |clk_prescale       |    46|
+|11    |  deb_btnc               |debounce           |    57|
+|12    |  deb_btnd               |debounce_0         |    53|
+|13    |  deb_btnl               |debounce_1         |    61|
+|14    |  deb_btnr               |debounce_2         |    55|
+|15    |  deb_btnu               |debounce_3         |    61|
+|16    |  display                |display_8hex       |    99|
+|17    |  frame_parser_1         |frame_parser       |   440|
+|18    |    divider_1            |divider            |   104|
+|19    |    frame_transfer_1     |frame_transfer     |    72|
+|20    |  reset_1                |pwr_reset          |     7|
+|21    |  video_playback_1       |video_playback     |   196|
++------+-------------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.496 ; gain = 615.301 ; free physical = 1585 ; free virtual = 12052
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 83 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1510.496 ; gain = 146.449 ; free physical = 1585 ; free virtual = 12052
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1510.504 ; gain = 615.309 ; free physical = 1585 ; free virtual = 12052
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 147 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+137 Infos, 215 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1542.516 ; gain = 563.758 ; free physical = 1588 ; free virtual = 12055
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1574.531 ; gain = 0.000 ; free physical = 1585 ; free virtual = 12053
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 26 22:53:30 2018...

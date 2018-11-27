@@ -1,0 +1,18 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /var/local/xilinx-local/Vivado/2016.2/bin/unwrapped/lnx64.o/xelab -wto 7fe53f79ee1a487ea60aea4dce032fb8 --debug typical --relax --mt 8 -L xil_defaultlib -L xpm -L unisims_ver -L unimacro_ver -L secureip --snapshot frame_parser_tb_behav xil_defaultlib.frame_parser_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 10 for port divisor [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:77]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/imports/Downloads/divider.v" Line 10. Module divider(WIDTH=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/imports/Downloads/divider.v" Line 10. Module divider(WIDTH=10) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.divider(WIDTH=10)
+Compiling module xil_defaultlib.frame_transfer(TARGET=32'b010010...
+Compiling module xil_defaultlib.frame_parser
+Compiling module xil_defaultlib.frame_parser_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot frame_parser_tb_behav

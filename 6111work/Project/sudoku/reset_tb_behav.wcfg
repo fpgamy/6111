@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="frame_parser_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="frame_parser_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6231000000fs"></ZoomStartTime>
+      <ZoomEndTime time="6486000001fs"></ZoomEndTime>
+      <Cursor1Time time="6244600000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="14" />
+   <wvobject type="logic" fp_name="/frame_parser_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/read_addr">
+      <obj_property name="ElementShortName">read_addr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[18:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/read_data">
+      <obj_property name="ElementShortName">read_data[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/write_addr_out">
+      <obj_property name="ElementShortName">write_addr_out[14:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr_out[14:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/write_data_out">
+      <obj_property name="ElementShortName">write_data_out[11:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data_out[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_parser_tb/uut/frame_transfer_1/we_out">
+      <obj_property name="ElementShortName">we_out</obj_property>
+      <obj_property name="ObjectShortName">we_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_parser_tb/uut/rescale_start">
+      <obj_property name="ElementShortName">rescale_start</obj_property>
+      <obj_property name="ObjectShortName">rescale_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_parser_tb/uut/frame_transfer_1/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_parser_tb/uut/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/hcount">
+      <obj_property name="ElementShortName">hcount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">hcount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/vcount">
+      <obj_property name="ElementShortName">vcount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">vcount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/cycle_count">
+      <obj_property name="ElementShortName">cycle_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_count[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/accl_x">
+      <obj_property name="ElementShortName">accl_x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">accl_x[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_parser_tb/uut/accl_y">
+      <obj_property name="ElementShortName">accl_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">accl_y[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

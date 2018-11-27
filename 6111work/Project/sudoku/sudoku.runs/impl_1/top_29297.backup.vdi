@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Nov 20 23:35:34 2018
+# Process ID: 29297
+# Current directory: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/impl_1
+# Command line: vivado -log top.vdi -applog -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/impl_1/top.vdi
+# Journal file: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+
+*** Halting run - EA reset detected ***
+
+
+
+    while executing
+"start_step init_design"
+    (file "top.tcl" line 48)
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 20 23:35:39 2018...
