@@ -50,8 +50,7 @@ module soduku_solver_tb;
 							.reset_in   (reset)      ,
 							.board_in   (test_input) ,
 							.board_out  (test_output),
-							.done_out   (done)       ,
-							.invalid_out(invalid)
+							.done_out   (done)
 						);
 	initial
 	begin

@@ -1,8 +1,8 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
--- Date        : Sun Nov 25 22:29:49 2018
--- Host        : eecs-digital-17 running 64-bit Ubuntu 14.04.5 LTS
+-- Date        : Tue Nov 27 14:29:13 2018
+-- Host        : eecs-digital-18 running 64-bit Ubuntu 14.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/eight_image_48_48/eight_image_48_48_stub.vhdl
 -- Design      : eight_image_48_48
