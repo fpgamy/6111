@@ -3,85 +3,95 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="frame_parser_tb_behav.wdb" id="1">
+      <db_ref path="char_rec_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="frame_parser_tb" />
+            <top_module name="char_rec_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="6231000000fs"></ZoomStartTime>
-      <ZoomEndTime time="6486000001fs"></ZoomEndTime>
-      <Cursor1Time time="6244600000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2190000002fs"></ZoomEndTime>
+      <Cursor1Time time="1451657000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="14" />
-   <wvobject type="logic" fp_name="/frame_parser_tb/clk">
+   <WVObjectSize size="17" />
+   <wvobject type="array" fp_name="/char_rec_tb/uut/cycle_counter">
+      <obj_property name="ElementShortName">cycle_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_counter[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/mem_addr_counter">
+      <obj_property name="ElementShortName">mem_addr_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr_counter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/x0">
+      <obj_property name="ElementShortName">x0[8:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/y0">
+      <obj_property name="ElementShortName">y0[8:0]</obj_property>
+      <obj_property name="ObjectShortName">y0[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/hcount">
+      <obj_property name="ElementShortName">hcount[4:0]</obj_property>
+      <obj_property name="ObjectShortName">hcount[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/vcount">
+      <obj_property name="ElementShortName">vcount[4:0]</obj_property>
+      <obj_property name="ObjectShortName">vcount[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/max_score">
+      <obj_property name="ElementShortName">max_score[8:0]</obj_property>
+      <obj_property name="ObjectShortName">max_score[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/char_rec_tb/uut/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/read_addr">
-      <obj_property name="ElementShortName">read_addr[18:0]</obj_property>
-      <obj_property name="ObjectShortName">read_addr[18:0]</obj_property>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/state">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/x">
+      <obj_property name="ElementShortName">x[8:0]</obj_property>
+      <obj_property name="ObjectShortName">x[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/y">
+      <obj_property name="ElementShortName">y[8:0]</obj_property>
+      <obj_property name="ObjectShortName">y[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/img_ram_addr">
+      <obj_property name="ElementShortName">img_ram_addr[14:0]</obj_property>
+      <obj_property name="ObjectShortName">img_ram_addr[14:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/rom_addr">
+      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/read_data">
-      <obj_property name="ElementShortName">read_data[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_data[11:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/char_rec_tb/uut/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/write_addr_out">
-      <obj_property name="ElementShortName">write_addr_out[14:0]</obj_property>
-      <obj_property name="ObjectShortName">write_addr_out[14:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/write_data_out">
-      <obj_property name="ElementShortName">write_data_out[11:0]</obj_property>
-      <obj_property name="ObjectShortName">write_data_out[11:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/frame_parser_tb/uut/frame_transfer_1/we_out">
-      <obj_property name="ElementShortName">we_out</obj_property>
-      <obj_property name="ObjectShortName">we_out</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/frame_parser_tb/uut/rescale_start">
-      <obj_property name="ElementShortName">rescale_start</obj_property>
-      <obj_property name="ObjectShortName">rescale_start</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/frame_parser_tb/uut/frame_transfer_1/done">
+   <wvobject type="logic" fp_name="/char_rec_tb/uut/done">
       <obj_property name="ElementShortName">done</obj_property>
       <obj_property name="ObjectShortName">done</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/frame_parser_tb/uut/done">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/recg_sudoku">
+      <obj_property name="ElementShortName">recg_sudoku[728:0]</obj_property>
+      <obj_property name="ObjectShortName">recg_sudoku[728:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/hcount">
-      <obj_property name="ElementShortName">hcount[9:0]</obj_property>
-      <obj_property name="ObjectShortName">hcount[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/vcount">
-      <obj_property name="ElementShortName">vcount[9:0]</obj_property>
-      <obj_property name="ObjectShortName">vcount[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/frame_transfer_1/cycle_count">
-      <obj_property name="ElementShortName">cycle_count[15:0]</obj_property>
-      <obj_property name="ObjectShortName">cycle_count[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/accl_x">
-      <obj_property name="ElementShortName">accl_x[9:0]</obj_property>
-      <obj_property name="ObjectShortName">accl_x[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/frame_parser_tb/uut/accl_y">
-      <obj_property name="ElementShortName">accl_y[9:0]</obj_property>
-      <obj_property name="ObjectShortName">accl_y[9:0]</obj_property>
+   <wvobject type="array" fp_name="/char_rec_tb/uut/two_score">
+      <obj_property name="ElementShortName">two_score[8:0]</obj_property>
+      <obj_property name="ObjectShortName">two_score[8:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

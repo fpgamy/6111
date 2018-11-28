@@ -20,14 +20,85 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/var/local/xilinx-local/Vivad
 INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/var/local/xilinx-local/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/new/frame_transfer.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ipstatic/blk_mem_gen_v8_3_3/simulation/blk_mem_gen_v8_3.v" into library blk_mem_gen_v8_3_3
+INFO: [VRFC 10-311] analyzing module STATE_LOGIC_v8_3
+INFO: [VRFC 10-311] analyzing module beh_vlog_muxf7_v8_3
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_clr_v8_3
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_pre_v8_3
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_ce_clr_v8_3
+INFO: [VRFC 10-311] analyzing module write_netlist_v8_3
+INFO: [VRFC 10-311] analyzing module read_netlist_v8_3
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_write_wrapper_beh_v8_3
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_read_wrapper_beh_v8_3
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_regs_fwd_v8_3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_3_3_output_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_3_3_softecc_output_reg_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_3_3_mem_module
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_3_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer/sim/frame_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/video_clk/video_clk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_clk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/video_clk/video_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/rescaled_frame_buffer/sim/rescaled_frame_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rescaled_frame_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/one_16_d/sim/one_16_d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module one_16_d
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/three_16_d_1/sim/three_16_d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module three_16_d
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCCB_interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OV7670_config_rom
+WARNING: [VRFC 10-159] /* in comment [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v:201]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OV7670_config
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/frame_transfer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module frame_transfer
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/imports/Downloads/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/Downloads/divider.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module divider
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/max_score.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module max_score
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_read.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera_read
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_configure.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera_configure
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera_address_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module frame_parser
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sim_1/new/frame_parser_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_playback
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwr_reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/display_8hex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_8hex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/clk_prescale.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_prescale
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module char_rec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_quarantine
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol state_out, assumed default net type wire [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:114]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/lab4/synchronize.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synchronize
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/sudoku_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sudoku_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/majority_enc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module majority_enc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sim_1/new/reset_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reset_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sim_1/new/frame_parser_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module frame_parser_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sim_1/new/char_rec_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module char_rec_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-163] Analyzing VHDL file "/var/local/xilinx-local/Vivado/2016.2/data/ip/xpm/xpm_VCOMP.vhd" into library xpm

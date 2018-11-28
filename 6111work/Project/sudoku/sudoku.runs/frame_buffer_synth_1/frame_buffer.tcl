@@ -10,13 +10,13 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.cache/wt [current_project]
-set_property parent.project_path /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.xpr [current_project]
+set_property webtalk.parent_dir /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.cache/wt [current_project]
+set_property parent.project_path /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-read_ip -quiet /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
-set_property is_locked true [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
+read_ip -quiet /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci
+set_property is_locked true [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
 
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
@@ -33,59 +33,59 @@ write_checkpoint -force -noxdef frame_buffer.dcp
 catch { report_utilization -file frame_buffer_utilization_synth.rpt -pb frame_buffer_utilization_synth.pb }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.v
+  write_verilog -force -mode synth_stub /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl
+  write_vhdl -force -mode synth_stub /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v
+  write_verilog -force -mode funcsim /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
-add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.v -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
+add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.v -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
 
-add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
+add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
 
-add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
+add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
 
-add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.vhdl -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
+add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.vhdl -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
 
-add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer.dcp -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
+add_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer.dcp -of_objects [get_files /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/frame_buffer/frame_buffer.xci]
 
 if {[file isdir /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer]} {
   catch { 
-    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
+    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.v /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
   }
 }
 
 if {[file isdir /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer]} {
   catch { 
-    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.vhdl /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
+    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_sim_netlist.vhdl /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
   }
 }
 
 if {[file isdir /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer]} {
   catch { 
-    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.v /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
+    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.v /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
   }
 }
 
 if {[file isdir /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer]} {
   catch { 
-    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
+    file copy -force /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1/frame_buffer_stub.vhdl /afs/athena.mit.edu/user/s/h/shreeyam/Downloads/camera_simple_frame_buffer_2/camera_simple_frame_buffer.ip_user_files/ip/frame_buffer
   }
 }

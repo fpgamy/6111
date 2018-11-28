@@ -25,7 +25,7 @@ module char_rec(
         input start,
         output done,
         
-        output[14:0] img_ram_addr,
+        output reg[14:0] img_ram_addr,
         input[11:0] img_ram_data,
         
         output[7:0] rom_addr,
@@ -77,27 +77,57 @@ reg[8:0] seven_score = 0;
 reg[8:0] eight_score = 0;
 reg[8:0] nine_score = 0;
 
-assign img_ram_addr = x + y * IMG_WIDTH;
-assign rom_addr = mem_addr_counter;
+//assign img_ram_addr = x + (y * IMG_WIDTH);
+
+assign rom_addr = mem_addr_counter > 0 ? mem_addr_counter - 1 : mem_addr_counter;
 
 parameter THRESHOLD = 15;
 parameter CELL_WIDTH = 16;
 wire[5:0] combined_pixel_data = img_ram_data[3:0] + img_ram_data[7:4] + img_ram_data[11:8];
 wire pix_logical = combined_pixel_data > THRESHOLD;
 
+wire[8:0] max_score;
+max_score max_score_1 (
+    .none_score(none_score),
+    .one_score(one_score),
+    .two_score(two_score),
+    .three_score(three_score),
+    .four_score(four_score),
+    .five_score(five_score),
+    .six_score(six_score),
+    .seven_score(seven_score),
+    .eight_score(eight_score),
+    .nine_score(nine_score),
+    .max_score(max_score));
+    
 always @(posedge clk) begin
+    img_ram_addr <= x + y * IMG_WIDTH;
     case(state)
         IDLE: begin
             if(start) begin
                 state <= RECG;
                 cycle_counter <= 0;
                 mem_addr_counter <= 0;
+                recg_sudoku <= 0;
+                x0 <= 0;
+                y0 <= 0;
+                
+                none_score  <= 0;
+                one_score   <= 0;
+                two_score   <= 0;
+                three_score <= 0;
+                four_score  <= 0;
+                five_score  <= 0;
+                six_score   <= 0;
+                seven_score <= 0;
+                eight_score <= 0;
+                nine_score  <= 0;
             end
         end
         RECG: begin
             mem_addr_counter <= mem_addr_counter + 1; 
             
-            if (hcount < CELL_WIDTH) begin
+            if (hcount < CELL_WIDTH - 1) begin
                 hcount <= hcount + 1;
             end else begin
                 hcount <= 0;
@@ -105,6 +135,10 @@ always @(posedge clk) begin
             end
             
             // Main recognition loop
+            if(mem_addr_counter == 259) begin
+                state <= RECONF;
+            end else
+            
             if(mem_addr_counter > DELAY_CYCLES) begin
                 none_score  <= none_score   + pix_logical;
                 one_score   <= one_score    + ~(pix_logical ^ one_rom_data);
@@ -118,15 +152,31 @@ always @(posedge clk) begin
                 nine_score  <= nine_score   + ~(pix_logical ^ nine_rom_data);
             end
             
-            if(mem_addr_counter == 258) begin
-                state <= RECONF;
-            end
+
         end
         RECONF: begin
-            if(x0 < 144 - 16 - 1) begin
-                x0 <= x0 + 16;
-            end else if(y0 < 144 - 16 - 1) begin
-                y0 <= y0 + 16;
+            // Shift
+            recg_sudoku <= {recg_sudoku[719:0], max_score};
+            mem_addr_counter <= 0;
+            
+            none_score  <= 0;
+            one_score   <= 0;
+            two_score   <= 0;
+            three_score <= 0;
+            four_score  <= 0;
+            five_score  <= 0;
+            six_score   <= 0;
+            seven_score <= 0;
+            eight_score <= 0;
+            nine_score  <= 0;
+        
+            if(x0 <= 144 - CELL_WIDTH - 1) begin
+                x0 <= x0 + CELL_WIDTH;
+                state <= RECG;
+            end else if(y0 <= 144 - CELL_WIDTH - 1) begin
+                y0 <= y0 + CELL_WIDTH;
+                x0 <= 0;
+                state <= RECG;
             end else begin
                 state <= IDLE;
             end

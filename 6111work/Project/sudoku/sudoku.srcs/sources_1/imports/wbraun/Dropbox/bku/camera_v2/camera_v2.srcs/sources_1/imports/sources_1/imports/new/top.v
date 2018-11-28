@@ -80,14 +80,14 @@ module top(
    assign SEG[6:0] = segments;
    assign SEG[7] = 1'b1;
    
-   reg[3:0] state = 0;
+   reg[3:0] state = 1;
 
-   assign data[3:0] = state;
+//   assign data[3:0] = state;
     
-   reg[9:0] x1 = 100;
-   reg[9:0] y1 = 100;
-   reg[9:0] x2 = 200;
-   reg[9:0] y2 = 200;
+   reg[9:0] x1 = 104;
+   reg[9:0] y1 = 24;
+   reg[9:0] x2 = 536;
+   reg[9:0] y2 = 456;
    
    // Synchronizers and power-on-reset
    
@@ -135,7 +135,8 @@ module top(
     wire clk_ps;
     clk_prescale clk_prescale_1 (.clk(video_clk), .clk_ps(clk_ps));
     wire frame_parser_done;
-    
+    reg char_rec_start = 0;
+
     reg frame_parser_started = 0;
     always @(posedge video_clk) begin
         if(SW[15]) begin
@@ -194,7 +195,13 @@ module top(
                     end
                 end
                 RECOGNIZING: begin
-                                
+                    if(btnl_cln) begin
+                        char_rec_start <= 1;
+                    end else begin
+                        char_rec_start <= 0;
+                    end
+                    
+                
                 end
                 SOLVING: begin
                         
@@ -269,12 +276,15 @@ module top(
     wire rescaled_fb_we;    
     wire[14:0] rescaled_fb_vid_addr = video_read_addr[14:0];
     wire[14:0] rescaled_fb_write_addr;
-        
+    wire[14:0] char_ram_addr;
+    
     wire[11:0] rescaled_fb_din;
+
+    wire[14:0] rescaled_fb_addr = 
+            switch_vid ? rescaled_fb_vid_addr : (~SW[2] ? rescaled_fb_write_addr : char_ram_addr);
     
-    assign LED[0] = SW[0];
-    
-    wire[14:0] rescaled_fb_addr = switch_vid ? rescaled_fb_vid_addr : rescaled_fb_write_addr;    
+    assign LED[0] = switch_vid;
+    assign LED[1] = (state == RESIZING);
     
     frame_parser frame_parser_1 (
         .clk(video_clk),
@@ -323,8 +333,36 @@ module top(
         .seven_d(seven_d),
         .eight_d(eight_d),
         .nine_d(nine_d));
+       
+    wire[728:0] recg_sudoku;
+    wire char_rec_done;
+    
+    char_rec char_rec_1 (
+        .clk(video_clk),
+        .start(char_rec_start),
+        .done(char_rec_done),
+        .img_ram_addr(char_ram_addr),
+        .img_ram_data(rescaled_fb_dout),
         
-    assign LED[1] = rescaled_fb_we;
-    assign data[31:16] = (state == CHOOSE_XY1) ? x1 : (state == CHOOSE_XY2 ? x2 : 0);    
+        .rom_addr(rom_addr),
         
+        .one_rom_data(one_d),
+        .two_rom_data(two_d),
+        .three_rom_data(three_d),
+        .four_rom_data(four_d),
+        .five_rom_data(five_d),
+        .six_rom_data(six_d),
+        .seven_rom_data(seven_d),
+        .eight_rom_data(eight_d),
+        .nine_rom_data(nine_d),
+        
+        .recg_sudoku(recg_sudoku));
+        
+//    assign data[31:16] = (state == CHOOSE_XY1) ? x1 : (state == CHOOSE_XY2 ? x2 : 0);    
+    assign data[31:4] = recg_sudoku[728:701];
+    assign data[3:0] = state;
+    assign LED[2] = char_rec_done;
+    
+    assign JC[0] = char_ram_addr[0];
+    assign JC[1] = recg_sudoku[0];
 endmodule

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="five_16_d_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543290393">
-  <File Type="VDS-TIMING-PB" Name="five_16_d_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="five_16_d_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="five_16_d.tcl"/>
   <File Type="RDS-DCP" Name="five_16_d.dcp"/>
   <File Type="RDS-UTIL-PB" Name="five_16_d_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="five_16_d_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="five_16_d_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="five_16_d.vds"/>
-  <File Type="PA-TCL" Name="five_16_d.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="five_16_d_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/five_16_d">
     <File Path="$PSRCDIR/sources_1/ip/five_16_d/five_16_d.xci">
       <FileInfo>
@@ -49,9 +49,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
