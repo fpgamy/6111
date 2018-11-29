@@ -86,8 +86,8 @@ module top(
     
    reg[9:0] x1 = 104;
    reg[9:0] y1 = 24;
-   reg[9:0] x2 = 539;
-   reg[9:0] y2 = 459;
+   reg[9:0] x2 = 536;
+   reg[9:0] y2 = 456;
    
    // Synchronizers and power-on-reset
    

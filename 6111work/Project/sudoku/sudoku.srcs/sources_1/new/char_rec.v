@@ -82,8 +82,6 @@ reg[8:0] nine_score = 0;
 parameter THRESHOLD = 15;
 parameter CELL_WIDTH = 16;
 
-//assign rom_addr = ;
-
 wire[5:0] combined_pixel_data = img_ram_data[3:0] + img_ram_data[7:4] + img_ram_data[11:8];
 wire pix_logical = combined_pixel_data > THRESHOLD;
 
@@ -103,7 +101,7 @@ max_score max_score_1 (
     
 always @(posedge clk) begin
     img_ram_addr <= x + y * IMG_WIDTH;
-    rom_addr <= hcount + vcount * CELL_WIDTH;
+    rom_addr <= (hcount < 16 && vcount < 16) ? hcount + vcount * CELL_WIDTH : 255;
     case(state)
         IDLE: begin
             if(start) begin

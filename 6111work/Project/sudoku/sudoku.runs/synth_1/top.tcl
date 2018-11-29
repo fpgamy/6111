@@ -109,8 +109,6 @@ read_verilog -library xil_defaultlib {
   /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/sudoku_fsm.v
   /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/majority_enc.v
   /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v
-  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_lib.v
-  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/common_lib.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
