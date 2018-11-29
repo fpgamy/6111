@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="seven_16_d_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543455123">
-  <File Type="VDS-TIMING-PB" Name="seven_16_d_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="seven_16_d.tcl"/>
+  <File Type="RDS-RDS" Name="seven_16_d.vds"/>
   <File Type="VDS-TIMINGSUMMARY" Name="seven_16_d_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="seven_16_d_timing_summary_synth.pb"/>
   <File Type="RDS-DCP" Name="seven_16_d.dcp"/>
   <File Type="RDS-UTIL-PB" Name="seven_16_d_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="seven_16_d_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="seven_16_d_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="seven_16_d.vds"/>
-  <File Type="PA-TCL" Name="seven_16_d.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/seven_16_d">
     <File Path="$PSRCDIR/sources_1/ip/seven_16_d.xcix">
       <FileInfo>
