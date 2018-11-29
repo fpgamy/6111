@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543348524">
-  <File Type="VDS-TIMING-PB" Name="labkit_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="labkit.tcl"/>
+  <File Type="RDS-RDS" Name="labkit.vds"/>
   <File Type="VDS-TIMINGSUMMARY" Name="labkit_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="labkit_timing_summary_synth.pb"/>
   <File Type="RDS-DCP" Name="labkit.dcp"/>
   <File Type="RDS-UTIL-PB" Name="labkit_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="labkit_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="labkit_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="labkit.vds"/>
-  <File Type="PA-TCL" Name="labkit.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Project/soduku_solver.v">
@@ -156,14 +156,14 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="two_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="three_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="four_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="nine_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="eight_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="seven_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="six_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="five_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="four_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="three_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="two_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
 </GenRun>

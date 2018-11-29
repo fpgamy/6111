@@ -86,8 +86,8 @@ module top(
     
    reg[9:0] x1 = 104;
    reg[9:0] y1 = 24;
-   reg[9:0] x2 = 536;
-   reg[9:0] y2 = 456;
+   reg[9:0] x2 = 539;
+   reg[9:0] y2 = 459;
    
    // Synchronizers and power-on-reset
    
@@ -138,10 +138,14 @@ module top(
     reg char_rec_start = 0;
 
     reg frame_parser_started = 0;
+    reg char_rec_started = 0;
+    wire char_rec_done;
+
     always @(posedge video_clk) begin
         if(SW[15]) begin
-            state <= IDLE;
+            state <= 0;//IDLE;
             frame_parser_started <= 0;
+            char_rec_started <= 0;
         end
         
         else if (VGA_VS) begin 
@@ -197,11 +201,12 @@ module top(
                 RECOGNIZING: begin
                     if(btnl_cln) begin
                         char_rec_start <= 1;
-                    end else begin
-                        char_rec_start <= 0;
+                        char_rec_started <= 1;
                     end
                     
-                
+                    if(char_rec_done && char_rec_started) begin
+                        state <= SOLVING;
+                    end
                 end
                 SOLVING: begin
                         
@@ -211,7 +216,8 @@ module top(
                 end   
             endcase
         end
-        last_btnc <= btnc_cln;
+        last_btnc <= btnc_cln;  
+        if(char_rec_start) char_rec_start <= 0;
     end
 
    
@@ -243,7 +249,27 @@ module top(
     wire[11:0] rescaled_pix_data;
     wire[11:0] rescaled_fb_dout;
     wire switch_vid = SW[1];
+    wire[323:0] recg_sudoku;
     
+//    wire[323:0] board;
+    
+//    assign board = {4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0,
+//                        4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0,
+//                        4'd8, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0,
+//                        4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0,
+//                        4'd0, 4'd0, 4'd7, 4'd5, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0,
+//                        4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd5, 4'd0,
+//                        4'd0, 4'd0, 4'd2, 4'd0, 4'd9, 4'd0, 4'd0, 4'd7, 4'd0,
+//                        4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6, 4'd3, 4'd0, 4'd0,
+//                        4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8};
+                      
+                      
+    wire[9:0] hcount;
+    wire[9:0] vcount;
+    wire blank;
+    
+
+        
     video_playback video_playback_1 (
         .pixel_data(memory_read_data),
         .rescaled_pix_data(rescaled_fb_dout),
@@ -251,12 +277,18 @@ module top(
         .memory_addr(video_read_addr),
         .vsync(VGA_VSYNC),
         .hsync(VGA_HS),
+        .hcount_out(hcount),
+        .vcount_out(vcount),
+        .blank_out(blank),
         .video_out({VGA_R, VGA_G, VGA_B}),
         .x1(x1), .y1(y1), .x2(x2), .y2(y2), 
         .state(state),
-        .switch_vid(switch_vid)
+        .switch_vid(switch_vid),
+        .board_in(recg_sudoku)
         );
         
+        
+    
     // Memory shit
     
     assign memory_read_addr = (state == 0 || state == 1 || state == 2) ? video_read_addr : img_read_addr;
@@ -334,8 +366,6 @@ module top(
         .eight_d(eight_d),
         .nine_d(nine_d));
        
-    wire[728:0] recg_sudoku;
-    wire char_rec_done;
     
     char_rec char_rec_1 (
         .clk(video_clk),
@@ -359,7 +389,8 @@ module top(
         .recg_sudoku(recg_sudoku));
         
 //    assign data[31:16] = (state == CHOOSE_XY1) ? x1 : (state == CHOOSE_XY2 ? x2 : 0);    
-    assign data[31:4] = recg_sudoku[728:701];
+
+    assign data[31:4] = recg_sudoku[27:0];
     assign data[3:0] = state;
     assign LED[2] = char_rec_done;
     

@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Nov 27 21:29:37 2018
-# Process ID: 22008
+# Start of session at: Wed Nov 28 21:08:29 2018
+# Process ID: 19217
 # Current directory: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1
 # Command line: vivado -log top.vds -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/top.vds

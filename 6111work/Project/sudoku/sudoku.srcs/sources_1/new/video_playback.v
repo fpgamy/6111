@@ -6,10 +6,14 @@ module video_playback(
     output reg vsync,
     output reg hsync,
     output wire [11:0] video_out,
+    output[9:0] hcount_out,
+    output[9:0] vcount_out,
+    output blank_out,
     input[9:0] x1, y1,
     input[9:0] x2, y2,
     input[3:0] state,
-    input switch_vid
+    input switch_vid,
+    input[323:0] board_in
     );
     
     parameter IDLE = 0;
@@ -17,13 +21,33 @@ module video_playback(
     parameter CHOOSE_XY2 = 2;
     parameter TARGET_WIDTH = 144;
     
+    localparam SCREEN_WIDTH = 640;
+    localparam SCREEN_HEIGHT = 480;
+    localparam CELL_PIXELS = 48;
+    localparam GRID_PIXELS = CELL_PIXELS*9;
+    localparam GRID_START_X = (SCREEN_WIDTH - GRID_PIXELS)/2;
+    localparam GRID_START_Y = (SCREEN_HEIGHT - GRID_PIXELS)/2;
+    
     // horizontal: 800 pixels total
     // display 640 pixels per line
     reg hblank,vblank;
     wire hsyncon,hsyncoff,hreset,hblankon;
-    reg [11:0] hcount = 0;
-    reg [11:0] vcount = 0;
+    reg [9:0] hcount = 0;
+    reg [9:0] vcount = 0;
     reg blank; 
+    
+    assign blank_out = blank;
+    assign hcount_out = hcount;
+    assign vcount_out = vcount;
+        
+    wire[11:0] rgb_out;
+        
+    display_grid #(.CELL_PIXELS(CELL_PIXELS)) display_grid_1 (
+                .clk_in(video_clk),
+                .x_in(hcount - GRID_START_X),
+                .y_in(vcount - GRID_START_Y),
+                .board_in(board_in),
+                .rgb_out(rgb_out));
     
     //kludges to fix frame alignment due to memory access time
     reg blank_delay;
@@ -36,6 +60,8 @@ module video_playback(
     
     // Excessive? Maybe.
     assign video_out = blank_delay_2                                           ? 12'b0             : 
+//                       (state == 5 && (hcount > GRID_START_Y + GRID_PIXELS || hcount < GRID_START_X)) ? 12'hFFF  :
+                       (state == 5)                                            ? rgb_out           :
                        (switch_vid)                                            ? rescaled_pix_data : 
                        ((hcount == x1 || vcount == y1) && state == CHOOSE_XY1) ? ~pixel_data       : 
                        ((hcount == x2 || vcount == y2) && state == CHOOSE_XY2) ? ~pixel_data       : 

@@ -4,5 +4,5 @@
   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/sudoku/sudoku.hw/webtalk/labtool_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sun Nov 25 16:50:57 2018...
+source /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Nov 28 15:34:56 2018...

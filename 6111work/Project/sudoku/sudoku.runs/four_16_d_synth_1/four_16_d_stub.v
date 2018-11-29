@@ -1,8 +1,8 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Mon Nov 26 22:39:57 2018
-// Host        : eecs-digital-17 running 64-bit Ubuntu 14.04.5 LTS
+// Date        : Wed Nov 28 20:34:50 2018
+// Host        : eecs-digital-18 running 64-bit Ubuntu 14.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/four_16_d_synth_1/four_16_d_stub.v
 // Design      : four_16_d

@@ -1,3 +1,5 @@
+`ifndef DISPLAY_SV
+`define DISPLAY_SV
 
 `define INSIDE(pixel_x, pixel_y, region_x, region_y, region_w, region_h) \
 	(((pixel_x > region_x) && (pixel_x < (region_x + region_w))) && ((pixel_y > region_y) && (pixel_y < (region_y + region_h))))
@@ -126,3 +128,4 @@ begin
 end
 endfunction
 
+`endif
