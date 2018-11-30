@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="five_16_d_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543455087">
-  <File Type="PA-TCL" Name="five_16_d.tcl"/>
-  <File Type="RDS-RDS" Name="five_16_d.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="five_16_d_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="five_16_d_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="five_16_d.vds"/>
+  <File Type="PA-TCL" Name="five_16_d.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="five_16_d_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="five_16_d.dcp"/>
   <File Type="RDS-UTIL-PB" Name="five_16_d_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="five_16_d_utilization_synth.rpt"/>

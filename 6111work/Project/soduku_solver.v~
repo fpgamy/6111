@@ -8,6 +8,7 @@ module soduku_solver(
 					);
 // INCLUDES
 //
+	`include "common_lib.v"
 	`include "soduku_lib.v"
 	// `include "soduku_tb_lib.v"
 

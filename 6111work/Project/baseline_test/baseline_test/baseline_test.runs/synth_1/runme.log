@@ -14,11 +14,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7816 
+INFO: Helper process launched with PID 5618 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1060.336 ; gain = 165.137 ; free physical = 4228 ; free virtual = 9267
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1059.340 ; gain = 164.137 ; free physical = 2533 ; free virtual = 12714
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
+INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
 	Parameter SCREEN_WIDTH bound to: 660 - type: integer 
 	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
 	Parameter CELL_PIXELS bound to: 48 - type: integer 
@@ -26,149 +26,44 @@ INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/m/a/m
 	Parameter GRID_START_X bound to: 114 - type: integer 
 	Parameter GRID_START_Y bound to: 24 - type: integer 
 	Parameter GRID_SIZE bound to: 9 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/display_8hex.v:16]
 	Parameter bits bound to: 13 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/display_8hex.v:16]
-INFO: [Synth 8-638] synthesizing module 'xvga' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/xvga.v:28]
-INFO: [Synth 8-256] done synthesizing module 'xvga' (3#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/xvga.v:28]
-INFO: [Synth 8-638] synthesizing module 'soduku_solver' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:1]
-	Parameter GRID_SIZE bound to: 9 - type: integer 
-	Parameter MAX_GUESSES bound to: 16 - type: integer 
-	Parameter DONE_COUNTDOWN_START bound to: 81 - type: integer 
-WARNING: [Synth 8-324] index 16 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 17 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 18 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 19 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 20 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 21 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 22 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 23 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 24 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 25 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 26 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 27 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 28 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 29 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 30 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 31 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 32 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 33 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 34 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 35 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 36 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 37 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 38 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 39 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 40 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 41 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 42 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 43 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 44 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 45 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 46 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 47 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 48 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 49 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 50 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 51 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 52 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 53 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 54 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 55 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 56 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 57 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 58 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 59 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 60 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 61 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 62 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 63 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 64 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 65 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 66 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 67 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 68 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 69 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 70 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 71 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 72 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 73 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 74 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 75 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 76 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 77 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 78 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 79 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 80 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 81 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 82 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 83 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 84 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 85 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 86 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 87 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 88 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 89 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 90 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 91 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 92 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 93 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 94 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 95 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 96 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 97 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 98 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 99 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 100 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 101 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 102 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 103 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 104 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 105 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 106 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 107 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 108 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 109 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 110 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 111 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 112 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 113 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 114 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-WARNING: [Synth 8-324] index 115 out of range [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:377]
-INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'soduku_solver' (4#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:1]
-INFO: [Synth 8-638] synthesizing module 'display_grid' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:22]
+INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'xvga' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/xvga.v:28]
+INFO: [Synth 8-256] done synthesizing module 'xvga' (3#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/xvga.v:28]
+INFO: [Synth 8-638] synthesizing module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:22]
 	Parameter CELL_PIXELS bound to: 48 - type: integer 
 	Parameter GRID_SIZE bound to: 9 - type: integer 
 	Parameter MAX_GUESSES bound to: 16 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'one_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'one_image_48_48' (5#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'two_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'two_image_48_48' (6#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'three_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'three_image_48_48' (7#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'four_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'four_image_48_48' (8#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'five_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'five_image_48_48' (9#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'six_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'six_image_48_48' (10#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'seven_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'seven_image_48_48' (11#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'eight_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'eight_image_48_48' (12#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'nine_image_48_48' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'nine_image_48_48' (13#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'display_grid' (14#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:22]
-WARNING: [Synth 8-689] width (32) of port connection 'x_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:108]
-WARNING: [Synth 8-689] width (32) of port connection 'y_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:108]
-INFO: [Synth 8-638] synthesizing module 'synchronize' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/synchronize.v:1]
+INFO: [Synth 8-638] synthesizing module 'one_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'one_image_48_48' (4#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'two_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'two_image_48_48' (5#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'three_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'three_image_48_48' (6#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'four_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'four_image_48_48' (7#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'five_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'five_image_48_48' (8#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'six_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'six_image_48_48' (9#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'seven_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'seven_image_48_48' (10#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'eight_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'eight_image_48_48' (11#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'nine_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'nine_image_48_48' (12#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'display_grid' (13#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:22]
+WARNING: [Synth 8-689] width (32) of port connection 'x_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:103]
+WARNING: [Synth 8-689] width (32) of port connection 'y_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:103]
+INFO: [Synth 8-638] synthesizing module 'synchronize' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/synchronize.v:1]
 	Parameter NSYNC bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'synchronize' (15#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/synchronize.v:1]
-INFO: [Synth 8-256] done synthesizing module 'labkit' (16#1) [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
+INFO: [Synth 8-256] done synthesizing module 'synchronize' (14#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/synchronize.v:1]
+INFO: [Synth 8-256] done synthesizing module 'labkit' (15#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[0]
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[7]
@@ -180,7 +75,7 @@ WARNING: [Synth 8-3331] design labkit has unconnected port JB[2]
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[1]
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:15 ; elapsed = 00:02:21 . Memory (MB): peak = 1696.055 ; gain = 800.855 ; free physical = 3510 ; free virtual = 8607
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1098.785 ; gain = 203.582 ; free physical = 2490 ; free virtual = 12672
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -190,381 +85,152 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:18 ; elapsed = 00:02:28 . Memory (MB): peak = 1696.055 ; gain = 800.855 ; free physical = 3537 ; free virtual = 8606
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1098.785 ; gain = 203.582 ; free physical = 2490 ; free virtual = 12672
 ---------------------------------------------------------------------------------
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clkdivider' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:49]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'eight_image_48_48' instantiated as 'dg1/rom_8' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:101]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'five_image_48_48' instantiated as 'dg1/rom_5' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:98]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'four_image_48_48' instantiated as 'dg1/rom_4' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:97]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'nine_image_48_48' instantiated as 'dg1/rom_9' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:102]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'one_image_48_48' instantiated as 'dg1/rom_1' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:94]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'seven_image_48_48' instantiated as 'dg1/rom_7' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:100]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'six_image_48_48' instantiated as 'dg1/rom_6' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:99]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'three_image_48_48' instantiated as 'dg1/rom_3' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:96]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'two_image_48_48' instantiated as 'dg1/rom_2' [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:95]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clkdivider' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:49]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'eight_image_48_48' instantiated as 'dg1/rom_8' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:101]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'five_image_48_48' instantiated as 'dg1/rom_5' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:98]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'four_image_48_48' instantiated as 'dg1/rom_4' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:97]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'nine_image_48_48' instantiated as 'dg1/rom_9' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:102]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'one_image_48_48' instantiated as 'dg1/rom_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:94]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'seven_image_48_48' instantiated as 'dg1/rom_7' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:100]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'six_image_48_48' instantiated as 'dg1/rom_6' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:99]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'three_image_48_48' instantiated as 'dg1/rom_3' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:96]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'two_image_48_48' instantiated as 'dg1/rom_2' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/new/display_grid.v:95]
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp/one_image_48_48_in_context.xdc] for cell 'dg1/rom_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp/one_image_48_48_in_context.xdc] for cell 'dg1/rom_1'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_2/two_image_48_48_in_context.xdc] for cell 'dg1/rom_2'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_2/two_image_48_48_in_context.xdc] for cell 'dg1/rom_2'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_3/three_image_48_48_in_context.xdc] for cell 'dg1/rom_3'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_3/three_image_48_48_in_context.xdc] for cell 'dg1/rom_3'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_4/four_image_48_48_in_context.xdc] for cell 'dg1/rom_4'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_4/four_image_48_48_in_context.xdc] for cell 'dg1/rom_4'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_5/five_image_48_48_in_context.xdc] for cell 'dg1/rom_5'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_5/five_image_48_48_in_context.xdc] for cell 'dg1/rom_5'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_6/six_image_48_48_in_context.xdc] for cell 'dg1/rom_6'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_6/six_image_48_48_in_context.xdc] for cell 'dg1/rom_6'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_7/seven_image_48_48_in_context.xdc] for cell 'dg1/rom_7'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_7/seven_image_48_48_in_context.xdc] for cell 'dg1/rom_7'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_8/eight_image_48_48_in_context.xdc] for cell 'dg1/rom_8'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_8/eight_image_48_48_in_context.xdc] for cell 'dg1/rom_8'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_9/nine_image_48_48_in_context.xdc] for cell 'dg1/rom_9'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_9/nine_image_48_48_in_context.xdc] for cell 'dg1/rom_9'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc] for cell 'clkdivider'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc] for cell 'clkdivider'
-Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/constrs_1/imports/baseline_test/Nexys4DDR_Master_lab5c.xdc]
-Finished Parsing XDC File [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/constrs_1/imports/baseline_test/Nexys4DDR_Master_lab5c.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/constrs_1/imports/baseline_test/Nexys4DDR_Master_lab5c.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp/one_image_48_48_in_context.xdc] for cell 'dg1/rom_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp/one_image_48_48_in_context.xdc] for cell 'dg1/rom_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_2/two_image_48_48_in_context.xdc] for cell 'dg1/rom_2'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_2/two_image_48_48_in_context.xdc] for cell 'dg1/rom_2'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_3/three_image_48_48_in_context.xdc] for cell 'dg1/rom_3'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_3/three_image_48_48_in_context.xdc] for cell 'dg1/rom_3'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_4/four_image_48_48_in_context.xdc] for cell 'dg1/rom_4'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_4/four_image_48_48_in_context.xdc] for cell 'dg1/rom_4'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_5/five_image_48_48_in_context.xdc] for cell 'dg1/rom_5'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_5/five_image_48_48_in_context.xdc] for cell 'dg1/rom_5'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_6/six_image_48_48_in_context.xdc] for cell 'dg1/rom_6'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_6/six_image_48_48_in_context.xdc] for cell 'dg1/rom_6'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_7/seven_image_48_48_in_context.xdc] for cell 'dg1/rom_7'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_7/seven_image_48_48_in_context.xdc] for cell 'dg1/rom_7'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_8/eight_image_48_48_in_context.xdc] for cell 'dg1/rom_8'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_8/eight_image_48_48_in_context.xdc] for cell 'dg1/rom_8'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_9/nine_image_48_48_in_context.xdc] for cell 'dg1/rom_9'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_9/nine_image_48_48_in_context.xdc] for cell 'dg1/rom_9'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc] for cell 'clkdivider'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc] for cell 'clkdivider'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/constrs_1/imports/baseline_test/Nexys4DDR_Master_lab5c.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/constrs_1/imports/baseline_test/Nexys4DDR_Master_lab5c.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/constrs_1/imports/baseline_test/Nexys4DDR_Master_lab5c.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/labkit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1868.316 ; gain = 0.004 ; free physical = 3495 ; free virtual = 8565
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1470.484 ; gain = 0.004 ; free physical = 2190 ; free virtual = 12372
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:32 ; elapsed = 00:02:45 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 3493 ; free virtual = 8564
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2191 ; free virtual = 12373
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:32 ; elapsed = 00:02:45 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 3491 ; free virtual = 8562
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2191 ; free virtual = 12373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-7795-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.runs/synth_1/.Xil/Vivado-5602-eecs-digital-18/dcp_10/clk_wiz_0_in_context.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:32 ; elapsed = 00:02:45 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 3489 ; free virtual = 8559
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2191 ; free virtual = 12373
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:1302]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:666]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:668]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:667]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:666]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:668]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:667]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:668]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:666]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:667]
-INFO: [Synth 8-5546] ROM "guess_col_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[14]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "guess_col_reg[15]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "guesses_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "col_counter" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "valid_one_hot3806" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot3807" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "pvr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "error_detected" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot3" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot4" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot5" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot6" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot7" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot8" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot9" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot10" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot11" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot12" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot13" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot14" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot15" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot16" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot18" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot19" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot20" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot21" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot22" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot23" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot24" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot25" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot26" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot27" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot28" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot29" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot30" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot31" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot32" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot33" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot34" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot35" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot36" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot37" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot38" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot39" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot40" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot41" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot42" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot43" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot65" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot66" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot67" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot68" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot69" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot70" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot71" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot72" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot82" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot83" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot84" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot85" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot86" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot87" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot88" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot89" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot90" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "bcd0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "valid_one_hot112" won't be mapped to RAM because it is too sparse
-INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5545] ROM "guesses_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "col_counter" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_detected" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pvr" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "rgb_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_y_component" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:40 ; elapsed = 00:03:55 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 2005 ; free virtual = 7077
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2187 ; free virtual = 12369
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |soduku_solver__GB0  |           1|     37994|
-|2     |soduku_solver__GB1  |           1|     36494|
-|3     |soduku_solver__GB2  |           1|     20241|
-|4     |soduku_solver__GB3  |           1|     23706|
-|5     |soduku_solver__GB4  |           1|     32599|
-|6     |soduku_solver__GB5  |           1|     39602|
-|7     |soduku_solver__GB6  |           1|     56909|
-|8     |soduku_solver__GB7  |           1|     14096|
-|9     |soduku_solver__GB8  |           1|     19847|
-|10    |soduku_solver__GB9  |           1|     24033|
-|11    |soduku_solver__GB10 |           1|     24036|
-|12    |soduku_solver__GB11 |           1|     46701|
-|13    |soduku_solver__GB12 |           1|     46211|
-|14    |soduku_solver__GB13 |           1|     46610|
-|15    |soduku_solver__GB14 |           1|     46413|
-|16    |soduku_solver__GB15 |           1|     46881|
-|17    |labkit__GC0         |           1|      7630|
-+------+--------------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 2     
 	   3 Input     12 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 47    
 	   2 Input     11 Bit       Adders := 49    
 	   2 Input     10 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 81    
-	   2 Input      5 Bit       Adders := 3     
-	  10 Input      4 Bit       Adders := 3     
-	   9 Input      4 Bit       Adders := 58    
-	   2 Input      4 Bit       Adders := 4     
 +---Registers : 
 	               10 Bit    Registers := 2     
-	                9 Bit    Registers := 1609  
 	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 82    
-	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 34    
+	                7 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 88    
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   4 Input     12 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 49    
-	   2 Input      9 Bit        Muxes := 6755  
-	  10 Input      9 Bit        Muxes := 243   
 	   8 Input      8 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 81    
-	   5 Input      7 Bit        Muxes := 81    
 	  16 Input      7 Bit        Muxes := 8     
-	   2 Input      6 Bit        Muxes := 81    
-	  10 Input      4 Bit        Muxes := 162   
-	   2 Input      4 Bit        Muxes := 7     
 	   9 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3423  
-	  10 Input      1 Bit        Muxes := 578   
-	  11 Input      1 Bit        Muxes := 81    
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -576,39 +242,9 @@ Module labkit
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     11 Bit       Adders := 2     
-+---Registers : 
-	                5 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-Module soduku_solver 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 81    
-	   2 Input      5 Bit       Adders := 3     
-	  10 Input      4 Bit       Adders := 3     
-	   9 Input      4 Bit       Adders := 58    
-	   2 Input      4 Bit       Adders := 4     
-+---Registers : 
-	                9 Bit    Registers := 1609  
-	                7 Bit    Registers := 81    
-	                4 Bit    Registers := 34    
-	                1 Bit    Registers := 81    
-+---Muxes : 
-	   2 Input      9 Bit        Muxes := 6755  
-	  10 Input      9 Bit        Muxes := 243   
-	   4 Input      7 Bit        Muxes := 81    
-	   5 Input      7 Bit        Muxes := 81    
-	   2 Input      6 Bit        Muxes := 81    
-	  10 Input      4 Bit        Muxes := 162   
-	   2 Input      4 Bit        Muxes := 4     
-	   2 Input      3 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3421  
-	  10 Input      1 Bit        Muxes := 578   
-	  11 Input      1 Bit        Muxes := 81    
 Module display_8hex 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -637,11 +273,6 @@ Detailed RTL Component Info :
 	   4 Input     12 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 48    
 	   9 Input      4 Bit        Muxes := 3     
-Module synchronize__1 
-Detailed RTL Component Info : 
-+---Registers : 
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
 Module synchronize 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -659,7 +290,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:48 ; elapsed = 00:04:03 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 1998 ; free virtual = 7070
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2187 ; free virtual = 12369
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -668,6 +299,7 @@ DSP Report: operator start_y is absorbed into DSP start_y.
 DSP Report: Generating DSP start_x, operation Mode is: A*(B:0x30).
 DSP Report: operator start_x is absorbed into DSP start_x.
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[0]
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[7]
@@ -678,53 +310,16 @@ WARNING: [Synth 8-3331] design labkit has unconnected port JB[3]
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[2]
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[1]
 WARNING: [Synth 8-3331] design labkit has unconnected port JB[0]
-INFO: [Synth 8-5545] ROM "guesses_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "guesses_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:668]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:666]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/Project/soduku_solver.v:667]
-INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:04:13 ; elapsed = 00:04:32 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 1761 ; free virtual = 6835
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2187 ; free virtual = 12369
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:04:13 ; elapsed = 00:04:32 . Memory (MB): peak = 1868.316 ; gain = 973.117 ; free physical = 1761 ; free virtual = 6835
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2187 ; free virtual = 12369
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |soduku_solver__GB0  |           1|     40235|
-|2     |soduku_solver__GB1  |           1|     38442|
-|3     |soduku_solver__GB2  |           1|     21393|
-|4     |soduku_solver__GB3  |           1|     25110|
-|5     |soduku_solver__GB4  |           1|     34443|
-|6     |soduku_solver__GB5  |           1|     42147|
-|7     |soduku_solver__GB6  |           1|     58980|
-|8     |soduku_solver__GB7  |           1|     14865|
-|9     |soduku_solver__GB8  |           1|     20018|
-|10    |soduku_solver__GB9  |           1|     24352|
-|11    |soduku_solver__GB10 |           1|     24561|
-|12    |soduku_solver__GB11 |           1|     49453|
-|13    |soduku_solver__GB12 |           1|     48883|
-|14    |soduku_solver__GB13 |           1|     49402|
-|15    |soduku_solver__GB14 |           1|     49125|
-|16    |soduku_solver__GB15 |           1|     49633|
-|17    |labkit__GC0         |           1|      8202|
-+------+--------------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -745,32 +340,15 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:04:55 ; elapsed = 00:05:20 . Memory (MB): peak = 2002.020 ; gain = 1106.820 ; free physical = 533 ; free virtual = 5608
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2181 ; free virtual = 12365
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:04:55 ; elapsed = 00:05:20 . Memory (MB): peak = 2002.020 ; gain = 1106.820 ; free physical = 533 ; free virtual = 5608
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2181 ; free virtual = 12365
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |soduku_solver__GB0  |           1|     10698|
-|2     |soduku_solver__GB1  |           1|     11641|
-|3     |soduku_solver__GB2  |           1|      3783|
-|4     |soduku_solver__GB3  |           1|      4910|
-|5     |soduku_solver__GB4  |           1|      9539|
-|6     |soduku_solver__GB5  |           1|      8901|
-|7     |soduku_solver__GB6  |           1|     32910|
-|8     |soduku_solver__GB7  |           1|      9132|
-|9     |soduku_solver__GB8  |           1|      4407|
-|10    |soduku_solver__GB9  |           1|      7614|
-|11    |soduku_solver__GB10 |           1|     10456|
-|12    |soduku_solver__GB11 |           1|     12415|
-|13    |soduku_solver__GB12 |           1|     11904|
-|14    |soduku_solver__GB13 |           1|     12348|
-|15    |soduku_solver__GB14 |           1|     12123|
-|16    |soduku_solver__GB15 |           1|     12358|
-|17    |labkit__GC0         |           1|      4174|
-+------+--------------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -780,248 +358,31 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clkdivider/clk_out1' to pin 'clkdivider/bbstub_clk_out1/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:03 ; elapsed = 00:05:27 . Memory (MB): peak = 2143.305 ; gain = 1248.105 ; free physical = 406 ; free virtual = 5481
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2161 ; free virtual = 12345
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:13:00 ; elapsed = 00:14:12 . Memory (MB): peak = 2871.172 ; gain = 1975.973 ; free physical = 133 ; free virtual = 4801
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1470.484 ; gain = 575.281 ; free physical = 2150 ; free virtual = 12333
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |soduku_solver__GB0  |           1|     10478|
-|2     |soduku_solver__GB1  |           1|     11601|
-|3     |soduku_solver__GB2  |           1|      3243|
-|4     |soduku_solver__GB3  |           1|      4926|
-|5     |soduku_solver__GB4  |           1|      9433|
-|6     |soduku_solver__GB5  |           1|      8681|
-|7     |soduku_solver__GB11 |           1|     12186|
-|8     |soduku_solver__GB14 |           1|     11969|
-|9     |labkit__GC0         |           1|      4174|
-|10    |labkit_GT1          |           1|        18|
-|11    |labkit_GT2          |           1|         9|
-|12    |labkit_GT3          |           1|         9|
-|13    |labkit_GT4          |           1|         9|
-|14    |labkit_GT5          |           1|         9|
-|15    |labkit_GT7          |           1|         9|
-|16    |labkit_GT8          |           1|         9|
-|17    |labkit_GT10         |           1|         9|
-|18    |labkit_GT11         |           1|         9|
-|19    |labkit_GT12         |           1|         9|
-|20    |labkit_GT13         |           1|         9|
-|21    |labkit_GT14         |           1|         9|
-|22    |labkit_GT15         |           1|         9|
-|23    |labkit_GT16         |           1|         9|
-|24    |labkit_GT18         |           1|         9|
-|25    |labkit_GT19         |           1|         9|
-|26    |labkit_GT20         |           1|       136|
-|27    |labkit_GT21         |           1|        50|
-|28    |muxpart__6018       |           1|        41|
-|29    |muxpart__6017       |           1|        41|
-|30    |muxpart__6016       |           1|        41|
-|31    |muxpart__6015       |           1|        41|
-|32    |muxpart__6014       |           1|        41|
-|33    |labkit_GT27         |           1|        13|
-|34    |labkit_GT28         |           1|        13|
-|35    |labkit_GT29         |           1|        13|
-|36    |labkit_GT1__3       |           1|     12115|
-|37    |labkit_GT2__1       |           1|        13|
-|38    |labkit_GT3__1       |           1|         9|
-|39    |labkit_GT4__1       |           1|         9|
-|40    |labkit_GT5__1       |           1|        13|
-|41    |labkit_GT6__1       |           1|         9|
-|42    |labkit_GT7__1       |           1|         9|
-|43    |labkit_GT8__1       |           1|         8|
-|44    |labkit_GT9__1       |           1|        13|
-|45    |labkit_GT10__1      |           1|        13|
-|46    |labkit_GT11__1      |           1|        13|
-|47    |labkit_GT12__1      |           1|        13|
-|48    |labkit_GT13__1      |           1|        13|
-|49    |labkit_GT14__1      |           1|        13|
-|50    |labkit_GT15__1      |           1|        13|
-|51    |labkit_GT16__1      |           1|        13|
-|52    |labkit_GT18__1      |           1|        13|
-|53    |labkit_GT19__1      |           1|        13|
-|54    |labkit_GT20__1      |           1|        13|
-|55    |labkit_GT21__1      |           1|        13|
-|56    |labkit_GT22         |           1|        13|
-|57    |labkit_GT23         |           1|        13|
-|58    |labkit_GT24         |           1|        13|
-|59    |labkit_GT25         |           1|        13|
-|60    |labkit_GT26         |           1|        13|
-|61    |labkit_GT27__1      |           1|        13|
-|62    |labkit_GT28__1      |           1|        13|
-|63    |labkit_GT29__1      |           1|        13|
-|64    |labkit_GT30         |           1|        13|
-|65    |labkit_GT31         |           1|        13|
-|66    |labkit_GT32         |           1|        13|
-|67    |labkit_GT33         |           1|        13|
-|68    |labkit_GT34         |           1|        13|
-|69    |labkit_GT35         |           1|        13|
-|70    |labkit_GT36         |           1|        13|
-|71    |labkit_GT37         |           1|        13|
-|72    |labkit_GT38         |           1|        13|
-|73    |labkit_GT39         |           1|        13|
-|74    |labkit_GT40         |           1|        13|
-|75    |labkit_GT41         |           1|        13|
-|76    |labkit_GT42         |           1|        13|
-|77    |labkit_GT43         |           1|        13|
-|78    |labkit_GT44         |           1|        13|
-|79    |labkit_GT45         |           1|        13|
-|80    |labkit_GT46         |           1|        13|
-|81    |labkit_GT47         |           1|        13|
-|82    |labkit_GT48         |           1|        13|
-|83    |labkit_GT49         |           1|        13|
-|84    |labkit_GT50         |           1|        13|
-|85    |labkit_GT51         |           1|        13|
-|86    |labkit_GT52         |           1|        13|
-|87    |labkit_GT53         |           1|        13|
-|88    |labkit_GT54         |           1|        13|
-|89    |labkit_GT55         |           1|        13|
-|90    |labkit_GT56         |           1|        13|
-|91    |labkit_GT1__5       |           1|     11807|
-|92    |labkit_GT2__2       |           1|         9|
-|93    |labkit_GT3__2       |           1|         9|
-|94    |labkit_GT4__2       |           1|         3|
-|95    |labkit_GT5__2       |           1|         9|
-|96    |labkit_GT6__2       |           1|         4|
-|97    |labkit_GT7__2       |           1|         9|
-|98    |labkit_GT12__2      |           1|         9|
-|99    |labkit_GT13__2      |           1|         9|
-|100   |labkit_GT14__2      |           1|         9|
-|101   |labkit_GT15__2      |           1|         9|
-|102   |labkit_GT16__2      |           1|         9|
-|103   |labkit_GT17         |           1|         9|
-|104   |labkit_GT18__2      |           1|         9|
-|105   |labkit_GT19__2      |           1|         9|
-|106   |labkit_GT20__2      |           1|         9|
-|107   |labkit_GT21__2      |           1|         9|
-|108   |labkit_GT22__1      |           1|         9|
-|109   |labkit_GT23__1      |           1|         9|
-|110   |labkit_GT24__1      |           1|         9|
-|111   |labkit_GT25__1      |           1|         9|
-|112   |labkit_GT26__1      |           1|         9|
-|113   |labkit_GT27__2      |           1|        13|
-|114   |labkit_GT28__2      |           1|         9|
-|115   |labkit_GT29__2      |           1|         9|
-|116   |labkit_GT30__1      |           1|         9|
-|117   |labkit_GT31__1      |           1|         9|
-|118   |labkit_GT32__1      |           1|         9|
-|119   |labkit_GT33__1      |           1|        13|
-|120   |labkit_GT34__1      |           1|        13|
-|121   |labkit_GT35__1      |           1|        13|
-|122   |labkit_GT36__1      |           1|        13|
-|123   |labkit_GT37__1      |           1|        13|
-|124   |labkit_GT38__1      |           1|        13|
-|125   |labkit_GT39__1      |           1|        13|
-|126   |labkit_GT40__1      |           1|        13|
-|127   |labkit_GT41__1      |           1|        13|
-|128   |labkit_GT42__1      |           1|        13|
-|129   |labkit_GT43__1      |           1|        13|
-|130   |labkit_GT44__1      |           1|        13|
-|131   |labkit_GT45__1      |           1|        13|
-|132   |labkit_GT46__1      |           1|        13|
-|133   |labkit_GT47__1      |           1|        13|
-|134   |labkit_GT48__1      |           1|        13|
-|135   |labkit_GT49__1      |           1|        13|
-|136   |labkit_GT50__1      |           1|        13|
-|137   |labkit_GT51__1      |           1|         9|
-|138   |labkit_GT52__1      |           1|        13|
-|139   |labkit_GT53__1      |           1|        13|
-|140   |labkit_GT54__1      |           1|        13|
-|141   |labkit_GT55__1      |           1|        13|
-|142   |labkit_GT56__1      |           1|        13|
-|143   |labkit_GT57         |           1|        13|
-|144   |labkit_GT58         |           1|         9|
-|145   |labkit_GT59         |           1|        13|
-|146   |labkit_GT60         |           1|        13|
-|147   |labkit_GT61         |           1|        13|
-|148   |labkit_GT62         |           1|        13|
-|149   |labkit_GT63         |           1|         9|
-|150   |labkit_GT64         |           1|         9|
-|151   |labkit_GT65         |           1|         9|
-|152   |labkit_GT66         |           1|         9|
-|153   |labkit_GT67         |           1|         9|
-|154   |labkit_GT68         |           1|         9|
-|155   |labkit_GT69         |           1|         9|
-|156   |labkit_GT2__3       |           1|         9|
-|157   |labkit_GT3__3       |           1|         9|
-|158   |labkit_GT4__3       |           1|         9|
-|159   |labkit_GT5__3       |           1|         9|
-|160   |labkit_GT6__3       |           1|         9|
-|161   |labkit_GT7__3       |           1|         9|
-|162   |labkit_GT8__3       |           1|         9|
-|163   |labkit_GT10__3      |           1|         9|
-|164   |labkit_GT11__3      |           1|         9|
-|165   |labkit_GT12__3      |           1|         9|
-|166   |labkit_GT13__3      |           1|         9|
-|167   |labkit_GT14__3      |           1|         9|
-|168   |labkit_GT15__3      |           1|         2|
-|169   |labkit_GT16__3      |           1|         9|
-|170   |labkit_GT17__1      |           1|        18|
-|171   |labkit_GT18__3      |           1|         9|
-|172   |labkit_GT19__3      |           1|         9|
-|173   |labkit_GT20__3      |           1|         9|
-|174   |labkit_GT22__2      |           1|        18|
-|175   |labkit_GT23__2      |           1|        18|
-|176   |labkit_GT24__2      |           1|        18|
-|177   |labkit_GT25__2      |           1|        18|
-|178   |labkit_GT26__2      |           1|        18|
-|179   |labkit_GT27__3      |           1|        18|
-|180   |labkit_GT0          |           1|     58334|
-|181   |labkit_GT1__7       |           1|     12172|
-|182   |labkit_GT2__4       |           1|        18|
-|183   |labkit_GT3__4       |           1|       216|
-|184   |labkit_GT4__4       |           1|         4|
-|185   |labkit_GT5__4       |           1|        18|
-+------+--------------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-Found timing loop:
-     0: my_lovei_12/O30205 (labkit_GT1__7_tempName)
-     1: my_lovei_12/O30205 (labkit_GT1__7_tempName)
-WARNING: [Synth 8-295] found timing loop. [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
-Found timing loop:
-     0: my_lovei_6/O29498 (labkit_GT0_tempName)
-     1: my_lovei_6/O29498 (labkit_GT0_tempName)
-WARNING: [Synth 8-295] found timing loop. [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
-Found timing loop:
-     0: my_lovei_12/O30205 (labkit_GT1__7_tempName)
-     1: my_lovei_12/O30205 (labkit_GT1__7_tempName)
-WARNING: [Synth 8-295] found timing loop. [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
-Found timing loop:
-     0: my_lovei_6/O29498 (labkit_GT0_tempName)
-     1: my_lovei_6/O29498 (labkit_GT0_tempName)
-WARNING: [Synth 8-295] found timing loop. [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
-Found timing loop:
-     0: my_lovei_12/O30205 (labkit_GT1__7_tempName)
-     1: my_lovei_12/O30205 (labkit_GT1__7_tempName)
-WARNING: [Synth 8-295] found timing loop. [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
-Found timing loop:
-     0: my_lovei_6/O29498 (labkit_GT0_tempName)
-     1: my_lovei_6/O29498 (labkit_GT0_tempName)
-WARNING: [Synth 8-295] found timing loop. [/afs/athena.mit.edu/user/m/a/magson/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/imports/baseline_test/base.v:24]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:13:55 ; elapsed = 00:15:53 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 130 ; free virtual = 3427
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:13:55 ; elapsed = 00:15:53 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 130 ; free virtual = 3427
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |soduku_solver__GB0  |           1|      3569|
-|2     |soduku_solver__GB1  |           1|      4143|
-|3     |soduku_solver__GB11 |           1|      3947|
-|4     |soduku_solver__GB14 |           1|      3900|
-|5     |labkit_GT1__3       |           1|      3967|
-|6     |labkit_GT1__5       |           1|      3851|
-|7     |labkit_GT0          |           1|     19165|
-|8     |labkit_GT1__7       |           1|      3990|
-+------+--------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:13:55 ; elapsed = 00:15:53 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 129 ; free virtual = 3427
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1038,7 +399,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:14:05 ; elapsed = 00:16:25 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 143 ; free virtual = 3351
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1051,7 +412,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:14:06 ; elapsed = 00:16:26 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 140 ; free virtual = 3351
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1063,38 +424,37 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:14:11 ; elapsed = 00:16:43 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 189 ; free virtual = 3449
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:14:11 ; elapsed = 00:16:44 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 182 ; free virtual = 3448
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:14:51 ; elapsed = 00:17:25 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 172 ; free virtual = 3448
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:14:51 ; elapsed = 00:17:25 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 172 ; free virtual = 3448
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|labkit      | syn1/out_reg     | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|labkit      | syn2/out_reg     | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|labkit      | reset_reg_reg[4] | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+--------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|labkit      | syn1/out_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|labkit      | syn2/out_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -1133,54 +493,49 @@ Report Cell Usage:
 |8     |six_image_48_48   |     1|
 |9     |three_image_48_48 |     1|
 |10    |two_image_48_48   |     1|
-|11    |CARRY4            |   248|
+|11    |CARRY4            |   159|
 |12    |DSP48E1           |     2|
-|13    |LUT1              |    59|
-|14    |LUT2              |  1789|
-|15    |LUT3              |  2757|
-|16    |LUT4              |  5152|
-|17    |LUT5              |  7126|
-|18    |LUT6              | 24166|
-|19    |MUXF7             |  1594|
-|20    |MUXF8             |   678|
-|21    |SRL16E            |     3|
-|22    |FDRE              | 14613|
-|23    |FDSE              |   772|
-|24    |IBUF              |    19|
-|25    |OBUF              |    52|
+|13    |LUT1              |    37|
+|14    |LUT2              |   382|
+|15    |LUT3              |   152|
+|16    |LUT4              |    88|
+|17    |LUT5              |    90|
+|18    |LUT6              |   295|
+|19    |SRL16E            |     2|
+|20    |FDRE              |    56|
+|21    |IBUF              |    19|
+|22    |OBUF              |    51|
+|23    |OBUFT             |     1|
 +------+------------------+------+
 
 Report Instance Areas: 
 +------+----------+--------------+------+
 |      |Instance  |Module        |Cells |
 +------+----------+--------------+------+
-|1     |top       |              | 59040|
-|2     |  dg1     |display_grid  |   750|
-|3     |  display |display_8hex  |    69|
-|4     |  my_love |soduku_solver | 57612|
-|5     |  syn1    |synchronize   |     3|
-|6     |  syn2    |synchronize_0 |     3|
-|7     |  xvga1   |xvga          |   529|
+|1     |top       |              |  1344|
+|2     |  dg1     |display_grid  |   599|
+|3     |  display |display_8hex  |    68|
+|4     |  syn1    |synchronize   |     3|
+|5     |  syn2    |synchronize_0 |     3|
+|6     |  xvga1   |xvga          |   599|
 +------+----------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:14:51 ; elapsed = 00:17:25 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 172 ; free virtual = 3448
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.512 ; gain = 600.309 ; free physical = 2129 ; free virtual = 12313
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:14:40 ; elapsed = 00:17:13 . Memory (MB): peak = 2883.098 ; gain = 1719.496 ; free physical = 161 ; free virtual = 3447
-Synthesis Optimization Complete : Time (s): cpu = 00:14:51 ; elapsed = 00:17:29 . Memory (MB): peak = 2883.098 ; gain = 1987.898 ; free physical = 142 ; free virtual = 3446
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1495.512 ; gain = 131.469 ; free physical = 2129 ; free virtual = 12313
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1495.520 ; gain = 600.316 ; free physical = 2130 ; free virtual = 12313
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 269 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 180 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'labkit' is not ideal for floorplanning, since the cellview 'soduku_solver' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-312 Infos, 141 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:14:57 ; elapsed = 00:18:01 . Memory (MB): peak = 2935.199 ; gain = 1956.441 ; free physical = 4132 ; free virtual = 7565
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2967.215 ; gain = 32.016 ; free physical = 4117 ; free virtual = 7563
-report_utilization: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:01 . Memory (MB): peak = 2967.215 ; gain = 0.000 ; free physical = 4111 ; free virtual = 7562
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 15:13:39 2018...
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1527.531 ; gain = 547.770 ; free physical = 2131 ; free virtual = 12315
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1559.547 ; gain = 0.000 ; free physical = 2132 ; free virtual = 12316
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 29 17:17:21 2018...

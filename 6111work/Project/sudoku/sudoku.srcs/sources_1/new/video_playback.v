@@ -16,6 +16,8 @@ module video_playback(
     input[323:0] board_in
     );
     
+//    `include "display_lib.v" 
+    
     parameter IDLE = 0;
     parameter CHOOSE_XY1 = 1;
     parameter CHOOSE_XY2 = 2;

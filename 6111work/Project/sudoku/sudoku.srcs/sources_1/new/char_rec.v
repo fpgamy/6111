@@ -80,7 +80,7 @@ reg[8:0] nine_score = 0;
 //assign img_ram_addr = x + (y * IMG_WIDTH);
 
 parameter THRESHOLD = 15;
-parameter CELL_WIDTH = 16;
+parameter CELL_LR_WIDTH = 16;
 
 wire[5:0] combined_pixel_data = img_ram_data[3:0] + img_ram_data[7:4] + img_ram_data[11:8];
 wire pix_logical = combined_pixel_data > THRESHOLD;
@@ -101,7 +101,7 @@ max_score max_score_1 (
     
 always @(posedge clk) begin
     img_ram_addr <= x + y * IMG_WIDTH;
-    rom_addr <= (hcount < 16 && vcount < 16) ? hcount + vcount * CELL_WIDTH : 255;
+    rom_addr <= ((hcount < 16) && (vcount < 16)) ? hcount + (vcount * CELL_LR_WIDTH) : 255;
     case(state)
         IDLE: begin
             if(start) begin
@@ -111,7 +111,9 @@ always @(posedge clk) begin
                 recg_sudoku <= 0;
                 x0 <= 0;
                 y0 <= 0;
-                
+                hcount <= 0;
+		vcount <= 0;
+
                 none_score  <= 0;
                 one_score   <= 0;
                 two_score   <= 0;
@@ -127,7 +129,7 @@ always @(posedge clk) begin
         RECG: begin
             mem_addr_counter <= mem_addr_counter + 1; 
             
-            if (hcount < CELL_WIDTH - 1) begin
+            if (hcount < CELL_LR_WIDTH - 1) begin
                 hcount <= hcount + 1;
             end else begin
                 hcount <= 0;
@@ -140,7 +142,7 @@ always @(posedge clk) begin
             end else
             
             if(mem_addr_counter > DELAY_CYCLES) begin
-                none_score  <= none_score   + (pix_logical == 0);
+                none_score  <= none_score   + (pix_logical == 1);
                 one_score   <= one_score    + (pix_logical == one_rom_data);
                 two_score   <= two_score    + (pix_logical == two_rom_data);
                 three_score <= three_score  + (pix_logical == three_rom_data);
@@ -170,12 +172,12 @@ always @(posedge clk) begin
             eight_score <= 0;
             nine_score  <= 0;
         
-            if(x0 <= 144 - CELL_WIDTH - 1) begin
-                x0 <= x0 + CELL_WIDTH;
+            if(x0 <= 144 - CELL_LR_WIDTH - 1) begin
+                x0 <= x0 + CELL_LR_WIDTH;
 
                 state <= RECG;
-            end else if(y0 <= 144 - CELL_WIDTH - 1) begin
-                y0 <= y0 + CELL_WIDTH;
+            end else if(y0 <= 144 - CELL_LR_WIDTH - 1) begin
+                y0 <= y0 + CELL_LR_WIDTH;
                 x0 <= 0;
 
                 state <= RECG;

@@ -84,9 +84,6 @@ GRID[8][6] = VALUE;\
 GRID[8][7] = VALUE;\
 GRID[8][8] = VALUE
 
-`define GEN_GUESS(M)\
--M & M
-
 `define OR_GRID(GRID) \
 GRID[0][0] |\
 GRID[0][1] |\

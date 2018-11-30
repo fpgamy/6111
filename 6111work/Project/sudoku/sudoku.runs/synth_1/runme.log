@@ -13,23 +13,23 @@ Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/frame_buffer/frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/video_clk/video_clk.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/one_16_d/one_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/nine_16_d/nine_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/five_16_d/five_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/six_16_d/six_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/four_16_d/four_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/seven_16_d/seven_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/two_16_d/two_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/eight_16_d/eight_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/three_16_d_1/three_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/three_16_d_1/three_16_d.dcp]
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 32355 
+INFO: Helper process launched with PID 25953 
 WARNING: [Synth 8-1102] /* in comment [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/OV7670_config_rom.v:201]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1066.520 ; gain = 171.324 ; free physical = 1648 ; free virtual = 12825
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1067.520 ; gain = 172.324 ; free physical = 3165 ; free virtual = 12885
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:4]
 	Parameter GRID_SIZE bound to: 9 - type: integer 
@@ -52,8 +52,8 @@ INFO: [Synth 8-256] done synthesizing module 'debounce' (3#1) [/afs/athena.mit.e
 INFO: [Synth 8-638] synthesizing module 'clk_prescale' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/clk_prescale.v:23]
 INFO: [Synth 8-256] done synthesizing module 'clk_prescale' (4#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/clk_prescale.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:152]
-INFO: [Synth 8-638] synthesizing module 'video_clk' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/video_clk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'video_clk' (5#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/video_clk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'video_clk' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/video_clk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'video_clk' (5#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/video_clk_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'camera' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera.v:1]
 INFO: [Synth 8-638] synthesizing module 'camera_configure' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/projects/OV7670-Verilog/src/camera_configure.v:23]
 	Parameter CLK_FREQ bound to: 25000000 - type: integer 
@@ -113,30 +113,30 @@ INFO: [Synth 8-638] synthesizing module 'display_grid' [/afs/athena.mit.edu/user
 	Parameter CELL_PIXELS bound to: 48 - type: integer 
 	Parameter GRID_SIZE bound to: 9 - type: integer 
 	Parameter MAX_GUESSES bound to: 16 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'one_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'one_image_48_48' (13#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'two_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'two_image_48_48' (14#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'three_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'three_image_48_48' (15#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'four_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'four_image_48_48' (16#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'five_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'five_image_48_48' (17#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'six_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'six_image_48_48' (18#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'seven_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'seven_image_48_48' (19#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'eight_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'eight_image_48_48' (20#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'nine_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'nine_image_48_48' (21#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'one_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'one_image_48_48' (13#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/one_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'two_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'two_image_48_48' (14#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/two_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'three_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'three_image_48_48' (15#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/three_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'four_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'four_image_48_48' (16#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/four_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'five_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'five_image_48_48' (17#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/five_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'six_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'six_image_48_48' (18#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/six_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'seven_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'seven_image_48_48' (19#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/seven_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'eight_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'eight_image_48_48' (20#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/eight_image_48_48_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'nine_image_48_48' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'nine_image_48_48' (21#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/nine_image_48_48_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'display_grid' (22#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:22]
-WARNING: [Synth 8-689] width (32) of port connection 'x_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:47]
-WARNING: [Synth 8-689] width (32) of port connection 'y_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'x_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:49]
+WARNING: [Synth 8-689] width (32) of port connection 'y_in' does not match port width (10) of module 'display_grid' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:50]
 INFO: [Synth 8-256] done synthesizing module 'video_playback' (23#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:1]
-INFO: [Synth 8-638] synthesizing module 'frame_buffer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/frame_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (24#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'frame_buffer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'frame_buffer' (24#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/frame_buffer_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'frame_parser' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:3]
 	Parameter IDLE bound to: 0 - type: integer 
 	Parameter DIV_X_START bound to: 1 - type: integer 
@@ -158,40 +158,54 @@ INFO: [Synth 8-638] synthesizing module 'frame_transfer' [/afs/athena.mit.edu/us
 INFO: [Synth 8-256] done synthesizing module 'frame_transfer' (26#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/frame_transfer.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:100]
 INFO: [Synth 8-256] done synthesizing module 'frame_parser' (27#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:3]
-INFO: [Synth 8-638] synthesizing module 'rescaled_frame_buffer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/rescaled_frame_buffer_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rescaled_frame_buffer' (28#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/rescaled_frame_buffer_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'bram_quarantine' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:23]
-INFO: [Synth 8-638] synthesizing module 'one_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/one_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'one_16_d' (29#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/one_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'two_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/two_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'two_16_d' (30#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/two_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'three_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/three_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'three_16_d' (31#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/three_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'four_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/four_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'four_16_d' (32#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/four_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'five_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/five_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'five_16_d' (33#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/five_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'six_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/six_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'six_16_d' (34#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/six_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'seven_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/seven_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'seven_16_d' (35#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/seven_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'eight_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/eight_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'eight_16_d' (36#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/eight_16_d_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'nine_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/nine_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'nine_16_d' (37#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/realtime/nine_16_d_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'bram_quarantine' (38#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:23]
-INFO: [Synth 8-638] synthesizing module 'char_rec' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:23]
-	Parameter IMG_WIDTH bound to: 144 - type: integer 
-	Parameter DELAY_CYCLES bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'rescaled_frame_buffer' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/rescaled_frame_buffer_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rescaled_frame_buffer' (28#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/rescaled_frame_buffer_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'get_board' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:23]
+	Parameter GRID_SIZE bound to: 9 - type: integer 
+	Parameter MAX_GUESSES bound to: 16 - type: integer 
+	Parameter IMG_SIZE bound to: 144 - type: integer 
+	Parameter CELL_LR_WIDTH bound to: 16 - type: integer 
+	Parameter MEM_SIZE bound to: 20736 - type: integer 
 	Parameter IDLE bound to: 0 - type: integer 
-	Parameter RECG bound to: 1 - type: integer 
-	Parameter RECONF bound to: 2 - type: integer 
+	Parameter READING bound to: 1 - type: integer 
+	Parameter RECG bound to: 2 - type: integer 
+	Parameter DELAY_CYCLES bound to: 2 - type: integer 
 	Parameter THRESHOLD bound to: 15 - type: integer 
-	Parameter CELL_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'max_score' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/max_score.v:23]
-INFO: [Synth 8-256] done synthesizing module 'max_score' (39#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/max_score.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:105]
-INFO: [Synth 8-256] done synthesizing module 'char_rec' (40#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:23]
+INFO: [Synth 8-638] synthesizing module 'char_rec_cell' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:23]
+	Parameter GRID_SIZE bound to: 9 - type: integer 
+	Parameter MAX_GUESSES bound to: 16 - type: integer 
+	Parameter BEST_THRESH bound to: 225 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'char_rec_cell' (29#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:23]
+INFO: [Synth 8-638] synthesizing module 'one_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/one_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'one_16_d' (30#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/one_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'one_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:60]
+INFO: [Synth 8-638] synthesizing module 'two_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/two_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'two_16_d' (31#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/two_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'two_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:61]
+INFO: [Synth 8-638] synthesizing module 'three_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/three_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'three_16_d' (32#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/three_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'three_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:62]
+INFO: [Synth 8-638] synthesizing module 'four_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/four_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'four_16_d' (33#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/four_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'four_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:63]
+INFO: [Synth 8-638] synthesizing module 'five_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/five_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'five_16_d' (34#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/five_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'five_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:64]
+INFO: [Synth 8-638] synthesizing module 'six_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/six_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'six_16_d' (35#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/six_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'six_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:65]
+INFO: [Synth 8-638] synthesizing module 'seven_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/seven_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'seven_16_d' (36#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/seven_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'seven_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:66]
+INFO: [Synth 8-638] synthesizing module 'eight_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/eight_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'eight_16_d' (37#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/eight_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'eight_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:67]
+INFO: [Synth 8-638] synthesizing module 'nine_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/nine_16_d_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'nine_16_d' (38#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/realtime/nine_16_d_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'nine_16_d' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:68]
+INFO: [Synth 8-155] case statement is not full and has no default [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:148]
+WARNING: [Synth 8-3848] Net img_addr_out in module/entity get_board does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:45]
+INFO: [Synth 8-256] done synthesizing module 'get_board' (39#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:23]
 WARNING: [Synth 8-3848] Net RGB1_Blue in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:8]
 WARNING: [Synth 8-3848] Net RGB1_Green in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:8]
 WARNING: [Synth 8-3848] Net RGB1_Red in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:8]
@@ -199,10 +213,25 @@ WARNING: [Synth 8-3848] Net RGB2_Blue in module/entity top does not have driver.
 WARNING: [Synth 8-3848] Net RGB2_Green in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:9]
 WARNING: [Synth 8-3848] Net RGB2_Red in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:9]
 WARNING: [Synth 8-3848] Net camera_sda in module/entity top does not have driver. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:32]
-INFO: [Synth 8-256] done synthesizing module 'top' (41#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:4]
+INFO: [Synth 8-256] done synthesizing module 'top' (40#1) [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:4]
 WARNING: [Synth 8-3917] design top has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3917] design top has port JA[4] driven by constant 1
 WARNING: [Synth 8-3917] design top has port JA[0] driven by constant 0
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[14]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[13]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[12]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[11]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[10]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[9]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[8]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[7]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[6]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[5]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[4]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[3]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[2]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[1]
+WARNING: [Synth 8-3331] design get_board has unconnected port img_addr_out[0]
 WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[18]
 WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[17]
 WARNING: [Synth 8-3331] design frame_transfer has unconnected port read_addr[16]
@@ -251,6 +280,8 @@ WARNING: [Synth 8-3331] design top has unconnected port JC[5]
 WARNING: [Synth 8-3331] design top has unconnected port JC[4]
 WARNING: [Synth 8-3331] design top has unconnected port JC[3]
 WARNING: [Synth 8-3331] design top has unconnected port JC[2]
+WARNING: [Synth 8-3331] design top has unconnected port JC[1]
+WARNING: [Synth 8-3331] design top has unconnected port JC[0]
 WARNING: [Synth 8-3331] design top has unconnected port JD[7]
 WARNING: [Synth 8-3331] design top has unconnected port JD[6]
 WARNING: [Synth 8-3331] design top has unconnected port JD[5]
@@ -274,7 +305,7 @@ WARNING: [Synth 8-3331] design top has unconnected port SW[3]
 WARNING: [Synth 8-3331] design top has unconnected port SW[0]
 WARNING: [Synth 8-3331] design top has unconnected port CPU_RESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1108.777 ; gain = 213.582 ; free physical = 1603 ; free virtual = 12782
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1143.949 ; gain = 248.754 ; free physical = 3086 ; free virtual = 12807
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -284,39 +315,39 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1108.777 ; gain = 213.582 ; free physical = 1603 ; free virtual = 12782
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1143.949 ; gain = 248.754 ; free physical = 3087 ; free virtual = 12807
 ---------------------------------------------------------------------------------
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/frame_buffer/frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/video_clk/video_clk.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/one_16_d/one_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/nine_16_d/nine_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/five_16_d/five_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/six_16_d/six_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/four_16_d/four_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/seven_16_d/seven_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/two_16_d/two_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/eight_16_d/eight_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/three_16_d_1/three_16_d.dcp]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'eight_16_d' instantiated as 'bram_quarantine_1/eight_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:73]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/three_16_d_1/three_16_d.dcp]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'eight_16_d' instantiated as 'get_board_1/eight_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:67]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'eight_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_8' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:102]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'five_16_d' instantiated as 'bram_quarantine_1/five_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:58]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'five_16_d' instantiated as 'get_board_1/five_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:64]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'five_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_5' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:99]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'four_16_d' instantiated as 'bram_quarantine_1/four_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:53]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'four_16_d' instantiated as 'get_board_1/four_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:63]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'four_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_4' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:98]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'frame_buffer' instantiated as 'frame_buffer_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:297]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'nine_16_d' instantiated as 'bram_quarantine_1/nine_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:78]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'nine_16_d' instantiated as 'get_board_1/nine_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:68]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'nine_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_9' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:103]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'one_16_d' instantiated as 'bram_quarantine_1/one_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:38]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'one_16_d' instantiated as 'get_board_1/one_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:60]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'one_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:95]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'rescaled_frame_buffer' instantiated as 'rescaled_fb_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:338]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'seven_16_d' instantiated as 'bram_quarantine_1/seven_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:68]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'seven_16_d' instantiated as 'get_board_1/seven_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:66]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'seven_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_7' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:101]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'six_16_d' instantiated as 'bram_quarantine_1/six_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:63]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'six_16_d' instantiated as 'get_board_1/six_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:65]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'six_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_6' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:100]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'three_16_d' instantiated as 'bram_quarantine_1/three_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:48]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'three_16_d' instantiated as 'get_board_1/three_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:62]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'three_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_3' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:97]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'two_16_d' instantiated as 'bram_quarantine_1/two_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/bram_quarantine.v:43]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'two_16_d' instantiated as 'get_board_1/two_16_d_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_manager.v:61]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'two_image_48_48' instantiated as 'video_playback_1/display_grid_1/rom_2' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/display_grid.v:96]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'video_clk' instantiated as 'video_clk_1' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:227]
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
@@ -324,48 +355,48 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_2/video_clk_in_context.xdc] for cell 'video_clk_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_2/video_clk_in_context.xdc] for cell 'video_clk_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_3/rescaled_frame_buffer_in_context.xdc] for cell 'rescaled_fb_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_3/rescaled_frame_buffer_in_context.xdc] for cell 'rescaled_fb_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_4/one_16_d_in_context.xdc] for cell 'bram_quarantine_1/one_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_4/one_16_d_in_context.xdc] for cell 'bram_quarantine_1/one_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_5/nine_16_d_in_context.xdc] for cell 'bram_quarantine_1/nine_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_5/nine_16_d_in_context.xdc] for cell 'bram_quarantine_1/nine_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_6/five_16_d_in_context.xdc] for cell 'bram_quarantine_1/five_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_6/five_16_d_in_context.xdc] for cell 'bram_quarantine_1/five_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_7/six_16_d_in_context.xdc] for cell 'bram_quarantine_1/six_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_7/six_16_d_in_context.xdc] for cell 'bram_quarantine_1/six_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_8/four_16_d_in_context.xdc] for cell 'bram_quarantine_1/four_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_8/four_16_d_in_context.xdc] for cell 'bram_quarantine_1/four_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_9/seven_16_d_in_context.xdc] for cell 'bram_quarantine_1/seven_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_9/seven_16_d_in_context.xdc] for cell 'bram_quarantine_1/seven_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_10/two_16_d_in_context.xdc] for cell 'bram_quarantine_1/two_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_10/two_16_d_in_context.xdc] for cell 'bram_quarantine_1/two_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_11/eight_16_d_in_context.xdc] for cell 'bram_quarantine_1/eight_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_11/eight_16_d_in_context.xdc] for cell 'bram_quarantine_1/eight_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_12/three_16_d_in_context.xdc] for cell 'bram_quarantine_1/three_16_d_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_12/three_16_d_in_context.xdc] for cell 'bram_quarantine_1/three_16_d_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_13/eight_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_8'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_13/eight_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_8'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_14/four_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_4'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_14/four_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_4'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_15/two_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_2'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_15/two_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_2'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_16/six_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_6'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_16/six_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_6'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_17/five_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_5'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_17/five_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_5'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_18/nine_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_9'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_18/nine_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_9'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_19/one_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_1'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_19/one_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_1'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_20/seven_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_7'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_20/seven_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_7'
-Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_21/three_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_3'
-Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_21/three_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_3'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp/frame_buffer_in_context.xdc] for cell 'frame_buffer_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_2/video_clk_in_context.xdc] for cell 'video_clk_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_2/video_clk_in_context.xdc] for cell 'video_clk_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_3/rescaled_frame_buffer_in_context.xdc] for cell 'rescaled_fb_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_3/rescaled_frame_buffer_in_context.xdc] for cell 'rescaled_fb_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_4/one_16_d_in_context.xdc] for cell 'get_board_1/one_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_4/one_16_d_in_context.xdc] for cell 'get_board_1/one_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_5/nine_16_d_in_context.xdc] for cell 'get_board_1/nine_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_5/nine_16_d_in_context.xdc] for cell 'get_board_1/nine_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_6/five_16_d_in_context.xdc] for cell 'get_board_1/five_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_6/five_16_d_in_context.xdc] for cell 'get_board_1/five_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_7/six_16_d_in_context.xdc] for cell 'get_board_1/six_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_7/six_16_d_in_context.xdc] for cell 'get_board_1/six_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_8/four_16_d_in_context.xdc] for cell 'get_board_1/four_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_8/four_16_d_in_context.xdc] for cell 'get_board_1/four_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_9/seven_16_d_in_context.xdc] for cell 'get_board_1/seven_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_9/seven_16_d_in_context.xdc] for cell 'get_board_1/seven_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_10/two_16_d_in_context.xdc] for cell 'get_board_1/two_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_10/two_16_d_in_context.xdc] for cell 'get_board_1/two_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_11/eight_16_d_in_context.xdc] for cell 'get_board_1/eight_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_11/eight_16_d_in_context.xdc] for cell 'get_board_1/eight_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_12/three_16_d_in_context.xdc] for cell 'get_board_1/three_16_d_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_12/three_16_d_in_context.xdc] for cell 'get_board_1/three_16_d_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_13/eight_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_8'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_13/eight_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_8'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_14/four_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_4'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_14/four_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_4'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_15/two_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_2'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_15/two_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_2'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_16/six_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_6'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_16/six_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_6'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_17/five_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_5'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_17/five_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_5'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_18/nine_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_9'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_18/nine_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_9'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_19/one_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_1'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_19/one_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_1'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_20/seven_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_7'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_20/seven_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_7'
+Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_21/three_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_3'
+Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_21/three_image_48_48_in_context.xdc] for cell 'video_playback_1/display_grid_1/rom_3'
 Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -375,36 +406,36 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1482.484 ; gain = 0.004 ; free physical = 1336 ; free virtual = 12516
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/frame_buffer/frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/video_clk/video_clk.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/one_16_d/one_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/nine_16_d/nine_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/five_16_d/five_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/six_16_d/six_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/four_16_d/four_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/seven_16_d/seven_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/two_16_d/two_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/eight_16_d/eight_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/three_16_d_1/three_16_d.dcp]
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1572.641 ; gain = 0.004 ; free physical = 2817 ; free virtual = 12537
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/three_16_d_1/three_16_d.dcp]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1336 ; free virtual = 12516
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1572.641 ; gain = 677.445 ; free physical = 2815 ; free virtual = 12537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1336 ; free virtual = 12516
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1572.641 ; gain = 677.445 ; free physical = 2815 ; free virtual = 12537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK_100M. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_2/video_clk_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_100M. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-32350-eecs-digital-18/dcp_2/video_clk_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK_100M. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_2/video_clk_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_100M. (constraint file  /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1/.Xil/Vivado-25944-eecs-digital-18/dcp_2/video_clk_in_context.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1336 ; free virtual = 12516
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1572.641 ; gain = 677.445 ; free physical = 2815 ; free virtual = 12537
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clean" won't be mapped to RAM because it is too sparse
@@ -465,18 +496,13 @@ INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/new/frame_parser.v:76]
 INFO: [Synth 8-5544] ROM "dividend" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "accl_x" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:64]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:64]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:64]
-INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "hcount" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:181]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:177]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:166]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/imports/wbraun/Dropbox/bku/camera_v2/camera_v2.srcs/sources_1/imports/sources_1/imports/new/top.v:162]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top'
 INFO: [Synth 8-5544] ROM "frame_parser_start" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'max_score_reg' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/max_score.v:38]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -489,14 +515,23 @@ WARNING: [Synth 8-327] inferring latch for variable 'max_score_reg' [/afs/athena
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1335 ; free virtual = 12515
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1572.641 ; gain = 677.445 ; free physical = 2770 ; free virtual = 12492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |get_board__GB0 |           1|     28611|
+|2     |get_board__GB1 |           1|      7840|
+|3     |get_board__GB2 |           1|      9408|
+|4     |get_board__GB3 |           1|     12544|
+|5     |get_board__GB4 |           1|     15680|
+|6     |get_board__GB5 |           1|     18816|
+|7     |get_board__GB6 |           1|     25088|
+|8     |get_board__GB7 |           1|     30011|
+|9     |top__GC0       |           1|     14520|
++------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -505,20 +540,20 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 4     
 	   3 Input     20 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 49    
 	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 49    
 	   2 Input     10 Bit       Adders := 14    
 	   3 Input     10 Bit       Adders := 5     
-	   2 Input      9 Bit       Adders := 15    
+	   2 Input      9 Bit       Adders := 731   
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
 	   3 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	              324 Bit    Registers := 1     
+	              256 Bit    Registers := 81    
 	               32 Bit    Registers := 2     
 	               23 Bit    Registers := 1     
 	               20 Bit    Registers := 2     
@@ -527,20 +562,18 @@ Detailed RTL Component Info :
 	               15 Bit    Registers := 1     
 	               12 Bit    Registers := 4     
 	               10 Bit    Registers := 19    
-	                9 Bit    Registers := 13    
-	                8 Bit    Registers := 8     
+	                9 Bit    Registers := 812   
+	                8 Bit    Registers := 7     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 3     
-	                4 Bit    Registers := 5     
+	                4 Bit    Registers := 85    
 	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 41    
 +---ROMs : 
 	                              ROMs := 1     
 +---Muxes : 
-	   2 Input    324 Bit        Muxes := 1     
-	   4 Input    324 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 81    
 	   2 Input     32 Bit        Muxes := 2     
 	   7 Input     32 Bit        Muxes := 1     
 	  14 Input     32 Bit        Muxes := 1     
@@ -548,40 +581,37 @@ Detailed RTL Component Info :
 	   2 Input     19 Bit        Muxes := 3     
 	   2 Input     17 Bit        Muxes := 1     
 	   5 Input     16 Bit        Muxes := 1     
+	   4 Input     15 Bit        Muxes := 1     
 	   2 Input     15 Bit        Muxes := 2     
 	   4 Input     12 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 54    
 	   2 Input     10 Bit        Muxes := 16    
 	   7 Input     10 Bit        Muxes := 6     
-	   2 Input      9 Bit        Muxes := 14    
-	   4 Input      9 Bit        Muxes := 13    
+	   2 Input      9 Bit        Muxes := 648   
+	   4 Input      9 Bit        Muxes := 2     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
 	  14 Input      8 Bit        Muxes := 1     
 	  16 Input      7 Bit        Muxes := 8     
-	   2 Input      5 Bit        Muxes := 3     
-	   4 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 4     
+	  10 Input      4 Bit        Muxes := 162   
+	   2 Input      4 Bit        Muxes := 84    
 	  14 Input      4 Bit        Muxes := 2     
 	   6 Input      4 Bit        Muxes := 2     
 	   9 Input      4 Bit        Muxes := 3     
 	   7 Input      4 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 2     
 	  14 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   3 Input      2 Bit        Muxes := 1     
 	  14 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 87    
-	   4 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 77    
 	   3 Input      1 Bit        Muxes := 5     
 	  14 Input      1 Bit        Muxes := 11    
 	   7 Input      1 Bit        Muxes := 9     
-	  10 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -604,6 +634,1074 @@ Detailed RTL Component Info :
 	   6 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
 	   6 Input      1 Bit        Muxes := 8     
+Module char_rec_cell__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__16 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__17 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__18 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__19 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__20 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__21 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__22 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__23 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__24 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__25 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__26 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__27 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__28 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__29 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__30 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__31 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__33 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__34 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__35 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__36 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__37 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__38 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__39 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__40 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__41 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__42 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__43 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__44 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__45 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__46 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__47 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__48 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__49 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__50 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__51 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__52 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__53 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__54 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__55 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__56 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__57 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__58 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__59 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__60 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__61 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__62 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__63 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__64 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__65 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__66 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__67 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__68 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__69 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__70 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__71 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__72 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__73 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__74 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__75 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__76 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__77 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__78 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__79 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell__80 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module char_rec_cell 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 9     
++---Registers : 
+	              256 Bit    Registers := 1     
+	                9 Bit    Registers := 10    
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 8     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+Module get_board 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     15 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     15 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
 Module display_8hex 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -616,6 +1714,30 @@ Module pwr_reset
 Detailed RTL Component Info : 
 +---Registers : 
 	               23 Bit    Registers := 1     
+Module debounce__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+Module debounce__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+Module debounce__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+Module debounce__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
 Module debounce 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -763,36 +1885,6 @@ Detailed RTL Component Info :
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 12    
 	   7 Input      1 Bit        Muxes := 9     
-Module max_score 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  10 Input      4 Bit        Muxes := 1     
-	  10 Input      1 Bit        Muxes := 1     
-Module char_rec 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      9 Bit       Adders := 15    
-	   3 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 2     
-+---Registers : 
-	              324 Bit    Registers := 1     
-	               15 Bit    Registers := 1     
-	                9 Bit    Registers := 13    
-	                8 Bit    Registers := 1     
-	                5 Bit    Registers := 3     
-	                4 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input    324 Bit        Muxes := 1     
-	   4 Input    324 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 14    
-	   4 Input      9 Bit        Muxes := 13    
-	   2 Input      5 Bit        Muxes := 3     
-	   4 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   4 Input      1 Bit        Muxes := 7     
-	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -805,10 +1897,108 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1335 ; free virtual = 12515
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design top has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port JA[4] driven by constant 1
+WARNING: [Synth 8-3917] design top has port JA[0] driven by constant 0
+WARNING: [Synth 8-3331] design top has unconnected port LED[15]
+WARNING: [Synth 8-3331] design top has unconnected port LED[14]
+WARNING: [Synth 8-3331] design top has unconnected port LED[13]
+WARNING: [Synth 8-3331] design top has unconnected port LED[12]
+WARNING: [Synth 8-3331] design top has unconnected port LED[11]
+WARNING: [Synth 8-3331] design top has unconnected port LED[10]
+WARNING: [Synth 8-3331] design top has unconnected port LED[9]
+WARNING: [Synth 8-3331] design top has unconnected port LED[8]
+WARNING: [Synth 8-3331] design top has unconnected port LED[7]
+WARNING: [Synth 8-3331] design top has unconnected port LED[6]
+WARNING: [Synth 8-3331] design top has unconnected port LED[5]
+WARNING: [Synth 8-3331] design top has unconnected port LED[4]
+WARNING: [Synth 8-3331] design top has unconnected port LED[3]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bcd" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'camera_address_gen_1/vcount_reg[11:0]' into 'camera_address_gen_1/vcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v:20]
 INFO: [Synth 8-4471] merging register 'camera_address_gen_1/hcount_reg[11:0]' into 'camera_address_gen_1/hcount_reg[11:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/camera_address_gen.v:20]
 INFO: [Synth 8-5545] ROM "camera_configure_1/config_1/timer0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -822,10 +2012,10 @@ DSP Report: Generating DSP start_y, operation Mode is: A*(B:0x30).
 DSP Report: operator start_y is absorbed into DSP start_y.
 DSP Report: Generating DSP start_x, operation Mode is: A*(B:0x30).
 DSP Report: operator start_x is absorbed into DSP start_x.
-INFO: [Synth 8-4471] merging register 'vcount_reg[9:0]' into 'vcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:41]
-INFO: [Synth 8-4471] merging register 'vcount_reg[9:0]' into 'vcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:41]
-INFO: [Synth 8-4471] merging register 'hcount_reg[9:0]' into 'hcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:40]
-INFO: [Synth 8-4471] merging register 'hcount_reg[9:0]' into 'hcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:40]
+INFO: [Synth 8-4471] merging register 'vcount_reg[9:0]' into 'vcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:43]
+INFO: [Synth 8-4471] merging register 'vcount_reg[9:0]' into 'vcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:43]
+INFO: [Synth 8-4471] merging register 'hcount_reg[9:0]' into 'hcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:42]
+INFO: [Synth 8-4471] merging register 'hcount_reg[9:0]' into 'hcount_reg[9:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/video_playback.v:42]
 DSP Report: Generating DSP memory_addr1, operation Mode is: C'+A2*(B:0x90).
 DSP Report: register vcount_reg is absorbed into DSP memory_addr1.
 DSP Report: register hcount_reg is absorbed into DSP memory_addr1.
@@ -843,9 +2033,6 @@ DSP Report: register vcount_reg is absorbed into DSP read_addr.
 DSP Report: register hcount_reg is absorbed into DSP read_addr.
 DSP Report: operator read_addr is absorbed into DSP read_addr.
 DSP Report: operator read_addr0 is absorbed into DSP read_addr.
-INFO: [Synth 8-4471] merging register 'vcount_reg[4:0]' into 'vcount_reg[4:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:65]
-INFO: [Synth 8-4471] merging register 'hcount_reg[4:0]' into 'hcount_reg[4:0]' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:64]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec.v:64]
 INFO: [Synth 8-5546] ROM "deb_btnc/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "deb_btnc/clean" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "deb_btnl/count" won't be mapped to RAM because it is too sparse
@@ -856,61 +2043,35 @@ INFO: [Synth 8-5546] ROM "deb_btnu/count" won't be mapped to RAM because it is t
 INFO: [Synth 8-5546] ROM "deb_btnu/clean" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "deb_btnd/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "deb_btnd/clean" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3917] design top has port SEG[7] driven by constant 1
-WARNING: [Synth 8-3917] design top has port JA[4] driven by constant 1
-WARNING: [Synth 8-3917] design top has port JA[0] driven by constant 0
-WARNING: [Synth 8-3331] design top has unconnected port LED[15]
-WARNING: [Synth 8-3331] design top has unconnected port LED[14]
-WARNING: [Synth 8-3331] design top has unconnected port LED[13]
-WARNING: [Synth 8-3331] design top has unconnected port LED[12]
-WARNING: [Synth 8-3331] design top has unconnected port LED[11]
-WARNING: [Synth 8-3331] design top has unconnected port LED[10]
-WARNING: [Synth 8-3331] design top has unconnected port LED[9]
-WARNING: [Synth 8-3331] design top has unconnected port LED[8]
-WARNING: [Synth 8-3331] design top has unconnected port LED[7]
-WARNING: [Synth 8-3331] design top has unconnected port LED[6]
-WARNING: [Synth 8-3331] design top has unconnected port LED[5]
-WARNING: [Synth 8-3331] design top has unconnected port LED[4]
-WARNING: [Synth 8-3331] design top has unconnected port LED[3]
-WARNING: [Synth 8-3331] design top has unconnected port RGB1_Blue
-WARNING: [Synth 8-3331] design top has unconnected port RGB1_Green
-WARNING: [Synth 8-3331] design top has unconnected port RGB1_Red
-WARNING: [Synth 8-3331] design top has unconnected port RGB2_Blue
-WARNING: [Synth 8-3331] design top has unconnected port RGB2_Green
-WARNING: [Synth 8-3331] design top has unconnected port RGB2_Red
-WARNING: [Synth 8-3331] design top has unconnected port JC[7]
-WARNING: [Synth 8-3331] design top has unconnected port JC[6]
-WARNING: [Synth 8-3331] design top has unconnected port JC[5]
-WARNING: [Synth 8-3331] design top has unconnected port JC[4]
-WARNING: [Synth 8-3331] design top has unconnected port JC[3]
-WARNING: [Synth 8-3331] design top has unconnected port JC[2]
-WARNING: [Synth 8-3331] design top has unconnected port JD[7]
-WARNING: [Synth 8-3331] design top has unconnected port JD[6]
-WARNING: [Synth 8-3331] design top has unconnected port JD[5]
-WARNING: [Synth 8-3331] design top has unconnected port JD[4]
-WARNING: [Synth 8-3331] design top has unconnected port JD[3]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1335 ; free virtual = 12515
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 1695.266 ; gain = 800.070 ; free physical = 748 ; free virtual = 10471
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1335 ; free virtual = 12515
+Finished Parallel Reinference  : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 1695.266 ; gain = 800.070 ; free physical = 748 ; free virtual = 10471
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |get_board__GB0 |           1|     31898|
+|2     |get_board__GB1 |           1|     11115|
+|3     |get_board__GB2 |           1|     13338|
+|4     |get_board__GB3 |           1|     17784|
+|5     |get_board__GB4 |           1|     22230|
+|6     |get_board__GB5 |           1|     26676|
+|7     |get_board__GB6 |           1|     35568|
+|8     |get_board__GB7 |           1|     42489|
+|9     |top__GC0       |           1|     15253|
++------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM:
-+------------------+----------------------------------+---------------+----------------+
-|Module Name       | RTL Object                       | Depth x Width | Implemented As | 
-+------------------+----------------------------------+---------------+----------------+
-|OV7670_config_rom | dout_reg                         | 256x16        | Block RAM      | 
-|camera            | camera_configure_1/rom1/dout_reg | 256x16        | Block RAM      | 
-+------------------+----------------------------------+---------------+----------------+
++------------------+------------+---------------+----------------+
+|Module Name       | RTL Object | Depth x Width | Implemented As | 
++------------------+------------+---------------+----------------+
+|OV7670_config_rom | dout_reg   | 256x16        | Block RAM      | 
++------------------+------------+---------------+----------------+
 
 
 DSP: Preliminary Mapping  Report (see note below)
@@ -932,314 +2093,22 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'camera_1/camera_configure_1/config_1/FSM_return_state_reg[2]' (FDE) to 'camera_1/camera_configure_1/config_1/FSM_return_state_reg[1]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\camera_1/camera_configure_1/config_1/FSM_return_state_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_1/camera_configure_1/config_1/FSM_return_state_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\frame_parser_1/divider_1/divisor_copy_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\frame_parser_1/divider_1/negative_output_reg )
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[7]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[7]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[6]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[6]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[5]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[5]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[4]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[4]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[3]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[3]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[2]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[2]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[1]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[1]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[0]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[0]'
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/divisor_copy_reg[18]' (FDE) to 'frame_parser_1/divider_1/divisor_copy_reg[17]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\frame_parser_1/divider_1/divisor_copy_reg[17] )
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[8]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[8]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_1/camera_configure_1/config_1/FSM_state_reg[2] )
-INFO: [Synth 8-3886] merging instance 'frame_parser_1/divider_1/quotient_temp_reg[9]' (FDRE) to 'frame_parser_1/divider_1/quotient_reg[9]'
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_state_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_return_state_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_return_state_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_configure_1/config_1/FSM_return_state_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[11]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (camera_1/camera_read_1/pixel_data_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/divisor_copy_reg[18]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/divisor_copy_reg[17]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/negative_output_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[7]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[6]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[4]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/quotient_temp_reg[9]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[22]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[21]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[20]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[19]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[18]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[17]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (reset_1/sr_reg[16]) is unused and will be removed from module top.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (char_rec_1/\hcount_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (char_rec_1/\x0_reg[8] )
-WARNING: [Synth 8-3332] Sequential element (x0_reg[8]) is unused and will be removed from module char_rec.
-WARNING: [Synth 8-3332] Sequential element (hcount_reg[4]) is unused and will be removed from module char_rec.
----------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1325 ; free virtual = 12505
----------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1482.484 ; gain = 587.289 ; free physical = 1325 ; free virtual = 12505
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/17677528.rtd.straps.rtd': Disk quota exceeded
+ERROR: [Synth 8-787] cannot access rtd files in './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/', this is a FATAL ERROR! Please make sure the directory is readable and writable by the program and do not delete files from this directory while the program is running.
+ERROR: [Synth 8-787] cannot access rtd files in './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/', this is a FATAL ERROR! Please make sure the directory is readable and writable by the program and do not delete files from this directory while the program is running.
+An unrecoverable error has occurred, synthesis cancelled.
+TclStackFree: incorrect freePtr. Call out of sequence?
+Abnormal program termination (6)
+We are unable to write a trace file, probably because the current working directory is not writable.
 
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'video_clk_1/clk_out1' to pin 'video_clk_1/bbstub_clk_out1/O {JB[1]}'
-INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1511.465 ; gain = 616.270 ; free physical = 1257 ; free virtual = 12438
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1566.621 ; gain = 671.426 ; free physical = 1204 ; free virtual = 12385
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/y0_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/y0_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/y0_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/y0_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/x0_reg[3]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/x0_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/x0_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (char_rec_1/x0_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/bit_reg[5]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (frame_parser_1/divider_1/bit_reg[4]) is unused and will be removed from module top.
-INFO: [Synth 8-4480] The timing for the instance camera_1/camera_configure_1/rom1/dout_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop frame_parser_1/divider_1/dividend_copy_reg[19] is being inverted and renamed to frame_parser_1/divider_1/dividend_copy_reg[19]_inv.
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|top         | video_playback_1/blank_delay_2_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|top         | reset_1/sr_reg[15]                 | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+------+----------------------+----------+
-|      |BlackBox name         |Instances |
-+------+----------------------+----------+
-|1     |video_clk             |         1|
-|2     |frame_buffer          |         1|
-|3     |rescaled_frame_buffer |         1|
-|4     |one_16_d              |         1|
-|5     |two_16_d              |         1|
-|6     |three_16_d            |         1|
-|7     |four_16_d             |         1|
-|8     |five_16_d             |         1|
-|9     |six_16_d              |         1|
-|10    |seven_16_d            |         1|
-|11    |eight_16_d            |         1|
-|12    |nine_16_d             |         1|
-|13    |one_image_48_48       |         1|
-|14    |two_image_48_48       |         1|
-|15    |three_image_48_48     |         1|
-|16    |four_image_48_48      |         1|
-|17    |five_image_48_48      |         1|
-|18    |six_image_48_48       |         1|
-|19    |seven_image_48_48     |         1|
-|20    |eight_image_48_48     |         1|
-|21    |nine_image_48_48      |         1|
-+------+----------------------+----------+
-
-Report Cell Usage: 
-+------+----------------------+------+
-|      |Cell                  |Count |
-+------+----------------------+------+
-|1     |eight_16_d            |     1|
-|2     |eight_image_48_48     |     1|
-|3     |five_16_d             |     1|
-|4     |five_image_48_48      |     1|
-|5     |four_16_d             |     1|
-|6     |four_image_48_48      |     1|
-|7     |frame_buffer          |     1|
-|8     |nine_16_d             |     1|
-|9     |nine_image_48_48      |     1|
-|10    |one_16_d              |     1|
-|11    |one_image_48_48       |     1|
-|12    |rescaled_frame_buffer |     1|
-|13    |seven_16_d            |     1|
-|14    |seven_image_48_48     |     1|
-|15    |six_16_d              |     1|
-|16    |six_image_48_48       |     1|
-|17    |three_16_d            |     1|
-|18    |three_image_48_48     |     1|
-|19    |two_16_d              |     1|
-|20    |two_image_48_48       |     1|
-|21    |video_clk             |     1|
-|22    |BUFG                  |     1|
-|23    |CARRY4                |   440|
-|24    |DSP48E1               |     2|
-|25    |DSP48E1_1             |     4|
-|26    |LUT1                  |   347|
-|27    |LUT2                  |   698|
-|28    |LUT3                  |   235|
-|29    |LUT4                  |   849|
-|30    |LUT5                  |   318|
-|31    |LUT6                  |   626|
-|32    |MUXF7                 |    22|
-|33    |MUXF8                 |     3|
-|34    |RAMB18E1              |     1|
-|35    |SRL16E                |     2|
-|36    |FDRE                  |  1057|
-|37    |FDSE                  |    25|
-|38    |LD                    |     4|
-|39    |IBUF                  |    19|
-|40    |OBUF                  |    38|
-|41    |OBUFT                 |    21|
-+------+----------------------+------+
-
-Report Instance Areas: 
-+------+-------------------------+-------------------+------+
-|      |Instance                 |Module             |Cells |
-+------+-------------------------+-------------------+------+
-|1     |top                      |                   |  4755|
-|2     |  bram_quarantine_1      |bram_quarantine    |     9|
-|3     |  camera_1               |camera             |   461|
-|4     |    camera_address_gen_1 |camera_address_gen |   104|
-|5     |    camera_configure_1   |camera_configure   |   332|
-|6     |      SCCB1              |SCCB_interface     |   179|
-|7     |      config_1           |OV7670_config      |   141|
-|8     |      rom1               |OV7670_config_rom  |    12|
-|9     |    camera_read_1        |camera_read        |    25|
-|10    |  char_rec_1             |char_rec           |  1867|
-|11    |    max_score_1          |max_score          |    34|
-|12    |  clk_prescale_1         |clk_prescale       |    46|
-|13    |  deb_btnc               |debounce           |    56|
-|14    |  deb_btnd               |debounce_0         |    53|
-|15    |  deb_btnl               |debounce_1         |    62|
-|16    |  deb_btnr               |debounce_2         |    55|
-|17    |  deb_btnu               |debounce_3         |    61|
-|18    |  display                |display_8hex       |    62|
-|19    |  frame_parser_1         |frame_parser       |   440|
-|20    |    divider_1            |divider            |   105|
-|21    |    frame_transfer_1     |frame_transfer     |    69|
-|22    |  reset_1                |pwr_reset          |     7|
-|23    |  video_playback_1       |video_playback     |  1365|
-|24    |    display_grid_1       |display_grid       |  1205|
-+------+-------------------------+-------------------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1582.637 ; gain = 687.441 ; free physical = 1186 ; free virtual = 12367
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 91 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1582.637 ; gain = 217.590 ; free physical = 1186 ; free virtual = 12367
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1582.645 ; gain = 687.449 ; free physical = 1187 ; free virtual = 12367
-INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 470 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  LD => LDCE: 4 instances
-
-INFO: [Common 17-83] Releasing license: Synthesis
-220 Infos, 216 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1614.656 ; gain = 635.898 ; free physical = 1187 ; free virtual = 12368
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1646.672 ; gain = 0.000 ; free physical = 1186 ; free virtual = 12368
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 28 21:42:51 2018...
+ABC: Error - cannot open file ./.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.7A6E380.0_temp
+/bin/touch: cannot touch ‘.vivado.error.rst’: Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.70D4380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.70D4380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.70D4380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.70D4380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.70D4380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.70D4380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.6D24380.0': Disk quota exceeded
+ERROR: [Synth 8-729] Failed to open './.Xil/Vivado-25944-eecs-digital-18/realtime/tmp/genlib.6D24380.0': Disk quota exceeded
+TclStackFree: incorrect freePtr. Call out of sequence?

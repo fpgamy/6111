@@ -1,7 +1,37 @@
-`ifndef COMMON_SV
-`define COMMON_SV
-
 localparam   GRID_SIZE = 9;
 localparam   MAX_GUESSES = 16;
 
-`endif
+`define GET_LSB(M)\
+-M & M
+
+`define MAX(N1, N2)\
+((N1 > N2) ? N1 : N2)
+
+`define MAX_OUT_OF_NINE(N1, N2, N3, N4, N5, N6, N7, N8, N9)\
+`MAX(N1, `MAX(N2, `MAX(N3, `MAX(N4, `MAX(N5, `MAX(N6, `MAX(N7, `MAX(N8, N9) ) ) ) ) ) ) )
+
+`define INST_ROM(TYPE, NAME, CLK, ADDR, OUT)\
+TYPE NAME (\
+	.clka(CLK),\
+	.addra(ADDR),\
+	.douta(OUT)\
+)
+
+function automatic [3:0] bcd;
+input [8:0] one_hot_in;
+begin
+	case(one_hot_in)
+		9'b0_0000_0001	: bcd = 4'd1;
+		9'b0_0000_0010	: bcd = 4'd2;
+		9'b0_0000_0100	: bcd = 4'd3;
+		9'b0_0000_1000	: bcd = 4'd4;
+		9'b0_0001_0000	: bcd = 4'd5;
+		9'b0_0010_0000	: bcd = 4'd6;
+		9'b0_0100_0000	: bcd = 4'd7;
+		9'b0_1000_0000	: bcd = 4'd8;
+		9'b1_0000_0000	: bcd = 4'd9;
+		default			: bcd = 4'd0;
+	endcase
+end
+endfunction
+

@@ -352,48 +352,20 @@ module top(
     wire seven_d;
     wire eight_d;
     wire nine_d;
+        
+    get_board get_board_1 (
+        .clk_in(video_clk),
+        .start_in(char_rec_start),
+        .done_out(char_rec_done),
+        .img_addr_out(char_ram_addr),
+        .img_data_in(rescaled_fb_dout),
+        .board_out(recg_sudoku));
     
-    bram_quarantine bram_quarantine_1 (
-        .clk(video_clk),
-        .addr(rom_addr),
-        .one_d(one_d),
-        .two_d(two_d),
-        .three_d(three_d),
-        .four_d(four_d),
-        .five_d(five_d),
-        .six_d(six_d),
-        .seven_d(seven_d),
-        .eight_d(eight_d),
-        .nine_d(nine_d));
-       
-    
-    char_rec char_rec_1 (
-        .clk(video_clk),
-        .start(char_rec_start),
-        .done(char_rec_done),
-        .img_ram_addr(char_ram_addr),
-        .img_ram_data(rescaled_fb_dout),
-        
-        .rom_addr(rom_addr),
-        
-        .one_rom_data(one_d),
-        .two_rom_data(two_d),
-        .three_rom_data(three_d),
-        .four_rom_data(four_d),
-        .five_rom_data(five_d),
-        .six_rom_data(six_d),
-        .seven_rom_data(seven_d),
-        .eight_rom_data(eight_d),
-        .nine_rom_data(nine_d),
-        
-        .recg_sudoku(recg_sudoku));
         
 //    assign data[31:16] = (state == CHOOSE_XY1) ? x1 : (state == CHOOSE_XY2 ? x2 : 0);    
 
     assign data[31:4] = recg_sudoku[27:0];
     assign data[3:0] = state;
     assign LED[2] = char_rec_done;
-    
-    assign JC[0] = char_ram_addr[0];
-    assign JC[1] = recg_sudoku[0];
+
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Tue Nov 27 15:18:16 2018
+| Date             : Thu Nov 29 17:18:20 2018
 | Host             : eecs-digital-18 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.338 |
-| Dynamic (W)              | 0.233 |
+| Total On-Chip Power (W)  | 0.242 |
+| Dynamic (W)              | 0.137 |
 | Device Static (W)        | 0.105 |
 | Effective TJA (C/W)      | 4.6   |
-| Max Ambient (C)          | 83.5  |
-| Junction Temperature (C) | 26.5  |
+| Max Ambient (C)          | 83.9  |
+| Junction Temperature (C) | 26.1  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.022 |        8 |       --- |             --- |
-| Slice Logic             |     0.028 |    58976 |       --- |             --- |
-|   LUT as Logic          |     0.028 |    37649 |     63400 |           59.38 |
-|   F7/F8 Muxes           |    <0.001 |     2272 |     63400 |            3.58 |
-|   Register              |    <0.001 |    15385 |    126800 |           12.13 |
-|   CARRY4                |    <0.001 |      248 |     15850 |            1.56 |
-|   LUT as Shift Register |    <0.001 |        3 |     19000 |            0.02 |
-|   Others                |     0.000 |       36 |       --- |             --- |
-| Signals                 |     0.048 |    39799 |       --- |             --- |
+| Clocks                  |    <0.001 |        8 |       --- |             --- |
+| Slice Logic             |    <0.001 |     1281 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      846 |     63400 |            1.33 |
+|   CARRY4                |    <0.001 |      159 |     15850 |            1.00 |
+|   Register              |    <0.001 |       56 |    126800 |            0.04 |
+|   LUT as Shift Register |    <0.001 |        2 |     19000 |            0.01 |
+|   Others                |     0.000 |       31 |       --- |             --- |
+| Signals                 |    <0.001 |      909 |       --- |             --- |
 | Block RAM               |     0.002 |      4.5 |       135 |            3.33 |
 | MMCM                    |     0.116 |        1 |         6 |           16.67 |
 | DSPs                    |    <0.001 |        2 |       240 |            0.83 |
-| I/O                     |     0.017 |       72 |       210 |           34.29 |
+| I/O                     |     0.018 |       71 |       210 |           33.81 |
 | Static Power            |     0.105 |          |           |                 |
-| Total                   |     0.338 |          |           |                 |
+| Total                   |     0.242 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.116 |       0.101 |      0.016 |
+| Vccint    |       1.000 |     0.019 |       0.003 |      0.016 |
 | Vccaux    |       1.800 |     0.083 |       0.065 |      0.018 |
 | Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -147,7 +146,7 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| labkit                                         |     0.233 |
+| labkit                                         |     0.137 |
 |   clkdivider                                   |     0.116 |
 |     inst                                       |     0.116 |
 |   dg1                                          |     0.002 |
@@ -215,7 +214,6 @@ Table of Contents
 |               ramloop[0].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
 |   display                                      |    <0.001 |
-|   my_love                                      |     0.097 |
 |   syn1                                         |    <0.001 |
 |   syn2                                         |    <0.001 |
 |   xvga1                                        |    <0.001 |
