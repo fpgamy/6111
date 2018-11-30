@@ -84,10 +84,10 @@ module top(
 
 //   assign data[3:0] = state;
     
-   reg[9:0] x1 = 104;
-   reg[9:0] y1 = 24;
-   reg[9:0] x2 = 536;
-   reg[9:0] y2 = 456;
+   reg[9:0] x1 = 110;
+   reg[9:0] y1 = 30;
+   reg[9:0] x2 = 542;
+   reg[9:0] y2 = 462;
    
    // Synchronizers and power-on-reset
    
@@ -353,15 +353,21 @@ module top(
     wire eight_d;
     wire nine_d;
         
-    get_board get_board_1 (
-        .clk_in(video_clk),
-        .start_in(char_rec_start),
-        .done_out(char_rec_done),
-        .img_addr_out(char_ram_addr),
-        .img_data_in(rescaled_fb_dout),
-        .board_out(recg_sudoku));
+//    get_board get_board_1 (
+//        .clk_in(video_clk),
+//        .start_in(char_rec_start),
+//        .done_out(char_rec_done),
+//        .img_addr_out(char_ram_addr),
+//        .img_data_in(rescaled_fb_dout),
+//        .board_out(recg_sudoku));
     
-        
+    char_rec char_rec_1 (
+        .clk(video_clk),
+        .start(char_rec_start),
+        .done(char_rec_done),
+        .img_ram_addr(char_ram_addr),
+        .img_ram_data(rescaled_fb_dout),
+        .recg_sudoku(recg_sudoku));
 //    assign data[31:16] = (state == CHOOSE_XY1) ? x1 : (state == CHOOSE_XY2 ? x2 : 0);    
 
     assign data[31:4] = recg_sudoku[27:0];

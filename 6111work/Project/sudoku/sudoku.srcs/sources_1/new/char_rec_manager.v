@@ -32,7 +32,7 @@ module get_board(
     );
     
     `include "common_lib.v"
-    parameter IMG_SIZE = 144;
+    parameter IMG_SIZE = 16;
     
     localparam CELL_LR_WIDTH = 16;
     localparam MEM_SIZE = IMG_SIZE * IMG_SIZE;

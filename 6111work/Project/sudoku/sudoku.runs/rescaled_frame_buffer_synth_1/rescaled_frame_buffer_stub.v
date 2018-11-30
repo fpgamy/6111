@@ -1,8 +1,8 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Mon Nov 26 20:53:27 2018
-// Host        : eecs-digital-17 running 64-bit Ubuntu 14.04.5 LTS
+// Date        : Fri Nov 30 14:48:24 2018
+// Host        : eecs-digital-18 running 64-bit Ubuntu 14.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/rescaled_frame_buffer_synth_1/rescaled_frame_buffer_stub.v
 // Design      : rescaled_frame_buffer

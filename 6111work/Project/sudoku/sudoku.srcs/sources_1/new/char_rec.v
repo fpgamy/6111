@@ -27,25 +27,13 @@ module char_rec(
         
         output reg[14:0] img_ram_addr,
         input[11:0] img_ram_data,
-        
-        output reg[7:0] rom_addr,
-        
-        input one_rom_data,
-        input two_rom_data,
-        input three_rom_data,
-        input four_rom_data,
-        input five_rom_data,
-        input six_rom_data,
-        input seven_rom_data,
-        input eight_rom_data,
-        input nine_rom_data,            
-        
+                
         output reg[323:0] recg_sudoku
                            
     );
 
 parameter IMG_WIDTH = 144;
-parameter DELAY_CYCLES = 3;
+parameter DELAY_CYCLES = 2;
     
 // States
 parameter IDLE = 0;
@@ -86,6 +74,7 @@ wire[5:0] combined_pixel_data = img_ram_data[3:0] + img_ram_data[7:4] + img_ram_
 wire pix_logical = combined_pixel_data > THRESHOLD;
 
 wire[3:0] max_score;
+
 max_score max_score_1 (
     .none_score(none_score),
     .one_score(one_score),
@@ -98,6 +87,65 @@ max_score max_score_1 (
     .eight_score(eight_score),
     .nine_score(nine_score),
     .max_score_out(max_score));
+    
+// ROMs
+
+wire one_d;
+wire two_d;
+wire three_d;
+wire four_d;
+wire five_d;
+wire six_d;
+wire seven_d;
+wire eight_d;
+wire nine_d;
+    
+reg[7:0] rom_addr = 0;
+
+one_16_d one_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(one_d));
+    
+two_16_d two_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(two_d));
+    
+three_16_d three_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(three_d));
+    
+four_16_d four_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(four_d));
+    
+five_16_d five_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(five_d));
+    
+six_16_d six_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(six_d));
+    
+seven_16_d seven_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(seven_d));
+    
+eight_16_d eight_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(eight_d));
+    
+nine_16_d nine_16_d_1 (
+    .clka(clk),
+    .addra(rom_addr),
+    .douta(nine_d));
     
 always @(posedge clk) begin
     img_ram_addr <= x + y * IMG_WIDTH;
@@ -141,17 +189,17 @@ always @(posedge clk) begin
                 state <= RECONF;
             end else
             
-            if(mem_addr_counter > DELAY_CYCLES) begin
+            if(mem_addr_counter >= DELAY_CYCLES) begin
                 none_score  <= none_score   + (pix_logical == 1);
-                one_score   <= one_score    + (pix_logical == one_rom_data);
-                two_score   <= two_score    + (pix_logical == two_rom_data);
-                three_score <= three_score  + (pix_logical == three_rom_data);
-                four_score  <= four_score   + (pix_logical == four_rom_data);
-                five_score  <= five_score   + (pix_logical == five_rom_data);
-                six_score   <= six_score    + (pix_logical == six_rom_data);
-                seven_score <= seven_score  + (pix_logical == seven_rom_data);
-                eight_score <= eight_score  + (pix_logical == eight_rom_data);
-                nine_score  <= nine_score   + (pix_logical == nine_rom_data);
+                one_score   <= one_score    + ~(pix_logical == one_d);
+                two_score   <= two_score    + ~(pix_logical == two_d);
+                three_score <= three_score  + ~(pix_logical == three_d);
+                four_score  <= four_score   + ~(pix_logical == four_d);
+                five_score  <= five_score   + ~(pix_logical == five_d);
+                six_score   <= six_score    + ~(pix_logical == six_d);
+                seven_score <= seven_score  + ~(pix_logical == seven_d);
+                eight_score <= eight_score  + ~(pix_logical == eight_d);
+                nine_score  <= nine_score   + ~(pix_logical == nine_d);
             end
         end
         RECONF: begin

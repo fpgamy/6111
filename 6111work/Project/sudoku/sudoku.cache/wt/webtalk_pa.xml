@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Nov 29 23:05:20 2018">
+<application name="pa" timeStamp="Fri Nov 30 15:23:23 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="07ca30e368c1445aa402e09a60f5221e" type="ProjectID"/>
-<property name="ProjectIteration" value="56" type="ProjectIteration"/>
+<property name="ProjectIteration" value="65" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -19,57 +19,29 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="AddCfgMem" value="2" type="JavaHandler"/>
 <property name="AddSources" value="9" type="JavaHandler"/>
-<property name="AutoConnectTarget" value="15" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="17" type="JavaHandler"/>
 <property name="CloseProject" value="1" type="JavaHandler"/>
 <property name="EditDelete" value="3" type="JavaHandler"/>
 <property name="EditProperties" value="3" type="JavaHandler"/>
 <property name="EditSimulationSets" value="1" type="JavaHandler"/>
 <property name="EditUndo" value="15" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="50" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="66" type="JavaHandler"/>
-<property name="OpenRecentTarget" value="15" type="JavaHandler"/>
-<property name="ProgramDevice" value="52" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="55" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="73" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="17" type="JavaHandler"/>
+<property name="ProgramDevice" value="57" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="4" type="JavaHandler"/>
-<property name="RecustomizeCore" value="22" type="JavaHandler"/>
+<property name="RecustomizeCore" value="23" type="JavaHandler"/>
 <property name="ResetLayout" value="3" type="JavaHandler"/>
-<property name="RunBitgen" value="54" type="JavaHandler"/>
-<property name="RunImplementation" value="1" type="JavaHandler"/>
-<property name="RunSynthesis" value="15" type="JavaHandler"/>
+<property name="RunBitgen" value="62" type="JavaHandler"/>
+<property name="RunImplementation" value="2" type="JavaHandler"/>
+<property name="RunSynthesis" value="17" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="5" type="JavaHandler"/>
 <property name="SetTopNode" value="2" type="JavaHandler"/>
-<property name="ShowView" value="12" type="JavaHandler"/>
+<property name="ShowView" value="14" type="JavaHandler"/>
 <property name="SimulationClose" value="8" type="JavaHandler"/>
 <property name="SimulationRun" value="22" type="JavaHandler"/>
 <property name="ToolsOptions" value="1" type="JavaHandler"/>
 <property name="WaveformSaveConfiguration" value="7" type="JavaHandler"/>
-</item>
-<item name="Gui Resources Info">
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Run Synthesis], 17, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, synth_1, [Synth 8-3352] multi-driven net one_hot_score0 with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred/one_hot_score0' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. , [Synth 8-3352] multi-driven net one_hot_score0 with 2nd driver pin 'GND' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. ], 3, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, synth_1, [Synth 8-3352] multi-driven net one_hot_score0 with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred/one_hot_score0' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. , [Synth 8-3352] multi-driven net one_hot_score00_out with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred__0/one_hot_score00_out' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:76]. ], 4, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, synth_1, [Synth 8-3352] multi-driven net one_hot_score0 with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred/one_hot_score0' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. , [Synth 8-3352] multi-driven net one_hot_score01_out with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred__1/one_hot_score01_out' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:75]. ], 6, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, synth_1, [Synth 8-3352] multi-driven net one_hot_score0 with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred/one_hot_score0' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. ], 2" value="3" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, synth_1, [Synth 8-3352] multi-driven net one_hot_score0 with 1st driver pin 'row_rec_gen[3].col_rec_gen[6].cell_rec/one_hot_score0_inferred/one_hot_score0' [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. ], 2, true" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, [, Synthesis, synth_1, [Synth 8-5559] multi-driven net one_hot_score0 is connected to constant driver, other driver is ignored [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/new/char_rec_cell.v:77]. ], 3, true" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 150, 381" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 150, 381, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 151, 128" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 151, 128, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 207, 12" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 211, 25" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 246, 386" value="1" type="GuiResourceData"/>
-<property name="char_rec_cell.v, 246, 386, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="char_rec_manager.v, 196, 458" value="1" type="GuiResourceData"/>
-<property name="char_rec_manager.v, 332, 504" value="1" type="GuiResourceData"/>
-<property name="char_rec_manager.v, 602, 279" value="1" type="GuiResourceData"/>
-<property name="char_rec_manager.v, 62, 518" value="1" type="GuiResourceData"/>
-<property name="char_rec_manager.v, 89, 516" value="1" type="GuiResourceData"/>
-<property name="char_rec_manager.v, 955, 201" value="1" type="GuiResourceData"/>
-</item>
-<item name="Other">
-<property name="GuiMode" value="68" type="GuiMode"/>
-<property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="38" type="TclMode"/>
 </item>
 </section>
 </application>

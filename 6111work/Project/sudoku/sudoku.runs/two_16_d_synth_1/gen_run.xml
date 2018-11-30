@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="two_16_d_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543455135">
-  <File Type="VDS-TIMING-PB" Name="two_16_d_timing_summary_synth.pb"/>
-  <File Type="RDS-RDS" Name="two_16_d.vds"/>
-  <File Type="PA-TCL" Name="two_16_d.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="two_16_d_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="two_16_d.tcl"/>
   <File Type="RDS-DCP" Name="two_16_d.dcp"/>
   <File Type="RDS-UTIL-PB" Name="two_16_d_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="two_16_d_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="two_16_d_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="two_16_d.vds"/>
+  <File Type="VDS-TIMING-PB" Name="two_16_d_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/two_16_d">
     <File Path="$PSRCDIR/sources_1/ip/two_16_d.xcix">
       <FileInfo>
