@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Fri Nov 30 15:25:25 2018
+| Date             : Fri Nov 30 16:00:20 2018
 | Host             : eecs-digital-18 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.246 |
-| Dynamic (W)              | 0.143 |
+| Total On-Chip Power (W)  | 0.245 |
+| Dynamic (W)              | 0.142 |
 | Device Static (W)        | 0.104 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 83.9  |
@@ -50,21 +50,21 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        6 |       --- |             --- |
-| Slice Logic             |     0.003 |     5302 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     2600 |     63400 |            4.10 |
+| Slice Logic             |     0.003 |     5303 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     2598 |     63400 |            4.10 |
 |   CARRY4                |    <0.001 |      440 |     15850 |            2.78 |
 |   Register              |    <0.001 |     1105 |    126800 |            0.87 |
 |   F7/F8 Muxes           |    <0.001 |      163 |     63400 |            0.26 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register |    <0.001 |        2 |     19000 |            0.01 |
 |   Others                |     0.000 |      307 |       --- |             --- |
-| Signals                 |     0.007 |     4037 |       --- |             --- |
+| Signals                 |     0.007 |     4038 |       --- |             --- |
 | Block RAM               |     0.006 |      121 |       135 |           89.63 |
 | MMCM                    |     0.116 |        1 |         6 |           16.67 |
 | DSPs                    |    <0.001 |        6 |       240 |            2.50 |
 | I/O                     |     0.006 |       58 |       210 |           27.62 |
 | Static Power            |     0.104 |          |           |                 |
-| Total                   |     0.246 |          |           |                 |
+| Total                   |     0.245 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.039 |       0.020 |      0.018 |
+| Vccint    |       1.000 |     0.038 |       0.020 |      0.018 |
 | Vccaux    |       1.800 |     0.083 |       0.065 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -146,9 +146,9 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| top                                              |     0.143 |
+| top                                              |     0.142 |
 |   camera_1                                       |     0.005 |
-|     camera_address_gen_1                         |     0.005 |
+|     camera_address_gen_1                         |     0.004 |
 |     camera_configure_1                           |    <0.001 |
 |       SCCB1                                      |    <0.001 |
 |       config_1                                   |    <0.001 |

@@ -80,14 +80,14 @@ module top(
    assign SEG[6:0] = segments;
    assign SEG[7] = 1'b1;
    
-   reg[3:0] state = 1;
+   reg[3:0] state = 4;
 
 //   assign data[3:0] = state;
-    
-   reg[9:0] x1 = 110;
-   reg[9:0] y1 = 30;
-   reg[9:0] x2 = 542;
-   reg[9:0] y2 = 462;
+    // 104
+   reg[9:0] x1 = 108;
+   reg[9:0] y1 = 28;
+   reg[9:0] x2 = 540;
+   reg[9:0] y2 = 460;
    
    // Synchronizers and power-on-reset
    
