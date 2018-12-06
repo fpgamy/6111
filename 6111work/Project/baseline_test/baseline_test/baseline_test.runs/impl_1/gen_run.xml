@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543529602">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544059405">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="labkit.vdi"/>
   <File Type="BG-DRC" Name="labkit.drc"/>
@@ -59,6 +59,15 @@
   <File Type="PA-TCL" Name="labkit.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Project/soduku_solver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../soduku_solver.v"/>
+        <Attr Name="ImportTime" Val="1543254531"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/display_grid.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -95,16 +104,6 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../base.v"/>
         <Attr Name="ImportTime" Val="1543199594"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Project/soduku_solver.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../soduku_solver.v"/>
-        <Attr Name="ImportTime" Val="1543254531"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

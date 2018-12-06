@@ -1303,7 +1303,7 @@ module soduku_solver(
 			begin //error at guess_number-1
 				min_ones_reg <= 4'd10;
 				guess_number <= guess_number - 1;
-				guesses[guess_number-1]   <= `GEN_GUESS(pvr_prevs[guess_row[guess_number-1]][guess_col[guess_number-1]][guess_number-1]);
+				guesses[guess_number-1]   <= `GET_LSB(pvr_prevs[guess_row[guess_number-1]][guess_col[guess_number-1]][guess_number-1]);
 			end
 			else if (timeout)
 			begin
@@ -1320,7 +1320,7 @@ module soduku_solver(
 				 	&& valid_one_hot(pvr[guess_row[guess_number]][guess_col[guess_number]]) ) )
 			begin
 				min_ones_reg			<= number_of_ones_in_mask;
-				guesses[guess_number]   <= `GEN_GUESS(pvr[row_counter][col_counter]);
+				guesses[guess_number]   <= `GET_LSB(pvr[row_counter][col_counter]);
 				guess_col[guess_number] <= col_counter;
 				guess_row[guess_number] <= row_counter;
 			end

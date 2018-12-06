@@ -63,7 +63,7 @@ module video_playback(
     // Excessive? Maybe.
     assign video_out = blank_delay_2                                           ? 12'b0             : 
 //                       (state == 5 && (hcount > GRID_START_Y + GRID_PIXELS || hcount < GRID_START_X)) ? 12'hFFF  :
-                       (state == 5)                                            ? rgb_out           :
+                       (state == 5 || state == 6)                              ? rgb_out           :
                        (switch_vid)                                            ? rescaled_pix_data : 
                        ((hcount == x1 || vcount == y1) && state == CHOOSE_XY1) ? ~pixel_data       : 
                        ((hcount == x2 || vcount == y2) && state == CHOOSE_XY2) ? ~pixel_data       : 

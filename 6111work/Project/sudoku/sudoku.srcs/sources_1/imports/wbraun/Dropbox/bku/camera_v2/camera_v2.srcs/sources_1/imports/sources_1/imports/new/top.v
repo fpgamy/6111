@@ -80,7 +80,7 @@ module top(
    assign SEG[6:0] = segments;
    assign SEG[7] = 1'b1;
    
-   reg[3:0] state = 4;
+   reg[3:0] state = 6;
 
 //   assign data[3:0] = state;
     // 104
@@ -101,6 +101,25 @@ module top(
 //        .state_out(state), 
 //        .enter(BTNC), 
 //        .reset(SW[15]));    
+
+    wire[323:0] recg_sudoku;
+    
+    wire [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board;
+    wire [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_solved;
+    wire sudoku_invalid;
+    wire sudoku_done;
+    
+    assign board = {4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0,
+                            4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0,
+                            4'd8, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0,
+                            4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0,
+                            4'd0, 4'd0, 4'd7, 4'd5, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0,
+                            4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd5, 4'd0,
+                            4'd0, 4'd0, 4'd2, 4'd0, 4'd9, 4'd0, 4'd0, 4'd7, 4'd0,
+                            4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6, 4'd3, 4'd0, 4'd0,
+                            4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8};
+                            
+    soduku_solver my_love(.clk_in(video_clk), .reset_in(reset), .board_in(board), .board_out(board_solved), .done_out(sudoku_done), .invalid_out(sudoku_invalid));
 
     // States
     parameter IDLE = 0;
@@ -140,7 +159,8 @@ module top(
     reg frame_parser_started = 0;
     reg char_rec_started = 0;
     wire char_rec_done;
-
+    
+        
     always @(posedge video_clk) begin
         if(SW[15]) begin
             state <= 0;//IDLE;
@@ -205,6 +225,7 @@ module top(
                     end
                     
                     if(char_rec_done && char_rec_started) begin
+//                        board <= recg_sudoku;
                         state <= SOLVING;
                     end
                 end
@@ -249,19 +270,7 @@ module top(
     wire[11:0] rescaled_pix_data;
     wire[11:0] rescaled_fb_dout;
     wire switch_vid = SW[1];
-    wire[323:0] recg_sudoku;
-    
-//    wire[323:0] board;
-    
-//    assign board = {4'd0, 4'd0, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0, 4'd9, 4'd0,
-//                        4'd0, 4'd1, 4'd0, 4'd0, 4'd0, 4'd5, 4'd8, 4'd0, 4'd0,
-//                        4'd8, 4'd6, 4'd0, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0,
-//                        4'd0, 4'd3, 4'd0, 4'd0, 4'd0, 4'd1, 4'd0, 4'd0, 4'd0,
-//                        4'd0, 4'd0, 4'd7, 4'd5, 4'd4, 4'd0, 4'd0, 4'd0, 4'd0,
-//                        4'd0, 4'd0, 4'd0, 4'd7, 4'd0, 4'd0, 4'd0, 4'd5, 4'd0,
-//                        4'd0, 4'd0, 4'd2, 4'd0, 4'd9, 4'd0, 4'd0, 4'd7, 4'd0,
-//                        4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd6, 4'd3, 4'd0, 4'd0,
-//                        4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd0, 4'd8};
+
                       
                       
     wire[9:0] hcount;
@@ -284,7 +293,7 @@ module top(
         .x1(x1), .y1(y1), .x2(x2), .y2(y2), 
         .state(state),
         .switch_vid(switch_vid),
-        .board_in(recg_sudoku)
+        .board_in((state == OUTPUT) ? board_solved : recg_sudoku)
         );
         
         
@@ -352,14 +361,6 @@ module top(
     wire seven_d;
     wire eight_d;
     wire nine_d;
-        
-//    get_board get_board_1 (
-//        .clk_in(video_clk),
-//        .start_in(char_rec_start),
-//        .done_out(char_rec_done),
-//        .img_addr_out(char_ram_addr),
-//        .img_data_in(rescaled_fb_dout),
-//        .board_out(recg_sudoku));
     
     char_rec char_rec_1 (
         .clk(video_clk),
@@ -368,10 +369,8 @@ module top(
         .img_ram_addr(char_ram_addr),
         .img_ram_data(rescaled_fb_dout),
         .recg_sudoku(recg_sudoku));
-//    assign data[31:16] = (state == CHOOSE_XY1) ? x1 : (state == CHOOSE_XY2 ? x2 : 0);    
+        
 
-    assign data[31:4] = recg_sudoku[27:0];
+    assign LED[2] = sudoku_done;
     assign data[3:0] = state;
-    assign LED[2] = char_rec_done;
-
 endmodule
