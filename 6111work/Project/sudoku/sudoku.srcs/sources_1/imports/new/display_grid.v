@@ -24,7 +24,10 @@ module display_grid(
         x_in,
         y_in,
         board_in,
-        rgb_out
+        rgb_out,
+        selected_x,
+        selected_y,
+        state
     );
     
     parameter CELL_PIXELS = 48;
@@ -38,6 +41,9 @@ module display_grid(
     input  [4*(GRID_SIZE)*(GRID_SIZE)-1:0] board_in;
     output [11:0] rgb_out;
     
+    input[3:0] selected_x;
+    input[3:0] selected_y;
+    input[3:0] state;
     wire  [3:0] board [0:(GRID_SIZE-1)] [0:(GRID_SIZE-1)];
     
     generate
@@ -113,6 +119,6 @@ module display_grid(
                                 six_black,
                                 seven_black,
                                 eight_black,
-                                nine_black) ? 0 : 12'hFFF) );                              
+                                nine_black) ? 0 : ((selected_x == (col_num - 1) && selected_y == (row_num - 1) && (state == 9 || state == 6)) ? 12'h0F0 : 12'hFFF)));                              
     
 endmodule

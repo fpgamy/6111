@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="one_16_d_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543455062">
-  <File Type="RDS-PROPCONSTRS" Name="one_16_d_drc_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="one_16_d_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="one_16_d.dcp"/>
   <File Type="RDS-UTIL" Name="one_16_d_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="one_16_d_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="one_16_d.vds"/>
   <File Type="VDS-TIMING-PB" Name="one_16_d_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="one_16_d.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="one_16_d_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="one_16_d.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="one_16_d_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/one_16_d">
     <File Path="$PSRCDIR/sources_1/ip/one_16_d.xcix">
       <FileInfo>

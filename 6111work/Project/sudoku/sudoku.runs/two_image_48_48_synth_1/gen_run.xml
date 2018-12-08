@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="two_image_48_48_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1543436243">
+<GenRun Id="two_image_48_48_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544133350">
   <File Type="RDS-UTIL-PB" Name="two_image_48_48_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="two_image_48_48.dcp"/>
   <File Type="RDS-UTIL" Name="two_image_48_48_utilization_synth.rpt"/>

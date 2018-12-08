@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Dec  5 21:17:14 2018">
+<application name="pa" timeStamp="Sat Dec  8 17:36:31 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="07ca30e368c1445aa402e09a60f5221e" type="ProjectID"/>
-<property name="ProjectIteration" value="73" type="ProjectIteration"/>
+<property name="ProjectIteration" value="142" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -17,31 +17,71 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddCfgMem" value="2" type="JavaHandler"/>
-<property name="AddSources" value="10" type="JavaHandler"/>
-<property name="AutoConnectTarget" value="19" type="JavaHandler"/>
+<property name="AddCfgMem" value="5" type="JavaHandler"/>
+<property name="AddSources" value="12" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="46" type="JavaHandler"/>
 <property name="CloseProject" value="1" type="JavaHandler"/>
-<property name="EditDelete" value="4" type="JavaHandler"/>
+<property name="EditDelete" value="6" type="JavaHandler"/>
 <property name="EditProperties" value="3" type="JavaHandler"/>
 <property name="EditSimulationSets" value="1" type="JavaHandler"/>
-<property name="EditUndo" value="15" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="62" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="82" type="JavaHandler"/>
-<property name="OpenRecentTarget" value="19" type="JavaHandler"/>
-<property name="ProgramDevice" value="64" type="JavaHandler"/>
+<property name="EditUndo" value="16" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="168" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="216" type="JavaHandler"/>
+<property name="OpenProject" value="1" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="46" type="JavaHandler"/>
+<property name="ProgramDevice" value="175" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="4" type="JavaHandler"/>
-<property name="RecustomizeCore" value="23" type="JavaHandler"/>
+<property name="RecustomizeCore" value="28" type="JavaHandler"/>
 <property name="ResetLayout" value="3" type="JavaHandler"/>
-<property name="RunBitgen" value="70" type="JavaHandler"/>
-<property name="RunImplementation" value="2" type="JavaHandler"/>
-<property name="RunSynthesis" value="28" type="JavaHandler"/>
-<property name="SaveFileProxyHandler" value="6" type="JavaHandler"/>
+<property name="RunBitgen" value="140" type="JavaHandler"/>
+<property name="RunImplementation" value="4" type="JavaHandler"/>
+<property name="RunSchematic" value="1" type="JavaHandler"/>
+<property name="RunSynthesis" value="30" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="9" type="JavaHandler"/>
 <property name="SetTopNode" value="2" type="JavaHandler"/>
-<property name="ShowView" value="23" type="JavaHandler"/>
+<property name="ShowView" value="29" type="JavaHandler"/>
 <property name="SimulationClose" value="8" type="JavaHandler"/>
 <property name="SimulationRun" value="22" type="JavaHandler"/>
 <property name="ToolsOptions" value="1" type="JavaHandler"/>
+<property name="ViewTaskSynthesis" value="1" type="JavaHandler"/>
 <property name="WaveformSaveConfiguration" value="7" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, Auto Connect" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, top (top.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Program Device], 39, false" value="5" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Open Hardware Manager, Open Target], 38, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="4" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, camera" value="3" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, camera_reset" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, r" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, reset" value="3" type="GuiResourceData"/>
+<property name="camera.v, 331, 308" value="1" type="GuiResourceData"/>
+<property name="top.v, 1128, 180" value="1" type="GuiResourceData"/>
+<property name="top.v, 137, 360" value="1" type="GuiResourceData"/>
+<property name="top.v, 171, 556" value="1" type="GuiResourceData"/>
+<property name="top.v, 185, 337" value="1" type="GuiResourceData"/>
+<property name="top.v, 192, 259" value="1" type="GuiResourceData"/>
+<property name="top.v, 193, 265" value="1" type="GuiResourceData"/>
+<property name="top.v, 214, 614" value="1" type="GuiResourceData"/>
+<property name="top.v, 224, 416, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="top.v, 233, 194" value="1" type="GuiResourceData"/>
+<property name="top.v, 263, 497" value="1" type="GuiResourceData"/>
+<property name="top.v, 278, 478" value="1" type="GuiResourceData"/>
+<property name="top.v, 297, 259" value="1" type="GuiResourceData"/>
+<property name="top.v, 303, 296" value="1" type="GuiResourceData"/>
+<property name="top.v, 418, 422" value="1" type="GuiResourceData"/>
+<property name="top.v, 427, 223" value="1" type="GuiResourceData"/>
+<property name="top.v, 606, 193" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="76" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="41" type="TclMode"/>
 </item>
 </section>
 </application>

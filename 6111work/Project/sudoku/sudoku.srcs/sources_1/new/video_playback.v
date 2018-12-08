@@ -13,10 +13,13 @@ module video_playback(
     input[9:0] x2, y2,
     input[3:0] state,
     input switch_vid,
-    input[323:0] board_in
+    input[323:0] board_in,
+    input[3:0] selected_x,
+    input[3:0] selected_y,
+    input wrong_guess
     );
     
-//    `include "display_lib.v" 
+    `include "display_lib.v" 
     
     parameter IDLE = 0;
     parameter CHOOSE_XY1 = 1;
@@ -49,7 +52,10 @@ module video_playback(
                 .x_in(hcount - GRID_START_X),
                 .y_in(vcount - GRID_START_Y),
                 .board_in(board_in),
-                .rgb_out(rgb_out));
+                .rgb_out(rgb_out),
+                .selected_x(selected_x),
+                .selected_y(selected_y),
+                .state(state));
     
     //kludges to fix frame alignment due to memory access time
     reg blank_delay;
@@ -59,12 +65,20 @@ module video_playback(
     reg vsync_pre_delay;
     reg vsync_pre_delay_2;
     
+    wire[11:0] sudoku_rgb;
+    
+    assign sudoku_rgb = `INSIDE(hcount, 
+                             vcount, 
+                             GRID_START_X, 
+                             GRID_START_Y, 
+                             GRID_PIXELS, 
+                             GRID_PIXELS) ?  rgb_out : (wrong_guess) ? 12'hF00 : 12'h000;
     
     // Excessive? Maybe.
     assign video_out = blank_delay_2                                           ? 12'b0             : 
 //                       (state == 5 && (hcount > GRID_START_Y + GRID_PIXELS || hcount < GRID_START_X)) ? 12'hFFF  :
-                       (state == 5 || state == 6)                              ? rgb_out           :
-                       (switch_vid)                                            ? rescaled_pix_data : 
+                       (state == 5 || state == 6 || state == 7 || state == 8 || state == 9)                ? sudoku_rgb           :
+                       (switch_vid)                                            ? (rescaled_pix_data[3:0] + rescaled_pix_data[7:4] + rescaled_pix_data[11:8] > 20 ? 12'hFFF : 12'h000) : 
                        ((hcount == x1 || vcount == y1) && state == CHOOSE_XY1) ? ~pixel_data       : 
                        ((hcount == x2 || vcount == y2) && state == CHOOSE_XY2) ? ~pixel_data       : 
                        ((hcount == x1 || vcount == y1) && state == CHOOSE_XY2) ? 12'hF00           : pixel_data; 

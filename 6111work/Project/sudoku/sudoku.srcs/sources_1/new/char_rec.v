@@ -67,7 +67,7 @@ reg[8:0] nine_score = 0;
 
 //assign img_ram_addr = x + (y * IMG_WIDTH);
 
-parameter THRESHOLD = 15;
+parameter THRESHOLD = 20;
 parameter CELL_LR_WIDTH = 16;
 
 wire[5:0] combined_pixel_data = img_ram_data[3:0] + img_ram_data[7:4] + img_ram_data[11:8];

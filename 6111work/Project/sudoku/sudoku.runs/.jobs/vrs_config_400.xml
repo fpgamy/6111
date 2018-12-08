@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="frame_buffer_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/frame_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rescaled_frame_buffer_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/rescaled_frame_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="eight_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/eight_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="four_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/four_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="two_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/two_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="six_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/six_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="five_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/five_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="nine_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/nine_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="one_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/one_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="seven_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/seven_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="three_image_48_48_synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/three_image_48_48_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="frame_buffer_synth_1"/>
+		<Parent Id="rescaled_frame_buffer_synth_1"/>
+		<Parent Id="eight_image_48_48_synth_1"/>
+		<Parent Id="four_image_48_48_synth_1"/>
+		<Parent Id="two_image_48_48_synth_1"/>
+		<Parent Id="six_image_48_48_synth_1"/>
+		<Parent Id="five_image_48_48_synth_1"/>
+		<Parent Id="nine_image_48_48_synth_1"/>
+		<Parent Id="one_image_48_48_synth_1"/>
+		<Parent Id="seven_image_48_48_synth_1"/>
+		<Parent Id="three_image_48_48_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="frame_buffer_synth_1"/>
+		<Parent Id="rescaled_frame_buffer_synth_1"/>
+		<Parent Id="eight_image_48_48_synth_1"/>
+		<Parent Id="four_image_48_48_synth_1"/>
+		<Parent Id="two_image_48_48_synth_1"/>
+		<Parent Id="six_image_48_48_synth_1"/>
+		<Parent Id="five_image_48_48_synth_1"/>
+		<Parent Id="nine_image_48_48_synth_1"/>
+		<Parent Id="one_image_48_48_synth_1"/>
+		<Parent Id="seven_image_48_48_synth_1"/>
+		<Parent Id="three_image_48_48_synth_1"/>
+	</Run>
+</Runs>
+
