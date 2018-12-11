@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="video_clk_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1542160708">
-  <File Type="RDS-PROPCONSTRS" Name="video_clk_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="video_clk_utilization_synth.rpt"/>
-  <File Type="RDS-RDS" Name="video_clk.vds"/>
-  <File Type="VDS-TIMING-PB" Name="video_clk_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="video_clk.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="video_clk_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="video_clk.tcl"/>
   <File Type="RDS-DCP" Name="video_clk.dcp"/>
   <File Type="RDS-UTIL-PB" Name="video_clk_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="video_clk_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="video_clk_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="video_clk.vds"/>
+  <File Type="VDS-TIMING-PB" Name="video_clk_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/video_clk">
     <File Path="$PSRCDIR/sources_1/ip/video_clk/video_clk.xci">
       <FileInfo>

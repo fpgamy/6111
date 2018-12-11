@@ -4,7 +4,7 @@
 module wrong_guess_gen(
         input[323:0] input_board,
         input[323:0] solved_board,
-        input state,
+        input[3:0] state,
         output wrong_guess
     );
     

@@ -16,7 +16,8 @@ module video_playback(
     input[323:0] board_in,
     input[3:0] selected_x,
     input[3:0] selected_y,
-    input wrong_guess
+    input wrong_guess,
+    input use_staff
     );
     
     `include "display_lib.v" 
@@ -55,7 +56,8 @@ module video_playback(
                 .rgb_out(rgb_out),
                 .selected_x(selected_x),
                 .selected_y(selected_y),
-                .state(state));
+                .state(state),
+                .use_staff(use_staff));
     
     //kludges to fix frame alignment due to memory access time
     reg blank_delay;

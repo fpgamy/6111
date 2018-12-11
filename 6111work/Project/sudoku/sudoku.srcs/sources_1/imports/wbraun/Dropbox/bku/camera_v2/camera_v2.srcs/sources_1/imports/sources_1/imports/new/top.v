@@ -120,8 +120,19 @@ module top(
     begin
         reset_reg = {reset_reg[3], reset_reg[2], reset_reg[1], reset_reg[0], (btnc_rise && state == SOLVING)};
     end         
-                            
+                 
+    wire[323:0] board_solved_100m;
+    wire done_100m;
+    wire sudoku_invalid_100m;
+    
+//    synchronize sync_1 (.clk(CLK_100M), .in(board), .out(board_sync));
+    
     soduku_solver my_love(.clk_in(video_clk), .reset_in(reset_reg[4]), .board_in(board), .board_out(board_solved), .done_out(sudoku_done), .invalid_out(sudoku_invalid));
+
+//    synchronize sync_2 (.clk(video_clk), .in(board_solved_100m), .out(board_solved));
+//    synchronize sync_3 (.clk(video_clk), .in(done_100m), .out(sudoku_done));
+//    synchronize sync_4 (.clk(video_clk), .in(sudoku_invalid_100m), .out(sudoku_invalid));
+
 
     // States
     parameter IDLE = 0;
@@ -154,7 +165,7 @@ module top(
     
     debounce #(.DELAY(1_000_000)) deb_btnc_held (.clk(video_clk), .reset(reset), .noisy(BTNC), .clean(btnc_held));
     
-    assign LED[15] = btnc_held;
+//    assign LED[15] = btnc_held;
     
     wire btnl_rise;
     wire btnr_rise;
@@ -396,6 +407,7 @@ module top(
     wire[9:0] hcount;
     wire[9:0] vcount;
     wire blank;
+    wire use_staff = SW[10];
     
     video_playback video_playback_1 (
         .pixel_data(memory_read_data),
@@ -414,7 +426,8 @@ module top(
         .board_in((state == OUTPUT) ? board_solved : board),
         .selected_x(selected_x),
         .selected_y(selected_y),
-        .wrong_guess(wrong_guess)
+        .wrong_guess(wrong_guess),
+        .use_staff(use_staff)
         );
         
         

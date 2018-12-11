@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="melinda_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544386774">
+  <File Type="RDS-DCP" Name="melinda.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="melinda_utilization_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="melinda_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="melinda_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="melinda.vds"/>
+  <File Type="PA-TCL" Name="melinda.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="melinda_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="melinda_utilization_synth.rpt"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/melinda">
+    <File Path="$PSRCDIR/sources_1/ip/melinda/melinda.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/melinda.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="melinda"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/melinda">
+    <File Path="$PSRCDIR/sources_1/ip/melinda/melinda.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/melinda.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="melinda"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

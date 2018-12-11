@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Sat Dec  8 17:29:26 2018
+| Date             : Mon Dec 10 18:07:44 2018
 | Host             : eecs-digital-18 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,9 +30,9 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.407 |
-| Dynamic (W)              | 0.303 |
-| Device Static (W)        | 0.104 |
+| Total On-Chip Power (W)  | 0.411 |
+| Dynamic (W)              | 0.307 |
+| Device Static (W)        | 0.105 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 83.1  |
 | Junction Temperature (C) | 26.9  |
@@ -50,21 +50,21 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.015 |        6 |       --- |             --- |
-| Slice Logic             |     0.057 |    68137 |       --- |             --- |
-|   LUT as Logic          |     0.055 |    42787 |     63400 |           67.49 |
-|   F7/F8 Muxes           |    <0.001 |     2457 |     63400 |            3.88 |
-|   Register              |    <0.001 |    16713 |    126800 |           13.18 |
-|   CARRY4                |    <0.001 |      632 |     15850 |            3.99 |
+| Slice Logic             |     0.057 |    67871 |       --- |             --- |
+|   LUT as Logic          |     0.056 |    42723 |     63400 |           67.39 |
+|   F7/F8 Muxes           |    <0.001 |     2436 |     63400 |            3.84 |
+|   Register              |    <0.001 |    16695 |    126800 |           13.17 |
+|   CARRY4                |    <0.001 |      592 |     15850 |            3.74 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register |    <0.001 |        3 |     19000 |            0.02 |
-|   Others                |     0.000 |      315 |       --- |             --- |
-| Signals                 |     0.102 |    46151 |       --- |             --- |
-| Block RAM               |     0.006 |    120.5 |       135 |           89.26 |
+|   Others                |     0.000 |      333 |       --- |             --- |
+| Signals                 |     0.104 |    46277 |       --- |             --- |
+| Block RAM               |     0.008 |      125 |       135 |           92.59 |
 | MMCM                    |     0.116 |        1 |         6 |           16.67 |
 | DSPs                    |    <0.001 |        6 |       240 |            2.50 |
-| I/O                     |     0.007 |       58 |       210 |           27.62 |
-| Static Power            |     0.104 |          |           |                 |
-| Total                   |     0.407 |          |           |                 |
+| I/O                     |     0.006 |       58 |       210 |           27.62 |
+| Static Power            |     0.105 |          |           |                 |
+| Total                   |     0.411 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.199 |       0.180 |      0.019 |
+| Vccint    |       1.000 |     0.203 |       0.184 |      0.019 |
 | Vccaux    |       1.800 |     0.083 |       0.065 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.000 |      0.003 |
+| Vccbram   |       1.000 |     0.004 |       0.001 |      0.003 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -146,7 +146,7 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| top                                              |     0.303 |
+| top                                              |     0.307 |
 |   btnd_rise_1                                    |    <0.001 |
 |   btnl_rise_1                                    |    <0.001 |
 |   btnr_rise_1                                    |    <0.001 |
@@ -154,7 +154,7 @@ Table of Contents
 |   camera_1                                       |     0.005 |
 |     camera_address_gen_1                         |     0.005 |
 |     camera_read_1                                |    <0.001 |
-|   char_rec_1                                     |     0.005 |
+|   char_rec_1                                     |     0.004 |
 |     eight_16_d_1                                 |    <0.001 |
 |       U0                                         |    <0.001 |
 |         inst_blk_mem_gen                         |    <0.001 |
@@ -176,7 +176,7 @@ Table of Contents
 |             valid.cstr                           |    <0.001 |
 |               ramloop[0].ram.r                   |    <0.001 |
 |                 prim_init.ram                    |    <0.001 |
-|     max_score_1                                  |     0.002 |
+|     max_score_1                                  |    <0.001 |
 |     nine_16_d_1                                  |    <0.001 |
 |       U0                                         |    <0.001 |
 |         inst_blk_mem_gen                         |    <0.001 |
@@ -420,7 +420,7 @@ Table of Contents
 |   frame_parser_1                                 |    <0.001 |
 |     divider_1                                    |    <0.001 |
 |     frame_transfer_1                             |    <0.001 |
-|   my_love                                        |     0.159 |
+|   my_love                                        |     0.161 |
 |   rescaled_fb_1                                  |     0.001 |
 |     U0                                           |     0.001 |
 |       inst_blk_mem_gen                           |     0.001 |
@@ -451,8 +451,57 @@ Table of Contents
 |   reset_1                                        |    <0.001 |
 |   video_clk_1                                    |     0.116 |
 |     inst                                         |     0.116 |
-|   video_playback_1                               |     0.004 |
-|     display_grid_1                               |     0.003 |
+|   video_playback_1                               |     0.006 |
+|     display_grid_1                               |     0.005 |
+|       aaron_1                                    |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       diana_1                                    |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       driss_1                                    |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       gim_1                                      |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       joe_1                                      |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       melinda_1                                  |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       mike_1                                     |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
 |       rom_1                                      |    <0.001 |
 |         U0                                       |    <0.001 |
 |           inst_blk_mem_gen                       |    <0.001 |
@@ -510,6 +559,20 @@ Table of Contents
 |                 ramloop[0].ram.r                 |    <0.001 |
 |                   prim_init.ram                  |    <0.001 |
 |       rom_9                                      |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       victor_1                                   |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|       yeung_1                                    |    <0.001 |
 |         U0                                       |    <0.001 |
 |           inst_blk_mem_gen                       |    <0.001 |
 |             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |

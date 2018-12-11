@@ -98,15 +98,15 @@ always @* begin
        
        max_score = 4;
     end else
-    if(five_score - 10 >= one_score &&
-       five_score - 10 >= two_score && 
-       five_score - 10 >= three_score && 
-       five_score - 10 >= four_score && 
-       five_score - 10 >= five_score && 
-       five_score - 10 >= six_score && 
-       five_score - 10 >= seven_score && 
-       five_score - 10 >= eight_score && 
-       five_score - 10 >= nine_score) begin
+    if(five_score - 2 >= one_score &&
+       five_score - 2 >= two_score && 
+       five_score - 2 >= three_score && 
+       five_score - 2 >= four_score && 
+       five_score - 2 >= five_score && 
+       five_score - 2 >= six_score && 
+       five_score - 2 >= seven_score && 
+       five_score - 2 >= eight_score && 
+       five_score - 2 >= nine_score) begin
        
        max_score = 5;
     end else
@@ -122,39 +122,39 @@ always @* begin
        
        max_score = 6;
     end else
-    if(seven_score - 4 >= one_score &&
-       seven_score - 4 >= two_score && 
-       seven_score - 4 >= three_score && 
-       seven_score - 4 >= four_score && 
-       seven_score - 4 >= five_score && 
-       seven_score - 4 >= six_score && 
-       seven_score - 4 >= seven_score && 
-       seven_score - 4 >= eight_score && 
-       seven_score - 4 >= nine_score) begin
+    if(seven_score >= one_score &&
+       seven_score >= two_score && 
+       seven_score >= three_score && 
+       seven_score >= four_score && 
+       seven_score >= five_score && 
+       seven_score >= six_score && 
+       seven_score >= seven_score && 
+       seven_score >= eight_score && 
+       seven_score >= nine_score) begin
        
        max_score = 7;
     end else
-    if(eight_score - 5 >= one_score &&
-       eight_score - 5 >= two_score && 
-       eight_score - 5 >= three_score && 
-       eight_score - 5 >= four_score && 
-       eight_score - 5 >= five_score && 
-       eight_score - 5 >= six_score && 
-       eight_score - 5 >= seven_score && 
-       eight_score - 5 >= eight_score && 
-       eight_score - 5 >= nine_score) begin
+    if(eight_score >= one_score &&
+       eight_score >= two_score && 
+       eight_score >= three_score && 
+       eight_score >= four_score && 
+       eight_score >= five_score && 
+       eight_score >= six_score && 
+       eight_score >= seven_score && 
+       eight_score >= eight_score && 
+       eight_score >= nine_score) begin
        
        max_score = 8;
     end else
-    if(nine_score - 16 >= one_score &&
-       nine_score - 16 >= two_score && 
-       nine_score - 16 >= three_score && 
-       nine_score - 16 >= four_score && 
-       nine_score - 16 >= five_score && 
-       nine_score - 16 >= six_score && 
-       nine_score - 16 >= seven_score && 
-       nine_score - 16 >= eight_score && 
-       nine_score - 16 >= nine_score) begin
+    if(nine_score - 20 >= one_score &&
+       nine_score - 20 >= two_score && 
+       nine_score - 20 >= three_score && 
+       nine_score - 20 >= four_score && 
+       nine_score - 20 >= five_score && 
+       nine_score - 20 >= six_score && 
+       nine_score - 20 >= seven_score && 
+       nine_score - 20 >= eight_score && 
+       nine_score - 20 >= nine_score) begin
        
        max_score = 9;
     end

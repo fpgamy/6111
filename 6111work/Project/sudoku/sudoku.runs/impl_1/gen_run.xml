@@ -1,47 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544307433">
-  <File Type="PA-TCL" Name="top.tcl"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_postroute_physopt.dcp"/>
-  <File Type="INIT-TIMING" Name="top_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="top_opt.dcp"/>
-  <File Type="OPT-DRC" Name="top_drc_opted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="top_methodology_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="top.hwdef"/>
-  <File Type="OPT-TIMING" Name="top_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="top_placed.dcp"/>
-  <File Type="PLACE-IO" Name="top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="top_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="top_postplace_pwropt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="top.bit"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="top_timing_summary_routed.rpt"/>
-  <File Type="BG-BIN" Name="top.bin"/>
-  <File Type="ROUTE-SIMILARITY" Name="top_incremental_reuse_routed.rpt"/>
-  <File Type="BITSTR-MSK" Name="top.msk"/>
-  <File Type="ROUTE-CLK" Name="top_clock_utilization_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="top.rbt"/>
-  <File Type="BITSTR-NKY" Name="top.nky"/>
-  <File Type="BITSTR-BMM" Name="top_bd.bmm"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_postroute_physopt_bb.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544482510">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="top.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_timing_summary_postroute_physopted.pb"/>
   <File Type="BG-DRC" Name="top.drc"/>
-  <File Type="ROUTE-TIMING-PB" Name="top_timing_summary_routed.pb"/>
-  <File Type="BITSTR-MMI" Name="top.mmi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_timing_summary_postroute_physopted.rpx"/>
   <File Type="BG-BGN" Name="top.bgn"/>
-  <File Type="ROUTE-TIMING-RPX" Name="top_timing_summary_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="top.sysdef"/>
+  <File Type="BITSTR-MMI" Name="top.mmi"/>
+  <File Type="BITSTR-BMM" Name="top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="top.nky"/>
+  <File Type="BITSTR-RBT" Name="top.rbt"/>
+  <File Type="BITSTR-MSK" Name="top.msk"/>
+  <File Type="BG-BIN" Name="top.bin"/>
+  <File Type="BG-BIT" Name="top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-CLK" Name="top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="top_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="top_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="top_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="top_power_routed.rpx"/>
@@ -57,6 +36,27 @@
   <File Type="PHYSOPT-DRC" Name="top_drc_physopted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="top_physopt.dcp"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="top_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="top_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="top_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="top_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="top_timing_summary_init.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_postroute_physopt.dcp"/>
+  <File Type="PA-TCL" Name="top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v">
@@ -470,6 +470,60 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/coe/staff/aaron.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/victor.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/yeung.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/diana.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/driss.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/gim.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/joe.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/melinda.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/mike.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -505,25 +559,34 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="frame_buffer"/>
-  <BlockFileSet Type="BlockSrcs" Name="two_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="video_clk"/>
-  <BlockFileSet Type="BlockSrcs" Name="eight_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="six_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="seven_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="five_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="five_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="nine_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="seven_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="nine_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="three_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="mike"/>
+  <BlockFileSet Type="BlockSrcs" Name="driss"/>
   <BlockFileSet Type="BlockSrcs" Name="three_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="eight_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="seven_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="aaron"/>
+  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="gim"/>
+  <BlockFileSet Type="BlockSrcs" Name="nine_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="five_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="six_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="two_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="melinda"/>
+  <BlockFileSet Type="BlockSrcs" Name="three_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="eight_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="joe"/>
+  <BlockFileSet Type="BlockSrcs" Name="diana"/>
+  <BlockFileSet Type="BlockSrcs" Name="seven_16_d"/>
   <BlockFileSet Type="BlockSrcs" Name="four_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="six_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="five_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="nine_16_d"/>
   <BlockFileSet Type="BlockSrcs" Name="one_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="rescaled_frame_buffer"/>
+  <BlockFileSet Type="BlockSrcs" Name="yeung"/>
   <BlockFileSet Type="BlockSrcs" Name="four_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="rescaled_frame_buffer"/>
+  <BlockFileSet Type="BlockSrcs" Name="eight_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="video_clk"/>
+  <BlockFileSet Type="BlockSrcs" Name="victor"/>
+  <BlockFileSet Type="BlockSrcs" Name="two_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="frame_buffer"/>
 </GenRun>

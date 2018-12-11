@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Dec  8 17:24:44 2018
-# Process ID: 9626
+# Start of session at: Mon Dec 10 18:02:44 2018
+# Process ID: 4815
 # Current directory: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1
 # Command line: vivado -log top.vdi -applog -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/top.vdi
@@ -12,30 +12,46 @@
 source top.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/frame_buffer/frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/video_clk/video_clk.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/one_16_d/one_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/nine_16_d/nine_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/five_16_d/five_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/six_16_d/six_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/four_16_d/four_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/seven_16_d/seven_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/two_16_d/two_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/eight_16_d/eight_16_d.dcp]
-WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/three_16_d_1/three_16_d.dcp]
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/frame_buffer/frame_buffer.dcp' for cell 'frame_buffer_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp' for cell 'rescaled_fb_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/video_clk/video_clk.dcp' for cell 'video_clk_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/eight_16_d/eight_16_d.dcp' for cell 'char_rec_1/eight_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/five_16_d/five_16_d.dcp' for cell 'char_rec_1/five_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/four_16_d/four_16_d.dcp' for cell 'char_rec_1/four_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/nine_16_d/nine_16_d.dcp' for cell 'char_rec_1/nine_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/one_16_d/one_16_d.dcp' for cell 'char_rec_1/one_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/seven_16_d/seven_16_d.dcp' for cell 'char_rec_1/seven_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/six_16_d/six_16_d.dcp' for cell 'char_rec_1/six_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/three_16_d_1/three_16_d.dcp' for cell 'char_rec_1/three_16_d_1'
-INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/two_16_d/two_16_d.dcp' for cell 'char_rec_1/two_16_d_1'
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/frame_buffer/frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/video_clk/video_clk.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/one_16_d/one_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/nine_16_d/nine_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/five_16_d/five_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/six_16_d/six_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/four_16_d/four_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/seven_16_d/seven_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/two_16_d/two_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/eight_16_d/eight_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/three_16_d_1/three_16_d.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/victor/victor.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/yeung/yeung.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/driss/driss.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/aaron/aaron.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/melinda/melinda.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/mike/mike.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/diana/diana.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/gim/gim.dcp]
+WARNING: [filemgmt 56-147] Overwrite of existing file isn't enabled.  Please specify -force to overwrite file  [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/joe/joe.dcp]
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/frame_buffer/frame_buffer.dcp' for cell 'frame_buffer_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp' for cell 'rescaled_fb_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/video_clk/video_clk.dcp' for cell 'video_clk_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/eight_16_d/eight_16_d.dcp' for cell 'char_rec_1/eight_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/five_16_d/five_16_d.dcp' for cell 'char_rec_1/five_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/four_16_d/four_16_d.dcp' for cell 'char_rec_1/four_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/nine_16_d/nine_16_d.dcp' for cell 'char_rec_1/nine_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/one_16_d/one_16_d.dcp' for cell 'char_rec_1/one_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/seven_16_d/seven_16_d.dcp' for cell 'char_rec_1/seven_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/six_16_d/six_16_d.dcp' for cell 'char_rec_1/six_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/three_16_d_1/three_16_d.dcp' for cell 'char_rec_1/three_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/two_16_d/two_16_d.dcp' for cell 'char_rec_1/two_16_d_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/aaron/aaron.dcp' for cell 'video_playback_1/display_grid_1/aaron_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/diana/diana.dcp' for cell 'video_playback_1/display_grid_1/diana_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/driss/driss.dcp' for cell 'video_playback_1/display_grid_1/driss_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/gim/gim.dcp' for cell 'video_playback_1/display_grid_1/gim_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/joe/joe.dcp' for cell 'video_playback_1/display_grid_1/joe_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/melinda/melinda.dcp' for cell 'video_playback_1/display_grid_1/melinda_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/mike/mike.dcp' for cell 'video_playback_1/display_grid_1/mike_1'
 INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/one_image_48_48/one_image_48_48.dcp' for cell 'video_playback_1/display_grid_1/rom_1'
 INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/two_image_48_48/two_image_48_48.dcp' for cell 'video_playback_1/display_grid_1/rom_2'
 INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/three_image_48_48/three_image_48_48.dcp' for cell 'video_playback_1/display_grid_1/rom_3'
@@ -45,7 +61,9 @@ INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/sh
 INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/seven_image_48_48/seven_image_48_48.dcp' for cell 'video_playback_1/display_grid_1/rom_7'
 INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/eight_image_48_48/eight_image_48_48.dcp' for cell 'video_playback_1/display_grid_1/rom_8'
 INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/nine_image_48_48/nine_image_48_48.dcp' for cell 'video_playback_1/display_grid_1/rom_9'
-INFO: [Netlist 29-17] Analyzing 660 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/victor/victor.dcp' for cell 'video_playback_1/display_grid_1/victor_1'
+INFO: [Project 1-454] Reading design checkpoint '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/yeung/yeung.dcp' for cell 'video_playback_1/display_grid_1/yeung_1'
+INFO: [Netlist 29-17] Analyzing 621 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'soduku_solver' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-479] Netlist was created with Vivado 2016.2
@@ -53,28 +71,28 @@ INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-35] Removing redundant IBUF, video_clk_1/inst/clkin1_ibufg, from the path connected to top-level port: CLK_100M 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'video_clk_1/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/dcp_3/video_clk.edf:276]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'video_clk_1/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/dcp_3/video_clk.edf:276]
 Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/video_clk/video_clk_board.xdc] for cell 'video_clk_1/inst'
 Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/video_clk/video_clk_board.xdc] for cell 'video_clk_1/inst'
 Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/video_clk/video_clk.xdc] for cell 'video_clk_1/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/video_clk/video_clk.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/video_clk/video_clk.xdc:57]
-get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1949.312 ; gain = 529.461 ; free physical = 3593 ; free virtual = 11915
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.258 ; gain = 529.461 ; free physical = 3876 ; free virtual = 13200
 Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/sources_1/ip/video_clk/video_clk.xdc] for cell 'video_clk_1/inst'
 Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/frame_buffer/frame_buffer.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/video_clk/video_clk.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/one_16_d/one_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/nine_16_d/nine_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/five_16_d/five_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/six_16_d/six_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/four_16_d/four_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/seven_16_d/seven_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/two_16_d/two_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/eight_16_d/eight_16_d.dcp'
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-9626-eecs-digital-18/three_16_d_1/three_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/frame_buffer/frame_buffer.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/video_clk/video_clk.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/rescaled_frame_buffer/rescaled_frame_buffer.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/one_16_d/one_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/nine_16_d/nine_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/five_16_d/five_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/six_16_d/six_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/four_16_d/four_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/seven_16_d/seven_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/two_16_d/two_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/eight_16_d/eight_16_d.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/three_16_d_1/three_16_d.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/eight_image_48_48/eight_image_48_48.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/four_image_48_48/four_image_48_48.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/two_image_48_48/two_image_48_48.dcp'
@@ -84,11 +102,20 @@ INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC const
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/one_image_48_48/one_image_48_48.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/seven_image_48_48/seven_image_48_48.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/baseline_test/baseline_test/baseline_test.srcs/sources_1/ip/three_image_48_48/three_image_48_48.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/victor/victor.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/yeung/yeung.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/driss/driss.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/aaron/aaron.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/melinda/melinda.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/mike/mike.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/diana/diana.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/gim/gim.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/.Xil/Vivado-4815-eecs-digital-18/joe/joe.dcp'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1950.312 ; gain = 971.547 ; free physical = 3741 ; free virtual = 11911
+link_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1954.258 ; gain = 974.492 ; free physical = 4027 ; free virtual = 13196
 INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
@@ -100,39 +127,39 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2014.344 ; gain = 64.031 ; free physical = 3742 ; free virtual = 11910
+Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2018.289 ; gain = 64.031 ; free physical = 4027 ; free virtual = 13196
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
-Implement Debug Cores | Checksum: d2a1a122
+Implement Debug Cores | Checksum: 18eb7a98c
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: e5664cd7
+Phase 1 Retarget | Checksum: 1b93bfcc3
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2014.344 ; gain = 0.000 ; free physical = 3718 ; free virtual = 11890
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2018.289 ; gain = 0.000 ; free physical = 4008 ; free virtual = 13177
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 18 cells.
-Phase 2 Constant Propagation | Checksum: 17995bb2d
+INFO: [Opt 31-10] Eliminated 19 cells.
+Phase 2 Constant Propagation | Checksum: 1da080652
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2014.344 ; gain = 0.000 ; free physical = 3719 ; free virtual = 11888
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2018.289 ; gain = 0.000 ; free physical = 4007 ; free virtual = 13176
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 2005 unconnected nets.
-INFO: [Opt 31-11] Eliminated 40 unconnected cells.
-Phase 3 Sweep | Checksum: 166cd72cd
+INFO: [Opt 31-12] Eliminated 1886 unconnected nets.
+INFO: [Opt 31-11] Eliminated 58 unconnected cells.
+Phase 3 Sweep | Checksum: a2633ee9
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2014.344 ; gain = 0.000 ; free physical = 3719 ; free virtual = 11887
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2018.289 ; gain = 0.000 ; free physical = 4007 ; free virtual = 13176
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2014.344 ; gain = 0.000 ; free physical = 3719 ; free virtual = 11887
-Ending Logic Optimization Task | Checksum: 166cd72cd
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2018.289 ; gain = 0.000 ; free physical = 4007 ; free virtual = 13176
+Ending Logic Optimization Task | Checksum: a2633ee9
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2014.344 ; gain = 0.000 ; free physical = 3719 ; free virtual = 11887
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2018.289 ; gain = 0.000 ; free physical = 4007 ; free virtual = 13176
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -145,27 +172,27 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 132 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 141 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 9 WE to EN ports
-Number of BRAM Ports augmented: 36 newly gated: 36 Total Ports: 264
+Number of BRAM Ports augmented: 36 newly gated: 36 Total Ports: 282
 Number of Flops added for Enable Generation: 4
 
-Ending PowerOpt Patch Enables Task | Checksum: 1dd368a0a
+Ending PowerOpt Patch Enables Task | Checksum: b1aa9a31
 
-Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3332 ; free virtual = 11503
-Ending Power Optimization Task | Checksum: 1dd368a0a
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3592 ; free virtual = 12768
+Ending Power Optimization Task | Checksum: b1aa9a31
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 2475.039 ; gain = 460.695 ; free physical = 3332 ; free virtual = 11503
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.102 ; gain = 497.812 ; free physical = 3592 ; free virtual = 12768
 INFO: [Common 17-83] Releasing license: Implementation
-70 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+88 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 2475.039 ; gain = 524.727 ; free physical = 3332 ; free virtual = 11503
+opt_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 2516.102 ; gain = 561.844 ; free physical = 3592 ; free virtual = 12768
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3325 ; free virtual = 11503
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3317 ; free virtual = 11501
+Write XDEF Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3585 ; free virtual = 12767
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3576 ; free virtual = 12765
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/top_drc_opted.rpt.
 INFO: [Chipscope 16-241] No debug cores found in the current design.
@@ -187,99 +214,99 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3311 ; free virtual = 11499
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3571 ; free virtual = 12764
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3310 ; free virtual = 11497
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3569 ; free virtual = 12762
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 1.1.1 ParallelPlaceIOClockAndInitTop
 
 Phase 1.1.1.1 Pre-Place Cells
-Phase 1.1.1.1 Pre-Place Cells | Checksum: 8f31cfb7
+Phase 1.1.1.1 Pre-Place Cells | Checksum: 0350f077
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3309 ; free virtual = 11497
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3568 ; free virtual = 12763
 
 Phase 1.1.1.2 Constructing HAPIClkRuleMgr
-Phase 1.1.1.2 Constructing HAPIClkRuleMgr | Checksum: 8f31cfb7
+Phase 1.1.1.2 Constructing HAPIClkRuleMgr | Checksum: 0350f077
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3309 ; free virtual = 11497
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3568 ; free virtual = 12762
 
-Phase 1.1.1.6 IOLockPlacementChecker
+Phase 1.1.1.4 IOLockPlacementChecker
 
-Phase 1.1.1.4 ClockRegionPlacementChecker
+Phase 1.1.1.5 ClockRegionPlacementChecker
 
-Phase 1.1.1.5 IOBufferPlacementChecker
+Phase 1.1.1.3 IOBufferPlacementChecker
 
-Phase 1.1.1.3 DSPChecker
-Phase 1.1.1.3 DSPChecker | Checksum: 8f31cfb7
+Phase 1.1.1.6 DSPChecker
+Phase 1.1.1.6 DSPChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.7 V7IOVoltageChecker
-Phase 1.1.1.7 V7IOVoltageChecker | Checksum: 8f31cfb7
+Phase 1.1.1.7 V7IOVoltageChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.8 OverlappingPBlocksChecker
-Phase 1.1.1.8 OverlappingPBlocksChecker | Checksum: 8f31cfb7
+Phase 1.1.1.8 OverlappingPBlocksChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
-Phase 1.1.1.6 IOLockPlacementChecker | Checksum: 8f31cfb7
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
+Phase 1.1.1.4 IOLockPlacementChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.9 CheckerForMandatoryPrePlacedCells
-Phase 1.1.1.9 CheckerForMandatoryPrePlacedCells | Checksum: 8f31cfb7
+Phase 1.1.1.9 CheckerForMandatoryPrePlacedCells | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.10 CascadeElementConstraintsChecker
-Phase 1.1.1.10 CascadeElementConstraintsChecker | Checksum: 8f31cfb7
+Phase 1.1.1.10 CascadeElementConstraintsChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.11 HdioRelatedChecker
-Phase 1.1.1.11 HdioRelatedChecker | Checksum: 8f31cfb7
+Phase 1.1.1.11 HdioRelatedChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
-Phase 1.1.1.5 IOBufferPlacementChecker | Checksum: 8f31cfb7
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
+Phase 1.1.1.5 ClockRegionPlacementChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
-Phase 1.1.1.12 DisallowedInsts
-Phase 1.1.1.12 DisallowedInsts | Checksum: 8f31cfb7
+Phase 1.1.1.12 CheckerForUnsupportedConstraints
+Phase 1.1.1.3 IOBufferPlacementChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
-Phase 1.1.1.13 Laguna PBlock Checker
-Phase 1.1.1.13 Laguna PBlock Checker | Checksum: 8f31cfb7
+Phase 1.1.1.13 DisallowedInsts
+Phase 1.1.1.13 DisallowedInsts | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
-Phase 1.1.1.14 ShapePlacementValidityChecker
-Phase 1.1.1.4 ClockRegionPlacementChecker | Checksum: 8f31cfb7
+Phase 1.1.1.14 Laguna PBlock Checker
+Phase 1.1.1.14 Laguna PBlock Checker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
-Phase 1.1.1.15 CheckerForUnsupportedConstraints
-Phase 1.1.1.15 CheckerForUnsupportedConstraints | Checksum: 8f31cfb7
+Phase 1.1.1.15 ShapePlacementValidityChecker
+Phase 1.1.1.12 CheckerForUnsupportedConstraints | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.16 ShapesExcludeCompatibilityChecker
-Phase 1.1.1.16 ShapesExcludeCompatibilityChecker | Checksum: 8f31cfb7
+Phase 1.1.1.16 ShapesExcludeCompatibilityChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
 
 Phase 1.1.1.17 IOStdCompatabilityChecker
-Phase 1.1.1.17 IOStdCompatabilityChecker | Checksum: 8f31cfb7
+Phase 1.1.1.17 IOStdCompatabilityChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3308 ; free virtual = 11496
-Phase 1.1.1.14 ShapePlacementValidityChecker | Checksum: 8f31cfb7
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3567 ; free virtual = 12762
+Phase 1.1.1.15 ShapePlacementValidityChecker | Checksum: 0350f077
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3305 ; free virtual = 11496
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
 WARNING: [Place 30-879] Found overlapping PBlocks. The use of overlapping PBlocks is not recommended as it may lead to legalization errors or unplaced instances.
 WARNING: [Place 30-12] An IO Bus SW with more than one IO standard is found. Components associated with this bus are: 
 	SW[15] of IOStandard LVCMOS33
@@ -303,116 +330,116 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 1.1.1.18 IO and Clk Clean Up
 
 Phase 1.1.1.18.1 Constructing HAPIClkRuleMgr
-Phase 1.1.1.18.1 Constructing HAPIClkRuleMgr | Checksum: 8f31cfb7
+Phase 1.1.1.18.1 Constructing HAPIClkRuleMgr | Checksum: 0350f077
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3304 ; free virtual = 11496
-Phase 1.1.1.18 IO and Clk Clean Up | Checksum: 8f31cfb7
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
+Phase 1.1.1.18 IO and Clk Clean Up | Checksum: 0350f077
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3304 ; free virtual = 11496
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
 
 Phase 1.1.1.19 Implementation Feasibility check On IDelay
-Phase 1.1.1.19 Implementation Feasibility check On IDelay | Checksum: 8f31cfb7
+Phase 1.1.1.19 Implementation Feasibility check On IDelay | Checksum: 0350f077
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3304 ; free virtual = 11496
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
 
 Phase 1.1.1.20 Commit IO Placement
-Phase 1.1.1.20 Commit IO Placement | Checksum: 41abd013
+Phase 1.1.1.20 Commit IO Placement | Checksum: 717206cf
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3304 ; free virtual = 11496
-Phase 1.1.1 ParallelPlaceIOClockAndInitTop | Checksum: 41abd013
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
+Phase 1.1.1 ParallelPlaceIOClockAndInitTop | Checksum: 717206cf
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3304 ; free virtual = 11496
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 898d6b98
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13c4b5d3f
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3304 ; free virtual = 11496
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3563 ; free virtual = 12762
 
 Phase 1.2 Build Placer Netlist Model
 
 Phase 1.2.1 Place Init Design
 
 Phase 1.2.1.1 Make Others
-Phase 1.2.1.1 Make Others | Checksum: d9c03548
+Phase 1.2.1.1 Make Others | Checksum: 1914725ff
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3300 ; free virtual = 11494
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3559 ; free virtual = 12759
 
 Phase 1.2.1.2 Init Lut Pin Assignment
-Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: d9c03548
+Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: 1914725ff
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3297 ; free virtual = 11491
-Phase 1.2.1 Place Init Design | Checksum: f80bf083
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3554 ; free virtual = 12755
+Phase 1.2.1 Place Init Design | Checksum: 1e023c79e
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3290 ; free virtual = 11486
-Phase 1.2 Build Placer Netlist Model | Checksum: f80bf083
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3542 ; free virtual = 12744
+Phase 1.2 Build Placer Netlist Model | Checksum: 1e023c79e
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3290 ; free virtual = 11486
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3542 ; free virtual = 12744
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: f80bf083
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1e023c79e
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3290 ; free virtual = 11486
-Phase 1 Placer Initialization | Checksum: f80bf083
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3542 ; free virtual = 12744
+Phase 1 Placer Initialization | Checksum: 1e023c79e
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3290 ; free virtual = 11486
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3542 ; free virtual = 12744
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 13c72cfb8
+Phase 2 Global Placement | Checksum: 236e5f61f
 
-Time (s): cpu = 00:01:57 ; elapsed = 00:00:58 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3284 ; free virtual = 11478
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 13c72cfb8
+Phase 3.1 Commit Multi Column Macros | Checksum: 236e5f61f
 
-Time (s): cpu = 00:01:59 ; elapsed = 00:00:58 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3284 ; free virtual = 11478
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 131f12bb6
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e451f816
 
-Time (s): cpu = 00:02:22 ; elapsed = 00:01:07 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3283 ; free virtual = 11477
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:25 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 186548cc4
+Phase 3.3 Area Swap Optimization | Checksum: 20562f095
 
-Time (s): cpu = 00:02:23 ; elapsed = 00:01:07 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3283 ; free virtual = 11477
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:25 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3.4 updateClock Trees: DP
-Phase 3.4 updateClock Trees: DP | Checksum: 186548cc4
+Phase 3.4 updateClock Trees: DP | Checksum: 20562f095
 
-Time (s): cpu = 00:02:23 ; elapsed = 00:01:07 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3283 ; free virtual = 11477
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:25 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 1380cf19c
+Phase 3.5 Timing Path Optimizer | Checksum: 1bf66eec0
 
-Time (s): cpu = 00:02:29 ; elapsed = 00:01:09 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3283 ; free virtual = 11477
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:28 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 1a24a26a1
+Phase 3.6 Fast Optimization | Checksum: 1bf66eec0
 
-Time (s): cpu = 00:02:30 ; elapsed = 00:01:09 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3283 ; free virtual = 11477
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:28 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3519 ; free virtual = 12722
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 13f0d97a3
+Phase 3.7 Small Shape Detail Placement | Checksum: fde366bf
 
-Time (s): cpu = 00:02:48 ; elapsed = 00:01:25 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3282 ; free virtual = 11476
+Time (s): cpu = 00:03:04 ; elapsed = 00:01:42 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3516 ; free virtual = 12720
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 199897264
+Phase 3.8 Re-assign LUT pins | Checksum: 18fe816eb
 
-Time (s): cpu = 00:02:50 ; elapsed = 00:01:27 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3282 ; free virtual = 11476
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:44 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3516 ; free virtual = 12720
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 199897264
+Phase 3.9 Pipeline Register Optimization | Checksum: 18fe816eb
 
-Time (s): cpu = 00:02:51 ; elapsed = 00:01:27 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3282 ; free virtual = 11477
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:44 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3516 ; free virtual = 12720
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: f16c8c59
+Phase 3.10 Fast Optimization | Checksum: 18fe816eb
 
-Time (s): cpu = 00:03:03 ; elapsed = 00:01:31 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3282 ; free virtual = 11476
-Phase 3 Detail Placement | Checksum: f16c8c59
+Time (s): cpu = 00:03:19 ; elapsed = 00:01:48 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3515 ; free virtual = 12719
+Phase 3 Detail Placement | Checksum: 18fe816eb
 
-Time (s): cpu = 00:03:03 ; elapsed = 00:01:31 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3282 ; free virtual = 11476
+Time (s): cpu = 00:03:19 ; elapsed = 00:01:49 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3515 ; free virtual = 12719
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -420,62 +447,62 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 updateClock Trees: PCOPT
-Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 1b0965c77
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 1f136baf2
 
-Time (s): cpu = 00:03:24 ; elapsed = 00:01:38 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3281 ; free virtual = 11475
+Time (s): cpu = 00:03:41 ; elapsed = 00:01:55 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 
 Phase 4.1.2 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.099. For the most accurate timing information please run report_timing.
-Phase 4.1.2 Post Placement Optimization | Checksum: 106a43968
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.449. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: e7a336b9
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:01:39 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11475
-Phase 4.1 Post Commit Optimization | Checksum: 106a43968
+Time (s): cpu = 00:03:42 ; elapsed = 00:01:56 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
+Phase 4.1 Post Commit Optimization | Checksum: e7a336b9
 
-Time (s): cpu = 00:03:26 ; elapsed = 00:01:40 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11475
+Time (s): cpu = 00:03:43 ; elapsed = 00:01:57 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 
 Phase 4.2 Sweep Clock Roots: Post-Placement
-Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 106a43968
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: e7a336b9
 
-Time (s): cpu = 00:03:27 ; elapsed = 00:01:40 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
+Time (s): cpu = 00:03:43 ; elapsed = 00:01:57 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12718
 
 Phase 4.3 Uram Pipeline Register Optimization
-Phase 4.3 Uram Pipeline Register Optimization | Checksum: 106a43968
+Phase 4.3 Uram Pipeline Register Optimization | Checksum: e7a336b9
 
-Time (s): cpu = 00:03:27 ; elapsed = 00:01:40 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
+Time (s): cpu = 00:03:43 ; elapsed = 00:01:57 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 
 Phase 4.4 Post Placement Cleanup
-Phase 4.4 Post Placement Cleanup | Checksum: 106a43968
+Phase 4.4 Post Placement Cleanup | Checksum: e7a336b9
 
-Time (s): cpu = 00:03:27 ; elapsed = 00:01:41 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
+Time (s): cpu = 00:03:44 ; elapsed = 00:01:57 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 
 Phase 4.5 Placer Reporting
-Phase 4.5 Placer Reporting | Checksum: 106a43968
+Phase 4.5 Placer Reporting | Checksum: e7a336b9
 
-Time (s): cpu = 00:03:28 ; elapsed = 00:01:41 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
+Time (s): cpu = 00:03:44 ; elapsed = 00:01:58 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 
 Phase 4.6 Final Placement Cleanup
-Phase 4.6 Final Placement Cleanup | Checksum: eebe4cb5
+Phase 4.6 Final Placement Cleanup | Checksum: 11759f2ec
 
-Time (s): cpu = 00:03:28 ; elapsed = 00:01:41 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: eebe4cb5
+Time (s): cpu = 00:03:44 ; elapsed = 00:01:58 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 11759f2ec
 
-Time (s): cpu = 00:03:28 ; elapsed = 00:01:42 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
-Ending Placer Task | Checksum: c5e6a4c4
+Time (s): cpu = 00:03:44 ; elapsed = 00:01:58 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
+Ending Placer Task | Checksum: 10bc0ef8b
 
-Time (s): cpu = 00:03:28 ; elapsed = 00:01:42 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
+Time (s): cpu = 00:03:44 ; elapsed = 00:01:58 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 INFO: [Common 17-83] Releasing license: Implementation
-87 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+105 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:03:32 ; elapsed = 00:01:44 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3280 ; free virtual = 11476
+place_design: Time (s): cpu = 00:03:48 ; elapsed = 00:02:00 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3513 ; free virtual = 12717
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3155 ; free virtual = 11476
-write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3256 ; free virtual = 11476
-report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3254 ; free virtual = 11475
-report_utilization: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3254 ; free virtual = 11475
-report_control_sets: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3254 ; free virtual = 11475
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3387 ; free virtual = 12718
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3488 ; free virtual = 12717
+report_io: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3487 ; free virtual = 12716
+report_utilization: Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3487 ; free virtual = 12716
+report_control_sets: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3485 ; free virtual = 12716
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -488,114 +515,113 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: 967a910c ConstDB: 0 ShapeSum: 2f6c13b8 RouteDB: 0
+Checksum: PlaceDB: 2c867e5f ConstDB: 0 ShapeSum: df3a712c RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 9778eddc
+Phase 1 Build RT Design | Checksum: 9d58219a
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3251 ; free virtual = 11474
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3484 ; free virtual = 12717
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 9778eddc
+Phase 2.1 Create Timer | Checksum: 9d58219a
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3251 ; free virtual = 11474
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3484 ; free virtual = 12717
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 9778eddc
+Phase 2.2 Fix Topology Constraints | Checksum: 9d58219a
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3249 ; free virtual = 11474
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3482 ; free virtual = 12716
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 9778eddc
+Phase 2.3 Pre Route Cleanup | Checksum: 9d58219a
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3249 ; free virtual = 11474
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3482 ; free virtual = 12716
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1b135e331
+Phase 2.4 Update Timing | Checksum: 1d7d9d1f2
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:24 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11454
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.299  | TNS=0.000  | WHS=-0.284 | THS=-39.030|
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:24 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3480 ; free virtual = 12715
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.666  | TNS=0.000  | WHS=-0.355 | THS=-41.940|
 
-Phase 2 Router Initialization | Checksum: 16e020d51
+Phase 2 Router Initialization | Checksum: 1bc9a36de
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:27 . Memory (MB): peak = 2475.039 ; gain = 0.000 ; free physical = 3228 ; free virtual = 11454
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:27 . Memory (MB): peak = 2516.102 ; gain = 0.000 ; free physical = 3499 ; free virtual = 12734
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 10e50cc6f
+Phase 3 Initial Routing | Checksum: 1722bb375
 
-Time (s): cpu = 00:01:52 ; elapsed = 00:00:36 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3107 ; free virtual = 11333
+Time (s): cpu = 00:01:54 ; elapsed = 00:00:36 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3343 ; free virtual = 12578
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 21672
- Number of Nodes with overlaps = 1864
- Number of Nodes with overlaps = 323
- Number of Nodes with overlaps = 51
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 20840
+ Number of Nodes with overlaps = 1993
+ Number of Nodes with overlaps = 425
+ Number of Nodes with overlaps = 81
+ Number of Nodes with overlaps = 27
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: f37f0360
+Phase 4.1.1 Update Timing | Checksum: 21ebd0e98
 
-Time (s): cpu = 00:05:57 ; elapsed = 00:01:20 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3105 ; free virtual = 11330
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.283  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:06:07 ; elapsed = 00:01:22 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.693  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 158099aee
+Phase 4.1 Global Iteration 0 | Checksum: 1dfe84895
 
-Time (s): cpu = 00:05:57 ; elapsed = 00:01:21 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
-Phase 4 Rip-up And Reroute | Checksum: 158099aee
+Time (s): cpu = 00:06:08 ; elapsed = 00:01:23 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
+Phase 4 Rip-up And Reroute | Checksum: 1dfe84895
 
-Time (s): cpu = 00:05:58 ; elapsed = 00:01:21 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
+Time (s): cpu = 00:06:08 ; elapsed = 00:01:23 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 13d7f8a42
+Phase 5.1.1 Update Timing | Checksum: 18d033eae
 
-Time (s): cpu = 00:06:02 ; elapsed = 00:01:22 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.283  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:06:12 ; elapsed = 00:01:24 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.693  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 13d7f8a42
+Phase 5.1 Delay CleanUp | Checksum: 18d033eae
 
-Time (s): cpu = 00:06:02 ; elapsed = 00:01:22 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
+Time (s): cpu = 00:06:12 ; elapsed = 00:01:24 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 13d7f8a42
+Phase 5.2 Clock Skew Optimization | Checksum: 18d033eae
 
-Time (s): cpu = 00:06:02 ; elapsed = 00:01:22 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
-Phase 5 Delay and Skew Optimization | Checksum: 13d7f8a42
+Time (s): cpu = 00:06:12 ; elapsed = 00:01:24 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
+Phase 5 Delay and Skew Optimization | Checksum: 18d033eae
 
-Time (s): cpu = 00:06:02 ; elapsed = 00:01:22 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
+Time (s): cpu = 00:06:12 ; elapsed = 00:01:24 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: a2e91cec
+Phase 6.1.1 Update Timing | Checksum: 19ff08358
 
-Time (s): cpu = 00:06:07 ; elapsed = 00:01:24 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.283  | TNS=0.000  | WHS=0.075  | THS=0.000  |
+Time (s): cpu = 00:06:17 ; elapsed = 00:01:25 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.693  | TNS=0.000  | WHS=0.065  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: e393c2f1
+Phase 6.1 Hold Fix Iter | Checksum: 1913e328f
 
-Time (s): cpu = 00:06:07 ; elapsed = 00:01:24 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
-Phase 6 Post Hold Fix | Checksum: e393c2f1
+Time (s): cpu = 00:06:17 ; elapsed = 00:01:26 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
+Phase 6 Post Hold Fix | Checksum: 1913e328f
 
-Time (s): cpu = 00:06:07 ; elapsed = 00:01:24 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
+Time (s): cpu = 00:06:17 ; elapsed = 00:01:26 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 28.6276 %
-  Global Horizontal Routing Utilization  = 29.5788 %
+  Global Vertical Routing Utilization    = 29.6764 %
+  Global Horizontal Routing Utilization  = 29.3372 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -604,55 +630,55 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 1419bb34c
+Phase 7 Route finalize | Checksum: 1a12d4b3c
 
-Time (s): cpu = 00:06:08 ; elapsed = 00:01:24 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3104 ; free virtual = 11330
+Time (s): cpu = 00:06:18 ; elapsed = 00:01:26 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1419bb34c
+Phase 8 Verifying routed nets | Checksum: 1a12d4b3c
 
-Time (s): cpu = 00:06:08 ; elapsed = 00:01:24 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3105 ; free virtual = 11330
+Time (s): cpu = 00:06:19 ; elapsed = 00:01:26 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3340 ; free virtual = 12575
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 190a0f1d7
+Phase 9 Depositing Routes | Checksum: 171922ed9
 
-Time (s): cpu = 00:06:11 ; elapsed = 00:01:28 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3105 ; free virtual = 11330
+Time (s): cpu = 00:06:22 ; elapsed = 00:01:29 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3339 ; free virtual = 12574
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.283  | TNS=0.000  | WHS=0.075  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.693  | TNS=0.000  | WHS=0.065  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 190a0f1d7
+Phase 10 Post Router Timing | Checksum: 171922ed9
 
-Time (s): cpu = 00:06:12 ; elapsed = 00:01:28 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3105 ; free virtual = 11330
+Time (s): cpu = 00:06:22 ; elapsed = 00:01:29 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3339 ; free virtual = 12574
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:06:12 ; elapsed = 00:01:28 . Memory (MB): peak = 2484.375 ; gain = 9.336 ; free physical = 3105 ; free virtual = 11330
+Time (s): cpu = 00:06:22 ; elapsed = 00:01:30 . Memory (MB): peak = 2522.227 ; gain = 6.125 ; free physical = 3339 ; free virtual = 12574
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-100 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+118 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:06:16 ; elapsed = 00:01:30 . Memory (MB): peak = 2484.379 ; gain = 9.340 ; free physical = 3105 ; free virtual = 11330
+route_design: Time (s): cpu = 00:06:26 ; elapsed = 00:01:32 . Memory (MB): peak = 2522.230 ; gain = 6.129 ; free physical = 3339 ; free virtual = 12574
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 2516.391 ; gain = 0.000 ; free physical = 2932 ; free virtual = 11326
-write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2516.395 ; gain = 32.016 ; free physical = 3064 ; free virtual = 11328
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2554.242 ; gain = 0.000 ; free physical = 3170 ; free virtual = 12575
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2554.246 ; gain = 32.016 ; free physical = 3301 ; free virtual = 12574
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/top_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-report_timing_summary: Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 2548.406 ; gain = 0.000 ; free physical = 3061 ; free virtual = 11328
+report_timing_summary: Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 2586.258 ; gain = 0.000 ; free physical = 3297 ; free virtual = 12572
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-report_power: Time (s): cpu = 00:00:21 ; elapsed = 00:00:05 . Memory (MB): peak = 2572.418 ; gain = 24.012 ; free physical = 3045 ; free virtual = 11327
+report_power: Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 2610.270 ; gain = 24.012 ; free physical = 3256 ; free virtual = 12571
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 Running DRC as a precondition to command write_bitstream
@@ -704,13 +730,13 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 6348384 bits.
+Bitstream compression saved 4509408 bits.
 Writing bitstream ./top.bit...
 Writing bitstream ./top.bin...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Dec  8 17:29:50 2018. For additional details about this file, please refer to the WebTalk help file at /var/local/xilinx-local/Vivado/2016.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Dec 10 18:08:14 2018. For additional details about this file, please refer to the WebTalk help file at /var/local/xilinx-local/Vivado/2016.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:57 ; elapsed = 00:00:23 . Memory (MB): peak = 2852.316 ; gain = 279.898 ; free physical = 2694 ; free virtual = 10990
+write_bitstream: Time (s): cpu = 00:01:04 ; elapsed = 00:00:28 . Memory (MB): peak = 2858.434 ; gain = 248.164 ; free physical = 2887 ; free virtual = 12260
 INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file top.hwdef
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  8 17:29:50 2018...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 10 18:08:14 2018...

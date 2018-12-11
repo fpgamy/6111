@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544307433">
-  <File Type="PA-TCL" Name="top.tcl"/>
-  <File Type="RDS-RDS" Name="top.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544482510">
   <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="PA-TCL" Name="top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/wbraun/projects/OV7670-Verilog/src/SCCB_interface.v">
@@ -421,6 +421,60 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/coe/staff/aaron.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/victor.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/yeung.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/diana.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/driss.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/gim.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/joe.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/melinda.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/coe/staff/mike.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -446,25 +500,34 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="frame_buffer"/>
-  <BlockFileSet Type="BlockSrcs" Name="two_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="video_clk"/>
-  <BlockFileSet Type="BlockSrcs" Name="eight_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="six_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="seven_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="five_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="five_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="nine_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="seven_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="nine_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="three_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="mike"/>
+  <BlockFileSet Type="BlockSrcs" Name="driss"/>
   <BlockFileSet Type="BlockSrcs" Name="three_image_48_48"/>
-  <BlockFileSet Type="BlockSrcs" Name="eight_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="seven_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="aaron"/>
+  <BlockFileSet Type="BlockSrcs" Name="one_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="gim"/>
+  <BlockFileSet Type="BlockSrcs" Name="nine_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="five_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="six_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="two_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="melinda"/>
+  <BlockFileSet Type="BlockSrcs" Name="three_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="eight_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="joe"/>
+  <BlockFileSet Type="BlockSrcs" Name="diana"/>
+  <BlockFileSet Type="BlockSrcs" Name="seven_16_d"/>
   <BlockFileSet Type="BlockSrcs" Name="four_image_48_48"/>
   <BlockFileSet Type="BlockSrcs" Name="six_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="five_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="nine_16_d"/>
   <BlockFileSet Type="BlockSrcs" Name="one_16_d"/>
-  <BlockFileSet Type="BlockSrcs" Name="rescaled_frame_buffer"/>
+  <BlockFileSet Type="BlockSrcs" Name="yeung"/>
   <BlockFileSet Type="BlockSrcs" Name="four_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="rescaled_frame_buffer"/>
+  <BlockFileSet Type="BlockSrcs" Name="eight_image_48_48"/>
+  <BlockFileSet Type="BlockSrcs" Name="video_clk"/>
+  <BlockFileSet Type="BlockSrcs" Name="victor"/>
+  <BlockFileSet Type="BlockSrcs" Name="two_16_d"/>
+  <BlockFileSet Type="BlockSrcs" Name="frame_buffer"/>
 </GenRun>

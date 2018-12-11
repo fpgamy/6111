@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Dec  9 15:20:44 2018
+# Process ID: 16259
+# Current directory: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/mike_synth_1
+# Command line: vivado -log mike.vds -mode batch -messageDb vivado.pb -notrace -source mike.tcl
+# Log file: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/mike_synth_1/mike.vds
+# Journal file: /afs/athena.mit.edu/user/s/h/shreeyam/Documents/6.111/6111/6111work/Project/sudoku/sudoku.runs/mike_synth_1/vivado.jou
+#-----------------------------------------------------------
+source mike.tcl -notrace
